@@ -62,48 +62,33 @@
 
 <footer class="site-footer brand-footer">
   <span class="brand-logo" aria-label="涛子办事处">
-    <img src="assets/logo-piano.jpg" alt="涛子办事处" loading="lazy">
+    <picture><source srcset="assets/logo-piano.webp" type="image/webp"><img src="assets/logo-piano.jpg" alt="涛子办事处" width="40" height="40" loading="lazy" decoding="async"></picture>
   </span>
   <span class="brand-name">涛子办事处</span>
 </footer>
-
-<script src="data/unit-00.js"></script>
-<script src="data/unit-01.js"></script>
-<script src="data/unit-02.js"></script>
-<script src="data/unit-03.js"></script>
-<script src="data/unit-04.js"></script>
-<script src="data/unit-05.js"></script>
-<script src="data/unit-06.js"></script>
-<script src="data/unit-07.js"></script>
-<script src="data/unit-08.js"></script>
-<script src="data/unit-09.js"></script>
-<script src="data/unit-10.js"></script>
-<script src="data/unit-11.js"></script>
-<script src="data/audio-manifest.js"></script>
+<script src="data/catalog.js"></script>
 <script src="js/npi-core.js"></script>
 <script>
 (function () {
-  const { units, items } = NPI_load();
-  const words = items.filter(i => i.kind === 'word').length;
-  const phrases = items.filter(i => i.kind === 'phrase').length;
-  const audioN = Object.keys(window.NPI_AUDIO || {}).length;
-  document.getElementById('h-w').textContent = words;
-  document.getElementById('h-p').textContent = phrases;
-  document.getElementById('s-words').textContent = words;
-  document.getElementById('s-phrases').textContent = phrases;
-  document.getElementById('s-units').textContent = Object.keys(units).length;
-  document.getElementById('s-audio').textContent = audioN;
+  /* 只读轻量目录 catalog.js，不再加载 12 份单元正文 */
+  const C = window.NPI_CATALOG || { order: [], units: {}, totals: {} };
+  const t = C.totals;
+  document.getElementById('h-w').textContent = t.words || 0;
+  document.getElementById('h-p').textContent = t.phrases || 0;
+  document.getElementById('s-words').textContent = t.words || 0;
+  document.getElementById('s-phrases').textContent = t.phrases || 0;
+  document.getElementById('s-units').textContent = t.units || 0;
+  document.getElementById('s-audio').textContent = t.audio || 0;
 
   const grid = document.getElementById('unit-grid');
-  grid.innerHTML = Object.keys(units).sort().map(id => {
-    const u = units[id];
-    const w = (u.words || []).length, p = (u.phrases || []).length;
+  grid.innerHTML = (C.order || []).map(id => {
+    const u = C.units[id];
     const label = id === '00' ? '导论' : 'Unità ' + (+id);
     return `<a class="unit-card" href="unit-${id}.html">
       <div class="uid">${label}</div>
       <div class="utitle">${NPI_esc(u.title)}</div>
       <div class="uzh">${NPI_esc(u.titleZh)}</div>
-      <div class="meta">${w} 词 · ${p} 句 →</div>
+      <div class="meta">${u.words} 词 · ${u.phrases} 句 →</div>
     </a>`;
   }).join('');
 })();

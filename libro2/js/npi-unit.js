@@ -96,7 +96,8 @@
   }
 
   function renderNav(u) {
-    const ids = Object.keys(window.NPI.units).sort();
+    /* 单元顺序取自轻量目录（单元页只加载本单元正文，不能依赖 window.NPI.units 的全量键） */
+    const ids = (window.NPI_CATALOG && window.NPI_CATALOG.order) || Object.keys(window.NPI.units || {}).sort();
     const i = ids.indexOf(UNIT);
     const prev = ids[i - 1], next = ids[i + 1];
     const nav = document.getElementById('unit-nav');

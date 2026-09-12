@@ -30,22 +30,59 @@ function NPI_load() {
 }
 
 /* ---------- 发音：优先播放 edge-tts 生成的 mp3 ---------- */
+/* 复用同一个 Audio 实例，避免每次点击都新建元素；已下载过的 mp3 命中 HTTP 缓存 / SW 缓存 */
 let NPI_currentAudio = null;
-function speak(text) {
-  if (!text) return;
-  if (NPI_currentAudio) { NPI_currentAudio.pause(); NPI_currentAudio = null; }
+function NPI_resolveSrc(text) {
   const map = window.NPI_AUDIO || {};
   let src = map[text];
   if (!src) {
     // 兜底：忽略大小写再找一次
-    const k = Object.keys(map).find((x) => x.toLowerCase() === text.toLowerCase());
+    const k = Object.keys(map).find((x) => x.toLowerCase() === String(text).toLowerCase());
     if (k) src = map[k];
   }
+  return src || '';
+}
+function speak(text) {
+  if (!text) return;
+  const src = NPI_resolveSrc(text);
   if (!src) { NPI_flashMissing(text); return; }
-  const a = new Audio(src);
-  NPI_currentAudio = a;
+  if (!NPI_currentAudio) NPI_currentAudio = new Audio();
+  const a = NPI_currentAudio;
+  a.pause();
+  try { a.currentTime = 0; } catch (e) { /* 尚未加载时忽略 */ }
+  a.src = src;
   a.play().catch(() => NPI_flashMissing(text));
 }
+
+/* ---------- 发音预取：鼠标停留 / 触摸时提前拉取，点击即响 ---------- */
+const NPI_prefetched = new Set();
+function NPI_prefetch(el) {
+  const t = el.getAttribute('data-spk');
+  if (!t || NPI_prefetched.has(t)) return;
+  NPI_prefetched.add(t);
+  const src = NPI_resolveSrc(t);
+  if (!src) return;
+  const link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.as = 'audio';
+  link.href = src;
+  document.head.appendChild(link);
+}
+(() => {
+  let timer = null;
+  let last = null;
+  document.addEventListener('mouseover', (e) => {
+    const el = e.target.closest && e.target.closest('[data-spk]');
+    if (!el || el === last) return;
+    last = el;
+    clearTimeout(timer);
+    timer = setTimeout(() => NPI_prefetch(el), 90);   // 停留 90ms 才预取，快速划过不触发
+  }, { passive: true });
+  document.addEventListener('touchstart', (e) => {
+    const el = e.target.closest && e.target.closest('[data-spk]');
+    if (el) NPI_prefetch(el);
+  }, { passive: true });
+})();
 function NPI_flashMissing(text) {
   let t = document.getElementById('npi-toast');
   if (!t) {
@@ -77,4 +114,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const href = a.getAttribute('href');
     if (href === here || (here === '' && href === 'index.html')) a.classList.add('active');
   });
+
+  /* ---------- 音频离线缓存：Service Worker 只接管 *.mp3，其它资源一律走网络 ---------- */
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => { /* 不支持或被禁用则静默降级 */ });
+    });
+  }
 });

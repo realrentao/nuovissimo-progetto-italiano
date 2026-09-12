@@ -352,3 +352,16 @@ body {
 @media (max-width: 420px) {
   .vocab-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ============================================================
+   渲染性能：长列表项延迟渲染。
+   content-visibility:auto 让视口外的条目跳过布局与绘制，
+   滚动长列表（词汇页 700+ 条、单元页词卡）明显更顺滑；
+   contain-intrinsic-size 的 auto 关键字会记住实测尺寸，避免滚动条抖动。
+   ============================================================ */
+.entry { content-visibility: auto; contain-intrinsic-size: auto 132px; }
+.vcard  { content-visibility: auto; contain-intrinsic-size: auto 150px; }
+
+/* 音频按钮 / 朗读元素不做延迟渲染，保证点击区域始终可交互 */
+.spk, .dlg-it, .entry .it, .entry .it-s { content-visibility: visible; }
