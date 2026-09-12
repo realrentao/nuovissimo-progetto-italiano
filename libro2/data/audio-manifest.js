@@ -1502,5 +1502,17 @@ Object.assign(window.NPI_AUDIO, {
 "Le bugie hanno le gambe lunghe.": "audio/1499_322b8e46.mp3",
 "Il buongiorno si vede dal mattino.": "audio/1500_66f49466.mp3",
 "Il mattino ha l'oro in bocca.": "audio/1501_74fc6437.mp3",
-"Il lupo perde il pelo ma non il vizio.": "audio/1502_452ec436.mp3"
+"Il lupo perde il pelo ma non il vizio.": "audio/1502_452ec436.mp3",
+"mausoleo": "audio/1511_5c0586aa.mp3",
+"negozi": "audio/1514_597e80b2.mp3",
+"secoli": "audio/1508_4528eb42.mp3",
+"shopping": "audio/1507_b2fe440c.mp3",
+"unità d'Italia": "audio/1509_17fd70c0.mp3",
+"aria pulita": "audio/1513_3d95505c.mp3",
+"sportello bancario": "audio/1506_4ff6d04e.mp3",
+"in forma": "audio/1512_1b198b17.mp3",
+"materie": "audio/1503_277d6f92.mp3",
+"barbari": "audio/1510_27cd5764.mp3",
+"banconote": "audio/1504_02d106bb.mp3",
+"sportello bancomat": "audio/1505_9c8de6a6.mp3"
 });
