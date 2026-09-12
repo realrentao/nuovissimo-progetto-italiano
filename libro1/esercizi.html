@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>练习 — NPI 1 意语学习站</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/npi-styles.css">
+</head>
+<body>
+<div class="scroll-progress"></div>
+<nav class="top-nav">
+  <a class="nav-logo" href="index.html">
+    <span class="flag"><i style="background:#008C45"></i><i style="background:#F4F5F0"></i><i style="background:#CD212A"></i></span>
+    NPI 1 · 意语学习站
+  </a>
+  <div class="nav-links">
+    <a href="index.html">首页</a>
+    <a href="vocabolario.html">词汇句型</a>
+    <a href="esercizi.html">练习</a>
+  </div>
+</nav>
+
+<main class="page-section">
+  <h2>✏️ 自动生成练习</h2>
+
+  <div class="filters" style="position:static">
+    <div class="search-row">
+      <select id="sel-unit" class="btn ghost" style="background:#fff"></select>
+      <select id="sel-mode" class="btn ghost" style="background:#fff"></select>
+      <select id="sel-num" class="btn ghost" style="background:#fff">
+        <option value="10">10 题</option>
+        <option value="20" selected>20 题</option>
+        <option value="30">30 题</option>
+        <option value="all">不限</option>
+      </select>
+      <button class="btn" id="btn-start">开始 / 重置</button>
+    </div>
+    <div class="chip-row">
+      <label class="chip" style="cursor:pointer"><input type="checkbox" id="chk-wrong" style="vertical-align:-1px"> 只练错题</label>
+      <span class="chip" id="btn-reset" style="cursor:pointer">清空统计</span>
+    </div>
+  </div>
+
+  <div class="scorebar" style="margin-top:18px">
+    <div><div class="n" id="n-asked">0</div><div class="l">累计答题</div></div>
+    <div><div class="n" id="n-correct">0</div><div class="l">答对</div></div>
+    <div><div class="n" id="n-acc">0%</div><div class="l">正确率</div></div>
+    <div><div class="n" id="n-streak">0</div><div class="l">当前连对</div></div>
+  </div>
+  <div class="progress-line"><i id="progress-fill"></i></div>
+  <div style="font-size:.82rem;color:#5D6D7E;margin-top:6px" id="progress-txt">本轮进度 0 / 0</div>
+
+  <div class="quiz-card" style="margin-top:16px">
+    <div class="q-meta">
+      <span class="q-type" id="q-type">题型</span>
+      <span id="q-idx"></span>
+    </div>
+    <div class="q-prompt" id="q-prompt"></div>
+    <div class="q-hint" id="q-hint"></div>
+    <div id="q-body"></div>
+    <div class="feedback" id="feedback"></div>
+    <div class="q-actions">
+      <button class="btn" id="btn-next" style="display:none">下一题 →</button>
+      <button class="btn ghost" id="btn-skip">跳过</button>
+    </div>
+  </div>
+
+  <p style="font-size:.86rem;color:#5D6D7E;max-width:760px;margin:18px auto 0">
+    · 题目由词库实时生成：选择题（意→中 / 中→意）、看中文拼写单词、例句补全。<br>
+    · 判定后即时显示正确答案、词性、音节与例句；统计与错题记录保存在浏览器本地（localStorage）。
+  </p>
+</main>
+
+<div class="nav-buttons">
+  <a href="vocabolario.html">← 词汇句型</a>
+  <a href="index.html">返回首页</a>
+</div>
+
+<footer class="site-footer brand-footer">
+  <span class="brand-logo" aria-label="涛子办事处">
+    <img src="assets/logo-piano.jpg" alt="涛子办事处" loading="lazy">
+  </span>
+  <span class="brand-name">涛子办事处</span>
+</footer>
+
+<script src="data/unit-00.js"></script>
+<script src="data/unit-01.js"></script>
+<script src="data/unit-02.js"></script>
+<script src="data/unit-03.js"></script>
+<script src="data/unit-04.js"></script>
+<script src="data/unit-05.js"></script>
+<script src="data/unit-06.js"></script>
+<script src="data/unit-07.js"></script>
+<script src="data/unit-08.js"></script>
+<script src="data/unit-09.js"></script>
+<script src="data/unit-10.js"></script>
+<script src="data/unit-11.js"></script>
+<script src="data/audio-manifest.js"></script>
+<script src="js/npi-core.js"></script>
+<script src="js/npi-quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,951 @@
+window.NPI = window.NPI || { units: {} };
+window.NPI.units["08"] = {
+  id: "08",
+  title: "Fare la spesa",
+  titleZh: "采购、买菜",
+  tema: "Fare la spesa al supermercato e nei negozi alimentari; esprimere quantità; esprimere gioia, rammarico e disappunto; offrire, accettare o rifiutare un aiuto; i pronomi diretti, il pronome partitivo ne e ce l'ho",
+  words: [
+    {
+      it: "spesa",
+      pos: "s.f.",
+      zh: "买菜；食品采购",
+      cat: "Shopping",
+      syll: "spé·sa",
+      ex: "Mamma manda sempre me a fare la spesa!",
+      exZh: "妈妈总是派我去买菜！",
+      note: "第121页 B1-b；fare la spesa = 采购食品、买菜（第118页标题即为此）"
+    },
+    {
+      it: "lista",
+      pos: "s.f.",
+      zh: "清单；单子",
+      cat: "Shopping",
+      syll: "lì·sta",
+      ex: "Allora, prendi la lista della spesa.",
+      exZh: "那么，你拿上购物清单。",
+      note: "第118页对话 A1；lista della spesa = 购物清单"
+    },
+    {
+      it: "supermercato",
+      pos: "s.m.",
+      zh: "超市",
+      cat: "Shopping",
+      syll: "su·per·mer·cà·to",
+      ex: "Non compro mai le uova al supermercato.",
+      exZh: "我从不在超市买鸡蛋。",
+      note: "第120页活动 8 例句；也见第126页「puoi andare al supermercato all'angolo?»"
+    },
+    {
+      it: "mela",
+      pos: "s.f.",
+      zh: "苹果",
+      cat: "Cibo",
+      syll: "mè·la",
+      ex: "lo sai che le mele rosse non mi piacciono, sono troppo dolci.",
+      exZh: "你知道我不喜欢红苹果，它们太甜了。",
+      note: "第118页；Gianna 更偏好青苹果 mele verdi，母亲则喜欢红的（第119页）"
+    },
+    {
+      it: "arancia",
+      pos: "s.f.",
+      zh: "橙子，橘子",
+      cat: "Cibo",
+      syll: "a·ràn·cia",
+      ex: "pere, banane... e le arance dove sono?",
+      exZh: "梨、香蕉……橙子在哪儿？",
+      note: "第119页活动 5；也出现在第117页图片词表"
+    },
+    {
+      it: "pera",
+      pos: "s.f.",
+      zh: "梨",
+      cat: "Cibo",
+      syll: "pé·ra",
+      ex: "Poi, frutta: pere, banane, mele rosse...",
+      exZh: "然后是水果：梨、香蕉、红苹果……",
+      note: "第118页对话 A1"
+    },
+    {
+      it: "banana",
+      pos: "s.f.",
+      zh: "香蕉",
+      cat: "Cibo",
+      syll: "ba·nà·na",
+      ex: "Poi... pere, banane... e le arance dove sono?",
+      exZh: "然后……梨、香蕉……橙子在哪儿？",
+      note: "第119页活动 5；复数 banane"
+    },
+    {
+      it: "yogurt",
+      pos: "s.m.",
+      zh: "酸奶",
+      cat: "Cibo",
+      syll: "yò·gurt",
+      ex: "Uno yogurt, per favore.",
+      exZh: "请给我一杯酸奶。",
+      note: "第117页图片词表与第127页 F1 配对练习均出现「uno yogurt」；原书无完整例句，此为常用短句"
+    },
+    {
+      it: "latte",
+      pos: "s.m.",
+      zh: "牛奶",
+      cat: "Cibo",
+      syll: "làt·te",
+      ex: "Che peccato! È finito il latte!",
+      exZh: "真遗憾！牛奶喝完了！",
+      note: "第121页 B1-a；也见第122页 C1「Sì, vorrei del latte fresco.」"
+    },
+    {
+      it: "cereale",
+      pos: "s.m.",
+      zh: "谷物；麦片",
+      cat: "Cibo",
+      syll: "ce·re·à·le",
+      ex: "Proviamo questi ai cereali? Hanno meno calorie e io sono a dieta.",
+      exZh: "我们试试这些谷物饼干好吗？它们热量少一些，而我在节食。",
+      note: "第118页；biscotti ai cereali = 谷物饼干"
+    },
+    {
+      it: "mozzarella",
+      pos: "s.f.",
+      zh: "马苏里拉奶酪",
+      cat: "Cibo",
+      syll: "moz·za·rèl·la",
+      ex: "Oh no! Abbiamo dimenticato la mozzarella!",
+      exZh: "噢不！我们忘了买马苏里拉奶酪！",
+      note: "第119页活动 5；第131页 Conosciamo l'Italia 专文介绍 Mozzarella di bufala campana"
+    },
+    {
+      it: "uovo",
+      pos: "s.m.",
+      zh: "鸡蛋",
+      cat: "Cibo",
+      syll: "uò·vo",
+      ex: "Non compro mai le uova al supermercato.",
+      exZh: "我从不在超市买鸡蛋。",
+      note: "第120页活动 8；单数 uovo（阳性），复数 le uova（阴性）。⚠️ 第119页活动 4 要求把代词 a-d 与 latte/uova/zucchero/pomodori 配对，但四句代词（la / lo / le / li）与该词表无法一一对应，疑为转录缺字，故此处不采用该练习作例句"
+    },
+    {
+      it: "zucchero",
+      pos: "s.m.",
+      zh: "糖，食糖",
+      cat: "Cibo",
+      syll: "zùc·che·ro",
+      ex: "Beh, la farina, lo zucchero...",
+      exZh: "嗯，面粉、糖……",
+      note: "第128页 G1 对话；第119页活动 4 词表亦含 zucchero"
+    },
+    {
+      it: "pomodoro",
+      pos: "s.m.",
+      zh: "番茄，西红柿",
+      cat: "Cibo",
+      syll: "po·mo·dò·ro",
+      ex: "Di pomodori quanti ne vuole, signora?",
+      exZh: "夫人，西红柿您要多少？",
+      note: "第122页 C2 练习第 2 题"
+    },
+    {
+      it: "olio",
+      pos: "s.m.",
+      zh: "油；食用油",
+      cat: "Cibo",
+      syll: "ò·lio",
+      ex: "Sì, ma ce n'è poco. Dobbiamo comprarlo.",
+      exZh: "有是有，但只剩一点了。我们得去买。",
+      note: "第128页 G1 对话（承上句「L'olio c'è?»）"
+    },
+    {
+      it: "farina",
+      pos: "s.f.",
+      zh: "面粉",
+      cat: "Cibo",
+      syll: "fa·rì·na",
+      ex: "No, aspetta. Manca pure la farina.",
+      exZh: "不，等等。还缺面粉。",
+      note: "第128页 G1 对话；后文提到「il pacco è quasi vuoto」"
+    },
+    {
+      it: "lievito",
+      pos: "s.m.",
+      zh: "酵母；发酵粉",
+      cat: "Cibo",
+      syll: "liè·vi·to",
+      ex: "il lievito ce l'hai, vero?",
+      exZh: "酵母你有吧？",
+      note: "第128页 G1 对话；后文「Basta una bustina」"
+    },
+    {
+      it: "carota",
+      pos: "s.f.",
+      zh: "胡萝卜",
+      cat: "Cibo",
+      syll: "ca·rò·ta",
+      ex: "Franco e Dario vogliono preparare una torta alle carote per una festa.",
+      exZh: "佛朗哥和达里奥想为一场聚会做一个胡萝卜蛋糕。",
+      note: "第128页 G 部分引导句；也见「Le carote le ho.」"
+    },
+    {
+      it: "pane",
+      pos: "s.m.",
+      zh: "面包",
+      cat: "Cibo",
+      syll: "pà·ne",
+      ex: "Vuole anche del pane, signora?",
+      exZh: "夫人，您也要些面包吗？",
+      note: "第122页 ne 表格例句；答句「Sì, ne vorrei un chilo.」"
+    },
+    {
+      it: "pacco",
+      pos: "s.m.",
+      zh: "包，袋（包装单位）",
+      cat: "Shopping",
+      syll: "pàc·co",
+      ex: "Quanti pacchi ne prendiamo?",
+      exZh: "我们要买几包？",
+      note: "第118页对话 A1；un pacco di pasta = 一包意面；第128页容器词表亦有 pacco"
+    },
+    {
+      it: "confezione",
+      pos: "s.f.",
+      zh: "盒；包装（一份商品）",
+      cat: "Shopping",
+      syll: "con·fe·ziò·ne",
+      ex: "Due confezioni, erano in offerta!",
+      exZh: "两盒，当时在促销！",
+      note: "第119页活动 5；第129页 H2 购物单亦用 confezioni 计饼干"
+    },
+    {
+      it: "bustina",
+      pos: "s.f.",
+      zh: "小袋，小包",
+      cat: "Shopping",
+      syll: "bu·stì·na",
+      ex: "Basta una bustina, no?",
+      exZh: "一小袋就够了，对吧？",
+      note: "第128页 G1 对话，指一小袋酵母"
+    },
+    {
+      it: "sacchetto",
+      pos: "s.m.",
+      zh: "小袋子；购物袋",
+      cat: "Shopping",
+      syll: "sac·chét·to",
+      ex: "Qui nei sacchetti non le vedo.",
+      exZh: "这些袋子里我没看到它们。",
+      note: "第119页活动 5；第129页有「Hai tu i nostri sacchetti?»"
+    },
+    {
+      it: "lattina",
+      pos: "s.f.",
+      zh: "易拉罐，罐",
+      cat: "Shopping",
+      syll: "lat·tì·na",
+      ex: "Una lattina di aranciata, per favore.",
+      exZh: "请给我一罐橙味汽水。",
+      note: "第128页活动 2「Abbinate i contenitori ai prodotti」，容器词表为 lattina | tubetto | vasetto | scatoletta | bottiglia | pacco；与 aranciata 的配对为依据该练习的合理推断，原书未给出答案句"
+    },
+    {
+      it: "etto",
+      pos: "s.m.",
+      zh: "百克（1 etto = 100 克；复数 etti）",
+      cat: "Shopping",
+      syll: "èt·to",
+      ex: "Vorrei due etti di prosciutto crudo.",
+      exZh: "我要两百克生火腿。",
+      note: "第122页脚注「un etto = 100 grammi」；第129页 H2 购物单写「Prosciutto crudo (2 etti)」"
+    },
+    {
+      it: "chilo",
+      pos: "s.m.",
+      zh: "公斤，千克",
+      cat: "Shopping",
+      syll: "chì·lo",
+      ex: "Sì, ne vorrei un chilo.",
+      exZh: "是的，我要一公斤。",
+      note: "第122页 ne 表格；也见第127页「due chili di mele」"
+    },
+    {
+      it: "litro",
+      pos: "s.m.",
+      zh: "升",
+      cat: "Shopping",
+      syll: "lì·tro",
+      ex: "Basta un litro?",
+      exZh: "一升够吗？",
+      note: "第122页 C1 对话；第129页 H2 购物单写「Latte (2 litri)」"
+    },
+    {
+      it: "pasticceria",
+      pos: "s.f.",
+      zh: "糕点店；西点铺",
+      cat: "Shopping",
+      syll: "pa·stic·ce·rì·a",
+      ex: "Li ho comprati proprio stamattina dalla nuova pasticceria in via Verdi.",
+      exZh: "我今天早上刚在威尔第街那家新开的糕点店买的。",
+      note: "第123页 D1 对话；也可指「糕点」这一类食品（第127页 F1 配对：i dolci → pasticceria）"
+    },
+    {
+      it: "fruttivendolo",
+      pos: "s.m.",
+      zh: "果蔬商；果蔬店",
+      cat: "Shopping",
+      syll: "frut·ti·vèn·do·lo",
+      ex: "Potete prendere due chili di mele dal fruttivendolo?",
+      exZh: "你们能在果蔬店买两公斤苹果吗？",
+      note: "第127页活动 7；第127页 F1 配对：un chilo di arance → fruttivendolo"
+    },
+    {
+      it: "panetteria",
+      pos: "s.f.",
+      zh: "面包店",
+      cat: "Shopping",
+      syll: "pa·net·te·rì·a",
+      ex: "Compro il pane in panetteria.",
+      exZh: "我在面包店买面包。",
+      note: "第127页 F1 配对：il pane → panetteria；例句为常用短句"
+    },
+    {
+      it: "fila",
+      pos: "s.f.",
+      zh: "队，队伍",
+      cat: "Shopping",
+      syll: "fì·la",
+      ex: "Oggi è sabato e c'è una fila lunghissima.",
+      exZh: "今天是周六，队伍排得特别长。",
+      note: "第118页对话 A1 末句"
+    },
+    {
+      it: "cassa",
+      pos: "s.f.",
+      zh: "收银台；付款处",
+      cat: "Shopping",
+      syll: "càs·sa",
+      ex: "E adesso subito alla cassa.",
+      exZh: "现在马上去收银台。",
+      note: "第118页对话 A1 末句"
+    },
+    {
+      it: "ingrediente",
+      pos: "s.m.",
+      zh: "原料，食材",
+      cat: "Cibo",
+      syll: "in·gre·dièn·te",
+      ex: "Ce li hai tutti gli ingredienti per fare la torta?",
+      exZh: "做蛋糕的原料你都齐了吗？",
+      note: "第128页 G1 首句"
+    },
+    {
+      it: "offerta",
+      pos: "s.f.",
+      zh: "特价；促销",
+      cat: "Shopping",
+      syll: "of·fèr·ta",
+      ex: "Due confezioni, erano in offerta!",
+      exZh: "两盒，当时在促销！",
+      note: "第119页活动 5；essere in offerta = 在打折/做促销；另见第134页（unità 9）「al centro commerciale ci sono delle offerte」"
+    },
+    {
+      it: "dieta",
+      pos: "s.f.",
+      zh: "节食；规定的饮食",
+      cat: "Salute",
+      syll: "diè·ta",
+      ex: "Hanno meno calorie e io sono a dieta.",
+      exZh: "它们热量少一些，而我在节食。",
+      note: "第118页；父亲回「Macché dieta, Gianna, stai benissimo così!»；essere a dieta = 正在节食"
+    },
+    {
+      it: "mercato",
+      pos: "s.m.",
+      zh: "市场，集市",
+      cat: "Shopping",
+      syll: "mer·cà·to",
+      ex: "Ecco cinque mercati storici in Italia da non perdere.",
+      exZh: "以下是意大利五个不容错过的历史市场。",
+      note: "第130页 Conosciamo l'Italia — Mercati storici d'Italia"
+    },
+    {
+      it: "comprare",
+      pos: "v.",
+      zh: "买，购买",
+      cat: "Shopping",
+      syll: "com·prà·re",
+      ex: "A tua madre piacciono e non li compriamo da un po' di tempo.",
+      exZh: "你妈妈喜欢，而且我们有一阵子没买了。",
+      note: "第118页对话 A1"
+    },
+    {
+      it: "mancare",
+      pos: "v.",
+      zh: "缺少；缺（某物）",
+      cat: "Grammatica",
+      syll: "man·cà·re",
+      ex: "Ah, quasi dimenticavo... manca anche la pasta.",
+      exZh: "啊，我差点忘了……还缺意面。",
+      note: "第118页；也见「Cos'altro ci manca?»「mi manca qualcosa」"
+    },
+    {
+      it: "servire",
+      pos: "v.",
+      zh: "需要；对……有用",
+      cat: "Grammatica",
+      syll: "ser·vì·re",
+      ex: "Poi che cos'altro serve?",
+      exZh: "那么还需要什么？",
+      note: "第128页 G1；也见「Allora ci servono soltanto lo zucchero e l'olio.」；与「服务」义不同，此处为「（被）需要」"
+    },
+    {
+      it: "preferire",
+      pos: "v.",
+      zh: "更喜欢，偏爱",
+      cat: "Shopping",
+      syll: "pre·fe·rì·re",
+      ex: "Prendiamo quelle verdi, le preferisco.",
+      exZh: "我们买青的吧，我更喜欢它们。",
+      note: "第118页对话 A1"
+    },
+    {
+      it: "convincere",
+      pos: "v.",
+      zh: "说服，使信服",
+      cat: "Comunicazione",
+      syll: "con·vìn·ce·re",
+      ex: "Mi ha convinto Gianna a comprare.",
+      exZh: "是詹娜说服我买的。",
+      note: "第119页活动 5 末段"
+    },
+    {
+      it: "integrale",
+      pos: "agg.",
+      zh: "全麦的；完整的",
+      cat: "Cibo",
+      syll: "in·te·grà·le",
+      ex: "Sempre fusilli! Prendiamo le penne integrali?",
+      exZh: "老是螺旋面！我们买全麦笔管面好吗？",
+      note: "第118页；pasta/penne integrali = 全麦意面（本单元「integrale」仅取「全麦的」义）"
+    },
+    {
+      it: "fresco",
+      pos: "agg.",
+      zh: "新鲜的；凉爽的",
+      cat: "Cibo",
+      syll: "fré·sco",
+      ex: "Sì, vorrei del latte fresco.",
+      exZh: "是的，我想要些鲜牛奶。",
+      note: "第122页 C1 对话"
+    },
+    {
+      it: "ne",
+      pos: "pron.",
+      zh: "（部分代词）其中一些；指代 di + 名词或数量",
+      cat: "Grammatica",
+      syll: "ne",
+      ex: "Quanti pacchi ne prendiamo?",
+      exZh: "我们要买几包？",
+      note: "第122页语法框「Il pronome partitivo ne」；例：Ne bevo almeno due. / ne vorrei un chilo / non ne conosco nessuna"
+    },
+    {
+      it: "ce l'ho",
+      pos: "loc.",
+      zh: "我有（它/它们）；我这儿有",
+      cat: "Grammatica",
+      syll: "ce l'ò",
+      ex: "Hai la lista della spesa? Sì, ce l'ho.",
+      exZh: "你有购物清单吗？有，我这儿有。",
+      note: "第129页 G2 表格；否定 No, non ce l'ho.；第三人称单/复数用 ce n'è / ce ne sono（如「Sì, ma ce n'è poco.」第128页）"
+    }
+  ],
+  phrases: [
+    {
+      it: "Ho dimenticato la lista a casa.",
+      pos: "frase",
+      zh: "我把购物清单忘在家里了。",
+      cat: "Shopping",
+      syll: "ho di·men·ti·cà·to la lì·sta a cà·sa",
+      note: "第118页对话 A1（Gianna 台词）"
+    },
+    {
+      it: "Quanti pacchi ne prendiamo?",
+      pos: "frase",
+      zh: "我们要买几包？",
+      cat: "Grammatica",
+      syll: "quàn·ti pàc·chi ne pre·dià·mo",
+      note: "第118页对话 A1；含部分代词 ne"
+    },
+    {
+      it: "Che bello!",
+      pos: "frase",
+      zh: "太好了！真棒！",
+      cat: "Comunicazione",
+      syll: "che bèl·lo",
+      note: "第121页 B2 表格「Esprimere gioia」栏；同栏还有 Che bella idea! / Che bella sorpresa! / Che fortuna!"
+    },
+    {
+      it: "Che peccato!",
+      pos: "frase",
+      zh: "真遗憾！真可惜！",
+      cat: "Comunicazione",
+      syll: "che pec·cà·to",
+      note: "第121页 B2 表格「Esprimere rammarico, disappunto」栏；第123页对话亦出现"
+    },
+    {
+      it: "Che rabbia!",
+      pos: "frase",
+      zh: "真气人！气死我了！",
+      cat: "Comunicazione",
+      syll: "che ràb·bia",
+      note: "第121页 B1-b「Che rabbia! Mamma manda sempre me a fare la spesa!»"
+    },
+    {
+      it: "Ti posso aiutare?",
+      pos: "frase",
+      zh: "我能帮你吗？",
+      cat: "Comunicazione",
+      syll: "ti pòs·so a·iu·tà·re",
+      note: "第125页 E2「Offrire collaborazione/aiuto」；敬称形式为 La posso aiutare?"
+    },
+    {
+      it: "Vuoi una mano?",
+      pos: "frase",
+      zh: "要帮忙吗？（直译：你要一只手吗？）",
+      cat: "Comunicazione",
+      syll: "vuòi u·na mà·no",
+      note: "第125页 E2 提供协助的表达；第132页自测亦出现"
+    },
+    {
+      it: "Hai bisogno di aiuto?",
+      pos: "frase",
+      zh: "你需要帮忙吗？",
+      cat: "Comunicazione",
+      syll: "hai bi·sò·gno di a·iù·to",
+      note: "第125页 E2；原书亦给出 Hai bisogno di aiuto / di qualcosa?"
+    },
+    {
+      it: "Grazie, faccio da solo.",
+      pos: "frase",
+      zh: "谢谢，我自己来。",
+      cat: "Comunicazione",
+      syll: "grà·zie, fàc·cio da sò·lo",
+      note: "第125页 E2「Rifiutare」栏；同栏还有 Grazie, non è niente. / No, grazie!"
+    },
+    {
+      it: "Buongiorno signora, desidera?",
+      pos: "frase",
+      zh: "您好，夫人，需要点什么？",
+      cat: "Shopping",
+      syll: "buon·giòr·no si·gnò·ra, de·sì·de·ra",
+      note: "第122页 C1 食品店对话（店主用语）"
+    },
+    {
+      it: "Quanto ne vuole?",
+      pos: "frase",
+      zh: "您要多少？",
+      cat: "Shopping",
+      syll: "quàn·to ne vuò·le",
+      note: "第122页 C1 对话「Buonissimo! Quanto ne vuole?»；敬称形式"
+    },
+    {
+      it: "Due etti. Anzi, no, ne prendo tre.",
+      pos: "frase",
+      zh: "两百克。不，等等，我要三百克。",
+      cat: "Shopping",
+      syll: "du·e èt·ti. àn·zi, no, ne prèn·do tre",
+      note: "第122页 C1 对话；un etto = 100 grammi"
+    },
+    {
+      it: "No, non ce l'ho.",
+      pos: "frase",
+      zh: "不，我没有。",
+      cat: "Grammatica",
+      syll: "no, non ce l'ò",
+      note: "第128页 G 部分标题与 G1 对话「Lo zucchero... No, non ce l'ho.」"
+    },
+    {
+      it: "Sì, ce l'ho.",
+      pos: "frase",
+      zh: "是的，我有。",
+      cat: "Grammatica",
+      syll: "sì, ce l'ò",
+      note: "第129页 G2 表格「Hai la lista della spesa? — Sì, ce l'ho.」"
+    },
+    {
+      it: "Ce n'è poco.",
+      pos: "frase",
+      zh: "只剩一点儿了。",
+      cat: "Grammatica",
+      syll: "ce n'è pò·co",
+      note: "第128页 G2 表格「L'olio c'è? — Sì, ma ce n'è poco.」；复数否定形式为 non ce ne sono più"
+    }
+  ],
+
+  sections: [
+    /* 1) 热身 / 单元目标 —— Per cominciare... */
+    {
+      id: "intro",
+      type: "intro",
+      title: "Per cominciare...",
+      goals: [
+        "a esprimere gioia, rammarico, disappunto",
+        "a offrire, accettare o rifiutare un aiuto",
+        "il lessico relativo alla spesa: negozi e prodotti",
+        "i pronomi diretti (nei tempi composti e con i verbi modali)",
+        "il pronome partitivo ne",
+        "ce l'ho, ce n'è",
+        "quali sono i prodotti tipici e i mercati storici italiani"
+      ],
+      preview: [
+        { it: "spesa", zh: "采购，买菜" },
+        { it: "supermercato", zh: "超市" },
+        { it: "lista", zh: "清单" },
+        { it: "latte", zh: "牛奶" },
+        { it: "mele", zh: "苹果" },
+        { it: "pane", zh: "面包" }
+      ]
+    },
+
+    /* 2) A 对话 —— Al supermercato (Audio 40) */
+    {
+      id: "A",
+      type: "dialogue",
+      title: "Al supermercato",
+      audio: "Audio 40",
+      lines: [
+        { who: "padre",  it: "Allora, prendi la lista della spesa.", zh: "那，你拿着购物清单。" },
+        { who: "Gianna", it: "Un momento... non la trovo.", zh: "等一下……我找不到它。" },
+        { who: "padre",  it: "Non mi dire che...", zh: "别告诉我……" },
+        { who: "Gianna", it: "Oh, no... ho dimenticato la lista a casa... Tranquillo, ricordo che cosa dobbiamo comprare.", zh: "噢，不……我把清单忘在家里了……放心，我记得我们要买什么。" },
+        { who: "padre",  it: "Sei sicura?", zh: "你确定吗？" },
+        { who: "Gianna", it: "Certo, papà! Allora: caffè, Parmigiano, frutta...", zh: "当然，爸爸！那么：咖啡、帕尔马干酪、水果……" },
+        { who: "padre",  it: "Bene, io prendo il caffè. Prendi tu il Parmigiano? È lì, in fondo.", zh: "好，我来拿咖啡。你拿帕尔马干酪吗？它在那边，最里头。" },
+        { who: "Gianna", it: "Hmm... niente Parmigiano, hanno solo Grana Padano. Lo prendiamo, no?", zh: "嗯……没有帕尔马干酪，只有格兰纳·帕达诺。我们买这个，好吗？" },
+        { who: "padre",  it: "Per me è uguale, anzi, costa di meno. Poi, frutta: pere, banane, mele rosse...", zh: "对我来说都一样，而且它更便宜。然后，水果：梨、香蕉、红苹果……" },
+        { who: "Gianna", it: "Eh no... lo sai che le mele rosse non mi piacciono, sono troppo dolci. Prendiamo quelle verdi, le preferisco.", zh: "哎不……你知道我不喜欢红苹果，它们太甜了。我们买青的吧，我更喜欢那些。" },
+        { who: "padre",  it: "D'accordo. Cos'altro ci manca?", zh: "好吧。还缺什么？" },
+        { who: "Gianna", it: "Hmm... ah sì, i biscotti per la colazione. Proviamo questi ai cereali? Hanno meno calorie e io sono a dieta.", zh: "嗯……啊对，早餐饼干。我们试试这些谷物饼干好吗？它们热量更少，而且我在节食。" },
+        { who: "padre",  it: "Macché dieta, Gianna, stai benissimo così! Comunque, prendiamo anche questi al limone? A tua madre piacciono e non li compriamo da un po' di tempo.", zh: "什么节食，Gianna，你这样就很好了！不过，我们也买这些柠檬味的吗？你妈妈喜欢，而且我们有一阵子没买了。" },
+        { who: "Gianna", it: "Bene! Ah, quasi dimenticavo... manca anche la pasta. Eccola qui. Quanti pacchi ne prendiamo?", zh: "好！啊，我差点忘了……还缺意面。在这儿呢。我们要买几包？" },
+        { who: "padre",  it: "Tre, due di spaghetti e uno di fusilli.", zh: "三包，两包螺旋面，一包笔管面。" },
+        { who: "Gianna", it: "Sempre fusilli! Prendiamo le penne integrali?", zh: "又是螺旋面！我们买全麦笔管面好吗？" },
+        { who: "padre",  it: "Ok... penne integrali. Contenta? E adesso subito alla cassa. Oggi è sabato e c'è una fila lunghissima.", zh: "好……全麦笔管面。满意了？现在马上去收银台。今天是周六，队伍排得特别长。" }
+      ]
+    },
+
+    /* 3) 语法 —— I pronomi diretti (p. 119-120) */
+    {
+      id: "gram1",
+      type: "grammar",
+      title: "I pronomi diretti",
+      blocks: [
+        {
+          kind: "table",
+          title: "I pronomi diretti (forma e significato)",
+          head: ["pronome", "esempio", "significato"],
+          rows: [
+            ["mi", "ha convinto tua sorella", "(ha convinto me)"],
+            ["ti", "ascolto con attenzione", "(ascolto te)"],
+            ["lo", "troviamo simpatico", "(troviamo lui)"],
+            ["la", "conosco bene", "(conosco lei)"],
+            ["La", "ringrazio", "(ringrazio Lei)"],
+            ["ci", "accompagna a casa", "(accompagna noi)"],
+            ["vi", "prego di non fumare", "(prego voi)"],
+            ["li", "chiamo io Carlo e Daniele", "(chiamo loro)"],
+            ["le", "rivediamo la prossima settimana", "(rivediamo loro)"]
+          ]
+        },
+        {
+          kind: "text",
+          title: "Regola",
+          text: "Il pronome diretto si mette prima del verbo (es. Non le compro mai al supermercato.). Con i tempi composti il participio passato concorda in genere e numero con il pronome (es. l'ho vista, li ho comprati)."
+        }
+      ]
+    },
+
+    /* 4) B 表达情绪 —— Che bello! (gioia / rammarico) */
+    {
+      id: "B",
+      type: "grammar",
+      title: "Che bello!",
+      note: "原书 p.120-121 表格，空格为原书填空练习（非臆造答案）。",
+      blocks: [
+        {
+          kind: "table",
+          title: "Esprimere gioia / Esprimere rammarico, disappunto",
+          head: ["Esprimere gioia", "Esprimere rammarico, disappunto"],
+          rows: [
+            ["Che bello!", "Peccato!"],
+            ["Che bella idea!", ""],
+            ["", "Mannaggia!"],
+            ["Che bella sorpresa!", ""],
+            ["", "Che brutta notizia!"],
+            ["Che fortuna!", ""]
+          ]
+        }
+      ]
+    },
+
+    /* 5) C 对话 —— Quanto ne vuole? (negozio di alimentari) */
+    {
+      id: "C",
+      type: "dialogue",
+      title: "Quanto ne vuole?",
+      note: "对话顺序由原书 p.122 «mettere in ordine il dialogo» 练习还原（原书给出打乱的台词，此处按自然语序排列）。",
+      lines: [
+        { who: "cliente",    it: "Buongiorno. Vorrei del prosciutto crudo. È buono?", zh: "您好。我想要点生火腿。好吃吗？" },
+        { who: "negoziante", it: "Buongiorno signora, desidera?", zh: "您好，夫人，您要点什么？" },
+        { who: "cliente",    it: "Sì, vorrei del latte fresco.", zh: "是的，我想要点鲜牛奶。" },
+        { who: "negoziante", it: "Buonissimo! Quanto ne vuole?", zh: "太好了！您要多少？" },
+        { who: "cliente",    it: "Due etti. Anzi, no, ne prendo tre.", zh: "两百克。不，等等，我要三百克。" },
+        { who: "negoziante", it: "Basta un litro?", zh: "一升够吗？" },
+        { who: "cliente",    it: "No, ne prendo due.", zh: "不，我要两升。" },
+        { who: "negoziante", it: "Ecco a lei. Desidera altro?", zh: "给您。还要别的吗？" }
+      ],
+      blocks: [
+        {
+          kind: "quote",
+          title: "Il pronome partitivo ne",
+          lines: [
+            "Quanti caffè bevi al giorno? • Ne bevo almeno due.",
+            "Vuole anche del pane, signora? • Sì, ne vorrei un chilo.",
+            "Hai bevuto molto vino ieri? • No, ne ho bevuto solo un bicchiere.",
+            "Conosci quelle ragazze? • No, non ne conosco nessuna.",
+            "Attenzione: Conosci gli amici di Alberto? • Sì, li conosco tutti."
+          ]
+        }
+      ]
+    },
+
+    /* 6) D 对话 —— Dove li hai comprati? (Marta / Giulia) + 近过去时代词 */
+    {
+      id: "D",
+      type: "dialogue",
+      title: "Dove li hai comprati?",
+      lines: [
+        { who: "Marta",  it: "Questi dolci sono davvero buoni! Dove li hai comprati?", zh: "这些甜点真好吃！你在哪儿买的？" },
+        { who: "Giulia", it: "Li ho comprati proprio stamattina dalla nuova pasticceria in via Verdi.", zh: "我今天早上刚在威尔第街那家新开的糕点店买的。" },
+        { who: "Marta",  it: "Ah sì, l'ho vista ieri mentre tornavo dal supermercato. Ha anche delle torte molto buone alla frutta, mi pare.", zh: "啊对，我昨天从超市回来时看到过它。它好像还有很不错的水果蛋糕。" },
+        { who: "Giulia", it: "Sì, è vero, sembrano buone ma purtroppo non le ho ancora provate! Alessia, però, mi ha detto che ne ha ordinata una per la festa di Fabrizio, la prossima settimana... ma che c'è?", zh: "是的，没错，看起来不错，但可惜我还没尝过！不过 Alessia 跟我说她为 Fabrizio 下周的派对订了一个……怎么了？" },
+        { who: "Marta",  it: "Niente... È che Alessia non mi ha invitata alla festa, mentre io l'anno scorso l'ho invitata al mio compleanno.", zh: "没什么……只是 Alessia 没邀请我参加派对，而我去年却邀请了她来我的生日会。" },
+        { who: "Giulia", it: "Davvero?! Comunque non sei l'unica, sai. Ricordi Dino, il cugino di Fabrizio? Non l'hanno invitato perché hanno litigato.", zh: "真的吗？！不过你不是唯一一个，你知道的。记得 Dino 吗，Fabrizio 的表兄？他们没邀请他，因为他们吵架了。" },
+        { who: "Marta",  it: "Che peccato! Secondo me, Dino è una persona simpatica. L'ho conosciuto proprio al matrimonio di Alessia e Fabrizio un anno fa.", zh: "真遗憾！我觉得 Dino 是个讨人喜欢的人。我正是一年前在 Alessia 和 Fabrizio 的婚礼上认识他的。" }
+      ],
+      blocks: [
+        {
+          kind: "table",
+          title: "I pronomi diretti nei tempi composti (concordanza participio)",
+          head: ["oggetto", "forma", "contesto"],
+          rows: [
+            ["Dino", "l'ho conosciuto", "al matrimonio di Alessia e Fabrizio."],
+            ["la pasticceria", "l'ho vista", "ieri mentre tornavo dal supermercato."],
+            ["i dolci", "li ho comprati", "stamattina in pasticceria."],
+            ["le torte", "le ho provate", "e sono buone."]
+          ]
+        },
+        {
+          kind: "table",
+          title: "Con il partitivo ne (tempi composti)",
+          head: ["di...", "forma", "quantità"],
+          rows: [
+            ["Di biscotti", "ne ho preso", "un pacco."],
+            ["Di torta alla frutta", "ne ha ordinata", "una per la festa di Fabrizio."],
+            ["Di spaghetti", "ne ho cucinati", "due chili."],
+            ["Di mele", "ne ho mangiate", "poche."]
+          ]
+        },
+        {
+          kind: "text",
+          title: "Attenzione",
+          text: "Signor Pieri, L'ho chiamata ieri sera. (forma di cortesia: L' + participio in -a)"
+        }
+      ]
+    },
+
+    /* 7) E 对话 —— Ti posso aiutare? (nonna / Stefania) + 提供帮助表达 + 情态动词代词 */
+    {
+      id: "E",
+      type: "dialogue",
+      title: "Ti posso aiutare?",
+      lines: [
+        { who: "nonna",    it: "Accidenti, è finito il caffè! Stefania, per favore, puoi andare al supermercato all'angolo?", zh: "哎呀，咖啡喝完了！Stefania，拜托，你能去街角那家超市吗？" },
+        { who: "Stefania", it: "Nonna, mi dispiace, ma ora non posso proprio aiutarti! Sono occupata con la ricerca di storia. La devo assolutamente finire oggi.", zh: "奶奶，抱歉，但我现在真的没法帮你！我在忙着写历史作业。我今天必须把它写完。" },
+        { who: "nonna",    it: "Dai, ci vogliono cinque minuti.", zh: "行了，只要五分钟。" },
+        { who: "Stefania", it: "E Mario? Non può andarci lui?", zh: "那 Mario 呢？他不能去吗？" },
+        { who: "nonna",    it: "Mario non è ancora tornato, il martedì esce più tardi da scuola.", zh: "Mario 还没回来，他周二放学比较晚。" },
+        { who: "Stefania", it: "Ah, già. Ma hai bisogno del caffè proprio adesso? Più tardi devo uscire, non lo posso comprare dopo?", zh: "啊，对。但你现在就必须用咖啡吗？我晚点要出门，不能之后买吗？" },
+        { who: "nonna",    it: "No, perché fra un po' arriva la signora Marini, non posso andarci io!", zh: "不行，因为过一会儿 Marini 夫人要来，我不能去！" },
+        { who: "Stefania", it: "Ah, non lo sapevo. D'accordo, nonna! Quanto ne devo comprare?", zh: "啊，我不知道。好吧，奶奶！我要买多少？" },
+        { who: "nonna",    it: "Due pacchi vanno bene.", zh: "两包就行。" },
+        { who: "Stefania", it: "Ok, ci vado subito.", zh: "好，我马上去。" },
+        { who: "nonna",    it: "Grazie, tesoro.", zh: "谢谢，宝贝。" }
+      ],
+      blocks: [
+        {
+          kind: "quote",
+          title: "Offrire / Accettare / Rifiutare un aiuto",
+          lines: [
+            "Offrire collaborazione/aiuto:",
+            "Ti posso aiutare? / Vuoi una mano? / (Come) posso esser d'aiuto?",
+            "Hai bisogno di aiuto / di qualcosa? / Posso fare qualcosa (per te/per Lei)? / La posso aiutare?",
+            "Accettare: Grazie, sei molto gentile! / Come no?! / Volentieri! / La ringrazio tanto!",
+            "Rifiutare: Grazie, non è niente. / No, grazie! / Grazie, faccio da solo."
+          ]
+        },
+        {
+          kind: "table",
+          title: "I pronomi diretti con i verbi modali",
+          head: ["pronome prima del verbo", "pronome prima dell'infinito"],
+          rows: [
+            ["Mi puoi portare a casa?", "Puoi portarmi a casa?"],
+            ["Ora non ti posso proprio aiutare.", "Non ti posso proprio aiutare."],
+            ["Lo posso comprare dopo?", "Non posso comprarlo dopo?"],
+            ["La devi assolutamente finire oggi.", "Devi assolutamente finirla oggi."],
+            ["La posso aiutare?", "Posso aiutarla?"],
+            ["Ci vogliono vedere.", "Vogliono vederci."],
+            ["Non vi possono incontrare.", "Non possono incontrarvi."],
+            ["Li/Le devo chiamare subito.", "Devo chiamarli/le subito."],
+            ["Quanto ne devo comprare? (di caffè)", "Quanto devo comprarne?"]
+          ]
+        }
+      ]
+    },
+
+    /* 8) F 词汇 —— Vocabolario (prodotti↔negozi, contenitori↔prodotti) */
+    {
+      id: "F",
+      type: "vocab",
+      title: "Vocabolario",
+      blocks: [
+        {
+          kind: "table",
+          title: "Dove compriamo? Prodotti e negozi",
+          head: ["Prodotto", "Negozio"],
+          rows: [
+            ["un dizionario", "libreria"],
+            ["un mazzo di rose", "fioraio"],
+            ["uno yogurt", "supermercato"],
+            ["i dolci", "pasticceria"],
+            ["una medicina", "farmacia"],
+            ["un chilo di arance", "fruttivendolo"],
+            ["il pane", "panetteria"],
+            ["il pesce", "pescivendolo"]
+          ]
+        },
+        {
+          kind: "table",
+          title: "Contenitori e prodotti",
+          head: ["Contenitore", "Prodotto"],
+          rows: [
+            ["lattina", "aranciata"],
+            ["tubetto", "dentifricio"],
+            ["vasetto", "marmellata"],
+            ["scatoletta", "tonno"],
+            ["bottiglia", "acqua"],
+            ["pacco", "spaghetti"]
+          ]
+        },
+        {
+          kind: "text",
+          title: "Nota",
+          text: "第二张表为原书 p.128 活动 2 «Abbinate i contenitori ai prodotti» 的常规搭配（lattina/tubetto/vasetto/scatoletta/bottiglia/pacco ↔ aranciata/dentifricio/marmellata/tonno/acqua/spaghetti）。"
+        }
+      ]
+    },
+
+    /* 9) G 对话 —— No, non ce l'ho! (Franco / Dario) + ce l'ho / ce n'è */
+    {
+      id: "G",
+      type: "dialogue",
+      title: "No, non ce l'ho!",
+      lines: [
+        { who: "Franco", it: "Ce li hai tutti gli ingredienti per fare la torta?", zh: "做蛋糕的原料你都齐了吗？" },
+        { who: "Dario",  it: "Vediamo... Le carote le ho. Poi che cos'altro serve?", zh: "看看……胡萝卜我有。还需要什么？" },
+        { who: "Franco", it: "Beh, la farina, lo zucchero...", zh: "嗯，面粉、糖……" },
+        { who: "Dario",  it: "Lo zucchero... No, non ce l'ho. La farina, invece, sì. L'ho presa due giorni fa.", zh: "糖……不，我没有。面粉倒是有。我两天前买的。" },
+        { who: "Franco", it: "Perfetto... il lievito ce l'hai, vero?", zh: "太好了……酵母你有吧？" },
+        { who: "Dario",  it: "Sì, ce n'è... Eccolo! Basta una bustina, no?", zh: "有，还有一点……在这儿！一小袋就够了，对吧？" },
+        { who: "Franco", it: "Sì, va bene. L'olio c'è?", zh: "好，行。油呢？" },
+        { who: "Dario",  it: "Sì, ma ce n'è poco. Dobbiamo comprarlo.", zh: "有，但只剩一点了。我们得去买。" },
+        { who: "Franco", it: "Allora ci servono soltanto lo zucchero e l'olio.", zh: "那我们只需要买糖和油。" },
+        { who: "Dario",  it: "No, aspetta. Manca pure la farina.", zh: "不，等等。还缺面粉。" },
+        { who: "Franco", it: "Ma come?! Non avevi detto che ce l'avevi?", zh: "怎么回事？！你不是说过你有吗？" },
+        { who: "Dario",  it: "È vero, ma il pacco è quasi vuoto. L'avrà usata sicuramente mia sorella ieri per fare i biscotti.", zh: "是有，但那袋几乎空了。肯定是我妹妹昨天做饼干用掉了。" },
+        { who: "Franco", it: "Ho capito, controlliamo di nuovo se abbiamo tutti gli ingredienti. Non mi va di andare due volte al supermercato!", zh: "我懂了，我们再确认一下原料是不是都齐了。我可不想跑两趟超市！" }
+      ],
+      blocks: [
+        {
+          kind: "table",
+          title: "ce l'ho / ce l'hai ...",
+          head: ["domanda", "risposta"],
+          rows: [
+            ["Hai lo zucchero?", "No, non ce l'ho."],
+            ["Hai la lista della spesa?", "Sì, ce l'ho."],
+            ["Hai tu i nostri sacchetti?", "Sì, ce li ho io."],
+            ["Hai le carote per la torta?", "Le carote ce le ho."]
+          ]
+        },
+        {
+          kind: "table",
+          title: "Ma: ce n'è / ce ne sono",
+          head: ["domanda", "risposta"],
+          rows: [
+            ["L'olio c'è?", "Sì, ma ce n'è poco."],
+            ["Ci sono abbastanza olive verdi?", "No, non ce ne sono più."]
+          ]
+        }
+      ]
+    },
+
+    /* 10) H 能力 / 练习 —— Abilità */
+    {
+      id: "H",
+      type: "exercise",
+      title: "Abilità",
+      items: [
+        "1. Ascolto (Audio 43) — Quaderno degli esercizi (p. 90).",
+        "2. Situazioni: a) A e B vanno al supermercato e fanno la lista della spesa, indicando confezione e quantità; b) A va in un negozio di alimentari, B è il negoziante (espressioni utili: prego signora/e..., desidera..., vorrei anche...).",
+        "3. Scriviamo: scrivi una breve storia cominciando con «Quel giorno al supermercato è successo qualcosa di strano/insolito...»."
+      ]
+    },
+
+    /* 11) 文化板块 —— Conosciamo l'Italia */
+    {
+      id: "it",
+      type: "culture",
+      title: "Conosciamo l'Italia",
+      body: "本单元文化板块介绍意大利的历史市场（Mercati storici d'Italia）与典型 DOP 食品（Prodotti tipici italiani）。意大利有五个不容错过的历史市场，可买到特色食材与日用品；另有逾 150 种获欧盟 DOP 认证的典型食品，其中最知名的三种为帕尔马干酪、帕尔马火腿与坎帕尼亚水牛奶酪。",
+      table: [
+        {
+          head: ["Mercato", "Città", "Specialità"],
+          rows: [
+            ["Mercato orientale", "Genova", "olio, basilico, acciughe, erbe aromatiche"],
+            ["Ballarò", "Palermo", "frutta, verdura, pesce, carne"],
+            ["Porta Palazzo", "Torino", "uno dei mercati all'aperto più grandi d'Europa"],
+            ["Rialto", "Venezia", "frutta, verdura, pesce"],
+            ["Mercato Centrale", "Livorno", "generi alimentari freschi tutti i giorni"]
+          ]
+        },
+        {
+          head: ["Prodotto tipico DOP", "Caratteristica"],
+          rows: [
+            ["Parmigiano Reggiano", "il re dei formaggi; nasce nella pianura padana (Nord Italia)"],
+            ["Prosciutto di Parma", "sapore dolce; stagionatura naturale 14-24 mesi"],
+            ["Mozzarella di bufala campana", "ingrediente base della pizza; dieta mediterranea"]
+          ]
+        }
+      ]
+    },
+
+    /* 12) 自测 —— AUTOVALUTAZIONE */
+    {
+      id: "es",
+      type: "exercise",
+      title: "Che cosa hai imparato nelle unità 7 e 8?",
+      items: [
+        "1. Sai...? Abbina le due colonne. — esprimere rammarico / offrire aiuto / esprimere disaccordo / rifiutare l'aiuto / esprimere accordo ↔ a. Vuoi una mano?  b. Grazie, ma faccio da solo.  c. Accidenti! Ma perché proprio oggi?  d. Hai ragione, è colpa mia.  e. Mah, non credo.",
+        "2. Abbina le frasi. Attenzione: c'è una risposta in più! — 1. Quanto ne vuole?  2. Ma tu lo sapevi già?  3. Quale vuoi?  4. Posso essere d'aiuto?  5. Niente secondo? ↔ a. Veramente l'ho appena saputo.  b. No, meglio un contorno.  c. Due etti, grazie.  d. Li voglio tutti e due.  e. Accidenti!  f. Grazie, molto gentile.",
+        "3. Completa. 1. Quanti etti ci vogliono per fare mezzo chilo? ______  2. Due negozi che non vendono alimenti: ______  3. L'imperfetto di essere (prima persona plurale): ______  4. Il singolare del pronome diretto ci: ______  5. Il plurale di «l'ho vista»: ______",
+        "4. In ogni negozio trova il prodotto estraneo. 1. negozio di alimentari: latte | prosciutto | zucchero | fiori  2. farmacia: medicine | acqua minerale | dentifricio | shampoo  3. macellaio: pollo | pesce | maiale | bistecche  4. fruttivendolo: formaggio | banane | arance | mele"
+      ]
+    }
+  ]
+};

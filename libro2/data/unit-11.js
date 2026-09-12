@@ -1,0 +1,855 @@
+window.NPI = window.NPI || { units: {} };
+window.NPI.units["11"] = {
+  id: "11",
+  title: "Che bello leggere!",
+  titleZh: "阅读真美好！",
+  tema: "Libri, lettura e letteratura italiana",
+  words: [
+    {
+      it: "leggere",
+      pos: "v.",
+      zh: "阅读",
+      cat: "Altro",
+      syll: "lèg·ge·re",
+      ex: "Gianna ha chiesto a Lorenzo di leggere l'oroscopo.",
+      exZh: "Gianna 让 Lorenzo 读星座运程。",
+      note: "p167 活动 3"
+    },
+    {
+      it: "libro",
+      pos: "s.m.",
+      zh: "书",
+      cat: "Altro",
+      syll: "lì·bro",
+      ex: "A mio padre ho preso un libro.",
+      exZh: "我给我爸爸买了一本书。",
+      note: "p169 对话 A3"
+    },
+    {
+      it: "lettore",
+      pos: "s.m.",
+      zh: "读者（阴性 lettrice）",
+      cat: "Altro",
+      syll: "let·tò·re",
+      ex: "Gli italiani storicamente sono poco lettori.",
+      exZh: "意大利人历史上很少读书。",
+      note: "p177 E3；常用复数 lettori"
+    },
+    {
+      it: "autore",
+      pos: "s.m.",
+      zh: "作者（阴性 autrice）",
+      cat: "Altro",
+      syll: "au·tò·re",
+      ex: "L'autrice mostra i traumi che la guerra lascia.",
+      exZh: "女作者展示了战争留下的创伤。",
+      note: "p173 C（La Storia）"
+    },
+    {
+      it: "scrittore",
+      pos: "s.m.",
+      zh: "作家（阴性 scrittrice）",
+      cat: "Altro",
+      syll: "scrit·tò·re",
+      ex: "Lo scrittore, Pier Paolo Pasolini, narra le vicende.",
+      exZh: "作家皮埃尔·保罗·帕索里尼讲述这些故事。",
+      note: "p173 C（Ragazzi di vita）"
+    },
+    {
+      it: "editore",
+      pos: "s.m.",
+      zh: "出版商；出版社（阴性 editrice）",
+      cat: "Altro",
+      syll: "e·di·tò·re",
+      ex: "Le grandi case editrici spesso scelgono di pubblicare cose.",
+      exZh: "大出版社常常选择出版某些作品。",
+      note: "p177 E3；复数编辑 editrici"
+    },
+    {
+      it: "libraio",
+      pos: "s.m.",
+      zh: "书商；书店店主（阴性 libraia）",
+      cat: "Altro",
+      syll: "li·brà·io",
+      ex: "Vai in una libreria italiana e chiedi aiuto al libraio.",
+      exZh: "你去一家意大利书店，向书商求助。",
+      note: "p179 F3"
+    },
+    {
+      it: "libreria",
+      pos: "s.f.",
+      zh: "书店；书架",
+      cat: "Altro",
+      syll: "li·bre·rì·a",
+      ex: "Preferite andare in libreria o acquistare online?",
+      exZh: "你们更喜欢去书店还是网上购买？",
+      note: "p177 E1"
+    },
+    {
+      it: "pubblicare",
+      pos: "v.",
+      zh: "出版；发表",
+      cat: "Altro",
+      syll: "pub·bli·cà·re",
+      ex: "Pubblicato nel 1974, racconta la storia di Ida.",
+      exZh: "出版于 1974 年，讲述 Ida 的故事。",
+      note: "p173 C（La Storia）"
+    },
+    {
+      it: "stampare",
+      pos: "v.",
+      zh: "印刷",
+      cat: "Altro",
+      syll: "stam·pà·re",
+      ex: "Il tipografo stampa il libro.",
+      exZh: "排版印刷工印刷这本书。",
+      note: "词汇表 F, p179"
+    },
+    {
+      it: "presentare",
+      pos: "v.",
+      zh: "介绍；推介（书）",
+      cat: "Altro",
+      syll: "pre·sen·tà·re",
+      ex: "L'autore va in libreria a presentare il libro.",
+      exZh: "作者去书店推介这本书。",
+      note: "词汇表 F, p179"
+    },
+    {
+      it: "copia",
+      pos: "s.f.",
+      zh: "册；副本（常复数 copie）",
+      cat: "Altro",
+      syll: "cò·pia",
+      ex: "Le copie del libro sono finite.",
+      exZh: "这本书的册数卖完了。",
+      note: "词汇表 F, p179"
+    },
+    {
+      it: "titolo",
+      pos: "s.m.",
+      zh: "书名；标题",
+      cat: "Altro",
+      syll: "tì·to·lo",
+      ex: "Il titolo del romanzo è 'Il ladro di merendine'.",
+      exZh: "小说的书名是《窃食贼》。",
+      note: "p169 A3"
+    },
+    {
+      it: "copertina",
+      pos: "s.f.",
+      zh: "封面",
+      cat: "Altro",
+      syll: "co·per·tì·na",
+      ex: "La copertina del libro è bellissima.",
+      exZh: "书的封面非常漂亮。",
+      note: "词汇表 F, p179"
+    },
+    {
+      it: "personaggio",
+      pos: "s.m.",
+      zh: "人物；角色",
+      cat: "Altro",
+      syll: "per·so·nàg·gio",
+      ex: "I personaggi di Pirandello cercano di definire la loro identità.",
+      exZh: "皮兰德娄笔下的人物试图定义自己的身份。",
+      note: "p175 D2"
+    },
+    {
+      it: "protagonista",
+      pos: "s.m.",
+      zh: "主角；主人公（男女同形）",
+      cat: "Altro",
+      syll: "pro·ta·go·nì·sta",
+      ex: "Il protagonista è il commissario Montalbano.",
+      exZh: "主角是警长蒙塔尔巴诺。",
+      note: "p169 A3"
+    },
+    {
+      it: "romanzo",
+      pos: "s.m.",
+      zh: "小说",
+      cat: "Altro",
+      syll: "ro·màn·zo",
+      ex: "I promessi sposi è uno dei primi grandi romanzi in lingua italiana.",
+      exZh: "《约婚夫妇》是最早用意大利语写成的伟大小说之一。",
+      note: "p179 Classici"
+    },
+    {
+      it: "giallo",
+      pos: "s.m.",
+      zh: "侦探小说；黄色",
+      cat: "Altro",
+      syll: "giàl·lo",
+      ex: "Il nome della rosa è un giallo in cui il protagonista indaga su delitti.",
+      exZh: "《玫瑰的名字》是一部侦探小说，主角调查一系列谋杀案。",
+      note: "p180 Classici（多义：此处指侦探小说）"
+    },
+    {
+      it: "poema",
+      pos: "s.m.",
+      zh: "长诗；史诗",
+      cat: "Altro",
+      syll: "pò·e·ma",
+      ex: "La Divina Commedia è un poema diviso in tre cantiche.",
+      exZh: "《神曲》是一首分为三部（歌）的长诗。",
+      note: "p179 Classici"
+    },
+    {
+      it: "opera",
+      pos: "s.f.",
+      zh: "作品；歌剧；劳作",
+      cat: "Altro",
+      syll: "ò·pe·ra",
+      ex: "Ragazzi di vita è un'opera neorealista del 1955.",
+      exZh: "《生命中的男孩》是 1955 年的一部新现实主义作品。",
+      note: "p173 C"
+    },
+    {
+      it: "teatro",
+      pos: "s.m.",
+      zh: "戏剧；剧院",
+      cat: "Tempo libero",
+      syll: "teà·tro",
+      ex: "Vi piace il teatro?",
+      exZh: "你们喜欢戏剧吗？",
+      note: "p175 D1"
+    },
+    {
+      it: "spettacolo",
+      pos: "s.m.",
+      zh: "演出；节目",
+      cat: "Tempo libero",
+      syll: "spet·tà·co·lo",
+      ex: "Vedere uno spettacolo a teatro o leggere un'opera teatrale.",
+      exZh: "去剧院看一场演出，还是读一部戏剧作品。",
+      note: "p175 D1"
+    },
+    {
+      it: "oroscopo",
+      pos: "s.m.",
+      zh: "星座运程；占星",
+      cat: "Altro",
+      syll: "o·rò·sco·po",
+      ex: "Diciamo che leggere l'oroscopo è più un'abitudine.",
+      exZh: "可以说读星座运程更多是一种习惯。",
+      note: "p167 A"
+    },
+    {
+      it: "segno",
+      pos: "s.m.",
+      zh: "星座；记号（常指 segno zodiacale）",
+      cat: "Altro",
+      syll: "sèg·no",
+      ex: "Di che segno sei?",
+      exZh: "你是什么星座？",
+      note: "p170 B"
+    },
+    {
+      it: "recensione",
+      pos: "s.f.",
+      zh: "书评；评论",
+      cat: "Altro",
+      syll: "re·cen·siò·ne",
+      ex: "Leggete le due recensioni e poi indicate a quale testo corrispondono.",
+      exZh: "读两篇书评，然后指出它们对应哪篇文本。",
+      note: "p172 C1"
+    },
+    {
+      it: "guerra",
+      pos: "s.f.",
+      zh: "战争",
+      cat: "Altro",
+      syll: "guèr·ra",
+      ex: "Negli anni difficili della Seconda guerra mondiale.",
+      exZh: "在第二次世界大战艰难的岁月里。",
+      note: "p173 C（La Storia）"
+    },
+    {
+      it: "commedia",
+      pos: "s.f.",
+      zh: "喜剧；戏剧作品",
+      cat: "Tempo libero",
+      syll: "com·mè·dia",
+      ex: "I De Filippo interpretarono una sua commedia, Il berretto a sonagli.",
+      exZh: "德·菲利波兄弟成功演绎了他的一部喜剧《铃帽》。",
+      note: "p175 D（插图说明）"
+    },
+    {
+      it: "cultura",
+      pos: "s.f.",
+      zh: "文化",
+      cat: "Altro",
+      syll: "cul·tù·ra",
+      ex: "Anche nella vostra cultura sono gli stessi i segni zodiacali?",
+      exZh: "在你们的文化里（星座）也一样吗？",
+      note: "p170 B1b"
+    },
+    {
+      it: "tipografo",
+      pos: "s.m.",
+      zh: "排版印刷工；印刷商（阴性 tipografa）",
+      cat: "Altro",
+      syll: "ti·pò·gra·fo",
+      ex: "Il tipografo stampa il libro.",
+      exZh: "排版印刷工印刷这本书。",
+      note: "词汇表 F, p179"
+    },
+    {
+      it: "successo",
+      pos: "s.m.",
+      zh: "成功",
+      cat: "Altro",
+      syll: "suc·cès·so",
+      ex: "È un libro di grande successo.",
+      exZh: "这是一本非常成功的书。",
+      note: "词汇表 F, p179"
+    },
+    {
+      it: "pagina",
+      pos: "s.f.",
+      zh: "页；书页",
+      cat: "Altro",
+      syll: "pà·gi·na",
+      ex: "La pagina scritta gli appariva la vera vita.",
+      exZh: "写下的书页对他而言才是真实的生活。",
+      note: "p177 E4（Calvino）"
+    },
+    {
+      it: "capitolo",
+      pos: "s.m.",
+      zh: "章；章节",
+      cat: "Altro",
+      syll: "ca·pì·to·lo",
+      ex: "Lo lesse d'un fiato, fino alla fine del capitolo.",
+      exZh: "他一口气读完，直到一章结束。",
+      note: "p177 E4（Calvino）"
+    },
+    {
+      it: "credere",
+      pos: "v.",
+      zh: "相信；认为",
+      cat: "Altro",
+      syll: "crè·de·re",
+      ex: "Ma credi ancora a queste cose?",
+      exZh: "但你仍然相信这些东西吗？",
+      note: "p167 A"
+    },
+    {
+      it: "ricordare",
+      pos: "v.",
+      zh: "记得；回忆",
+      cat: "Altro",
+      syll: "ri·cor·dà·re",
+      ex: "Mannaggia, ho proprio un vuoto, non riesco a ricordare!",
+      exZh: "糟了，我一片空白，想不起来！",
+      note: "p168 A"
+    },
+    {
+      it: "risolvere",
+      pos: "v.",
+      zh: "解决",
+      cat: "Altro",
+      syll: "ri·sòl·ve·re",
+      ex: "Se riuscite a risolvere un problema in fretta!",
+      exZh: "如果你们能迅速解决一个问题！",
+      note: "p167 A"
+    },
+    {
+      it: "narrare",
+      pos: "v.",
+      zh: "讲述；叙述",
+      cat: "Altro",
+      syll: "nar·rà·re",
+      ex: "Lo scrittore narra le vicende di un gruppo di ragazzi.",
+      exZh: "作家讲述一群男孩的故事。",
+      note: "p173 C（Ragazzi di vita）"
+    },
+    {
+      it: "ambientare",
+      pos: "v.",
+      zh: "把（故事）设在；安置",
+      cat: "Altro",
+      syll: "am·bien·tà·re",
+      ex: "Ambientata nelle borgate romane, l'opera narra i quartieri poveri.",
+      exZh: "（故事）发生在罗马的城郊，讲述贫民区。",
+      note: "p173 C；此处用分词 ambientata"
+    },
+    {
+      it: "descrivere",
+      pos: "v.",
+      zh: "描写；描述",
+      cat: "Altro",
+      syll: "de·scrì·ve·re",
+      ex: "Con estremo realismo, descrive la tragica storia.",
+      exZh: "以极度的现实主义，描写这个悲惨的故事。",
+      note: "p180 Conosciamo l'Italia"
+    },
+    {
+      it: "compiere",
+      pos: "v.",
+      zh: "完成；度过（compiere gli anni 过生日）",
+      cat: "Altro",
+      syll: "com·piè·re",
+      ex: "Perché compie gli anni lo stesso giorno di mio padre.",
+      exZh: "因为她和我爸爸同一天过生日。",
+      note: "p169 A"
+    },
+    {
+      it: "storico",
+      pos: "agg.",
+      zh: "历史的；历史上的",
+      cat: "Altro",
+      syll: "stò·ri·co",
+      ex: "I promessi sposi è un romanzo storico.",
+      exZh: "《约婚夫妇》是一部历史小说。",
+      note: "p179 Classici"
+    },
+    {
+      it: "celebre",
+      pos: "agg.",
+      zh: "著名的；知名的",
+      cat: "Altro",
+      syll: "cè·le·bre",
+      ex: "La Storia è il romanzo più celebre di Elsa Morante.",
+      exZh: "《历史》是埃尔萨·莫兰特最著名的小说。",
+      note: "p173 C"
+    },
+    {
+      it: "famoso",
+      pos: "agg.",
+      zh: "著名的",
+      cat: "Altro",
+      syll: "fa·mò·so",
+      ex: "È il romanzo più famoso di Umberto Eco.",
+      exZh: "这是翁贝托·艾柯最著名的小说。",
+      note: "p180 Classici（Il nome della rosa）"
+    },
+    {
+      it: "romantico",
+      pos: "agg.",
+      zh: "浪漫的",
+      cat: "Altro",
+      syll: "ro·màn·ti·co",
+      ex: "Sono i più romantici e sognatori dello zodiaco.",
+      exZh: "他们是黄道十二宫里最浪漫、最爱做梦的。",
+      note: "p171 B（Cancro）"
+    },
+    {
+      it: "ambizioso",
+      pos: "agg.",
+      zh: "有野心的；雄心勃勃的",
+      cat: "Altro",
+      syll: "am·bi·ziò·so",
+      ex: "Sono provocatori, ma anche molto ambiziosi.",
+      exZh: "他们爱挑衅，但也很有野心。",
+      note: "p171 B（Scorpione）"
+    },
+    {
+      it: "ottimista",
+      pos: "agg.",
+      zh: "乐观的",
+      cat: "Altro",
+      syll: "ot·ti·mì·sta",
+      ex: "Molto ottimisti, non perdona mai il loro buon umore.",
+      exZh: "非常乐观，从不丧失好心情。",
+      note: "p171 B（Sagittario）"
+    }
+  ],
+  phrases: [
+    {
+      it: "Che bello leggere!",
+      pos: "frase",
+      zh: "阅读真美好！",
+      cat: "Altro",
+      syll: "che bèl·lo leg·gè·re",
+      note: "单元标题 / p166"
+    },
+    {
+      it: "Ti facevo più intelligente...",
+      pos: "frase",
+      zh: "我以为你更聪明呢……",
+      cat: "Altro",
+      syll: "ti fa·cè·vo più in·tel·li·gèn·te",
+      note: "p167 A（Gianna 对 Lorenzo）"
+    },
+    {
+      it: "Meno male!",
+      pos: "frase",
+      zh: "谢天谢地！",
+      cat: "Altro",
+      syll: "mè·no mà·ie",
+      note: "p168 A"
+    },
+    {
+      it: "Mannaggia!",
+      pos: "frase",
+      zh: "糟了！/真见鬼！",
+      cat: "Altro",
+      syll: "man·nàg·gia",
+      note: "p168 A"
+    },
+    {
+      it: "In che senso?",
+      pos: "frase",
+      zh: "什么意思？/你指的是什么？",
+      cat: "Altro",
+      syll: "in che sèn·so",
+      note: "p167 A"
+    },
+    {
+      it: "Ho proprio un vuoto...",
+      pos: "frase",
+      zh: "我脑子里一片空白……",
+      cat: "Altro",
+      syll: "ho prò·prio un vùo·to",
+      note: "p168 A"
+    },
+    {
+      it: "mica io...",
+      pos: "frase",
+      zh: "可不是我……",
+      cat: "Altro",
+      syll: "mì·ca ìo",
+      note: "p169 A（Il problema lo devi risolvere tu, mica io...）"
+    },
+    {
+      it: "compie gli anni",
+      pos: "loc.",
+      zh: "过生日",
+      cat: "Altro",
+      syll: "còm·pie gli àn·ni",
+      note: "p169 A"
+    },
+    {
+      it: "leggere l'oroscopo",
+      pos: "loc.",
+      zh: "读星座运程",
+      cat: "Altro",
+      syll: "lèg·ge·re lo·rò·sco·po",
+      note: "p167 A"
+    },
+    {
+      it: "per abitudine",
+      pos: "loc.",
+      zh: "出于习惯",
+      cat: "Altro",
+      syll: "per a·bi·tù·di·ne",
+      note: "p167 A"
+    },
+    {
+      it: "non bisogna prenderlo sul serio",
+      pos: "frase",
+      zh: "不该把它当真",
+      cat: "Altro",
+      syll: "non bi·sò·gna prèn·der·lo sul sè·rio",
+      note: "p168 A"
+    },
+    {
+      it: "Di che segno sei?",
+      pos: "frase",
+      zh: "你是什么星座？",
+      cat: "Altro",
+      syll: "di che sèg·no sèi",
+      note: "p170 B"
+    },
+    {
+      it: "valeva la pena leggerlo",
+      pos: "frase",
+      zh: "值得读它",
+      cat: "Altro",
+      syll: "va·lè·va la pè·na leg·gèr·lo",
+      note: "p169 A3（valesse la pena leggerlo）"
+    }
+  ],
+  sections: [
+    /* 1) 热身 / 单元目标 —— Per cominciare... */
+    {
+      id: "intro",
+      type: "intro",
+      title: "Per cominciare...",
+      goals: [
+        "a parlare di libri e di testi letterari",
+        "a parlare dell'oroscopo",
+        "il gerundio semplice e passato",
+        "il participio semplice e passato",
+        "l'infinito semplice e passato",
+        "curiosità e informazioni sulla letteratura italiana"
+      ],
+      preview: [
+        { it: "libro", zh: "书" },
+        { it: "lettore", zh: "读者" },
+        { it: "oroscopo", zh: "星座运程" },
+        { it: "autore", zh: "作者" },
+        { it: "teatro", zh: "戏剧" },
+        { it: "giallo", zh: "侦探小说" },
+        { it: "segno", zh: "星座" },
+        { it: "romanzo", zh: "小说" }
+      ]
+    },
+
+    /* 2) A 对话 —— Un problema da risolvere */
+    {
+      id: "A",
+      type: "dialogue",
+      title: "Un problema da risolvere",
+      audio: "Audio 29",
+      lines: [
+        { who: "Lorenzo", it: "\"Oggi potrebbe essere una bella giornata...\"", zh: "“今天可能是个美好的日子……”" },
+        { who: "Gianna", it: "In che senso?", zh: "什么意思？" },
+        { who: "Lorenzo", it: "\"...se riuscite a risolvere un problema in fretta!\"", zh: "“……如果你们能迅速解决一个问题！”" },
+        { who: "Gianna", it: "Che problema, Lorenzo?!", zh: "什么问题，Lorenzo？！" },
+        { who: "Lorenzo", it: "Però attenzione: la memoria non è il vostro forte!", zh: "不过注意：记性可不是你们的强项！" },
+        { who: "Gianna", it: "Ma che stai dicendo? Ah, stai leggendo l'oroscopo!", zh: "你在说什么呀？啊，你在读星座运程！" },
+        { who: "Lorenzo", it: "Sì, perché lo dici così?", zh: "对，你为什么这么说？" },
+        { who: "Gianna", it: "Ma credi ancora a queste cose? Ti facevo più intelligente...", zh: "你还在相信这些？我以为你更聪明呢……" },
+        { who: "Lorenzo", it: "Guarda che c'è tanta gente che inizia la giornata consultando l'oroscopo.", zh: "你看，有很多人是以看星座运程开始一天的。" },
+        { who: "Gianna", it: "Lo so, ma tu ci credi o no?", zh: "我知道，但你到底信不信？" },
+        { who: "Lorenzo", it: "Mah... non è che ci creda proprio... diciamo che leggere l'oroscopo è più un'abitudine...", zh: "哎……也不是真的信……算是读星座运程更多是一种习惯吧……" },
+        { who: "Gianna", it: "Sai, anch'io lo facevo un tempo, ma poi, dopo aver capito che erano solo cretinate, ho smesso: avevo 16 anni...", zh: "你知道，我以前也读，但后来明白那只是胡说八道，就戒了：那时我 16 岁……" },
+        { who: "Lorenzo", it: "Comunque, tranquilla, lo so che non bisogna prenderlo sul serio...", zh: "不管怎样，放心，我知道不该把它当真……" },
+        { who: "Gianna", it: "Meno male! ...Ma secondo te, in che modo \"potrebbe essere una bella giornata\"?", zh: "谢天谢地！……但依你看，“可能是个美好日子”是指什么？" },
+        { who: "Lorenzo", it: "Non lo so, guarda! E poi dice che \"la memoria non è il mio forte\"!", zh: "我不知道啊！而且它还说“记性不是我的强项”！" },
+        { who: "Gianna", it: "E chissà che problema dovrai risolvere...", zh: "天晓得你要解决什么问题……" },
+        { who: "Lorenzo", it: "Mannaggia, ho proprio un vuoto, non riesco a ricordare!", zh: "糟了，我一片空白，想不起来！" },
+        { who: "Gianna", it: "Eh... un incontro, un compleanno, forse?", zh: "呃……一次约会？一个生日？也许？" },
+        { who: "Lorenzo", it: "Un compleanno?! Non mi viene niente in mente.", zh: "生日？！我脑子里什么也想不起来。" },
+        { who: "Gianna", it: "Di tua nonna per caso?", zh: "该不会是你奶奶吧？" },
+        { who: "Lorenzo", it: "Eh? Oddio, è vero! Come fai a saperlo?", zh: "啊？天哪，真的！你怎么知道的？" },
+        { who: "Gianna", it: "Perché compie gli anni lo stesso giorno di mio padre, ne parlavamo l'altro giorno, non ti ricordi?", zh: "因为她和我爸爸同一天过生日，我们前几天还聊过，你不记得了？" },
+        { who: "Lorenzo", it: "Ah... auguri! E perché non l'hai detto subito?", zh: "啊……祝她生日快乐！那你为什么不早说？" },
+        { who: "Gianna", it: "Ma non ci ho pensato, credevo che lo ricordassi già!", zh: "我没想到，以为你已经记着了呢！" },
+        { who: "Lorenzo", it: "Ecco il problema da risolvere... A quest'ora che faccio, che regalo le compro?", zh: "这就是要解决的问题……这会儿我该怎么办，给她买什么礼物？" },
+        { who: "Gianna", it: "Boh, io a mio padre ho preso un libro... potresti fare lo stesso!", zh: "呃，我给我爸爸买了一本书……你也可以照样做！" },
+        { who: "Lorenzo", it: "Brava, un libro! Che libro?", zh: "好主意，一本书！什么书？" },
+        { who: "Gianna", it: "Il problema lo devi risolvere tu, mica io... Però hai visto? Alla fine, l'oroscopo era tutto giusto, non sei contento?", zh: "问题得你自己解决，又不是我……不过你发现了吗？最后星座运程全说中了，你不高兴吗？" }
+      ],
+      blocks: [
+        {
+          kind: "text",
+          title: "Il gerundio presente (semplice)",
+          text: "Termina in -ando / -endo (consultando, leggendo, sentendo). Indica un'azione contemporanea a quella della frase principale. Es. Sorridendo, Lorenzo è tornato a casa. (Approfondimento grammaticale a pagina 230)"
+        },
+        {
+          kind: "text",
+          title: "Il gerundio passato (composto)",
+          text: "Forma: essere/avere + participio passato. Esprime un'azione avvenuta prima di un'altra. Es. Avendo già letto questo libro, ne compro un altro. (Approfondimento grammaticale a pagina 231)"
+        }
+      ]
+    },
+
+    /* 3) B 活动 / 语法 —— Di che segno sei? */
+    {
+      id: "B",
+      type: "exercise",
+      title: "Di che segno sei?",
+      blocks: [
+        {
+          kind: "table",
+          title: "I segni zodiacali",
+          head: ["Segno", "Descrizione"],
+          rows: [
+            ["Ariete", "Le parole d'ordine sono passionalità e coraggio. Grandi lavoratori, preferiscono dedicare all'amore pochi ma intensi momenti. ⚠️（左缘被裁切）"],
+            ["Toro", "I nati sotto il Toro amano molto gli ⚠️... zienti e poco romantici, preferiscono storie lunghe e tranquille. ⚠️（OCR 残缺）"],
+            ["Gemelli", "Spiritosi e intelligenti. Particolarmente sensibili agli stati d'animo e ai pensieri di chi li circonda, giocano sulle frasi e le parole a doppio senso."],
+            ["Cancro", "Sono i più romantici e sognatori dello zodiaco; cercano negli altri tenerezza e protezione. Hanno bisogno di emozioni e di parole dolci e sono molto fedeli."],
+            ["Leone", "Amano esibire la loro bellezza, esteriore e interiore. Sono seducenti e hanno un'energia straordinaria. Ma si annoiano facilmente."],
+            ["Vergine", "Le loro caratteristiche sono la puntualità, la precisione e l'altruismo. Non sempre trovano il coraggio di esprimere i loro sentimenti, perciò preferiscono scriverli."],
+            ["Bilancia", "Non molto stabili, soprattutto in momenti di particolare stanchezza. In compenso, sono estroversi e creativi. Tolleranti, sanno evitare gli scontri con gli altri. ⚠️（Tollera⚠️ti）"],
+            ["Scorpione", "Sono provocatori, ma anche molto ambiziosi e attratti dal potere. Spesso si lasciano catturare da relazioni difficili, ma sanno sempre riprendersi delle difficoltà."],
+            ["Sagittario", "Molto ottimisti, non perdona mai il loro buon umore. Si innamorano facilmente, ma si sposano tardi, a volte dopo lunghi fidanzamenti."],
+            ["Capricorno", "Sono capaci di sopportare la fatica. Tipi molto concreti non sprecano tempo né energia. Di solito vivono a lungo e con gli anni sembrano ringiovanire."],
+            ["Acquario", "Sono eccentrici, fantasiosi e attratti dalla libertà di pensiero: gli studi lunghi non sono per loro. Sanno stupire con sorprese e idee originali."],
+            ["Pesci", "Essendo troppo romantici, per loro i sentimenti contano più della razionalità. Alcune volte si comportano in modo imprevedibile."]
+          ]
+        },
+        {
+          kind: "text",
+          title: "L'infinito presente",
+          text: "Allacciarsi le cinture. / Non superare la linea gialla. ➜ per dare ordini o istruzioni in modo impersonale o come imperativo negativo. Camminare fa bene. ➜ come soggetto o oggetto, preceduto da articoli, preposizioni e aggettivi. A vederti prima! ➜ in frasi esclamative che esprimono un'ipotesi o un desiderio."
+        },
+        {
+          kind: "text",
+          title: "L'infinito passato",
+          text: "Si forma con ausiliare essere o avere + participio passato. Nelle frasi secondarie esprime un'azione avvenuta prima di un'altra. Es. Sono venuti a casa mia dopo essere passati in libreria. (Approfondimento grammaticale a pagina 232)"
+        }
+      ]
+    },
+
+    /* 4) C 阅读 / 语法 —— Due classici da leggere! */
+    {
+      id: "C",
+      type: "exercise",
+      title: "Due classici da leggere!",
+      blocks: [
+        {
+          kind: "text",
+          title: "A — La Storia (Elsa Morante)",
+          text: "La Storia è il romanzo più celebre, ma anche il più discusso di Elsa Morante. Pubblicato nel 1974, racconta la storia di Ida Ramundo, una vedova ebrea che vive a Roma insieme a suo figlio Ninozuzzo, negli anni difficili della Seconda guerra mondiale e delle leggi razziali. La protagonista, che fa la maestra elementare, viene violentata da un soldato tedesco e dà alla luce il piccolo Useppe, un bambino fragile e sofferente. Ida dovrà combattere per la sua sopravvivenza e per quella dei figli non solo durante la guerra, ma anche negli anni successivi: perderà la casa a causa dei bombardamenti e dovrà trasferirsi insieme ad altri sfollati nel quartiere di Pietralata; sarà costretta addirittura a rubare per nutrire il figlio più piccolo. Con la drammatica vicenda di Ida, l'autrice mostra e critica apertamente i traumi che la guerra lascia sul popolo che la subisce. (Adattato da www.treccani.it)"
+        },
+        {
+          kind: "text",
+          title: "B — Ragazzi di vita (Pier Paolo Pasolini)",
+          text: "Ragazzi di vita è un'opera neorealista del 1955, ambientata nelle borgate romane, i quartieri più popolari di Roma. Lo scrittore, Pier Paolo Pasolini, non crea un vero e proprio romanzo con una trama lineare, ma narra le vicende interessanti ed emozionanti di un gruppo di ragazzi dei quartieri poveri della periferia romana, e i loro tentativi di guadagnarsi un po' di soldi, più o meno onestamente. I personaggi, ⚠️... nonostante vivano in condizioni difficili e di estrema povertà, sono giovani e desiderano godersi la vita proprio come i loro coetanei benestanti. Con la sua opera Pasolini mostra ai lettori la vita dell'altra Italia del boom economico. (Adattato da www.treccani.it)"
+        },
+        {
+          kind: "text",
+          title: "Il participio presente e passato",
+          text: "Participio presente: parlare ➜ parlante; sorridere ➜ sorridente; uscire ➜ uscente. Aggettivo: Questo è un libro molto interessante! (interessare). Participio passato: pubblicare ➜ pubblicato; vendere ➜ venduto; capire ➜ capito. Aggettivo: Ho comprato una macchina usata (usare); sostantivo: Andiamo a fare una passeggiata (passeggiare); verbo: Una volta partito (partire), non sono più tornato indietro. (Approfondimento grammaticale a pagina 233)"
+        }
+      ]
+    },
+
+    /* 5) D 戏剧 / 语法 —— Il teatro come opera letteraria */
+    {
+      id: "D",
+      type: "exercise",
+      title: "Il teatro come opera letteraria",
+      audio: "Audio 30",
+      blocks: [
+        {
+          kind: "text",
+          title: "Eduardo De Filippo si racconta (D3)",
+          text: "Nel 1942, con i miei fratelli decidemmo di passare al teatro, con una compagnia nostra e con copioni scritti da noi. Debuttammo a Milano, (1) Odeon. Ma chi ci conosceva? Le poltrone (2) per metà vuote, però alla fine il pubblico gridava: «Viva Napoli». Un (3) scrisse un lungo articolo e nei giorni seguenti tutte le file (4) rompirono! Il più bel ricordo: È nella mia città che ho avuto la commozione più profonda. Fu (5) prima di Napoli milionaria nel '45. C'era la fame e tanta gente disperata. Ottenni il teatro San Carlo per una (6). [...] Io facevo Gennaro Esposito, un povero e bravo uomo, che viene portato via dai tedeschi e, (7) torna, trova un figlio ladro, la moglie che fa il mercato nero, si è arricchita e (8) ha tradito, e la figlia che ha fatto l'amore con un soldato americano. Gennaro, con tolleranza, (9) capire ai famigliari che non è finito niente, che la (10) continua. Recitavo e sentivo intorno a me un silenzio terribile. (11) dissi l'ultima battuta: «Deve passare la nottata» e scese il sipario, ci fu un silenzio ancora (12) otto, dieci secondi, poi scoppiò un applauso furioso e anche un pianto irrefrenabile; tutti piangevano e anch'io piangevo. Avevo detto il dolore di tutti. (tratto da un'intervista a Eduardo De Filippo)"
+        },
+        {
+          kind: "table",
+          title: "Le parole alterate",
+          head: ["Tipo", "Suffisso", "Esempi"],
+          rows: [
+            ["Diminutivo", "-ino/-a, -ello/-a, -etto/-a", "fiorellino, stradina, alberello, storiella, libretto, cassetta"],
+            ["Accrescitivo", "-one, -ona", "tavolone, librone, macchinona, casona"],
+            ["Dispregiativo / Peggiorativo", "-accio/-a", "tempaccio, giornataccia, parolaccia"],
+            ["Vezzeggiativo", "-uccio/-a", "cavalluccio, casuccia, boccuccia"]
+          ]
+        }
+      ]
+    },
+
+    /* 6) E 书店 / 阅读 —— Librerie e libri */
+    {
+      id: "E",
+      type: "exercise",
+      title: "Librerie e libri",
+      audio: "Audio 31",
+      blocks: [
+        {
+          kind: "text",
+          title: "L'AVVENTURA DI UN LETTORE (Italo Calvino)",
+          text: "Da tempo Amedeo tendeva a ridurre al minimo la sua partecipazione alla vita attiva. [...] L'interesse all'azione sopravviveva però nel piacere di leggere; la sua passione erano sempre le narrazioni di fatti, le storie, l'intreccio delle vicende umane. Romanzi dell'Ottocento, prima di tutto, ma anche memorie e biografie; e via via fino ad arrivare ai gialli e alla fantascienza, che non disdegnava ma che gli davano minor soddisfazione anche perché erano i libretti brevi: Amedeo amava i grossi tomi e metteva nell'affrontarli il piacere fisico dell'affrontare una grossa fatica. [...] Nel libro trovava un'adesione alla realtà molto più piena e concreta [...] La signora abbronzata, dal suo materassino, gli fece un sorriso e un cenno di saluto, lui rispose pure con un sorriso e un vago cenno e riabbassò subito lo sguardo. Ma la signora aveva detto qualcosa: – Legga, legga sempre? – Sì. – Buon proseguimento! – Grazie. [...] – Ma non si stanca mai di leggere? – Non sa che con le signore si deve fare conversazione? – aggiunse con un mezzo sorriso che forse voleva essere solo ironico, ma ad Amedeo [...] sembrò addirittura minaccioso. «Così fatto a, a mettermi qui» (espressione di difficile lettura nell'immagine), pensò. Ormai era chiaro che con quella donna al fianco non avrebbe più letto una riga. (adattato da Gli amori difficili di Italo Calvino)"
+        }
+      ]
+    },
+
+    /* 7) F 词汇 —— Vocabolario e abilità */
+    {
+      id: "F",
+      type: "vocab",
+      title: "Vocabolario e abilità",
+      blocks: [
+        {
+          kind: "table",
+          title: "Vita da libri! (parole utili)",
+          head: ["Parola", "Tipo"],
+          rows: [
+            ["editore", "s.m."],
+            ["presentare", "v."],
+            ["lettore", "s.m."],
+            ["pubblicare", "v."],
+            ["personaggi", "s.m. (pl.)"],
+            ["libraio", "s.m."],
+            ["autore", "s.m."],
+            ["successo", "s.m."],
+            ["copie", "s.f. (pl.)"],
+            ["titolo", "s.m."],
+            ["tipografo", "s.m."],
+            ["stampare", "v."],
+            ["copertina", "s.f."],
+            ["comprare", "v."]
+          ]
+        }
+      ]
+    },
+
+    /* 8) 文化 —— Classici della letteratura italiana */
+    {
+      id: "classici",
+      type: "culture",
+      title: "Classici della letteratura italiana",
+      body: "Quattro capolavori della letteratura italiana presentati nel manuale (testo originale a completamento con parole a margine).",
+      blocks: [
+        {
+          kind: "text",
+          title: "La Divina Commedia — Dante Alighieri",
+          text: "È il capolavoro di Dante Alighieri, ma anche un'opera fondamentale per la letteratura italiana e mondiale. Composto tra il 1306-07 e il 1321 circa, è un poema diviso in tre cantiche (Inferno, Purgatorio e Paradiso), ciascuna suddivisa in 33 canti, più uno introduttivo nell'Inferno. Dante è il primo poeta a utilizzare la lingua volgare per gli scritti letterari."
+        },
+        {
+          kind: "text",
+          title: "L'Orlando furioso — Ludovico Ariosto",
+          text: "Ludovico Ariosto pubblica il suo poema epico-cavalleresco nel 1516. L'opera narra con elegante ironia le vicende dei cavalieri di Carlo Magno, seguendo due temi principali: la guerra dei cristiani contro i musulmani e la ricerca di Angelica da parte di Orlando e degli altri cavalieri, tutti innamorati di lei."
+        },
+        {
+          kind: "text",
+          title: "I promessi sposi — Alessandro Manzoni",
+          text: "Il romanzo di Alessandro Manzoni, pubblicato nel 1827, è uno dei primi grandi romanzi in lingua italiana. Si tratta di un romanzo storico e narra la storia di Renzo e Lucia, due giovani innamorati nella Lombardia dei primi decenni del 1600 sotto la dominazione spagnola, i quali sono costretti a superare diversi ostacoli per vivere il loro amore."
+        },
+        {
+          kind: "text",
+          title: "Il fu Mattia Pascal — Luigi Pirandello",
+          text: "È un romanzo, che potremmo definire psicologico, di Luigi Pirandello pubblicato nel 1904. Racconta la storia di Mattia Pascal, che decide di cominciare una nuova vita con un nuovo nome, lontano dalla sua vecchia famiglia. Questo tentativo fallisce e il protagonista decide di ritornare alla sua vita precedente, ma trova tutto cambiato e soprattutto non c'è più posto per lui."
+        }
+      ],
+      note: "原书为填空练习，文字跨页拼接；页脚无裁切问题。"
+    },
+
+    /* 9) 文化 —— Gli italiani e la lettura */
+    {
+      id: "stat",
+      type: "culture",
+      title: "Gli italiani e la lettura",
+      body: "Nell'ultimo anno, solo il 41% degli italiani ha letto un libro (il 59% non ne ha letto nessuno). Le donne leggono più degli uomini (47,1% contro 34,5%). Il Trentino Alto Adige è la regione con più lettori (53,1%), la Sicilia quella con meno (25,8%). (dati ISTAT)",
+      table: [
+        {
+          head: ["Indicatore", "Valore"],
+          rows: [
+            ["Donne che leggono", "47,1%"],
+            ["Uomini che leggono", "34,5%"],
+            ["Trentino Alto Adige (lettori)", "53,1%"],
+            ["Sicilia (lettori)", "25,8%"]
+          ]
+        }
+      ]
+    },
+
+    /* 10) 文化 —— Conosciamo l'Italia | Unità 11 */
+    {
+      id: "it",
+      type: "culture",
+      title: "Conosciamo l'Italia",
+      body: "Quattro libri della letteratura italiana del Novecento presentati nel manuale (testo a completamento).",
+      blocks: [
+        {
+          kind: "text",
+          title: "Il nome della rosa — Umberto Eco",
+          text: "Nel 1980 viene pubblicato il romanzo più famoso di Umberto Eco. È un giallo in cui il protagonista, il frate Guglielmo da Baskerville, indaga su una serie di delitti (sette in sette giorni) avvenuti all'interno di un'abbazia ⚠️ [testo interrotto a piè di pagina]."
+        },
+        {
+          kind: "text",
+          title: "Gli indifferenti — Alberto Moravia",
+          text: "Nel 1929, in pieno regime fascista, Alberto Moravia realizza un ritratto critico della borghesia italiana. I protagonisti del romanzo, 'indifferenti' a tutto, vivono la loro vita nell'ipocrisia, nel loro mondo borghese privo di ⚠️ [testo interrotto]."
+        },
+        {
+          kind: "text",
+          title: "La storia — Elsa Morante",
+          text: "Elsa Morante pubblica nel 1974 il suo romanzo storico più noto ma anche più discusso, ambientato nella Roma della guerra e dell'immediato dopoguerra. Con estremo realismo, descrive la tragica storia di ⚠️ [testo interrotto]."
+        },
+        {
+          kind: "text",
+          title: "Se questo è un uomo — Primo Levi",
+          text: "Sopravvissuto al campo di concentramento di Auschwitz, Primo Levi scrive tra il dicembre del 1945 e il gennaio del 1947 il suo primo libro, che pubblica nello stesso anno. Con una scrittura diretta e chiara, ⚠️ [testo interrotto]."
+        }
+      ],
+      note: "本页（p180）底部数段文字被裁切（转录 ⚠️），内容不完整，未臆造。"
+    }
+  ]
+};

@@ -1,0 +1,831 @@
+window.NPI = window.NPI || { units: {} };
+window.NPI.units["08"] = {
+  id: "08",
+  title: "Tempo libero e tecnologia",
+  titleZh: "闲暇与科技",
+  tema: "Il tempo libero e la tecnologia: social network, ipotesi e scienza italiana",
+  words: [
+    {
+      it: "tecnologia",
+      pos: "s.f.",
+      zh: "科技；技术",
+      cat: "Altro",
+      syll: "tec·no·lo·gì·a",
+      ex: "La tecnologia dovrebbe migliorare la tua vita, non diventare la tua vita.",
+      exZh: "科技应当改善你的生活，而非成为你的生活。",
+      note: ""
+    },
+    {
+      it: "smartphone",
+      pos: "s.m.",
+      zh: "智能手机",
+      cat: "Comunicazione",
+      syll: "⚠️",
+      ex: "Non toglietemi lo smartphone!",
+      exZh: "别拿走我的智能手机！",
+      note: "外语词，重音待确认"
+    },
+    {
+      it: "social network",
+      pos: "s.m.",
+      zh: "社交网络",
+      cat: "Comunicazione",
+      syll: "⚠️",
+      ex: "Sia Gianna che Lorenzo usano i social network per lavoro.",
+      exZh: "詹娜和洛伦佐都用社交网络工作。",
+      note: "外语词，重音待确认"
+    },
+    {
+      it: "social",
+      pos: "agg.",
+      zh: "社交的；社会的",
+      cat: "Comunicazione",
+      syll: "sò·cial",
+      ex: "Sei sempre sui social network invece di studiare!",
+      exZh: "你总在社交网络上，而不是学习！",
+      note: ""
+    },
+    {
+      it: "post",
+      pos: "s.m.",
+      zh: "帖子；动态（脸书等）",
+      cat: "Comunicazione",
+      syll: "post",
+      ex: "Stamattina hai già fatto tre post su Facebook...",
+      exZh: "你今天早上已经在脸书上发了三条动态……",
+      note: ""
+    },
+    {
+      it: "postare",
+      pos: "v.",
+      zh: "发帖；发布",
+      cat: "Comunicazione",
+      syll: "po·stà·re",
+      ex: "Se continui a postare selfie e non ti laurei...",
+      exZh: "如果你继续发自拍还不毕业……",
+      note: ""
+    },
+    {
+      it: "follower",
+      pos: "s.m.",
+      zh: "粉丝；关注者",
+      cat: "Comunicazione",
+      syll: "⚠️",
+      ex: "Sai che ho 2.000 amici e followers.",
+      exZh: "你知道我有 2000 个朋友和粉丝。",
+      note: "外语词，重音待确认"
+    },
+    {
+      it: "influencer",
+      pos: "s.m./s.f.",
+      zh: "网红；意见领袖（男女同形）",
+      cat: "Comunicazione",
+      syll: "⚠️",
+      ex: "ALESSIO ESPOSITO è tra i 5 influencer più famosi d'Italia.",
+      exZh: "亚历西欧·埃斯波西托是意大利最著名的 5 位网红之一。",
+      note: "外语词，重音待确认"
+    },
+    {
+      it: "schermo",
+      pos: "s.m.",
+      zh: "屏幕",
+      cat: "Comunicazione",
+      syll: "scèr·mo",
+      ex: "Ma sei sempre davanti a uno schermo Lorenzo!",
+      exZh: "但你总盯着屏幕，洛伦佐！",
+      note: ""
+    },
+    {
+      it: "rete",
+      pos: "s.f.",
+      zh: "网络；网",
+      cat: "Comunicazione",
+      syll: "rè·te",
+      ex: "La dipendenza dai videogiochi è la semplice dipendenza dalla rete.",
+      exZh: "电子游戏成瘾只是单纯对网络的依赖。",
+      note: ""
+    },
+    {
+      it: "connessione",
+      pos: "s.f.",
+      zh: "连接；联网",
+      cat: "Comunicazione",
+      syll: "con·nes·sió·ne",
+      ex: "Cerchiamo una tariffa che permetta di essere sempre connessa.",
+      exZh: "我们在找能让她始终在线的套餐。",
+      note: ""
+    },
+    {
+      it: "connesso",
+      pos: "agg.",
+      zh: "联网的；连接的",
+      cat: "Comunicazione",
+      syll: "con·nès·so",
+      ex: "Siete sempre connessi?",
+      exZh: "你们一直在线吗？",
+      note: ""
+    },
+    {
+      it: "telecomunicazioni",
+      pos: "s.f.",
+      zh: "电信（复数）",
+      cat: "Comunicazione",
+      syll: "te·le·co·mu·ni·ca·zió·ni",
+      ex: "Marconi è giustamente considerato il \"padre\" delle telecomunicazioni.",
+      exZh: "马可尼被公认为电信之父。",
+      note: "教材原文拼写为 telecomunicazioni"
+    },
+    {
+      it: "applicazione",
+      pos: "s.f.",
+      zh: "应用程序（常缩写为 app）",
+      cat: "Comunicazione",
+      syll: "ap·pli·ca·zió·ne",
+      ex: "Questa app per organizzare il programma quotidiano è fantastica!",
+      exZh: "这个用来安排日常计划的应用太棒了！",
+      note: ""
+    },
+    {
+      it: "chiamata",
+      pos: "s.f.",
+      zh: "通话；呼叫",
+      cat: "Comunicazione",
+      syll: "chia·mà·ta",
+      ex: "Chiamate e SMS illimitati.",
+      exZh: "无限通话和短信。",
+      note: ""
+    },
+    {
+      it: "messaggio",
+      pos: "s.m.",
+      zh: "消息；短信",
+      cat: "Comunicazione",
+      syll: "mes·sàg·gio",
+      ex: "Gli amici mi scrivono messaggi più numerosi.",
+      exZh: "朋友们给我写来更多的消息。",
+      note: ""
+    },
+    {
+      it: "account",
+      pos: "s.m.",
+      zh: "账户；账号",
+      cat: "Comunicazione",
+      syll: "⚠️",
+      ex: "Ho disattivato il mio account Facebook da oltre un mese.",
+      exZh: "我注销脸书账户已经一个多月了。",
+      note: "外语词，重音待确认"
+    },
+    {
+      it: "dipendenza",
+      pos: "s.f.",
+      zh: "依赖；成瘾",
+      cat: "Altro",
+      syll: "di·pen·dèn·za",
+      ex: "Di Facebook ero diventata dipendente.",
+      exZh: "我对脸书已经上瘾了。",
+      note: ""
+    },
+    {
+      it: "videogioco",
+      pos: "s.m.",
+      zh: "电子游戏",
+      cat: "Tempo libero",
+      syll: "vi·de·o·giò·co",
+      ex: "Giovani e dipendenza da videogiochi.",
+      exZh: "年轻人与电子游戏成瘾。",
+      note: ""
+    },
+    {
+      it: "streaming",
+      pos: "s.m.",
+      zh: "流媒体",
+      cat: "Tempo libero",
+      syll: "⚠️",
+      ex: "Piattaforme di streaming come Netflix.",
+      exZh: "像网飞这样的流媒体平台。",
+      note: "外语词，重音待确认"
+    },
+    {
+      it: "piattaforma",
+      pos: "s.f.",
+      zh: "平台",
+      cat: "Tempo libero",
+      syll: "piat·ta·fòr·ma",
+      ex: "Netflix non è più una semplice piattaforma di streaming.",
+      exZh: "网飞不再只是一个简单的流媒体平台。",
+      note: ""
+    },
+    {
+      it: "abbonamento",
+      pos: "s.m.",
+      zh: "订阅；套餐",
+      cat: "Tempo libero",
+      syll: "ab·bo·na·mén·to",
+      ex: "Guadagna grazie agli abbonati che gli consentono un'entrata fissa.",
+      exZh: "靠订阅用户获得稳定收入。",
+      note: ""
+    },
+    {
+      it: "cellulare",
+      pos: "s.m.",
+      zh: "手机（手提电话）",
+      cat: "Comunicazione",
+      syll: "cel·lu·là·re",
+      ex: "Quante volte usate il cellulare durante la giornata?",
+      exZh: "你们一天里用多少次手机？",
+      note: ""
+    },
+    {
+      it: "telefono",
+      pos: "s.m.",
+      zh: "电话",
+      cat: "Comunicazione",
+      syll: "te·lè·fo·no",
+      ex: "Meucci è riconosciuto come l'inventore del telefono.",
+      exZh: "梅乌奇被公认为电话的发明者。",
+      note: ""
+    },
+    {
+      it: "offerta",
+      pos: "s.f.",
+      zh: "套餐；优惠；报价",
+      cat: "Shopping",
+      syll: "of·fèr·ta",
+      ex: "Individuate l'offerta migliore per ogni cliente.",
+      exZh: "为每位客户找出最合适的套餐。",
+      note: ""
+    },
+    {
+      it: "internet",
+      pos: "s.m.",
+      zh: "互联网",
+      cat: "Comunicazione",
+      syll: "⚠️",
+      ex: "Internet dentro e fuori casa senza limiti.",
+      exZh: "家里家外无限上网。",
+      note: "外语词，重音待确认"
+    },
+    {
+      it: "email",
+      pos: "s.f.",
+      zh: "电子邮件",
+      cat: "Comunicazione",
+      syll: "⚠️",
+      ex: "Ieri ho ricevuto un'email da Stefania.",
+      exZh: "昨天我收到了斯特法尼亚的一封邮件。",
+      note: "外语词，重音待确认"
+    },
+    {
+      it: "tastiera",
+      pos: "s.f.",
+      zh: "键盘",
+      cat: "Altro",
+      syll: "tas·tiè·ra",
+      ex: "Per copiare premo i tasti Ctrl + C sulla tastiera.",
+      exZh: "要复制，我在键盘上按 Ctrl+C 键。",
+      note: ""
+    },
+    {
+      it: "mouse",
+      pos: "s.m.",
+      zh: "鼠标",
+      cat: "Altro",
+      syll: "⚠️",
+      ex: "Sulla scrivania ci sono mouse e stampante.",
+      exZh: "书桌上有鼠标和打印机。",
+      note: "外语词，重音待确认"
+    },
+    {
+      it: "stampante",
+      pos: "s.f.",
+      zh: "打印机",
+      cat: "Altro",
+      syll: "stam·pàn·te",
+      ex: "Completa con stampante.",
+      exZh: "用『打印机』填空。",
+      note: ""
+    },
+    {
+      it: "cuffie",
+      pos: "s.f.",
+      zh: "耳机（复数）",
+      cat: "Altro",
+      syll: "cùf·fie",
+      ex: "Guarda la serie preferita senza cuffie o auricolari.",
+      exZh: "看自己喜欢的剧却没戴耳机或耳塞。",
+      note: ""
+    },
+    {
+      it: "chiavetta USB",
+      pos: "s.f.",
+      zh: "U 盘；优盘",
+      cat: "Altro",
+      syll: "chia·vèt·ta USB",
+      ex: "Abbina chiavetta USB.",
+      exZh: "把 U 盘对应起来。",
+      note: "USB 为外语缩写，重音待确认"
+    },
+    {
+      it: "batteria",
+      pos: "s.f.",
+      zh: "电池",
+      cat: "Altro",
+      syll: "bat·te·rì·a",
+      ex: "La batteria di questo cellulare si scarica subito.",
+      exZh: "这部手机的电池很快就没电。",
+      note: ""
+    },
+    {
+      it: "laurearsi",
+      pos: "v.",
+      zh: "大学毕业；获得学位",
+      cat: "Studio",
+      syll: "lau·reàr·si",
+      ex: "Ti lamenti che non riesci a laurearti.",
+      exZh: "你抱怨自己毕不了业。",
+      note: ""
+    },
+    {
+      it: "studiare",
+      pos: "v.",
+      zh: "学习；攻读",
+      cat: "Studio",
+      syll: "stu·dià·re",
+      ex: "Se studiassi tutto il giorno, avresti bisogno di staccare.",
+      exZh: "如果你整天学习，你就需要放松一下。",
+      note: ""
+    },
+    {
+      it: "rilassarsi",
+      pos: "v.",
+      zh: "放松；休息",
+      cat: "Tempo libero",
+      syll: "ri·las·sàr·si",
+      ex: "È solo per rilassarmi.",
+      exZh: "只是为了放松一下。",
+      note: ""
+    },
+    {
+      it: "navigare",
+      pos: "v.",
+      zh: "上网；浏览（网络）",
+      cat: "Comunicazione",
+      syll: "na·vi·gà·re",
+      ex: "Quanto tempo passi a navigare online?",
+      exZh: "你上网花多少时间？",
+      note: ""
+    },
+    {
+      it: "scaricare",
+      pos: "v.",
+      zh: "下载",
+      cat: "Comunicazione",
+      syll: "sca·ri·cà·re",
+      ex: "Se scarichi questa applicazione per la corsa...",
+      exZh: "如果你下载这个跑步应用……",
+      note: ""
+    },
+    {
+      it: "inviare",
+      pos: "v.",
+      zh: "发送；寄出",
+      cat: "Comunicazione",
+      syll: "in·vià·re",
+      ex: "Trascorre le giornate a inviare il suo curriculum.",
+      exZh: "她整天都在发送自己的简历。",
+      note: ""
+    },
+    {
+      it: "condividere",
+      pos: "v.",
+      zh: "分享；共享",
+      cat: "Comunicazione",
+      syll: "con·dì·vi·de·re",
+      ex: "Vuole condividerle con i suoi amici.",
+      exZh: "想和朋友们分享它们。",
+      note: ""
+    },
+    {
+      it: "criticare",
+      pos: "v.",
+      zh: "批评；评论",
+      cat: "Altro",
+      syll: "cri·ti·cà·re",
+      ex: "Se avessi voluto sentire delle critiche, sarei tornato a casa.",
+      exZh: "如果我想听批评，我就回父母家住了。",
+      note: ""
+    },
+    {
+      it: "isolarsi",
+      pos: "v.",
+      zh: "自我孤立；与世隔绝",
+      cat: "Altro",
+      syll: "i·so·làr·si",
+      ex: "Mica posso isolarmi!",
+      exZh: "我可不能与世隔绝！",
+      note: ""
+    },
+    {
+      it: "ipotesi",
+      pos: "s.f.",
+      zh: "假设；假说",
+      cat: "Grammatica",
+      syll: "i·pò·te·si",
+      ex: "A fare ipotesi realizzabili o no.",
+      exZh: "做可行或不可行的假设。",
+      note: ""
+    },
+    {
+      it: "approvazione",
+      pos: "s.f.",
+      zh: "赞成；认可",
+      cat: "Grammatica",
+      syll: "ap·pro·va·zió·ne",
+      ex: "A esprimere approvazione e disapprovazione.",
+      exZh: "表达赞成与反对。",
+      note: ""
+    },
+    {
+      it: "disapprovazione",
+      pos: "s.f.",
+      zh: "反对；不赞成",
+      cat: "Grammatica",
+      syll: "di·sap·pro·va·zió·ne",
+      ex: "Esprimere disapprovazione con le espressioni giuste.",
+      exZh: "用恰当的表达表示反对。",
+      note: ""
+    }
+  ],
+  phrases: [
+    {
+      it: "Se più tardi sei al bar, magari passo a trovarti.",
+      pos: "frase",
+      zh: "如果你晚点去酒吧，我也许顺路去找你。",
+      cat: "Comunicazione",
+      syll: "se più tàr·di sèi al bàr, ma·gà·ri pàs·so a tro·vàr·ti",
+      note: "A 对话开场（periodo ipotetico 1° tipo）"
+    },
+    {
+      it: "Se studiassi tutto il giorno, avresti bisogno di staccare per un po'.",
+      pos: "frase",
+      zh: "如果你整天学习，你就需要放松一下。",
+      cat: "Grammatica",
+      syll: "se stu·diàs·si tùt·to il giòr·no, a·vrès·ti bi·sò·gno di stac·cà·re per un pò",
+      note: "2° tipo（A 对话）"
+    },
+    {
+      it: "Se avessi voluto sentire delle critiche, sarei tornato a vivere con i miei.",
+      pos: "frase",
+      zh: "如果我想听批评，我就回父母家住了。",
+      cat: "Altro",
+      syll: "se a·vès·si vo·lù·to sen·tì·re dèl·le cri·ti·che, sa·rèi tor·nà·to a vi·ve·re con i mièi",
+      note: "A 对话结尾（3° tipo）"
+    },
+    {
+      it: "Non fare la rompiscatole!",
+      pos: "loc.",
+      zh: "别烦人了！别扫兴！",
+      cat: "Altro",
+      syll: "non fà·re la rom·pi·sca·tò·le",
+      note: "p136 洛伦佐语"
+    },
+    {
+      it: "Che c'entra?",
+      pos: "frase",
+      zh: "这有什么关系？/这算什么？",
+      cat: "Altro",
+      syll: "che cèn·tra",
+      note: "p134"
+    },
+    {
+      it: "Mi sa che...",
+      pos: "loc.",
+      zh: "我觉得…/看样子…",
+      cat: "Altro",
+      syll: "mi sà che",
+      note: "p146『mi sa che ci tornerai presto』"
+    },
+    {
+      it: "essere sempre connessi",
+      pos: "loc.",
+      zh: "一直在线；始终联网",
+      cat: "Comunicazione",
+      syll: "ès·se·re sèm·pre con·nès·si",
+      note: "D 标题『Sempre connessi』"
+    },
+    {
+      it: "fare collezione di \"mi piace\"",
+      pos: "loc.",
+      zh: "收集『赞』",
+      cat: "Comunicazione",
+      syll: "fà·re col·le·zió·ne di mi pià·ce",
+      note: "p135『mica faccio là... collezione di \"mi piace\"』"
+    },
+    {
+      it: "Complimenti!",
+      pos: "frase",
+      zh: "祝贺你！/太棒了！",
+      cat: "Altro",
+      syll: "com·pli·mén·ti",
+      note: "B 活动 2 赞成表达"
+    },
+    {
+      it: "Questa sì che è una bella idea!",
+      pos: "frase",
+      zh: "这真是个好主意！",
+      cat: "Altro",
+      syll: "què·sta sì che è una bèl·la i·dè·a",
+      note: "B 活动 2 赞成表达"
+    },
+    {
+      it: "Ma quando mai?!",
+      pos: "frase",
+      zh: "绝不可能！/哪有的事！",
+      cat: "Altro",
+      syll: "ma quàn·do mài",
+      note: "B 活动 2 反对表达"
+    },
+    {
+      it: "Se fossi andato in palestra, sarei venuto con te.",
+      pos: "frase",
+      zh: "如果你当时去了健身房，我就会和你一起去了。",
+      cat: "Grammatica",
+      syll: "se fòs·si an·dà·to in pal·è·stra, sa·rèi ve·nù·to con te",
+      note: "3° tipo（B 活动 4）"
+    },
+    {
+      it: "Non ci vengo alla tua festa.",
+      pos: "frase",
+      zh: "我不去你的派对。",
+      cat: "Grammatica",
+      syll: "non ci vièn·go al·la tù·a fè·sta",
+      note: "usi di ci（p412）"
+    },
+    {
+      it: "Non ne so niente.",
+      pos: "frase",
+      zh: "我对此一无所知。",
+      cat: "Grammatica",
+      syll: "non ne so nièn·te",
+      note: "usi di ne（p479）"
+    }
+  ],
+  sections: [
+    /* 0) 转录起始处的 AUTOVALUTAZIONE（实为上一单元末尾自测，落在本次 PDF 页范围内 p117-118） */
+    {
+      id: "autoval",
+      type: "exercise",
+      title: "Che cosa ricordi delle unità 6 e 7?",
+      items: [
+        "1. Sai...? Abbina le due colonne. (dare consigli / esprimere un desiderio / porre condizioni / presentare un fatto come facile / dare il permesso → a–e)",
+        "2. Abbina le frasi.",
+        "3. Completa. (bilocale / desertificazione / risorse / raccolta differenziata / biologici)",
+        "4. Scopri le otto parole nascoste. (soluzione a pagina 194)"
+      ],
+      note: "转录 p117-118 的 AUTOVALUTAZIONE 标题为『unità 6 e 7』，实为上一单元（单元 7）末尾的自测，因落在本次 PDF 页范围内一并收录；不属于单元 8 教学内容。"
+    },
+
+    /* 1) 热身 / 单元目标 —— Per cominciare... */
+    {
+      id: "intro",
+      type: "intro",
+      title: "Per cominciare...",
+      goals: [
+        "a complimentarci con qualcuno",
+        "a fare ipotesi realizzabili o no",
+        "a esprimere approvazione e disapprovazione",
+        "a parlare dei pro e dei contro della tecnologia",
+        "il periodo ipotetico: 1°, 2° e 3° tipo",
+        "gli usi delle particelle pronominali ci e ne",
+        "alcune informazioni su scienziati, inventori e nobel italiani"
+      ],
+      preview: [
+        { it: "smartphone", zh: "智能手机" },
+        { it: "social network", zh: "社交网络" },
+        { it: "post", zh: "帖子；动态" },
+        { it: "schermo", zh: "屏幕" },
+        { it: "connesso", zh: "联网的" },
+        { it: "streaming", zh: "流媒体" },
+        { it: "ipotesi", zh: "假设" },
+        { it: "influencer", zh: "网红" }
+      ]
+    },
+
+    /* 2) A 对话 —— Se avessi voluto sentire delle critiche... */
+    {
+      id: "A",
+      type: "dialogue",
+      title: "Se avessi voluto sentire delle critiche...",
+      audio: "Audio 14",
+      lines: [
+        { who: "Lorenzo", it: "Se più tardi sei al bar, magari passo a trovarti.", zh: "如果你晚点去酒吧，我也许顺路去找你。" },
+        { who: "Gianna", it: "Ok, forse ci vediamo là. Senti, come va con lo studio? Manca poco ormai.", zh: "好，也许我们在那儿见。听我说，学习进展怎么样？快结束了吧。" },
+        { who: "Lorenzo", it: "Molto bene, guarda. Questa volta sono proprio deciso, supererò tutti gli esami.", zh: "很好，你看。这次我是铁了心了，我会通过所有考试。" },
+        { who: "Gianna", it: "Ah, bene... No, perché ho visto che stamattina hai già fatto tre post su Facebook...", zh: "啊，好……不，因为我看到你今天早上已经在脸书上发了三条动态……" },
+        { who: "Lorenzo", it: "Ma sì, è solo per rilassarmi.", zh: "哎呀，只是为了放松一下。" },
+        { who: "Gianna", it: "E ieri notte alle 2 eri su Instagram?", zh: "那你昨天凌晨两点还在刷 Instagram？" },
+        { who: "Lorenzo", it: "Ma che fai, mi spii?", zh: "你干嘛，监视我吗？" },
+        { who: "Gianna", it: "No, caro, ma è evidente che sei sempre sui social network invece di studiare!", zh: "不是，亲爱的，但很明显你总在社交网络上，而不是学习！" },
+        { who: "Lorenzo", it: "Guarda che anche tu, se studiassi tutto il giorno, avresti bisogno di staccare per un po'...", zh: "你看你也是，如果你整天学习，你也会需要放松一下的……" },
+        { who: "Gianna", it: "Ma sei sempre davanti a uno schermo Lorenzo!", zh: "但你总盯着屏幕，洛伦佐！" },
+        { who: "Lorenzo", it: "Gianna, mica posso isolarmi! Sai che ho 2.000 amici e followers. Tu se ne avessi tanti non faresti lo stesso?", zh: "詹娜，我可不能与世隔绝！你知道我有 2000 个朋友和粉丝。你要是有这么多，你就不一样了？" },
+        { who: "Gianna", it: "Sì, 2.000 amici di cui di persona non ne conosci nemmeno un terzo.", zh: "是，2000 个朋友，其中你本人认识的还不到三分之一。" },
+        { who: "Lorenzo", it: "Che c'entra? Perché tu i tuoi li conosci tutti?", zh: "这有什么关系？难道你认识你所有的朋友？" },
+        { who: "Gianna", it: "No, ma io uso i social soprattutto per lavoro, mica faccio là... collezione di \"mi piace\".", zh: "不，但我用社交网络主要是工作，我可不会在那儿……收集『赞』。" },
+        { who: "Lorenzo", it: "Uffa, non fare la rompiscatole, mica sono l'unico che sta su Facebook.", zh: "唉，别烦人了，我又不是唯一上脸书的人。" },
+        { who: "Gianna", it: "Sì, ma poi ti lamenti che non riesci a laurearti, gli altri superano gli esami e tu stai a chiacchierare sui social!", zh: "是，可你接着又抱怨毕不了业，别人都通过考试了，你却在社交网络上闲聊！" },
+        { who: "Lorenzo", it: "Scusamì sei ho una vita sociale. Lo studio non è tutto, sai.", zh: "抱歉，我也有社交生活。学习不是全部，你知道的。", note: "转录作『Scusamì』（疑为 OCR 误标重音，正确应为 Scusami）" },
+        { who: "Gianna", it: "Infatti, c'è anche il lavoro. Va be', lasciamo perdere.", zh: "确实，还有工作呢。算了，不说了。" },
+        { who: "Lorenzo", it: "Gianna, se avessi voluto sentire delle critiche sarei tornato a vivere con i miei...", zh: "詹娜，如果我想听批评，我就回父母家住了……" },
+        { who: "Gianna", it: "Se continui a postare selfie e non ti laurei, mi sa che ci tornerai presto.", zh: "如果你继续发自拍还不毕业，看样子你很快就要回去了。" }
+      ],
+      blocks: [
+        {
+          kind: "text",
+          title: "Periodo ipotetico del 1° tipo (realtà)",
+          text: "Se oggi vai in palestra, vengo con te. / Se oggi andrai in palestra, verrò con te. — Il periodo ipotetico della realtà esprime un'ipotesi, nella condizione, reale o molto probabile."
+        },
+        {
+          kind: "text",
+          title: "Periodo ipotetico del 2° tipo (possibilità)",
+          text: "Se andassi in palestra, verrei con te. — Il periodo ipotetico della possibilità esprime un'ipotesi nella condizione, probabile ma non è sicuro che si realizzi."
+        }
+      ]
+    },
+
+    /* 3) B 语法 / 交际 —— Complimenti! */
+    {
+      id: "B",
+      type: "grammar",
+      title: "Complimenti!",
+      audio: "Audio 15",
+      blocks: [
+        {
+          kind: "quote",
+          title: "Congratularsi - approvare / Disapprovare",
+          lines: [
+            "Complimenti!",
+            "Questa sì che è una bella idea!",
+            "Ma quando mai?!",
+            "(approvare: Complimenti! / Questa sì che è una bella idea! | disapprovare: Ma quando mai?!)"
+          ]
+        },
+        {
+          kind: "text",
+          title: "Periodo ipotetico del 3° tipo (impossibilità)",
+          text: "Se fossi andato in palestra, sarei venuto con te. — Il periodo ipotetico dell'impossibilità esprime un'ipotesi improbabile, per questo irrealizzabile, che non può più diventare realtà perché si riferisce a una condizione passata."
+        },
+        {
+          kind: "text",
+          title: "Ipotesi al passato con conseguenza nel presente",
+          text: "Se non fossi andato in palestra, oggi non saresti così in forma."
+        }
+      ],
+      items: [
+        "1. Ascolta i mini dialoghi e indica se la reazione è positiva o negativa.",
+        "2. Ascolta di nuovo e completa la tabella con le espressioni dei dialoghi.",
+        "3. Sei A: parla a B (del nuovo cellulare / dello sciopero / del torneo di calcetto). Sei B: rispondi con le espressioni ascoltate.",
+        "4. Osserva e completa la tabella sul periodo ipotetico del 3° tipo.",
+        "5. Coniuga il verbo tra parentesi e completa le frasi.",
+        "6. Osserva la tabella e scrivi una frase simile (ipotesi al passato con conseguenza nel presente)."
+      ]
+    },
+
+    /* 4) C 阅读 / 讨论 —— Non toglietemi lo smartphone! */
+    {
+      id: "C",
+      type: "exercise",
+      title: "Non toglietemi lo smartphone!",
+      blocks: [
+        {
+          kind: "text",
+          title: "COSÌ MI SONO LIBERATA DA FACEBOOK (Roma)",
+          text: "Ho disattivato il mio account Facebook da oltre un mese. Dopo otto anni in cui, dei miei 900 amici, ho visto nascere i loro figli, morire i loro gatti, crescere i loro amori, ho condiviso gioie e dolori, alla fine ho scelto di smettere di guardare le foto delle loro vacanze e dei loro panini. L'ho fatto perché di Facebook ero diventata dipendente. Dalla mattina – ancora nel letto – alla colazione, passando per il bagno. Poi in macchina, al lavoro, dopo il lavoro, durante l'aperitivo mentre l'amico parla e tu lo ascolti ma non lo guardi perché gli occhi sono incollati sulla pagina biancoblu, a cena, dopo cena, al cinema, al concerto, a letto. Ne ho parlato con gli amici e ho capito che non ero la sola ad avere il problema. Per noi, gente con più di trenta anni, senza figli, spesso senza lavoro, abbondante vita sociale e tanto tempo a disposizione, scrollare è diventato una dipendenza. Io il 4 agosto ho deciso e ho disattivato il mio account Facebook. Da più di un mese non sono più su Facebook e non ne ho mai sentito la mancanza. Quando mi sveglio accendo la radio, faccio colazione e guardo fuori dalla finestra, in bagno leggo una rivista e durante l'aperitivo riscopro quanto sono belli gli occhi verdi del mio amico. La sera mi addormento leggendo un libro. Che belle le sere senza Facebook. Da più di un mese mi diverto a riscoprire il piacere di telefonare o andare a trovare gli amici. Eppure qualcosa sento di averlo perso: l'effetto megafono, quel passaparola veloce e intrusivo che solo un annuncio su Facebook può garantire."
+        }
+      ],
+      items: [
+        "1. Cosa pensate della scelta della protagonista? In quali situazioni vi riconoscete?",
+        "2. Quali sono, secondo voi, i pregi e i difetti dei social network?",
+        "4. Vi piacciono i videogiochi? Quali sono gli aspetti positivi e negativi di questo passatempo?",
+        "5. Quali di queste parole conoscete già? (dipendenza / patologia / rabbia / abuso / terapia / eccessivo)",
+        "6. Ascolta il brano 'Giovani e dipendenza da videogiochi' e indica V/F."
+      ],
+      note: "活动 3 为长篇阅读，此处收录原文要点；活动编号 3 在原书为阅读任务，4-6 为后续讨论与听力。"
+    },
+
+    /* 5) D 阅读 / 语法 —— Sempre connessi */
+    {
+      id: "D",
+      type: "exercise",
+      title: "Sempre connessi",
+      blocks: [
+        {
+          kind: "text",
+          title: "Tre offerte (A / B / C)",
+          text: "A — 3Cube: GIGA illimitati, Internet a casa senza limiti, connessione veloce per video HD/UHD, chiamate e SMS illimitati. B — WIND: Internet dentro e fuori casa, chiamate illimitate, 19,90€ al mese. C — Solo se scolleghi: Fibra e ADSL tutto incluso, Internet Unlimited, prezzo bloccato 14,99€ al mese."
+        },
+        {
+          kind: "text",
+          title: "Usi di ne",
+          text: "1. — Hai saputo di Gianni e Elisa? — No, non ne so niente. (di qualcosa/qualcuno)  2. — È così grave? — Sì, e non sanno come uscirne. (da un luogo/da una situazione)  3. — Quante mail inviate? — Poche, ma ne riceviamo moltissime. (ne partitivo)"
+        }
+      ],
+      items: [
+        "1. Leggi le offerte e individua l'offerta migliore per Caterina / Renato / Alessandra.",
+        "2. In gruppi, create un poster pubblicitario e presentatelo alla classe.",
+        "3. Abbina gli esempi agli usi della particella ne.",
+        "4. Completa le frasi con ci o ne.",
+        "5. Per quali scopi usate lo smartphone? Vi è mai capitato di guardare un film sul cellulare?"
+      ]
+    },
+
+    /* 6) E 词汇与技能 —— Vocabolario e abilità */
+    {
+      id: "E",
+      type: "vocab",
+      title: "Vocabolario e abilità",
+      blocks: [
+        {
+          kind: "table",
+          title: "Dispositivi tecnologici (E1)",
+          head: ["n.", "parola"],
+          rows: [
+            ["1", "tablet"],
+            ["2", "chiavetta USB"],
+            ["3", "computer"],
+            ["4", "stampante"],
+            ["5", "mouse"],
+            ["6", "portatile"],
+            ["7", "cuffie"],
+            ["8", "cavo / filo"],
+            ["9", "schermo"],
+            ["10", "tastiera"]
+          ]
+        },
+        {
+          kind: "text",
+          title: "Completa (E1 b)",
+          text: "cartella / batteria / pagine web / tasti / app (applicazione) / email — completa le frasi e abbina alle immagini."
+        }
+      ],
+      items: [
+        "3. Ascolto — Quaderno degli esercizi (p. 103).",
+        "4. Situazioni: A compra una scheda SIM / B sul treno senza cuffie.",
+        "5. Scriviamo: email al servizio clienti / riflessione sulla frase 'La tecnologia dovrebbe migliorare la tua vita, non diventare la tua vita'."
+      ]
+    },
+
+    /* 7) H2 游戏 —— Obligo-verità */
+    {
+      id: "H2",
+      type: "exercise",
+      title: "Obligo-verità",
+      blocks: [
+        {
+          kind: "text",
+          title: "Regole del gioco",
+          text: "Tutti i giocatori si dispongono in cerchio. Un giocatore sceglie un altro e gli chiede 'Cosa faresti se...?'. Il secondo deve rispondere in modo sincero: se corretto guadagna 2 punti e ne toglie 1 al primo; se errato perde 1 punto e ne fa guadagnare 1 al primo. Se si rifiuta di rispondere, deve fare un 'obbligo' deciso dal primo (es. scrivere alla lavagna il congiuntivo di 'supportare'). Il turno passa al secondo giocatore. Vince chi fa più punti."
+        }
+      ],
+      note: "在原书中以 '## H2 Obligo-verità' 单独标出，属 E 板块内的课堂游戏。"
+    },
+
+    /* 8) 文化 —— L'ITALIA E LA SCIENZA */
+    {
+      id: "scienza",
+      type: "culture",
+      title: "L'ITALIA E LA SCIENZA",
+      body: "Molti scienziati italiani hanno dato il loro contributo al progresso dell'umanità con invenzioni e scoperte. Leonardo da Vinci (1452-1519): pittore, scrittore, architetto e scienziato, precursore dei tempi, autore di innumerevoli invenzioni di ingegneria. Galileo Galilei (1564-1642): fondatore del metodo scientifico sperimentale; perfezionò il telescopio e scoprì i satelliti di Giove e le macchie solari; sostenne la teoria eliocentrica di Copernico. Alessandro Volta (1745-1827): dal suo nome deriva il Volt; nel 1800 inventò la batteria elettrica. Antonio Meucci (1808-1889): nel 1863 costruì un apparecchio telefonico; nel 2002 il Congresso americano lo ha riconosciuto inventore del telefono. Guglielmo Marconi (1874-1937): usò le onde elettromagnetiche per trasmettere messaggi a distanza senza fili; nel 1909 ottenne il premio Nobel per la Fisica; è il 'padre' delle telecomunicazioni.",
+      table: [
+        {
+          head: ["Scienziato", "Invenzione / contributo"],
+          rows: [
+            ["Leonardo da Vinci", "macchine e invenzioni di ingegneria"],
+            ["Galileo Galilei", "telescopio perfezionato, metodo sperimentale"],
+            ["Alessandro Volta", "batteria elettrica (Volt)"],
+            ["Antonio Meucci", "apparecchio telefonico"],
+            ["Guglielmo Marconi", "radio / telecomunicazioni senza fili, Nobel 1909"]
+          ]
+        }
+      ]
+    },
+
+    /* 9) 文化 —— Conosciamo l'Italia (Nobel) */
+    {
+      id: "it",
+      type: "culture",
+      title: "Conosciamo l'Italia",
+      body: "Alcuni Nobel italiani in campo scientifico: Enrico Fermi ha ricevuto il Nobel per la Fisica nel 1938 per la scoperta della radioattività artificiale e partecipò alla creazione della prima bomba atomica. Giulio Natta ha ricevuto il Nobel per la Chimica nel 1963 insieme a Karl Ziegler per la scoperta del propilene isotattico (Moplen), la plastica leggera di molti utensili quotidiani. Rita Levi-Montalcini ha ricevuto il Nobel per la Medicina nel 1986 per le sue scoperte sul sistema nervoso, utili per la cura di malattie come l'Alzheimer.",
+      table: [
+        {
+          head: ["Nobel", "Anno", "Campo"],
+          rows: [
+            ["Enrico Fermi", "1938", "Fisica"],
+            ["Giulio Natta", "1963", "Chimica"],
+            ["Rita Levi-Montalcini", "1986", "Medicina"]
+          ]
+        }
+      ]
+    }
+  ]
+};

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuovissimo Progetto Italiano · 学习总站</title>
+<link rel="icon" href="data:,">
+<style>
+  :root{
+    --green:#008C45; --white:#F4F5F0; --red:#CD212A;
+    --ink:#2C3E50; --ink2:#5D6D7E; --line:#E6E2DA; --bg:#FBF9F4; --card:#fff;
+    --gold:#C9922B;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--green),var(--red));z-index:100;transition:width .1s}
+  .top-nav{position:sticky;top:0;z-index:90;display:flex;align-items:center;justify-content:space-between;
+    padding:12px 26px;background:rgba(251,249,244,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+  .flag{display:inline-flex;width:26px;height:18px;border-radius:3px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.15)}
+  .flag i{flex:1}
+  .nav-links a{margin-left:20px;font-size:.92rem;color:var(--ink2);font-weight:600}
+  .nav-links a:hover,.nav-links a.active{color:var(--red)}
+  .hero{padding:64px 26px 30px;text-align:center;max-width:900px;margin:0 auto}
+  .hero h1{margin:0 0 10px;font-size:2.5rem;letter-spacing:-.5px;
+    background:linear-gradient(90deg,var(--green),#1b5e20 45%,var(--red));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{margin:0;color:var(--ink2);font-size:1.05rem}
+  .badge-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+  .badge{font-size:.78rem;padding:4px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink2)}
+  main{max-width:1080px;margin:0 auto;padding:10px 26px 70px}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 38px}
+  .stat-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 12px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.03)}
+  .stat-card .num{font-size:1.7rem;font-weight:800;color:var(--red)}
+  .stat-card .lbl{font-size:.82rem;color:var(--ink2);margin-top:2px}
+  h2.sec{margin:8px 0 18px;font-size:1.25rem}
+  .card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .card{position:relative;display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:22px 22px 20px;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s}
+  a.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.08);border-color:#d9d3c6}
+  .card .stripe{position:absolute;left:0;top:0;bottom:0;width:6px;
+    background:linear-gradient(180deg,var(--green) 33%,#fff 33% 66%,var(--red) 66%)}
+  .card .lvl{font-size:.76rem;font-weight:700;letter-spacing:.4px;color:var(--gold);text-transform:uppercase}
+  .card h3{margin:6px 0 6px;font-size:1.2rem}
+  .card .desc{margin:0;color:var(--ink2);font-size:.92rem;min-height:44px}
+  .card .meta{margin-top:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:.82rem;color:var(--ink2)}
+  .pill{font-size:.72rem;padding:3px 10px;border-radius:999px;font-weight:700}
+  .pill.on{background:#E7F6EC;color:#1E7A45;border:1px solid #BFE7CD}
+  .pill.todo{background:#F1EFEA;color:#8A8578;border:1px solid #E3DFD5}
+  .go{margin-left:auto;font-weight:700;color:var(--red)}
+  .card.todo{opacity:.92}
+  .card.todo h3{color:#6b6b6b}
+  h2.sec.two{margin-top:44px}
+  .info{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;color:var(--ink2);font-size:.92rem}
+  .info b{color:var(--ink)}
+  .site-footer.brand-footer{display:flex;flex-direction:column;align-items:center;gap:8px;padding:34px 0 44px;border-top:1px solid var(--line);margin-top:20px}
+  .brand-logo img{height:56px;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,.12)}
+  .brand-name{font-size:.86rem;font-weight:700;letter-spacing:2px;color:var(--ink2)}
+  @media(max-width:760px){
+    .hero h1{font-size:1.9rem}
+    .stat-grid{grid-template-columns:repeat(2,1fr)}
+    .card-grid{grid-template-columns:1fr}
+    .nav-links a{margin-left:14px;font-size:.86rem}
+  }
+</style>
+</head>
+<body>
+<div class="scroll-progress"></div>
+<nav class="top-nav">
+  <a class="nav-logo" href="index.html">
+    <span class="flag"><i style="background:#008C45"></i><i style="background:#F4F5F0"></i><i style="background:#CD212A"></i></span>
+    NPI · 学习总站
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="active">总览</a>
+    <a href="libro1/index.html">第一册</a>
+    <a href="libro2/index.html">第二册</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Nuovissimo Progetto Italiano</h1>
+  <p>从 A1 到 C2 的四册整合学习站 · 真人发音 · 点击即读</p>
+  <div class="badge-row">
+    <span class="badge">A1–A2 基础</span>
+    <span class="badge">B1–B2 进阶</span>
+    <span class="badge">C1 高阶（筹备中）</span>
+    <span class="badge">C2 精通（筹备中）</span>
+    <span class="badge">真人发音 🔊</span>
+    <span class="badge">离线可用</span>
+  </div>
+</header>
+
+<main>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="num">4</div><div class="lbl">册数（A1–C2）</div></div>
+    <div class="stat-card"><div class="num">2</div><div class="lbl">已上线册</div></div>
+    <div class="stat-card"><div class="num">24</div><div class="lbl">已收录单元</div></div>
+    <div class="stat-card"><div class="num">2673</div><div class="lbl">真人发音音频</div></div>
+  </div>
+
+  <h2 class="sec">📚 四册导航</h2>
+  <div class="card-grid">
+    <a class="card" href="libro1/index.html">
+      <div class="stripe"></div>
+      <div class="lvl">Libro 1 · A1–A2</div>
+      <h3>第一册 · 学生用书</h3>
+      <p class="desc">基础语法与日常交际，从打招呼、自我介绍到购物、点餐，打牢起步阶段。</p>
+      <div class="meta">
+        <span class="pill on">已上线</span>
+        <span>12 单元</span><span>537 词</span><span>174 句型</span><span>1170 发音</span>
+        <span class="go">进入 →</span>
+      </div>
+    </a>
+
+    <a class="card" href="libro2/index.html">
+      <div class="stripe"></div>
+      <div class="lvl">Libro 2 · B1–B2</div>
+      <h3>第二册 · 学生用书</h3>
+      <p class="desc">叙事与观点：讲述过去与未来、表达立场，攻克虚拟式、条件式与比较表达。</p>
+      <div class="meta">
+        <span class="pill on">已上线</span>
+        <span>12 单元</span><span>515 词</span><span>168 句型</span><span>1503 发音</span>
+        <span class="go">进入 →</span>
+      </div>
+    </a>
+
+    <div class="card todo">
+      <div class="stripe"></div>
+      <div class="lvl">Libro 3 · C1</div>
+      <h3>第三册 · 学生用书</h3>
+      <p class="desc">高阶表达与长文理解，抽象话题、论证与文体意识。</p>
+      <div class="meta"><span class="pill todo">待补充</span><span>即将制作</span></div>
+    </div>
+
+    <div class="card todo">
+      <div class="stripe"></div>
+      <div class="lvl">Libro 4 · C2</div>
+      <h3>第四册 · 学生用书</h3>
+      <p class="desc">精通阶段：母语级语感、修辞与专业语域。</p>
+      <div class="meta"><span class="pill todo">待补充</span><span>即将制作</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec two">ℹ️ 使用说明</h2>
+  <div class="info">
+    点击任意册进入学习页：每册含 <b>单元导航</b>、<b>词汇·句型列表</b>（筛选 / 搜索 / 发音）与 <b>自动生成练习</b>（选择题 · 填空 · 意中互译，即时判定并记录正确率）。
+    所有意大利语单词、例句与对话均可点击朗读，音频由 <b>edge-tts 真人发音</b>生成，可离线使用。
+  </div>
+</main>
+
+<footer class="site-footer brand-footer">
+  <span class="brand-logo" aria-label="涛子办事处">
+    <img src="assets/logo-piano.jpg" alt="涛子办事处" loading="lazy">
+  </span>
+  <span class="brand-name">涛子办事处</span>
+</footer>
+
+<script>
+  (function () {
+    const bar = document.querySelector('.scroll-progress');
+    const upd = () => {
+      const h = document.documentElement;
+      const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+      if (bar) bar.style.width = (isNaN(pct) ? 0 : pct) + '%';
+    };
+    window.addEventListener('scroll', upd, { passive: true });
+    upd();
+  })();
+</script>
+</body>
+</html>

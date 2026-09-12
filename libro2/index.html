@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NPI 2 · 意大利语学习站 — Nuovissimo Progetto Italiano 2 (B1–B2)</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/npi-styles.css">
+</head>
+<body>
+<div class="scroll-progress"></div>
+<nav class="top-nav">
+  <a class="nav-logo" href="index.html">
+    <span class="flag"><i style="background:#008C45"></i><i style="background:#F4F5F0"></i><i style="background:#CD212A"></i></span>
+    NPI 2 · 意语学习站
+  </a>
+  <div class="nav-links">
+    <a href="index.html">首页</a>
+    <a href="vocabolario.html">词汇句型</a>
+    <a href="esercizi.html">练习</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Nuovissimo Progetto Italiano 2</h1>
+  <p>基于教材《Nuovissimo Progetto Italiano 2 — Libro dello studente (B1–B2)》全书 250 页内容整理：<b id="h-w">0</b> 个单词、<b id="h-p">0</b> 个实用句型，覆盖 12 个单元，配真人发音与自动生成的练习题库。</p>
+  <div class="badge-row">
+    <span class="badge">B1–B2 级别</span>
+    <span class="badge">12 个单元</span>
+    <span class="badge">真人发音 🔊</span>
+    <span class="badge">离线可运行</span>
+  </div>
+</header>
+
+<main class="page-section">
+  <div class="stat-grid">
+    <div class="stat-card"><div class="num" id="s-words">0</div><div class="lbl">单词词条</div></div>
+    <div class="stat-card"><div class="num" id="s-phrases">0</div><div class="lbl">实用句型</div></div>
+    <div class="stat-card"><div class="num" id="s-units">0</div><div class="lbl">教材单元</div></div>
+    <div class="stat-card"><div class="num" id="s-audio">0</div><div class="lbl">发音音频</div></div>
+  </div>
+
+  <h2 style="margin-top:34px">📚 单元导航</h2>
+  <div class="card-grid" id="unit-grid"></div>
+
+  <h2 style="margin-top:34px">🚀 开始学习</h2>
+  <div class="card-grid">
+    <a class="unit-card" href="vocabolario.html">
+      <div class="uid">功能</div>
+      <div class="utitle">词汇 · 句型列表</div>
+      <div class="uzh">按单元 / 类别 / 首字母筛选，支持关键词搜索与发音</div>
+      <div class="meta">可隐藏中文自测 →</div>
+    </a>
+    <a class="unit-card" href="esercizi.html">
+      <div class="uid">功能</div>
+      <div class="utitle">自动生成练习</div>
+      <div class="uzh">选择题 · 填空 · 意中互译，即时判定并记录正确率</div>
+      <div class="meta">开始测验 →</div>
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer brand-footer">
+  <span class="brand-logo" aria-label="涛子办事处">
+    <img src="assets/logo-piano.jpg" alt="涛子办事处" loading="lazy">
+  </span>
+  <span class="brand-name">涛子办事处</span>
+</footer>
+
+<script src="data/unit-00.js"></script>
+<script src="data/unit-01.js"></script>
+<script src="data/unit-02.js"></script>
+<script src="data/unit-03.js"></script>
+<script src="data/unit-04.js"></script>
+<script src="data/unit-05.js"></script>
+<script src="data/unit-06.js"></script>
+<script src="data/unit-07.js"></script>
+<script src="data/unit-08.js"></script>
+<script src="data/unit-09.js"></script>
+<script src="data/unit-10.js"></script>
+<script src="data/unit-11.js"></script>
+<script src="data/audio-manifest.js"></script>
+<script src="js/npi-core.js"></script>
+<script>
+(function () {
+  const { units, items } = NPI_load();
+  const words = items.filter(i => i.kind === 'word').length;
+  const phrases = items.filter(i => i.kind === 'phrase').length;
+  const audioN = Object.keys(window.NPI_AUDIO || {}).length;
+  document.getElementById('h-w').textContent = words;
+  document.getElementById('h-p').textContent = phrases;
+  document.getElementById('s-words').textContent = words;
+  document.getElementById('s-phrases').textContent = phrases;
+  document.getElementById('s-units').textContent = Object.keys(units).length;
+  document.getElementById('s-audio').textContent = audioN;
+
+  const grid = document.getElementById('unit-grid');
+  grid.innerHTML = Object.keys(units).sort().map(id => {
+    const u = units[id];
+    const w = (u.words || []).length, p = (u.phrases || []).length;
+    const label = id === '00' ? '导论' : 'Unità ' + (+id);
+    return `<a class="unit-card" href="unit-${id}.html">
+      <div class="uid">${label}</div>
+      <div class="utitle">${NPI_esc(u.title)}</div>
+      <div class="uzh">${NPI_esc(u.titleZh)}</div>
+      <div class="meta">${w} 词 · ${p} 句 →</div>
+    </a>`;
+  }).join('');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,905 @@
+window.NPI = window.NPI || { units: {} };
+window.NPI.units["02"] = {
+  id: "02",
+  title: "Soldi e lavoro",
+  titleZh: "金钱与工作",
+  tema: "Banca, lavoro e Made in Italy",
+  words: [
+    {
+      it: "conto",
+      pos: "s.m.",
+      zh: "账户；银行户头",
+      cat: "Lavoro",
+      syll: "còn·to",
+      ex: "Lo puoi aprire in un minuto da casa e i costi non superano i 5 euro all'anno!",
+      exZh: "你在家一分钟就能开通，费用一年不超过 5 欧元！",
+      note: "第25页对话 A"
+    },
+    {
+      it: "banca",
+      pos: "s.f.",
+      zh: "银行",
+      cat: "Lavoro",
+      syll: "bàn·ca",
+      ex: "È un nuovo prodotto che offre solo la nostra banca.",
+      exZh: "这是只有我们银行提供的全新产品。",
+      note: "第25页对话 A"
+    },
+    {
+      it: "bancomat",
+      pos: "s.m.",
+      zh: "银行卡；自动提款卡（ATM 卡）",
+      cat: "Lavoro",
+      syll: "bàn·co·màt",
+      ex: "Poi a casa ti arriva un bancomat con il quale puoi prelevare soldi ovunque",
+      exZh: "然后家里会收到一张银行卡，凭它你可以在任何地方取钱。",
+      note: "第25页对话 A"
+    },
+    {
+      it: "carta di credito",
+      pos: "s.f.",
+      zh: "信用卡",
+      cat: "Altro",
+      syll: "càr·ta di crè·di·to",
+      ex: "Hai deciso di non usare più carte di credito",
+      exZh: "你决定不再使用信用卡了。",
+      note: "第29页活动 4b"
+    },
+    {
+      it: "contanti",
+      pos: "s.m.",
+      zh: "现金",
+      cat: "Altro",
+      syll: "con·tàn·ti",
+      ex: "⚠️",
+      exZh: "⚠️",
+      note: "转录仅作词汇项出现（第24页 Per cominciare 配对 d. contanti），无完整例句"
+    },
+    {
+      it: "assegno",
+      pos: "s.m.",
+      zh: "支票",
+      cat: "Altro",
+      syll: "as·sèg·no",
+      ex: "carta prepagata × [ (home banking + phone banking) × assegni gratuiti ]",
+      exZh: "预付卡 × [（网银＋电话银行）× 免费支票]",
+      note: "第24页广告（assegni gratuiti）"
+    },
+    {
+      it: "sportello",
+      pos: "s.m.",
+      zh: "柜台；窗口（sportello bancomat / sportello bancario）",
+      cat: "Lavoro",
+      syll: "spor·tèl·lo",
+      ex: "sportello POSTAMAT",
+      exZh: "POSTAMAT 自助终端",
+      note: "第24页 Per cominciare 配对（sportello bancomat / sportello bancario）"
+    },
+    {
+      it: "soldi",
+      pos: "s.m.",
+      zh: "钱（复数）",
+      cat: "Altro",
+      syll: "sòl·di",
+      ex: "Matteo è sempre al verde, non ha mai soldi con sé.",
+      exZh: "马泰奥总是身无分文，从不带钱。",
+      note: "第28页活动 B1d"
+    },
+    {
+      it: "lavoro",
+      pos: "s.m.",
+      zh: "工作；劳动",
+      cat: "Lavoro",
+      syll: "la·vò·ro",
+      ex: "Avete mai sostenuto un colloquio di lavoro?",
+      exZh: "你们参加过招聘面试吗？",
+      note: "第31页 E1"
+    },
+    {
+      it: "stipendio",
+      pos: "s.m.",
+      zh: "工资；薪水",
+      cat: "Lavoro",
+      syll: "sti·pèn·dio",
+      ex: "Ho trovato il lavoro, ma è lontano da casa, lo stipendio è buono.",
+      exZh: "我找到了工作，但离家远，工资还不错。",
+      note: "第27页活动 6（由打乱词重组的例句）"
+    },
+    {
+      it: "mutuo",
+      pos: "s.m.",
+      zh: "按揭贷款；房贷",
+      cat: "Altro",
+      syll: "mù·tuo",
+      ex: "Paola ha preso un altro mutuo dalla banca.",
+      exZh: "葆拉又从银行贷了一笔房贷。",
+      note: "第28页活动 B1a"
+    },
+    {
+      it: "prestito",
+      pos: "s.m.",
+      zh: "贷款；借款",
+      cat: "Altro",
+      syll: "prè·sti·to",
+      ex: "puoi chiedere piccoli prestiti fino a mille euro",
+      exZh: "你可以申请最高一千欧元的小额贷款。",
+      note: "第25页对话 A"
+    },
+    {
+      it: "colloquio",
+      pos: "s.m.",
+      zh: "面试；会谈（colloquio di lavoro 招聘面试）",
+      cat: "Lavoro",
+      syll: "col·lò·quio",
+      ex: "resto a Sua disposizione per un eventuale colloquio.",
+      exZh: "如需面试，我随时恭候。",
+      note: "第29页邮件 C2"
+    },
+    {
+      it: "curriculum vitae",
+      pos: "s.m.",
+      zh: "简历（常简作 curriculum）",
+      cat: "Lavoro",
+      syll: "cur·rì·cu·lum vi·tàe",
+      ex: "ho allegato i vari documenti, tra cui il mio curriculum vitae.",
+      exZh: "我已附上各类材料，其中包括我的简历。",
+      note: "第29页邮件 C2"
+    },
+    {
+      it: "candidatura",
+      pos: "s.f.",
+      zh: "求职申请；候选资格",
+      cat: "Lavoro",
+      syll: "can·di·da·tù·ra",
+      ex: "desidero presentarmi e sottoporre alla Sua attenzione la mia candidatura.",
+      exZh: "我想自我介绍一下，并向您提交我的求职申请。",
+      note: "第29页邮件 C2"
+    },
+    {
+      it: "mansione",
+      pos: "s.f.",
+      zh: "职责；岗位任务",
+      cat: "Lavoro",
+      syll: "man·siò·ne",
+      ex: "quali sono le vostre mansioni",
+      exZh: "你们的岗位职责是什么？",
+      note: "第35页 G5"
+    },
+    {
+      it: "assunzione",
+      pos: "s.f.",
+      zh: "录用；雇佣",
+      cat: "Lavoro",
+      syll: "as·sun·ziò·ne",
+      ex: "Cooperazione sas ... assumiamo personale",
+      exZh: "……我们招聘员工",
+      note: "与 assunzione 相关（第32页启事 2）；转录无完整含该词的句子"
+    },
+    {
+      it: "licenziamento",
+      pos: "s.m.",
+      zh: "解雇；辞退",
+      cat: "Lavoro",
+      syll: "li·cen·zia·mèn·to",
+      ex: "Dopo il licenziamento, Giulio sta per prendere un'importante decisione.",
+      exZh: "被解雇后，朱利奥即将做一个重要决定。",
+      note: "第34页活动 4"
+    },
+    {
+      it: "disoccupato",
+      pos: "s.m./agg.",
+      zh: "失业者；失业的",
+      cat: "Lavoro",
+      syll: "di·soc·cu·pà·to",
+      ex: "un conto per studenti e disoccupati",
+      exZh: "面向学生和失业者的账户",
+      note: "第25页对话 A"
+    },
+    {
+      it: "laurea",
+      pos: "s.f.",
+      zh: "大学学位；毕业（laureato 毕业生）",
+      cat: "Studio",
+      syll: "làu·rea",
+      ex: "Come potrete vedere sono laureata in Lingue",
+      exZh: "如您所见，我拥有语言学学位。",
+      note: "第29页邮件 C2"
+    },
+    {
+      it: "esperienza",
+      pos: "s.f.",
+      zh: "经验；经历",
+      cat: "Lavoro",
+      syll: "e·spe·rièn·za",
+      ex: "ho maturato un'esperienza didattica di 5 anni",
+      exZh: "我积累了 5 年的教学经验。",
+      note: "第29页邮件 C2"
+    },
+    {
+      it: "azienda",
+      pos: "s.f.",
+      zh: "公司；企业",
+      cat: "Lavoro",
+      syll: "a·zièn·da",
+      ex: "Scrivete una lettera di presentazione per inviare il vostro CV ad un'azienda.",
+      exZh: "写一封求职信，把简历发给一家公司。",
+      note: "第30页 C4"
+    },
+    {
+      it: "professione",
+      pos: "s.f.",
+      zh: "职业",
+      cat: "Lavoro",
+      syll: "pro·fes·siò·ne",
+      ex: "Abbinate le professioni alle definizioni.",
+      exZh: "把职业和定义配对。",
+      note: "第35页 G2"
+    },
+    {
+      it: "commesso",
+      pos: "s.m.",
+      zh: "售货员；店员（阴性 commessa）",
+      cat: "Lavoro",
+      syll: "com·mès·so",
+      ex: "Commesso: ...lavora in un negozio",
+      exZh: "售货员：……在商店工作。",
+      note: "第35页 G2"
+    },
+    {
+      it: "cuoca",
+      pos: "s.f.",
+      zh: "女厨师（阳性 cuoco）",
+      cat: "Lavoro",
+      syll: "cuò·ca",
+      ex: "Cuoca: è esperta nell'arte del cucinare",
+      exZh: "厨师：擅长烹饪艺术。",
+      note: "第35页 G2"
+    },
+    {
+      it: "grafico",
+      pos: "s.m.",
+      zh: "平面设计师（阴性 grafica）",
+      cat: "Lavoro",
+      syll: "grà·fi·co",
+      ex: "Grafico: disegna libri, riviste, pubblicità ecc. al computer",
+      exZh: "平面设计师：用电脑绘制书刊、广告等。",
+      note: "第35页 G2"
+    },
+    {
+      it: "cameriere",
+      pos: "s.m.",
+      zh: "服务员（阴性 cameriera）",
+      cat: "Lavoro",
+      syll: "ca·me·riè·re",
+      ex: "Cameriere: prende le ordinazioni e serve i clienti al tavolo",
+      exZh: "服务员：点单并在桌边为顾客服务。",
+      note: "第35页 G2"
+    },
+    {
+      it: "veterinario",
+      pos: "s.m.",
+      zh: "兽医（阴性 veterinaria）",
+      cat: "Lavoro",
+      syll: "ve·te·ri·nà·rio",
+      ex: "Veterinario: cura gli animali",
+      exZh: "兽医：照料动物。",
+      note: "第35页 G2"
+    },
+    {
+      it: "operaio",
+      pos: "s.m.",
+      zh: "工人；体力劳动者",
+      cat: "Lavoro",
+      syll: "o·pe·rà·io",
+      ex: "Operaio: svolge un lavoro manuale e spesso faticoso",
+      exZh: "工人：从事手工、往往劳累的工作。",
+      note: "第35页 G2"
+    },
+    {
+      it: "direttore",
+      pos: "s.m.",
+      zh: "经理；主任（阴性 direttrice）",
+      cat: "Lavoro",
+      syll: "di·ret·tò·re",
+      ex: "il direttore di una scuola di lingue",
+      exZh: "一所语言学校的校长。",
+      note: "第29页 C1"
+    },
+    {
+      it: "segretaria",
+      pos: "s.f.",
+      zh: "秘书（阳性 segretario）",
+      cat: "Lavoro",
+      syll: "se·gre·tà·ria",
+      ex: "una segretaria aveva confuso i nomi!",
+      exZh: "一位秘书把名字搞混了！",
+      note: "第33页文章 F2"
+    },
+    {
+      it: "giornalista",
+      pos: "s.m./f.",
+      zh: "记者",
+      cat: "Lavoro",
+      syll: "gior·na·lì·sta",
+      ex: "la giornalista si è arrabbiata con Guy Goma",
+      exZh: "女记者对 Guy Goma 发了火。",
+      note: "第33页文章 F2"
+    },
+    {
+      it: "truccatrice",
+      pos: "s.f.",
+      zh: "化妆师（阳性 truccatore）",
+      cat: "Lavoro",
+      syll: "truc·ca·trì·ce",
+      ex: "mi aspettava una truccatrice, il che mi è sembrato molto strano.",
+      exZh: "有位化妆师在等我，这让我觉得非常奇怪。",
+      note: "第33页文章 F2"
+    },
+    {
+      it: "elettricista",
+      pos: "s.m./f.",
+      zh: "电工",
+      cat: "Lavoro",
+      syll: "e·let·tri·cì·sta",
+      ex: "Guy Goma voleva solo proporre come elettricista.",
+      exZh: "Guy Goma 只是想应聘电工。",
+      note: "第33页文章 F2"
+    },
+    {
+      it: "requisito",
+      pos: "s.m.",
+      zh: "要求；条件",
+      cat: "Lavoro",
+      syll: "re·quì·si·to",
+      ex: "requisiti: età inferiore ai 30 anni, laurea...",
+      exZh: "要求：30 岁以下、本科……",
+      note: "第32页启事 3"
+    },
+    {
+      it: "annuncio",
+      pos: "s.m.",
+      zh: "招聘启事；广告（annuncio di lavoro）",
+      cat: "Lavoro",
+      syll: "an·nùn·cio",
+      ex: "in risposta all'annuncio apparso sul vostro sito",
+      exZh: "回应贵网站发布的招聘启事。",
+      note: "第29页邮件 C2"
+    },
+    {
+      it: "email",
+      pos: "s.f.",
+      zh: "电子邮件",
+      cat: "Comunicazione",
+      syll: "e·mail",
+      ex: "Leggete questa email e indicate quali informazioni sono presenti.",
+      exZh: "读这封邮件，指出其中包含哪些信息。",
+      note: "第29页 C2"
+    },
+    {
+      it: "aprire",
+      pos: "v.",
+      zh: "开通；打开",
+      cat: "Lavoro",
+      syll: "a·prì·re",
+      ex: "Lo puoi aprire in un minuto da casa",
+      exZh: "你在家一分钟就能开通。",
+      note: "第25页对话 A"
+    },
+    {
+      it: "prelevare",
+      pos: "v.",
+      zh: "提取；取款",
+      cat: "Altro",
+      syll: "pre·le·và·re",
+      ex: "con il quale puoi prelevare soldi ovunque",
+      exZh: "凭它你可以在任何地方取钱。",
+      note: "第25页对话 A"
+    },
+    {
+      it: "assumere",
+      pos: "v.",
+      zh: "雇佣；录用",
+      cat: "Lavoro",
+      syll: "as·sù·me·re",
+      ex: "Cooperazione sas ... assumiamo personale",
+      exZh: "……我们招聘员工。",
+      note: "第32页启事 2"
+    },
+    {
+      it: "licenziare",
+      pos: "v.",
+      zh: "解雇",
+      cat: "Lavoro",
+      syll: "li·cen·zià·re",
+      ex: "la decisione del governo di licenziare 200 maestri elementari",
+      exZh: "政府解雇 200 名小学老师的决定。",
+      note: "第33页文章 F2"
+    },
+    {
+      it: "chiedere",
+      pos: "v.",
+      zh: "请求；询问",
+      cat: "Altro",
+      syll: "chiè·de·re",
+      ex: "puoi chiedere piccoli prestiti fino a mille euro",
+      exZh: "你可以申请最高一千欧元的小额贷款。",
+      note: "第25页对话 A"
+    },
+    {
+      it: "vantaggioso",
+      pos: "agg.",
+      zh: "有利的；实惠的",
+      cat: "Altro",
+      syll: "van·tag·giò·so",
+      ex: "È un nuovo prodotto che è veramente vantaggioso",
+      exZh: "这是一个真正实惠的新产品。",
+      note: "第25页对话 A"
+    },
+    {
+      it: "formale",
+      pos: "agg.",
+      zh: "正式的（lettera / formula formale）",
+      cat: "Comunicazione",
+      syll: "for·mà·le",
+      ex: "non trovereste in un'email amichevole, informale",
+      exZh: "在友好的非正式邮件里找不到。",
+      note: "第30页 C3"
+    }
+  ],
+  phrases: [
+    {
+      it: "Come posso esserle utile?",
+      pos: "frase",
+      zh: "有什么可以帮您的吗？（尊称）",
+      cat: "Comunicazione",
+      syll: "cò·me pòs·so es·sèr·le u·tì·le",
+      note: "第26页对话 banca（银行接线员开场）"
+    },
+    {
+      it: "Sto cercando di aprire online il nuovo conto.",
+      pos: "frase",
+      zh: "我想在网上开通新账户。",
+      cat: "Lavoro",
+      syll: "stò cer·càn·do di a·prì·re on·lì·ne il nuò·vo cón·to",
+      note: "第26页对话 banca"
+    },
+    {
+      it: "In cosa consiste?",
+      pos: "frase",
+      zh: "具体内容是什么？/ 它包含什么？",
+      cat: "Lavoro",
+      syll: "in cò·sa con·sì·ste",
+      note: "第25页对话 A"
+    },
+    {
+      it: "Che cosa volevi sapere?",
+      pos: "frase",
+      zh: "你想了解什么？",
+      cat: "Comunicazione",
+      syll: "che cò·sa vo·lé·vi sa·pè·re",
+      note: "第25页对话 A"
+    },
+    {
+      it: "Si tratta di...",
+      pos: "loc.",
+      zh: "是关于……；指的是……",
+      cat: "Altro",
+      syll: "si tràt·ta di",
+      note: "第25页对话 A（si tratta di un conto che conviene davvero）"
+    },
+    {
+      it: "Che bello!",
+      pos: "frase",
+      zh: "太好了！",
+      cat: "Altro",
+      syll: "che bèl·lo",
+      note: "第25页对话 A"
+    },
+    {
+      it: "Egregio Direttore,",
+      pos: "frase",
+      zh: "尊敬的主编／主任（正式信件开头）",
+      cat: "Comunicazione",
+      syll: "e·grè·gio di·ret·tò·re",
+      note: "第29页邮件 C2 开头"
+    },
+    {
+      it: "Resto a Sua disposizione per un eventuale colloquio.",
+      pos: "frase",
+      zh: "如需面试，我随时恭候。",
+      cat: "Lavoro",
+      syll: "rè·sto a sù·a di·spo·si·ziò·ne per un e·ven·tuà·le col·lò·quio",
+      note: "第29页邮件 C2 结尾"
+    },
+    {
+      it: "Distinti saluti",
+      pos: "frase",
+      zh: "此致敬礼（正式信件结尾）",
+      cat: "Comunicazione",
+      syll: "di·stìn·ti sa·lù·ti",
+      note: "第29页邮件 C2 结尾"
+    },
+    {
+      it: "Chi cerca trova!",
+      pos: "frase",
+      zh: "有志者事竟成（谚）",
+      cat: "Altro",
+      syll: "chi cèr·ca trò·va",
+      note: "第30页对话 mamma/Lorenzo"
+    },
+    {
+      it: "Chi trova un amico trova un tesoro!",
+      pos: "frase",
+      zh: "得一友如得宝（谚）",
+      cat: "Altro",
+      syll: "chi trò·va un a·mì·co trò·va un te·sò·ro",
+      note: "第30页对话 mamma/Lorenzo"
+    },
+    {
+      it: "Sta per piovere.",
+      pos: "frase",
+      zh: "要下雨了。（stare per + 不定式，表即将发生）",
+      cat: "Grammatica",
+      syll: "sta per piò·ve·re",
+      note: "第34页表格（stare per + infinito）"
+    },
+    {
+      it: "Stavo lavorando.",
+      pos: "frase",
+      zh: "我当时正在工作。（stare + 副动词，表进行）",
+      cat: "Grammatica",
+      syll: "stà·vo la·vo·ràn·do",
+      note: "第34页表格（stare + gerundio）"
+    },
+    {
+      it: "Made in Italy",
+      pos: "loc.",
+      zh: "意大利制造",
+      cat: "Altro",
+      syll: "mèid in ì·ta·li",
+      note: "第37页 COS'È IL MADE IN ITALY?"
+    },
+    {
+      it: "lettera di presentazione",
+      pos: "loc.",
+      zh: "求职信；自荐信",
+      cat: "Lavoro",
+      syll: "lèt·te·ra di pre·sen·ta·ziò·ne",
+      note: "第30页 C4（由 words 移入短语）"
+    }
+  ],
+  sections: [
+    /* 1) 热身 / 单元目标 —— Per cominciare... */
+    {
+      id: "intro",
+      type: "intro",
+      title: "Per cominciare...",
+      goals: [
+        "diversi modi per formulare una domanda",
+        "a scrivere una email / lettera formale",
+        "le formule di apertura e di chiusura",
+        "a prepararci ad un colloquio di lavoro",
+        "a scrivere una lettera di presentazione",
+        "a scrivere un Curriculum Vitae",
+        "i pronomi relativi (che, il quale, cui)",
+        "chi come pronome relativo",
+        "pronomi doppi",
+        "stare + gerundio · stare per + infinito",
+        "cosa ha rappresentato il miracolo economico per l'Italia",
+        "alcune curiosità sul Made in Italy"
+      ],
+      preview: [
+        { it: "carta di credito", zh: "信用卡" },
+        { it: "banconote", zh: "纸币（欧元）" },
+        { it: "sportello bancomat", zh: "ATM 柜员机" },
+        { it: "sportello bancario", zh: "银行柜台" },
+        { it: "assegno", zh: "支票" },
+        { it: "contanti", zh: "现金" }
+      ]
+    },
+
+    /* 2) A 对话 —— Amici su cui contare (Audio 6) */
+    {
+      id: "A",
+      type: "dialogue",
+      title: "Amici su cui contare",
+      audio: "Audio 6",
+      lines: [
+        { who: "Gianna",  it: "Pronto, ciao Carlo, sono Gianna.", zh: "喂，你好 Carlo，我是 Gianna。" },
+        { who: "Carlo",   it: "Oh, ciao Gianna, come stai?", zh: "哦，你好 Gianna，你好吗？" },
+        { who: "Gianna",  it: "Bene, e tu? Senti, è un buon momento per quella mini intervista di cui parlavamo?", zh: "挺好，你呢？听着，现在是不是适合聊我们说的那个小采访？" },
+        { who: "Carlo",   it: "Certo, a quest'ora sono più tranquillo. Allora, ricordami, che cosa volevi sapere?", zh: "当然，这会儿我比较清闲。那提醒我一下，你想了解什么？" },
+        { who: "Gianna",  it: "Dunque, dovrei scrivere un articolo sui nuovi servizi bancari, no? E ho pensato subito a te.", zh: "嗯，我得写一篇关于新银行服务的文章，对吧？我马上就想到你了。" },
+        { who: "Carlo",   it: "Certo. Cosa ti interessa in particolare?", zh: "当然。你特别感兴趣的是什么？" },
+        { who: "Gianna",  it: "Allora... se non sbaglio, voi avete un conto per studenti e disoccupati, vero?", zh: "那……如果我没记错，你们有一个面向学生和失业者的账户，对吧？" },
+        { who: "Carlo",   it: "Esatto. È un nuovo prodotto che è veramente vantaggioso e che offre solo la nostra banca.", zh: "没错。这是一个真正实惠的新产品，而且只有我们银行提供。" },
+        { who: "Gianna",  it: "Ehehe, hai già cominciato a fare pubblicità?", zh: "嘿嘿，你已经开始打广告了？" },
+        { who: "Carlo",   it: "No, non è pubblicità, te l'ho detto... si tratta di un conto che conviene davvero.", zh: "不，这不是广告，我跟你说过了……这是一个真的划算的账户。" },
+        { who: "Gianna",  it: "Perché? In cosa consiste?", zh: "为什么？它具体是什么？" },
+        { who: "Carlo",   it: "Beh, lo puoi aprire in un minuto da casa e i costi non superano i 5 euro all'anno!", zh: "嗯，你在家一分钟就能开通，费用一年不超过 5 欧元！" },
+        { who: "Gianna",  it: "Hmm, interessante! E poi?", zh: "嗯，有意思！还有呢？" },
+        { who: "Carlo",   it: "Poi a casa ti arriva un bancomat con il quale puoi non solo prelevare soldi ovunque, ma anche avere sconti in più di tremila negozi, cinema, teatri, tra cui la Scala.", zh: "然后家里会收到一张银行卡，凭它你不仅可以在任何地方取钱，还能在三千多家商店、电影院、剧院（包括斯卡拉歌剧院）享受折扣。" },
+        { who: "Gianna",  it: "Addirittura? Che bello!", zh: "居然？太好了！" },
+        { who: "Carlo",   it: "Vedi? Infine, con questo conto, che noi chiamiamo \"aperto\", puoi chiedere, sempre online, piccoli prestiti fino a mille euro a un tasso d'interesse molto basso.", zh: "看到了吧？最后，用这个我们叫“aperto”的账户，你可以随时在线申请最高一千欧元的小额贷款，利率很低。" },
+        { who: "Gianna",  it: "Ma guarda che questo conto interesserebbe anche a me! Però hai detto che è solo per disoccupati e studenti, giusto? Potrebbe andare bene per Lorenzo, te lo ricordi no?", zh: "你看，这个账户连我都会感兴趣！不过你说过只面向失业者和学生，对吧？对 Lorenzo 也合适，你记得吧？" },
+        { who: "Carlo",   it: "Come no! Ma è disoccupato o studente?", zh: "当然记得！那他是失业还是学生？" },
+        { who: "Gianna",  it: "Tutti e due...", zh: "都是……" }
+      ]
+    },
+
+    /* 3) banca 对话 —— Lorenzo e l'operatrice (练习填空形式 che / a cui) */
+    {
+      id: "banca",
+      type: "dialogue",
+      title: "Lorenzo e l'operatrice bancaria",
+      lines: [
+        { who: "operatrice bancaria", it: "Pronto sono Rita, come posso esserle utile?", zh: "您好，我是 Rita，有什么可以帮您？" },
+        { who: "Lorenzo", it: "Buongiorno Rita, sono Lorenzo. Sto cercando di aprire online il nuovo conto che / a cui pubblicizzate...", zh: "早上好 Rita，我是 Lorenzo。我想在网上开通你们宣传的那个新账户……" },
+        { who: "operatrice", it: "Il conto business?", zh: "是商务账户吗？" },
+        { who: "Lorenzo", it: "Magari!... No, il conto che / per cui avete per gli studenti, quello che / tra cui offre tanti vantaggi.", zh: "要是就好了！……不是，是你们给学生办的那种账户，就是有很多优惠的那种。" },
+        { who: "operatrice", it: "Ah... il \"Conto aperto\"! Per aprirlo è necessario...", zh: "啊……是“开放账户”！开通它需要……" },
+        { who: "Lorenzo", it: "Guardi... ho seguito tutte le istruzioni che / a cui spiegano passo passo cosa fare, ma non riesco a completare la procedura online.", zh: "您看……我按照一步步说明的操作做了，但没法完成线上流程。" },
+        { who: "operatrice", it: "Non si preoccupi... se mi dice i servizi che / a cui è interessato ci penso io...", zh: "别担心……您告诉我您感兴趣的服务，我来办……" },
+        { who: "Lorenzo", it: "Oh, meno male. Grazie!", zh: "哦，太好了。谢谢！" }
+      ],
+      note: "转录为练习填空形式（che / a cui / per cui / tra cui 备选）；正确代词依次为：che, che, che, che, a cui。"
+    },
+
+    /* 4) 语法 —— I pronomi relativi (che, il quale, cui) */
+    {
+      id: "gram-rel",
+      type: "grammar",
+      title: "I pronomi relativi: che, il quale, cui",
+      blocks: [
+        {
+          kind: "quote",
+          title: "Il pronome relativo che",
+          lines: [
+            "Questo conto, che è veramente vantaggioso, è un nuovo prodotto.",
+            "Questo conto è un nuovo prodotto. Questo conto è veramente vantaggioso. (soggetto)",
+            "Si tratta di un conto che conviene davvero.",
+            "Con questo conto puoi chiedere un piccolo prestito. Noi chiamiamo \"aperto\" questo conto. (oggetto)",
+            "Il pronome relativo che è invariabile e si riferisce al soggetto (esempio 1) o al complemento oggetto (esempio 2)."
+          ]
+        },
+        {
+          kind: "quote",
+          title: "Il pronome relativo il quale",
+          lines: [
+            "Questo conto, il quale è veramente vantaggioso, è un nuovo prodotto.",
+            "Il pronome relativo il quale è variabile (il quale, la quale, i quali, le quali) e può sostituire il relativo che quando ha la funzione di soggetto.",
+            "Ho incontrato la ragazza di Michele che lavora in banca. → Chi lavora in banca, Michele o la sua ragazza?",
+            "Ho incontrato la ragazza di Michele, la quale lavora in banca. → se è la sua ragazza a lavorare in banca",
+            "Ho incontrato la ragazza di Michele, il quale lavora in banca. → se è Michele stesso a lavorare in banca",
+            "Il pronome relativo il quale permette di rendere più chiara la frase, di evitare ambiguità, specificando il genere e il numero."
+          ]
+        },
+        {
+          kind: "quote",
+          title: "Il pronome relativo cui",
+          lines: [
+            "Sono uscito con Luigi. → Il ragazzo ... sono uscito è Luigi.",
+            "Ho venduto la bicicletta a Gianna. → Gianna, ... ho venduto la bicicletta, è una cara amica.",
+            "Sono nata in una città bellissima. → La città ... sono nata è bellissima anche se un po' caotica.",
+            "Il pronome relativo cui è invariabile e, di solito, è preceduto da una preposizione semplice.",
+            "Anche il pronome relativo cui può essere sostituito da il quale, accompagnato da una preposizione articolata.",
+            "Il ragazzo con cui sono uscito è Luigi. → Il ragazzo con il quale sono uscito è Luigi.",
+            "Gianna, a cui ho venduto la bicicletta, è una cara amica. → Gianna, alla quale ho venduto la bicicletta, ..."
+          ]
+        }
+      ]
+    },
+
+    /* 5) B 练习 —— Perché...? */
+    {
+      id: "B",
+      type: "exercise",
+      title: "Perché...?",
+      items: [
+        "1. Paola ha preso un altro mutuo dalla banca. Le chiedi: ............",
+        "2. Alessandro ha litigato con Beatrice. Gli chiedi: ............",
+        "3. Carla odia il francese e non studia mai. Le chiedi: ............",
+        "4. Matteo è sempre al verde, non ha mai soldi con sé. Gli chiedi: ............",
+        "5. Gli esercizi di italiano sono difficili, ma Irene non ti aiuta. Le chiedi: ............",
+        "Chiedere il perché: Come mai? / Perché? / Per quale motivo?"
+      ],
+      blocks: [
+        { kind: "quote", title: "Chiedere il perché", lines: ["Come mai?", "Perché?"] }
+      ]
+    },
+
+    /* 6) C 练习 —— Egregio direttore... (邮件 + 正式格式) */
+    {
+      id: "C",
+      type: "exercise",
+      title: "Egregio direttore...",
+      blocks: [
+        {
+          kind: "text",
+          title: "Email di candidatura (Marisa Grandi)",
+          text: "Egregio Direttore,\n\nin risposta all'annuncio apparso sul vostro sito per un posto di insegnante di lingua italiana, desidero presentarmi e sottoporre alla Sua attenzione la mia candidatura.\n\nHo già compilato il modulo online e ho allegato i vari documenti, tra cui il mio curriculum vitae.\n\nCome potrete vedere sono laureata in Lingue e ho maturato un'esperienza didattica di 5 anni prima all'estero e poi in Italia, insegnando soprattutto ad adolescenti e adulti.\n\nSono una persona socievole, responsabile e mi piace lavorare in gruppo. Credo di essere adatta alle esigenze di una scuola prestigiosa come la vostra.\n\nIn attesa di una Sua risposta, resto a Sua disposizione per un eventuale colloquio.\n\nDistinti saluti\nMarisa Grandi"
+        },
+        {
+          kind: "table",
+          title: "Lettere / email formali",
+          head: ["Apertura (gentilezza)", "Titolo / Destinatario", "Chiusura"],
+          rows: [
+            ["Gentile / Gentilissimo/a / Gentili", "Egregio/a Direttore/Direttrice; Dottor/Dot.ssa; Signor/Signora Rossi", "Cordiali saluti / Distinti saluti"],
+            ["", "Spettabile (Spett.le) Ditta / Scuola ...", "La saluto cordialmente / In attesa di un Vostro riscontro, Vi saluto cordialmente"],
+            ["", "", "Aspetto / Attendo Vostre notizie"]
+          ]
+        }
+      ],
+      items: [
+        "1. Marisa è un'insegnante di lingua italiana. Quali informazioni può dare al direttore?",
+        "2. Leggete l'email e indicate quali informazioni sono presenti o meno (1-10).",
+        "3. Sottolineate le espressioni proprie di un'email formale.",
+        "4. Scrivete una lettera di presentazione per inviare il vostro CV ad un'azienda.",
+        "5. Lorenzo chiama la mamma: ascoltate e scrivete il proverbio corrispondente.",
+        "6. Osservate il pronome relativo chi (interrogativo vs relativo)."
+      ]
+    },
+
+    /* 7) 语法 —— Pronomi doppi */
+    {
+      id: "pd",
+      type: "grammar",
+      title: "Pronomi doppi",
+      blocks: [
+        {
+          kind: "table",
+          title: "Pronomi doppi",
+          head: ["Pronome", "Sostituisce", "Esempio"],
+          rows: [
+            ["quanto (solo cosa)", "(tutto) quello che, ciò che", "È quanto vi chiederanno in tanti."],
+            ["quanti / quante (solo persone)", "(tutti/e) quelli/e che, coloro che", "Quanti cercano lavoro dovranno pagarsi le spese."],
+            ["il che", "ciò, cosa che (un'intera frase)", "..., il che è importante."]
+          ]
+        },
+        {
+          kind: "text",
+          title: "Note",
+          text: "Il pronome relativo quanto è riferito solo a cosa, è invariabile e sostituisce (tutto) quello che, ciò che. I pronomi relativi quanti/quante sono riferiti solo a persone e sostituiscono (tutti/e) quelli/e che, coloro che. Il che (articolo + che) sostituisce un'intera frase e ha il significato di ciò, cosa che."
+        }
+      ]
+    },
+
+    /* 8) E 练习 —— Curriculum Vitae */
+    {
+      id: "E",
+      type: "exercise",
+      title: "Curriculum Vitae",
+      blocks: [
+        {
+          kind: "text",
+          title: "CV Europass — Gennaro Moscini",
+          text: "Cognome/Nome: Moscini Gennaro\nIndirizzo: Via B. Bruno 156, 50136 Firenze\nCittadinanza: italiana\nData e luogo di nascita: 10 maggio 1995, Maschile\nOccupazione desiderata: Gestione risorse umane\nEsperienza professionale: Addetto alle vendite (09/2016-11/2020), Soft System, Firenze\nIstruzione: Laurea magistrale in Scienze dell'Economia (Bologna)\nLingue: Italiano (madrelingua); Francese (livello C1/C2...)\nPatente: B\n\n⚠️ 部分字段 OCR 不清晰（es. vedlite, veridini, 110/110, borsa di studio, Quadro comune...），以原书 p32 为准。"
+        },
+        {
+          kind: "text",
+          title: "Annunci di lavoro (p32-33)",
+          text: "1. Milano — F.lli Fiore ricerca laureato (anche neolaureato) in Economia e Commercio: gestione ordini clienti e assistenza ufficio marketing.\n2. Mazara del Vallo — Cooperazione sas assumiamo personale per supermercato Conad (macellai, salumieri...), contratto a tempo indeterminato.\n3. Trieste — Generali Assicurazioni cerca neolaureato come responsabile commerciale: età < 30, laurea, conoscenza Office e inglese."
+        }
+      ],
+      items: [
+        "1. Avete mai sostenuto un colloquio di lavoro? Quali sono le domande più frequenti?",
+        "2. Ascoltate il colloquio di lavoro di Gennaro Moscini.",
+        "3. Ascoltate di nuovo e completate il CV.",
+        "4. Rispondete alle domande su Gennaro.",
+        "5. Completate gli annunci con le parole date (mansioni, determinato, requisiti, ricerca neolaureato, assunzione).",
+        "6. Scegliete un annuncio e scrivete una breve email allegando il CV."
+      ]
+    },
+
+    /* 9) F 练习 —— Un colloquio di lavoro... in diretta */
+    {
+      id: "F",
+      type: "exercise",
+      title: "Un colloquio di lavoro... in diretta",
+      blocks: [
+        {
+          kind: "text",
+          title: "La Repubblica — articolo (F2)",
+          text: "ALLA BBC PER UN COLLOQUIO DI LAVORO. VA IN DIRETTA SCAMBIATO PER L'OSPITE\n\nLONDRA - Ecco che è successo un giovane che si è presentato presso gli studi della BBC per un colloquio di lavoro e invece, per errore, è finito davanti alle telecamere! Guy Goma voleva solo proporre come elettricista. Invece: \"È successo tutto così! Improvvisamente, stavano per allontanarmi dalla reception, quando un tipo mi ha detto di seguirlo. Davanti così di fretta che per stargli dietro mi sono messo a correre. E correndo siamo arrivati in un camerino dove mi aspettava una truccatrice, il che mi è sembrato molto strano.\"\n\nDal trucco poi dritto nello studio, davanti alla conduttrice della BBC, la quale senza perdere tempo lo ha presentato come Guy Somders, esperto di economia. Lui, che di economia non ne sa assolutamente nulla. \"Quando ho capito che ero in diretta alle telecamere, che cosa potevo fare? Ho cercato di rispondere alle domande di stare calmo.\" Prima domanda della conduttrice: \"Che cosa ne pensa della decisione del governo di licenziare 200 maestri elementari?\" Dovevo dire qualcosa. \"Sono molto sorpreso, questa decisione veramente non mi è aspettata!\"\n\nNel frattempo, il vero Somders era arrivato e stava aspettando nella lobby, davanti a un monitor, quando ha visto che il suo nome compariva sullo schermo sotto il volto di uno sconosciuto, che cercava senza molto successo di rispondere alle domande della giornalista. Cos'era accaduto? Alla reception una segretaria aveva confuso i nomi!\n\nA Goma è andata comunque bene: da disoccupato è diventato una \"star per caso\" ed ha partecipato ad altre trasmissioni televisive! Per parlare non di economia, ma della sua esperienza..."
+        },
+        {
+          kind: "table",
+          title: "stare + gerundio / stare per + infinito",
+          head: ["stare + gerundio", "stare per + infinito"],
+          rows: [
+            ["esprime l'aspetto progressivo di un'azione in corso di svolgimento", "esprime l'aspetto prossimo di un'azione, cioè un'azione che si verificherà nell'immediato futuro"],
+            ["Stavo lavorando quando mi ha telefonato Elisa.", "Stavo per uscire, quando mi ha telefonato Elisa."],
+            ["Per fortuna, mi sta aiutando anche Gianna.", "Sta per piovere, prendi l'ombrello!"]
+          ]
+        }
+      ],
+      items: [
+        "1. Leggete il titolo: cos'è successo, secondo voi?",
+        "2. Leggete l'articolo e indicate le affermazioni presenti (1-10).",
+        "3. Osservate «stavo per...» e «stava aspettando»: che significano?",
+        "4. Completate le frasi con: stai facendo / sta per aprire / sta per prendere / stava andando / sta leggendo.",
+        "5. Osservate i disegni e raccontate la storia (ANGolo Moda / Armani)."
+      ]
+    },
+
+    /* 10) G 词汇 —— Vocabolario e abilità (professioni) */
+    {
+      id: "G",
+      type: "vocab",
+      title: "Vocabolario e abilità",
+      blocks: [
+        {
+          kind: "table",
+          title: "Professioni",
+          head: ["Professione", "Definizione"],
+          rows: [
+            ["Commesso", "lavora in un negozio (ad esempio, di abbigliamento)"],
+            ["Cuoca", "è esperta nell'arte del cucinare"],
+            ["Grafico", "disegna libri, riviste, pubblicità ecc. al computer"],
+            ["Cameriere", "prende le ordinazioni e serve i clienti al tavolo, al bar o al ristorante"],
+            ["Veterinaria", "cura gli animali"],
+            ["Operaio", "svolge un lavoro manuale e spesso faticoso"]
+          ]
+        }
+      ],
+      items: [
+        "1. Abbinate le professioni alle foto.",
+        "2. Chi...? Abbinate le professioni alle definizioni.",
+        "5. Scrivete una lettera a un amico italiano sul vostro nuovo lavoro.",
+        "6. Mima la professione!"
+      ]
+    },
+
+    /* 11) 文化 —— L'economia italiana */
+    {
+      id: "econ",
+      type: "culture",
+      title: "L'economia italiana",
+      body: "本单元阅读：意大利“经济奇迹”（miracolo economico）与“意大利制造”（Made in Italy）。",
+      blocks: [
+        {
+          kind: "text",
+          title: "Il miracolo economico",
+          text: "Dopo la Seconda guerra mondiale, l'Italia appare come un Paese distrutto e anche molto povero, con un'economia basata sull'agricoltura. È grazie agli aiuti degli Stati Uniti per l'Europa, il cosiddetto piano Marshall, che l'Italia comincia la ricostruzione del Paese e la ripresa della sua economia. Comincia a costruire grandi opere pubbliche, ad esempio l'autostrada del Sole che collega Napoli a Milano. Aumentano i posti di lavoro nelle grandi aziende che in questi anni si rinnovano utilizzando nuove tecnologie. Simbolo dell'Italia del boom economico è soprattutto la FIAT, che crea le utilitarie: la Seicento e la Cinquecento, macchine piccole, comode ed economiche."
+        },
+        {
+          kind: "text",
+          title: "Cos'è il Made in Italy?",
+          text: "I produttori italiani devono applicare sui loro prodotti d'esportazione il marchio \"Made in Italy\" per specificarne la provenienza. Con il tempo \"Made in Italy\" diventa sinonimo di qualità e creatività: dagli anni '60 si affermano in tutto il mondo grandi marchi in diversi settori. Nel settore automobilistico: FIAT, Ferrari, Lamborghini, Maserati. Nella moda: Armani, Versace, Missoni, Prada. Nel settore alimentare: Ferrero (Nutella), Algida, Barilla."
+        }
+      ]
+    },
+
+    /* 12) 文化 —— Conosciamo l'Italia */
+    {
+      id: "it",
+      type: "culture",
+      title: "Conosciamo l'Italia",
+      body: "意大利经济奇迹与意大利制造品牌：了解“意大利制造”受法律保护的背景。",
+      blocks: [
+        {
+          kind: "table",
+          title: "Marchi italiani",
+          head: ["Marchio", "Prodotto"],
+          rows: [
+            ["UNITED COLORS OF BENETTON", "abbigliamento"],
+            ["CANDY", "elettrodomestici"],
+            ["Vespa", "scooter"],
+            ["Barilla", "pasta"],
+            ["illy", "caffè"],
+            ["Ferrari", "automobili"],
+            ["GUCCI", "alta moda"],
+            ["GENERALI", "assicurazioni"],
+            ["nutella", "cioccolata"],
+            ["LUXOTTICA", "occhiali"]
+          ]
+        },
+        {
+          kind: "text",
+          title: "Glossario",
+          text: "miracolo economico: il grande sviluppo economico dell'Italia negli anni '50 e '60 del Novecento. utilitaria: auto di piccole dimensioni e di piccola cilindrata, a basso costo. affermarsi: acquisire sempre più importanza. reclusione: essere rinchiusi in prigione per non aver rispettato la legge.\n\n⚠️ Una legge del 2003 ha stabilito che è illegale usare il marchio Made in Italy per beni non prodotti e progettati in Italia (fino a 2 anni di reclusione)."
+        }
+      ]
+    }
+  ]
+};

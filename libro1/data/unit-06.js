@@ -1,0 +1,818 @@
+window.NPI = window.NPI || { units: {} };
+window.NPI.units["06"] = {
+  id: "06",
+  title: "A cena fuori",
+  titleZh: "外出就餐",
+  tema: "Ordinare al ristorante; i pasti della giornata e i piatti italiani; il lessico della cucina; esprimere preferenza e possesso",
+  words: [
+    {
+      it: "menù",
+      pos: "s.m.",
+      zh: "菜单",
+      cat: "Cibo",
+      syll: "me·nù",
+      ex: "Guardate di nuovo il menù e in coppia fate dei mini dialoghi.",
+      exZh: "你们再看看菜单，然后两人一组做小对话。",
+      note: "第95页活动 C3；也见于第101页「offre un menù semplice」；重音在最后一个音节 u"
+    },
+    {
+      it: "antipasto",
+      pos: "s.m.",
+      zh: "开胃菜，前菜（意餐第一道）",
+      cat: "Cibo",
+      syll: "an·ti·pà·sto",
+      ex: "E come antipasto, magari le bruschette della nonna...",
+      exZh: "前菜的话，也许可以点奶奶做的烤面包片……",
+      note: "第90页对话 A1；意式正餐顺序：antipasto → primo → secondo (+contorno) → dolce"
+    },
+    {
+      it: "primo",
+      pos: "s.m.",
+      zh: "第一道菜（意餐中的面食/米饭类）",
+      cat: "Cibo",
+      syll: "prì·mo",
+      ex: "No, oggi niente primo.",
+      exZh: "不，今天不吃第一道菜。",
+      note: "第102页自测活动 2（对「Perché non prendi le lasagne?」的回答）；作名词时指第一道菜"
+    },
+    {
+      it: "secondo",
+      pos: "s.m.",
+      zh: "第二道菜（意餐中的主菜：肉、鱼等）",
+      cat: "Cibo",
+      syll: "se·còn·do",
+      ex: "Come secondo puoi prendere la cotoletta alla milanese, è ottima!",
+      exZh: "第二道菜你可以点米兰炸肉排，非常好吃！",
+      note: "第90页对话 A1；点菜常用语 Per secondo?（第二道菜点什么？）"
+    },
+    {
+      it: "contorno",
+      pos: "s.m.",
+      zh: "配菜（随主菜一起上的蔬菜/沙拉等）",
+      cat: "Cibo",
+      syll: "con·tòr·no",
+      ex: "Ieri, però, hai preso primo, secondo, contorno e dolce...",
+      exZh: "可是昨天你第一道、第二道、配菜和甜点都点了……",
+      note: "第97页对话 D1"
+    },
+    {
+      it: "cena",
+      pos: "s.f.",
+      zh: "晚餐，晚饭",
+      cat: "Cibo",
+      syll: "cè·na",
+      ex: "Oggi vieni a cena da noi?",
+      exZh: "今天你来我们家吃晚饭吗？",
+      note: "第90页对话 A1；常用搭配 cenare（吃晚饭）、a cena（吃晚饭）"
+    },
+    {
+      it: "pranzo",
+      pos: "s.m.",
+      zh: "午餐，午饭",
+      cat: "Cibo",
+      syll: "pràn·zo",
+      ex: "Comunque, fra un'ora c'è la pausa pranzo.",
+      exZh: "反正再过一个小时就是午休时间了。",
+      note: "第97页对话 D1；pausa pranzo = 午休；pranzare = 吃午饭"
+    },
+    {
+      it: "spuntino",
+      pos: "s.m.",
+      zh: "（两餐之间的）小吃，点心",
+      cat: "Cibo",
+      syll: "spun·tì·no",
+      ex: "Ho un po' di fame, facciamo uno spuntino?",
+      exZh: "我有点饿，我们吃点小吃好吗？",
+      note: "第97页 D 部分标题「Facciamo uno spuntino?」；fare uno spuntino = 吃点点心"
+    },
+    {
+      it: "merenda",
+      pos: "s.f.",
+      zh: "下午茶点，午后小吃",
+      cat: "Cibo",
+      syll: "me·rèn·da",
+      ex: "Faccio merenda verso le sei del pomeriggio e sono a posto.",
+      exZh: "我下午六点左右吃点茶点就解决了。",
+      note: "第97页对话 D1；与 spuntino 相近，merenda 多指下午的固定加餐"
+    },
+    {
+      it: "pasto",
+      pos: "s.m.",
+      zh: "一餐，一顿饭",
+      cat: "Cibo",
+      syll: "pà·sto",
+      ex: "Ci vogliono pochi minuti per fare colazione ed è il pasto più importante della giornata.",
+      exZh: "吃早餐只要几分钟，而它是一天中最重要的一餐。",
+      note: "第97页对话 D1"
+    },
+    {
+      it: "fame",
+      pos: "s.f.",
+      zh: "饥饿",
+      cat: "Cibo",
+      syll: "fà·me",
+      ex: "Così a pranzo non ho molta fame.",
+      exZh: "这样我午饭就不太饿了。",
+      note: "第97页对话 D1；avere fame = 饿了；un po' di fame = 有点饿"
+    },
+    {
+      it: "specialità",
+      pos: "s.f.",
+      zh: "特色菜，招牌菜",
+      cat: "Cibo",
+      syll: "spe·cia·li·tà",
+      ex: "Allora, prendi il risotto alla milanese, è una delle loro specialità!",
+      exZh: "那你点米兰烩饭吧，那是他们的招牌菜之一！",
+      note: "第90页对话 A1；也见第95页「È la specialità dello chef.」"
+    },
+    {
+      it: "cliente",
+      pos: "s.m.",
+      zh: "顾客，客人",
+      cat: "Cibo",
+      syll: "cli·èn·te",
+      ex: "Uno di voi è il cameriere e gli altri i clienti del ristorante.",
+      exZh: "你们当中一人当服务员，其他人当餐厅的顾客。",
+      note: "第96页活动 C5b；名词阴阳性同形：un cliente / una cliente"
+    },
+    {
+      it: "pizzeria",
+      pos: "s.f.",
+      zh: "比萨店",
+      cat: "Cibo",
+      syll: "piz·ze·rì·a",
+      ex: "Chi, invece, preferisce la pizza, va in pizzeria.",
+      exZh: "而喜欢比萨的人则去比萨店。",
+      note: "第101页「Dove mangiano gli italiani?」"
+    },
+    {
+      it: "trattoria",
+      pos: "s.f.",
+      zh: "（家常、实惠的）小餐馆",
+      cat: "Cibo",
+      syll: "trat·to·rì·a",
+      ex: "Anche la trattoria offre un menù semplice con una varietà di piatti regionali e un ambiente informale.",
+      exZh: "小餐馆也提供简单的菜单，有各种地方菜，气氛也比较随意。",
+      note: "第101页「Dove mangiano gli italiani?」"
+    },
+    {
+      it: "risotto",
+      pos: "s.m.",
+      zh: "意式烩饭",
+      cat: "Cibo",
+      syll: "ri·sòt·to",
+      ex: "Prendi il risotto alla milanese, è una delle loro specialità!",
+      exZh: "你点米兰风味烩饭吧，那是他们的招牌菜之一！",
+      note: "第90页对话 A1；alla milanese = 米兰风味的（藏红花烩饭）"
+    },
+    {
+      it: "lasagne",
+      pos: "s.f.",
+      zh: "千层面",
+      cat: "Cibo",
+      syll: "la·sà·gne",
+      ex: "Per me prosciutto di Parma e le lasagne alla bolognese.",
+      exZh: "我要帕尔马火腿和博洛尼亚千层面。",
+      note: "第96页活动 C4 点餐气泡；该词常用复数 le lasagne"
+    },
+    {
+      it: "spaghetti",
+      pos: "s.m.",
+      zh: "（细长）意大利面条",
+      cat: "Cibo",
+      syll: "spa·ghè·ti",
+      ex: "Quanto ci vuole per cuocere gli spaghetti al dente?",
+      exZh: "把意大利面煮到弹牙需要多久？",
+      note: "第98页活动 D3；该词常用复数 gli spaghetti"
+    },
+    {
+      it: "tagliatelle",
+      pos: "s.f.",
+      zh: "（宽条）意大利干切面",
+      cat: "Cibo",
+      syll: "ta·glia·tèl·le",
+      ex: "Le tagliatelle sono uno dei tipi di pasta italiani.",
+      exZh: "宽面条是意大利面食的一种。",
+      note: "第101页面食名称列表，另见第100页照片说明；原书未给例句，此为常用短句；常用复数 le tagliatelle"
+    },
+    {
+      it: "pasta",
+      pos: "s.f.",
+      zh: "意大利面食（总称）；面团",
+      cat: "Cibo",
+      syll: "pà·sta",
+      ex: "Dove cuoci la pasta? — Cuocio la pasta nella pentola.",
+      exZh: "你在哪儿煮面？——我在锅里煮面。",
+      note: "第99页活动 E3；pasta al dente = 煮得弹牙的面"
+    },
+    {
+      it: "cotoletta",
+      pos: "s.f.",
+      zh: "炸肉排",
+      cat: "Cibo",
+      syll: "co·to·lèt·ta",
+      ex: "Come secondo puoi prendere la cotoletta alla milanese, è ottima!",
+      exZh: "第二道菜你可以点米兰炸肉排，非常好吃！",
+      note: "第90页对话 A1"
+    },
+    {
+      it: "bistecca",
+      pos: "s.f.",
+      zh: "牛排，肉排",
+      cat: "Cibo",
+      syll: "bi·stèc·ca",
+      ex: "Mhm... per me la bistecca ai ferri.",
+      exZh: "嗯……我要铁扒牛排。",
+      note: "第96页活动 C4 点餐气泡；ai ferri = 铁板扒的；al sangue / ben cotta = 三分熟 / 全熟"
+    },
+    {
+      it: "prosciutto",
+      pos: "s.m.",
+      zh: "火腿（生食腌火腿）",
+      cat: "Cibo",
+      syll: "pro·sciùt·to",
+      ex: "Per me prosciutto di Parma e le lasagne alla bolognese.",
+      exZh: "我要帕尔马火腿和博洛尼亚千层面。",
+      note: "第96页活动 C4；prosciutto crudo（生火腿）/ prosciutto cotto（熟火腿）"
+    },
+    {
+      it: "insalata",
+      pos: "s.f.",
+      zh: "沙拉，凉拌菜",
+      cat: "Cibo",
+      syll: "in·sa·là·ta",
+      ex: "Comunque, di solito preferisco una cena leggera: un'insalata, della frutta...",
+      exZh: "总之，我一般喜欢清淡的晚餐：一份沙拉、一些水果……",
+      note: "第97页对话 D1"
+    },
+    {
+      it: "pesce",
+      pos: "s.m.",
+      zh: "鱼；鱼肉",
+      cat: "Cibo",
+      syll: "pè·sce",
+      ex: "Mi piace molto il pesce.",
+      exZh: "我很喜欢鱼。",
+      note: "第96页 Osservate 方框"
+    },
+    {
+      it: "carne",
+      pos: "s.f.",
+      zh: "肉，肉类",
+      cat: "Cibo",
+      syll: "càr·ne",
+      ex: "Ti piace la carne? Sì, perché a te non piace?",
+      exZh: "你喜欢肉吗？喜欢，怎么，你不喜欢吗？",
+      note: "第96页活动 C5a"
+    },
+    {
+      it: "formaggio",
+      pos: "s.m.",
+      zh: "奶酪，干酪",
+      cat: "Cibo",
+      syll: "for·màg·gio",
+      ex: "Per grattugiare il formaggio uso la grattugia.",
+      exZh: "我用擦丝器把奶酪擦成丝。",
+      note: "第99页活动 E3"
+    },
+    {
+      it: "frutta",
+      pos: "s.f.",
+      zh: "水果",
+      cat: "Cibo",
+      syll: "frùt·ta",
+      ex: "Frutta fresca di stagione.",
+      exZh: "时令新鲜水果。",
+      note: "第95页菜单 Dolci 一栏；另见第97页「un'insalata, della frutta」"
+    },
+    {
+      it: "vino",
+      pos: "s.m.",
+      zh: "葡萄酒",
+      cat: "Cibo",
+      syll: "vì·no",
+      ex: "Vogliamo del vino? E una bottiglia d'acqua minerale frizzante.",
+      exZh: "我们来点葡萄酒好吗？再加一瓶充气矿泉水。",
+      note: "第96页活动 C4"
+    },
+    {
+      it: "bottiglia",
+      pos: "s.f.",
+      zh: "瓶，一瓶（量词）",
+      cat: "Cibo",
+      syll: "bot·tì·glia",
+      ex: "E una bottiglia d'acqua minerale frizzante.",
+      exZh: "再来一瓶充气矿泉水。",
+      note: "第96页活动 C4；una bottiglia di... = 一瓶……"
+    },
+    {
+      it: "piatto",
+      pos: "s.m.",
+      zh: "盘子；一道菜",
+      cat: "Cibo",
+      syll: "piàt·to",
+      ex: "Quando cucino, metto sempre molto sale, per questo i miei piatti sono sempre salati.",
+      exZh: "我做饭时总是放很多盐，所以我做的菜总是很咸。",
+      note: "第92页活动 A7；另见第98页 E1 餐具词汇表"
+    },
+    {
+      it: "bicchiere",
+      pos: "s.m.",
+      zh: "玻璃杯，杯子；一杯（量词）",
+      cat: "Cibo",
+      syll: "bic·chiè·re",
+      ex: "Su una tavola apparecchiata ci sono il piatto, il bicchiere e il tovagliolo.",
+      exZh: "摆好的餐桌上有盘子、杯子和餐巾。",
+      note: "第98页活动 E1 餐具词汇；原书仅为词表，此为根据场景写的常用短句；un bicchiere di... = 一杯……"
+    },
+    {
+      it: "tovagliolo",
+      pos: "s.m.",
+      zh: "餐巾",
+      cat: "Cibo",
+      syll: "to·va·gliò·lo",
+      ex: "Cosa c'è su una tavola apparecchiata? Il piatto, il bicchiere, il tovagliolo...",
+      exZh: "摆好的餐桌上有什么？盘子、杯子、餐巾……",
+      note: "第98页活动 E1"
+    },
+    {
+      it: "burro",
+      pos: "s.m.",
+      zh: "黄油",
+      cat: "Cibo",
+      syll: "bùr·ro",
+      ex: "Io bevo sempre un caffelatte e mangio delle fette biscottate con burro e miele.",
+      exZh: "我总是喝一杯牛奶咖啡，吃几片烤面包片配黄油和蜂蜜。",
+      note: "第97页对话 D1"
+    },
+    {
+      it: "biscotto",
+      pos: "s.m.",
+      zh: "饼干",
+      cat: "Cibo",
+      syll: "bi·scòt·to",
+      ex: "Hai ancora quei biscotti al cioccolato?",
+      exZh: "你还有那些巧克力饼干吗？",
+      note: "第97页对话 D1"
+    },
+    {
+      it: "cucinare",
+      pos: "v.",
+      zh: "做饭，烹调",
+      cat: "Azioni quotidiane",
+      syll: "cu·ci·nà·re",
+      ex: "Quali sono i vostri piatti preferiti della cucina italiana? Sapete cucinare qualcuno di questi?",
+      exZh: "你们最喜欢的意大利菜是哪几道？其中有些你们会做吗？",
+      note: "第99页活动 E4「Parliamo」"
+    },
+    {
+      it: "cuocere",
+      pos: "v.",
+      zh: "煮，烧，烹制",
+      cat: "Azioni quotidiane",
+      syll: "cuò·ce·re",
+      ex: "Cuocio la pasta nella pentola.",
+      exZh: "我在锅里煮面。",
+      note: "第99页活动 E3；过去分词 cotto（ben cotta = 煮/烤得透的）"
+    },
+    {
+      it: "grattugiare",
+      pos: "v.",
+      zh: "擦碎，磨成丝/粉",
+      cat: "Azioni quotidiane",
+      syll: "grat·tu·già·re",
+      ex: "Cosa usi per grattugiare il formaggio?",
+      exZh: "你用什么把奶酪擦成丝？",
+      note: "第99页活动 E3；相关词 la grattugia = 擦丝器"
+    },
+    {
+      it: "assaggiare",
+      pos: "v.",
+      zh: "品尝",
+      cat: "Azioni quotidiane",
+      syll: "as·sag·già·re",
+      ex: "Il re d'Italia e la regina invitano a corte Don Raffaele Esposito per assaggiare la sua pizza.",
+      exZh: "意大利国王和王后把那不勒斯比萨师唐·拉法埃莱·埃斯波西托请到王宫，品尝他做的比萨。",
+      note: "第100页「La storia della pizza」"
+    },
+    {
+      it: "gustare",
+      pos: "v.",
+      zh: "品尝，品味",
+      cat: "Azioni quotidiane",
+      syll: "gu·stà·re",
+      ex: "Chi, invece, vuole mangiare e gustare piatti più raffinati può andare al ristorante.",
+      exZh: "而想吃得精致、品尝更讲究的菜肴的人，可以去餐厅。",
+      note: "第101页「Dove mangiano gli italiani?」；原书词表释义：sentire il sapore di qualcosa"
+    },
+    {
+      it: "volerci",
+      pos: "v.",
+      zh: "需要，花（时间/东西）",
+      cat: "Grammatica",
+      syll: "vo·lér·ci",
+      ex: "Ci vogliono pochi minuti per fare colazione.",
+      exZh: "吃早餐只需要几分钟。",
+      note: "第97页对话 D1；ci vuole + 单数名词，ci vogliono + 复数名词；另见第98页活动 3"
+    },
+    {
+      it: "metterci",
+      pos: "v.",
+      zh: "花（时间），用（多久）",
+      cat: "Grammatica",
+      syll: "mèt·ter·ci",
+      ex: "Cose che ci metto poco a preparare.",
+      exZh: "那些我准备起来花不了多少时间的东西。",
+      note: "第97页对话 D1；metterci + 时间 = 花费……时间；另见第98页「Ci metti molto per preparare da mangiare?」"
+    },
+    {
+      it: "saporito",
+      pos: "agg.",
+      zh: "味道浓郁的，可口的",
+      cat: "Descrizione",
+      syll: "sa·po·rì·to",
+      ex: "È molto saporito.",
+      exZh: "味道很足／很好吃。",
+      note: "第95页活动 C2 听力句子"
+    },
+    {
+      it: "al dente",
+      pos: "loc.",
+      zh: "（面条）煮得弹牙、有嚼劲的",
+      cat: "Cibo",
+      syll: "al dèn·te",
+      ex: "Gli italiani mangiano la pasta al dente.",
+      exZh: "意大利人吃面喜欢煮得弹牙。",
+      note: "第101页「La pasta」；字面意思「到牙齿」，即不过烂；另见第98页 cuocere gli spaghetti al dente"
+    },
+    {
+      it: "famiglia",
+      pos: "s.f.",
+      zh: "家庭，家人",
+      cat: "Altro",
+      syll: "fa·mì·glia",
+      ex: "Domani Gianna festeggia con la sua famiglia perché è venuto suo fratello da Palermo.",
+      exZh: "明天詹娜和她的家人一起庆祝，因为她哥哥从巴勒莫来了。",
+      note: "第90页对话 A1；本单元 B 部分专门学习亲属称谓（nonno, zio, cugina, nipote 等）"
+    }
+  ],
+  phrases: [
+    {
+      it: "Scusi, possiamo ordinare?",
+      pos: "frase",
+      zh: "打扰一下，我们可以点菜吗？",
+      cat: "Comunicazione",
+      syll: "scù·si, pos·sià·mo or·di·nà·re",
+      note: "第96页活动 C4 点餐气泡；服务员答「Prego!」（请讲）"
+    },
+    {
+      it: "Per me prosciutto di Parma e le lasagne alla bolognese.",
+      pos: "frase",
+      zh: "我要帕尔马火腿和博洛尼亚千层面。",
+      cat: "Comunicazione",
+      syll: "pér mé pro·sciùt·to di pàr·ma e le la·sà·gne al·la bo·lo·gné·se",
+      note: "第96页活动 C4；per me... = 我要……（点餐常用语）"
+    },
+    {
+      it: "Vorrei il vitello alle verdure.",
+      pos: "frase",
+      zh: "我想要蔬菜小牛肉。",
+      cat: "Comunicazione",
+      syll: "vor·rèi il vi·tèl·lo al·le ver·dù·re",
+      note: "第95页活动 C2／第96页活动 C4；vorrei 是 volere 的条件式，点餐时表示客气"
+    },
+    {
+      it: "Da bere?",
+      pos: "frase",
+      zh: "喝点什么？（点饮料）",
+      cat: "Comunicazione",
+      syll: "da bé·re",
+      note: "第96页活动 C4 点餐气泡"
+    },
+    {
+      it: "Lei cosa consiglia?",
+      pos: "frase",
+      zh: "您推荐什么？",
+      cat: "Comunicazione",
+      syll: "lèi cò·sa con·sì·glia",
+      note: "第95页活动 C2 听力句子"
+    },
+    {
+      it: "È la specialità dello chef.",
+      pos: "frase",
+      zh: "这是主厨的招牌菜。",
+      cat: "Cibo",
+      syll: "è la spe·cia·li·tà del·lo chef",
+      note: "第95页活动 C2 听力句子"
+    },
+    {
+      it: "Ben cotta, per favore.",
+      pos: "frase",
+      zh: "请做得熟一点／全熟。",
+      cat: "Cibo",
+      syll: "bén còt·ta, per fa·vó·re",
+      note: "第95页活动 C2 听力句子；第102页自测亦出现「Una bistecca ben cotta.」；指牛排火候"
+    },
+    {
+      it: "Mi piace molto il pesce.",
+      pos: "frase",
+      zh: "我很喜欢鱼。",
+      cat: "Comunicazione",
+      syll: "mi pia·ce mòl·to il pè·sce",
+      note: "第96页活动 C5a；piacere 结构：单数用 piace，复数用 piacciono（Mi piacciono i dolci.）"
+    },
+    {
+      it: "A me non piace affatto!",
+      pos: "frase",
+      zh: "我一点也不喜欢！",
+      cat: "Comunicazione",
+      syll: "a mé non pia·ce af·fàt·to",
+      note: "第96页活动 C5a；affatto 用于强调否定"
+    },
+    {
+      it: "Ti piace la carne?",
+      pos: "frase",
+      zh: "你喜欢肉吗？",
+      cat: "Comunicazione",
+      syll: "ti pia·ce la càr·ne",
+      note: "第96页活动 C5a"
+    },
+    {
+      it: "Cameriere, scusi!",
+      pos: "frase",
+      zh: "服务员，打扰一下！",
+      cat: "Comunicazione",
+      syll: "ca·me·riè·re, scù·si",
+      note: "第102页自测活动 2；应答语「Un attimo, signora, arrivo.」（请稍等，夫人，马上来）"
+    },
+    {
+      it: "Prendi il risotto alla milanese, è una delle loro specialità!",
+      pos: "frase",
+      zh: "你点米兰烩饭吧，那是他们的招牌菜之一！",
+      cat: "Cibo",
+      syll: "prèn·di il ri·sòt·to al·la mi·la·né·se, è u·na del·le lò·ro spe·cia·li·tà",
+      note: "第90页对话 A1；una delle loro specialità = 他们的招牌菜之一"
+    },
+    {
+      it: "Ho un po' di fame, facciamo uno spuntino?",
+      pos: "frase",
+      zh: "我有点饿，我们吃点小吃好吗？",
+      cat: "Cibo",
+      syll: "ho un pò di fà·me, fac·cià·mo u·no spun·tì·no",
+      note: "第97页对话 D1；un po' di... = 一点……（部分量词）"
+    },
+    {
+      it: "Ci vogliono pochi minuti per fare colazione.",
+      pos: "frase",
+      zh: "吃早餐只需要几分钟。",
+      cat: "Grammatica",
+      syll: "ci vò·glio·no pò·chi mi·nù·ti per fà·re co·la·ziò·ne",
+      note: "第97页对话 D1；ci vogliono + 复数名词 = 需要……"
+    },
+    {
+      it: "Quanto ci vuole per cuocere gli spaghetti al dente?",
+      pos: "frase",
+      zh: "把意大利面煮到弹牙需要多久？",
+      cat: "Grammatica",
+      syll: "quàn·to ci vuo·le per cuò·ce·re gli spa·ghè·ti al dèn·te",
+      note: "第98页活动 D3；答句「Ci vogliono circa 8 minuti di cottura.」（大约需要 8 分钟）"
+    }
+  ],
+  sections: [
+    /* 1) 热身 / 单元目标 */
+    {
+      id: "intro",
+      type: "intro",
+      title: "Per cominciare...",
+      goals: [
+        "表达所属关系（esprimere possesso）",
+        "给出建议（dare consigli）",
+        "家庭称谓词汇（il lessico della famiglia）",
+        "一天的各餐与部分意大利菜肴（i pasti e alcuni piatti italiani）",
+        "在餐厅点餐（ordinare al ristorante）",
+        "表达偏好（esprimere preferenza）",
+        "厨房相关词汇（un po' di lessico della cucina）",
+        "物主形容词及其与亲属名词的搭配（i possessivi / con i nomi di parentela）",
+        "quello 与 bello",
+        "volerci 与 metterci",
+        "意大利美食简史、意面种类、意大利人外出就餐的去处"
+      ],
+      preview: [
+        { it: "menù", zh: "菜单" },
+        { it: "antipasto", zh: "开胃菜，前菜" },
+        { it: "primo", zh: "第一道菜（面/饭类）" },
+        { it: "secondo", zh: "第二道菜（主菜）" },
+        { it: "contorno", zh: "配菜" },
+        { it: "cena", zh: "晚餐" },
+        { it: "pranzo", zh: "午餐" },
+        { it: "spuntino", zh: "两餐间的小吃" }
+      ]
+    },
+
+    /* 2) A 对话 —— È il suo compleanno. (Audio 34) */
+    {
+      id: "A",
+      type: "dialogue",
+      title: "È il suo compleanno.",
+      audio: "Audio 34",
+      lines: [
+        { who: "madre", it: "Allora? Oggi vieni a cena da noi?", zh: "那？今天你来我们家吃晚饭吗？" },
+        { who: "Lorenzo", it: "No, oggi no, dopo l'università andrò a cena con Gianna.", zh: "不，今天不去，大学下课后我要和 Gianna 去吃晚饭。" },
+        { who: "madre", it: "Ah, come mai?", zh: "啊，怎么回事？" },
+        { who: "Lorenzo", it: "Domani è il suo compleanno.", zh: "明天是她的生日。" },
+        { who: "madre", it: "E non festeggiate con i vostri amici?", zh: "那你们不和朋友们一起庆祝吗？" },
+        { who: "Lorenzo", it: "Oh, quante domande, mamma! Paolo e Maria oggi non possono e domani Gianna festeggia con la sua famiglia perché è venuto suo fratello da Palermo.", zh: "哦，问题真多，妈妈！Paolo 和 Maria 今天来不了，而且明天 Gianna 要和她的家人庆祝，因为她哥哥从巴勒莫来了。" },
+        { who: "madre", it: "Ho capito... Ma... tu e Gianna siete sempre amici, vero?", zh: "我明白了……不过……你和 Gianna 一直都是朋友，对吧？" },
+        { who: "Lorenzo", it: "Certo, che domanda è?! Gianna è solo un'amica! E poi ha il ragazzo...", zh: "当然，这算什么问题？！Gianna 只是个朋友！而且她有男朋友了……" },
+        { who: "madre", it: "Certo... E lui non viene a cena con voi?", zh: "当然……那他不来和你们一起吃晚饭吗？" },
+        { who: "Lorenzo", it: "No, perché studia a Firenze. Come sei discreta, mamma...", zh: "不来，因为他在佛罗伦萨读书。妈妈你真爱打探啊……" },
+        { who: "madre", it: "Sono sempre discreta io... E dove andate a mangiare?", zh: "我一向爱打探嘛……那你们去哪儿吃？" },
+        { who: "Lorenzo", it: "Da \"I due fratelli\".", zh: "去「I due fratelli」。" },
+        { who: "madre", it: "Oh, che bello, è uno dei miei posti preferiti. Allora, prendi il risotto alla milanese, è una delle loro specialità!", zh: "哦，真棒，那是我最喜欢的地方之一。那你点米兰烩饭吧，那是他们的招牌菜之一！" },
+        { who: "Lorenzo", it: "Va bene, mamma, vedrò...", zh: "好吧，妈妈，再说吧……" },
+        { who: "madre", it: "Come secondo puoi prendere la cotoletta alla milanese, è ottima! E come antipasto, magari le bruschette della nonna...", zh: "第二道菜你可以点米兰炸肉排，非常好吃！前菜的话，也许可以点奶奶做的烤面包片……" },
+        { who: "Lorenzo", it: "Scusa, per caso vuoi andare tu al mio posto?!", zh: "抱歉，难道你想替我去？！" }
+      ],
+      blocks: [
+        { kind: "quote", title: "Osservate", lines: ["Domani è il suo compleanno.", "Suo è un aggettivo possessivo."] }
+      ]
+    },
+
+    /* 3) B 对话 —— La famiglia di Gianna */
+    {
+      id: "B",
+      type: "dialogue",
+      title: "La famiglia di Gianna",
+      lines: [
+        { who: "Lorenzo", it: "Che bella coppia! Sono i tuoi nonni?", zh: "真是一对好夫妻！那是你的祖父母吗？" },
+        { who: "Gianna", it: "Sì, questa è mia nonna Anna Rita e questo è mio nonno Giuseppe. E qui accanto, ci sono mia madre e mio zio Giovanni.", zh: "是的，这是我的奶奶 Anna Rita，这是我的爷爷 Giuseppe。旁边是我妈妈和我舅舅 Giovanni。" },
+        { who: "Lorenzo", it: "Ah sì, ho conosciuto tuo zio l'anno scorso alla festa di Natale a casa tua. Ha due figlie che vanno all'università, se ricordo bene...", zh: "啊是的，我去年在你家的圣诞聚会上见过你舅舅。他有两个上大学的女儿，如果我没记错的话……" },
+        { who: "Gianna", it: "Solo Susanna. Laura, invece, lavora in banca. Guarda questa foto: è bellissima! Le mie cugine sempre con il cellulare in mano e mia zia Alessandra arrabbiatissima...", zh: "只有 Susanna。Laura 则在银行工作。看这张照片：真美！我的表姐妹总拿着手机，而我姑姑 Alessandra 气坏了……" },
+        { who: "Lorenzo", it: "Ahaha! E Carlo?", zh: "哈哈！那 Carlo 呢？" },
+        { who: "Gianna", it: "Eccolo qua, mio fratello! Tutta la serata a discutere di politica con nostro padre.", zh: "他在这儿，我哥哥！整个晚上都在和我们爸爸争论政治。" },
+        { who: "Lorenzo", it: "Povera te! E chi è quella bambina con i capelli biondi?", zh: "你真可怜！那个金发小女孩是谁？" },
+        { who: "Gianna", it: "È mia nipote Cristina, in braccio alla sua mamma.", zh: "是我侄女 Cristina，在她妈妈怀里。" },
+        { who: "Lorenzo", it: "Silvia, la moglie di Carlo?", zh: "Silvia，Carlo 的妻子？" },
+        { who: "Gianna", it: "Sì, bravo! Carine, no?", zh: "对，聪明！挺可爱的，不是吗？" }
+      ],
+      blocks: [
+        { kind: "text", title: "Attenzione!", text: "Con la parola nipote si indicano due rapporti di parentela diversi: il figlio del fratello/sorella (nipote = 侄/甥)." }
+      ]
+    },
+
+    /* 4) C 对话 —— Da \"I due fratelli\" (Audio 35) */
+    {
+      id: "C",
+      type: "dialogue",
+      title: "Da \"I due fratelli\"",
+      audio: "Audio 35",
+      lines: [
+        { who: "Lucia", it: "Scusi, possiamo ordinare?", zh: "打扰一下，我们可以点菜吗？" },
+        { who: "Cameriere", it: "Prego!", zh: "请讲！" },
+        { who: "Lucia", it: "Per me prosciutto di Parma e le lasagne alla bolognese.", zh: "我要帕尔马火腿和博洛尼亚千层面。" },
+        { who: "Claudio", it: "Io prendo spaghetti alla carbonara.", zh: "我点培根蛋面。" },
+        { who: "Cameriere", it: "Per secondo?", zh: "第二道菜呢？" },
+        { who: "Lucia", it: "Io prendo il vitello alle verdure.", zh: "我点蔬菜小牛肉。" },
+        { who: "Claudio", it: "Mhm per me la bistecca ai ferri.", zh: "嗯，我要铁扒牛排。" },
+        { who: "Cameriere", it: "Da bere?", zh: "喝点什么？" },
+        { who: "Lucia", it: "Vorremmo del vino? E una bottiglia d'acqua minerale frizzante.", zh: "我们来点葡萄酒好吗？再加一瓶充气矿泉水。" }
+      ],
+      blocks: [
+        { kind: "table", title: "Il menù — I DUE FRATELLI", head: ["Categoria", "Piatti"], rows: [
+          ["Antipasti", "Prosciutto di Parma · Antipasto misto · Insalata di pesce · Bruschette della nonna"],
+          ["Primi", "Linguine al pesto · Spaghetti alla carbonara · Penne all'arrabbiata · Lasagne alla bolognese · Risotto alla milanese"],
+          ["Secondi", "Pollo all'aglio · Bistecca ai ferri · Cotoletta alla milanese · Vitello alle verdure · Involtini alla romana"],
+          ["Dolci", "Torta di mele · Frutta fresca di stagione · Panna cotta"],
+          ["Contorni", "Insalata verde · Verdure grigliate · Patate al forno"],
+          ["Pizze", "Margherita · Funghi · Marinara · Napoletana · 4 stagioni"],
+          ["Vini", "Chianti · Barolo · Orvieto · Lambrusco"],
+          ["Bevande", "Coca Cola · Acqua minerale · Birra Nastro Azzurro · Birra Peroni"]
+        ] },
+        { kind: "quote", title: "Osservate", lines: ["(Non) mi piace il pesce.", "(Non) mi piace mangiare fuori.", "(Non) mi piacciono i dolci.", "(Non) mi piacciono le lasagne."] }
+      ]
+    },
+
+    /* 5) D 对话 —— Facciamo uno spuntino? */
+    {
+      id: "D",
+      type: "dialogue",
+      title: "Facciamo uno spuntino?",
+      lines: [
+        { who: "Sara", it: "Ho un po' di fame, facciamo uno spuntino? Hai ancora quei biscotti al cioccolato?", zh: "我有点饿，我们吃点小吃好吗？你还有那些巧克力饼干吗？" },
+        { who: "Mia", it: "No, sono finiti. Comunque, fra un'ora c'è la pausa pranzo. Ma non hai fatto colazione?", zh: "没了，吃完了。反正再过一小时就是午休。你没吃早饭吗？" },
+        { who: "Sara", it: "Io non mangio mai niente la mattina. Siccome ho sempre fretta, al massimo bevo un caffè.", zh: "我早上从不吃东西。因为我总是很急，最多喝杯咖啡。" },
+        { who: "Mia", it: "Fai molto male! Ci vogliono pochi minuti per fare colazione ed è il pasto più importante della giornata. Io bevo sempre un caffelatte e mangio delle fette biscottate con burro e miele, così a pranzo non ho molta fame.", zh: "你这样很不好！吃早餐只要几分钟，而它是一天中最重要的一餐。我总是喝牛奶咖啡，吃几片烤面包配黄油和蜂蜜，这样午饭就不太饿。" },
+        { who: "Sara", it: "Veramente?! Ieri, però, hai preso primo, secondo, contorno e dolce...", zh: "真的吗？！可是昨天你第一道、第二道、配菜和甜点都点了……" },
+        { who: "Mia", it: "È vero, però dopo, a cena non ho mangiato. Comunque, di solito preferisco una cena leggera: un'insalata, della frutta... cose che ci metto poco a preparare.", zh: "确实，不过之后晚饭我没吃。反正我通常喜欢清淡的晚餐：一份沙拉、一些水果……都是我花很少时间就能准备好的东西。" },
+        { who: "Sara", it: "Io, in genere, se mangio molto a pranzo, salto sempre la cena. Faccio merenda verso le sei del pomeriggio e sono a posto.", zh: "我一般如果午饭吃得多，就总跳过晚饭。我下午六点左右吃个茶点就解决了。" },
+        { who: "Mia", it: "Io, in ogni caso, cerco di cenare presto, non dopo le otto. E tu?", zh: "我无论如何都尽量早点吃晚饭，不超过八点。你呢？" },
+        { who: "Sara", it: "Anch'io, più o meno a quell'ora lì.", zh: "我也是，差不多那个点。" }
+      ]
+    },
+
+    /* 6) E 词汇与技能 —— Vocabolario e abilità */
+    {
+      id: "E",
+      type: "vocab",
+      title: "Vocabolario e abilità",
+      blocks: [
+        { kind: "table", title: "Su una tavola apparecchiata", head: ["parola", "中文"], rows: [
+          ["tovaglia", "桌布"],
+          ["tovagliolo", "餐巾"],
+          ["forchetta", "叉子"],
+          ["piatto", "盘子"],
+          ["sale", "盐"],
+          ["pepe", "胡椒"],
+          ["bicchiere", "杯子"],
+          ["bottiglia", "瓶子"],
+          ["cucchiaio", "勺子"],
+          ["coltello", "刀"],
+          ["tavolo", "桌子"]
+        ] },
+        { kind: "table", title: "Utensili da cucina", head: ["oggetto", "中文"], rows: [
+          ["la pentola", "锅"],
+          ["la grattugia", "擦丝器"],
+          ["il tagliere", "砧板"],
+          ["la padella", "煎锅"],
+          ["il mestolo", "汤勺"],
+          ["il colapasta", "漏勺"]
+        ] },
+        { kind: "table", title: "Alcuni tipi di pasta", head: ["pasta"], rows: [
+          ["lasagne"], ["farfalle"], ["tortellini"], ["spaghetti"], ["gnocchi"], ["fusilli"], ["tagliatelle"], ["penne"]
+        ] }
+      ]
+    },
+
+    /* 7) 语法框 */
+    {
+      id: "gram",
+      type: "grammar",
+      title: "Grammatica",
+      blocks: [
+        { kind: "table", title: "I possessivi", head: ["Persona", "Esempio", "Forme"], rows: [
+          ["io", "Sabato prossimo è il mio compleanno. Ci saranno anche i miei genitori.", "il mio / la mia — i miei / le mie"],
+          ["tu", "Bella la tua casa! Che festa è senza i tuoi amici?", "il tuo / la tua — i tuoi / le tue"],
+          ["lui / lei", "Il suo lavoro è molto interessante. Verranno le sue cugine.", "il suo / la sua — i suoi / le sue"],
+          ["Lei (formale)", "Ha dimenticato la Sua sciarpa! Quanti anni hanno i Suoi figli?", "il Suo / la Sua — i Suoi / le Sue"],
+          ["noi", "Il nostro volo parte da Napoli. Usciamo con le nostre amiche.", "il nostro / la nostra — i nostri / le nostre"],
+          ["voi", "Andate con la vostra macchina? Avete programmato le vostre vacanze?", "il vostro / la vostra — i vostri / le vostre"],
+          ["loro", "Il loro gatto è un cucciolo. Hanno conosciuto i loro colleghi.", "il loro / la loro — i loro / le loro"]
+        ] },
+        { kind: "table", title: "I possessivi con i nomi di parentela", head: ["Singolare (senza articolo)", "Plurale (con articolo)"], rows: [
+          ["mio marito / mia madre / tuo nipote / sua moglie / vostro nonno", "i miei genitori / le tue cugine / i tuoi fratelli / le sue sorelle / le nostre nipoti / i vostri zii"]
+        ] },
+        { kind: "text", title: "Attenzione", text: "Con i nomi di parentela al singolare l'articolo di solito non si usa (mio fratello); al plurale si usa (i miei fratelli). Eccezione: il loro padre, la loro zia, il loro fratello, la loro madre." },
+        { kind: "quote", title: "volerci e metterci", lines: [
+          "Quanto ci vuole per cuocere gli spaghetti al dente? — Ci vogliono circa 8 minuti di cottura.",
+          "Ci metti molto per preparare da mangiare? — Mah, un quarto d'ora!",
+          "Ci vogliono pochi minuti per fare colazione. (ci vuole + sing.; ci vogliono + plur.)",
+          "metterci + tempo = impiegare del tempo"
+        ] },
+        { kind: "quote", title: "piacere: mi piace / mi piacciono", lines: [
+          "(Non) mi piace il pesce.",
+          "(Non) mi piace mangiare fuori.",
+          "(Non) mi piacciono i dolci.",
+          "(Non) mi piacciono le lasagne.",
+          "Ti piace la carne? — Sì, perché a te non piace?",
+          "Mi piace molto il pesce. / A me non piace affatto!"
+        ] },
+        { kind: "text", title: "Il partitivo: un po' di / del / della / delle", text: "Per esprimere una quantità indeterminata si usano le particelle partitive: un po' di fame, del vino, della frutta, delle fette biscottate, una fetta di..." },
+        { kind: "text", title: "quello e bello", text: "Gli aggettivi dimostrativo quello e l'aggettivo bello hanno forme tronche e piene (quel, quello, bella, bell') studiate nell'Approfondimento grammaticale a pagina 209." }
+      ]
+    },
+
+    /* 8) 文化板块 —— La cucina italiana */
+    {
+      id: "it",
+      type: "culture",
+      title: "Conosciamo l'Italia",
+      body: "意大利美食以地域多样著称，被称为闻名世界的菜系。披萨与意面是其中最著名的代表：传说 Marco Polo 于1292年将面条从中国带回，而披萨在1889年因那不勒斯厨师 Don Raffaele Esposito 为 Margherita 王后制作的三色披萨（罗勒之绿、马苏里拉之白、番茄之红）而成为国家象征。意大利人吃面讲究『al dente』（弹牙）。外出就餐时，意大利人常去 bar、paninoteca、osteria、trattoria、pizzeria 与 ristorante 等不同场所。",
+      table: [
+        { head: ["Luogo", "Descrizione"], rows: [
+          ["paninoteca", "il tipico fast-food italiano per un toast o un panino"],
+          ["osteria", "frequentata da chi ama mangiare cose semplici e bere qualcosa"],
+          ["trattoria", "menù semplice con piatti regionali e ambiente informale"],
+          ["ristorante", "per piatti più raffinati"],
+          ["pizzeria", "per chi preferisce la pizza"],
+          ["bar", "nella pausa pranzo, per uno spuntino e un caffè"]
+        ] },
+        { head: ["Alcuni tipi di pasta"], rows: [
+          ["lasagne"], ["farfalle"], ["tortellini"], ["spaghetti"], ["gnocchi"], ["fusilli"], ["tagliatelle"], ["penne"]
+        ] }
+      ]
+    },
+
+    /* 9) 原书练习 —— AUTOVALUTAZIONE */
+    {
+      id: "es",
+      type: "exercise",
+      title: "Cosa hai imparato nelle unità 5 e 6?",
+      items: [
+        "1. Sai...? Abbina le due colonne.  1. esprimere possesso / 2. parlare della famiglia / 3. esprimere preferenza / 4. parlare di progetti / 5. parlare dei pasti  ——  a. A me piace di più la pasta al pomodoro / b. In estate andremo in Portogallo / c. Tua nonna è molto simpatica / d. Marco non fa mai colazione / e. Questa è la mia macchina nuova.",
+        "2. Abbina le frasi.  1. Cameriere, scusi! / 2. Perché non prendi le lasagne? / 3. Di chi è questo? / 4. Scusi, il prossimo treno per Perugia? / 5. Per secondo, hai deciso?  ——  a. Il Regionale delle 11 / b. No, oggi niente primo / c. Un attimo, signora, arrivo / d. Una bistecca ben cotta / e. È mio.",
+        "3. Completa.  1. Tre pasti: ______ ______ ______   2. Due aggettivi per descrivere un piatto: ______ ______   3. Il plurale di mia: ______   4. Il futuro di volere (prima persona singolare): ______   5. Il plurale di bel: ______",
+        "4. In ogni gruppo trova la parola estranea.  1. È un dolce: prosciutto | mozzarella | salame | parmigiano | panna cotta   2. Non si mangia a colazione: fette biscottate | burro | cornetto | risotto | pane   3. Non è un tipo di pasta: tagliatelle | tortellini | vitello | penne | farfalle   4. Non è un verbo da cucina: tagliare | cuocere | ordinare | mescolare | grattugiare"
+      ]
+    }
+  ]
+};

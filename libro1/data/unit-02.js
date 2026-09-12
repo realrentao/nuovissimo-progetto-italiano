@@ -1,0 +1,838 @@
+window.NPI = window.NPI || { units: {} };
+window.NPI.units["02"] = {
+  id: "02",
+  title: "Tempo libero",
+  titleZh: "空闲时间",
+  tema: "Invitare, accettare/rifiutare e parlare del tempo libero",
+  words: [
+    {
+      it: "andare",
+      pos: "v.",
+      zh: "去；走",
+      cat: "Azioni quotidiane",
+      syll: "an·dà·re",
+      ex: "Andiamo al cinema o a bere qualcosa.",
+      exZh: "我们去看电影，或者去喝点东西。",
+      note: "第32页采访 A；现在时变位不规则（vado, vai, va, andiamo, andate, vanno）"
+    },
+    {
+      it: "venire",
+      pos: "v.",
+      zh: "来",
+      cat: "Azioni quotidiane",
+      syll: "ve·nì·re",
+      ex: "Spesso viene la mia migliore amica e facciamo una partita a carte.",
+      exZh: "我最好的朋友常来，我们打一局牌。",
+      note: "第32页采访 B；现在时变位不规则（vengo, vieni, viene...）"
+    },
+    {
+      it: "uscire",
+      pos: "v.",
+      zh: "出去；外出",
+      cat: "Azioni quotidiane",
+      syll: "u·scì·re",
+      ex: "Il fine settimana esco con gli amici.",
+      exZh: "周末我和朋友们出去。",
+      note: "第32页采访 A；现在时为 esco, esci, esce, usciamo, uscite, escono"
+    },
+    {
+      it: "fare",
+      pos: "v.",
+      zh: "做；干",
+      cat: "Azioni quotidiane",
+      syll: "fà·re",
+      ex: "Che fai domani? Andiamo al mare?",
+      exZh: "你明天做什么？我们去海边吗？",
+      note: "第35页对话 B1；现在时变位不规则（faccio, fai, fa, facciamo, fate, fanno）"
+    },
+    {
+      it: "dare",
+      pos: "v.",
+      zh: "给",
+      cat: "Grammatica",
+      syll: "dà·re",
+      ex: "Gli studenti danno del tu o del Lei all'insegnante?",
+      exZh: "学生们对老师用「你」还是「您」称呼？",
+      note: "第34页活动 7；句中为第三人称复数 danno；dare del tu = 用「你」相称"
+    },
+    {
+      it: "sapere",
+      pos: "v.",
+      zh: "知道；懂得",
+      cat: "Grammatica",
+      syll: "sa·pè·re",
+      ex: "Sai come si chiama l'insegnante?",
+      exZh: "你知道老师叫什么名字吗？",
+      note: "第34页活动 7；现在时变位不规则（so, sai, sa, sappiamo, sapete, sanno）"
+    },
+    {
+      it: "stare",
+      pos: "v.",
+      zh: "停留；处于（某种状态）",
+      cat: "Grammatica",
+      syll: "stà·re",
+      ex: "Vado in piscina per stare in forma.",
+      exZh: "我去游泳，为了保持体型。",
+      note: "第32页采访 B；stare in forma = 保持身材/健康"
+    },
+    {
+      it: "giocare",
+      pos: "v.",
+      zh: "玩；踢（球）",
+      cat: "Tempo libero",
+      syll: "gio·cà·re",
+      ex: "Suono il pianoforte, gioco a calcio, leggo e il fine settimana esco con gli amici.",
+      exZh: "我弹钢琴、踢足球、看书，周末和朋友们出去。",
+      note: "第32页采访 A；giocare a calcio = 踢足球"
+    },
+    {
+      it: "suonare",
+      pos: "v.",
+      zh: "演奏（乐器）；响",
+      cat: "Tempo libero",
+      syll: "suo·nà·re",
+      ex: "Suono in un gruppo musicale.",
+      exZh: "我在一个乐队里演奏。",
+      note: "第32页采访 B"
+    },
+    {
+      it: "leggere",
+      pos: "v.",
+      zh: "阅读；朗读",
+      cat: "Tempo libero",
+      syll: "lèg·ge·re",
+      ex: "Ama leggere.",
+      exZh: "她喜欢阅读。",
+      note: "第32页活动 1（选项 b：ama leggere）"
+    },
+    {
+      it: "ballare",
+      pos: "v.",
+      zh: "跳舞",
+      cat: "Tempo libero",
+      syll: "bal·là·re",
+      ex: "Ragazzi, stasera noi andiamo a ballare, voi che fate?",
+      exZh: "伙计们，今晚我们去跳舞，你们做什么？",
+      note: "第33页活动 5"
+    },
+    {
+      it: "ascoltare",
+      pos: "v.",
+      zh: "听",
+      cat: "Tempo libero",
+      syll: "a·scol·tà·re",
+      ex: "Ascolto musica.",
+      exZh: "我听音乐。",
+      note: "第32页采访 B"
+    },
+    {
+      it: "guardare",
+      pos: "v.",
+      zh: "看；观看",
+      cat: "Tempo libero",
+      syll: "guar·dà·re",
+      ex: "Ragazzi, potete guardare la TV fino alle 10.",
+      exZh: "孩子们，你们可以看电视看到 10 点。",
+      note: "第37页 potere 变位表（原书留空处为 potete）"
+    },
+    {
+      it: "potere",
+      pos: "v.",
+      zh: "能够；可以",
+      cat: "Grammatica",
+      syll: "po·tè·re",
+      ex: "Purtroppo non posso, devo studiare.",
+      exZh: "可惜我不行，我得学习。",
+      note: "第35页对话 B1；情态动词，后接动词原形"
+    },
+    {
+      it: "volere",
+      pos: "v.",
+      zh: "想要",
+      cat: "Grammatica",
+      syll: "vo·lè·re",
+      ex: "Vuoi venire?",
+      exZh: "你想来吗？",
+      note: "第35页对话 B1；情态动词，后接动词原形"
+    },
+    {
+      it: "dovere",
+      pos: "v.",
+      zh: "必须；应该",
+      cat: "Grammatica",
+      syll: "do·vè·re",
+      ex: "Stasera devo andare a letto presto.",
+      exZh: "今晚我得早点睡觉。",
+      note: "第37页情态动词表；情态动词，后接动词原形"
+    },
+    {
+      it: "restare",
+      pos: "v.",
+      zh: "留下；待着",
+      cat: "Azioni quotidiane",
+      syll: "re·stà·re",
+      ex: "Con questo bel tempo non ho voglia di restare in città.",
+      exZh: "这么好的天气，我不想待在城里。",
+      note: "第35页对话 B1"
+    },
+    {
+      it: "passare",
+      pos: "v.",
+      zh: "度过；打发（时间）",
+      cat: "Tempo libero",
+      syll: "pas·sà·re",
+      ex: "Martina, come passi il tempo libero?",
+      exZh: "玛蒂娜，你怎么打发空闲时间？",
+      note: "第32页采访 B"
+    },
+    {
+      it: "tempo",
+      pos: "s.m.",
+      zh: "时间；天气",
+      cat: "Tempo",
+      syll: "tèm·po",
+      ex: "Hai però un po' di tempo per te?",
+      exZh: "不过你有一点属于自己的时间吗？",
+      note: "第33页采访 C；tempo libero = 空闲时间"
+    },
+    {
+      it: "attività",
+      pos: "s.f.",
+      zh: "活动",
+      cat: "Tempo libero",
+      syll: "at·ti·vi·tà",
+      ex: "Nel mio tempo libero faccio varie attività.",
+      exZh: "空闲时我做各种各样的活动。",
+      note: "第32页采访 A"
+    },
+    {
+      it: "palestra",
+      pos: "s.f.",
+      zh: "健身房",
+      cat: "Tempo libero",
+      syll: "pa·lè·stra",
+      ex: "Vado spesso in palestra.",
+      exZh: "我常去健身房。",
+      note: "第31页活动 1；第40页邮件范例中亦出现"
+    },
+    {
+      it: "piscina",
+      pos: "s.f.",
+      zh: "游泳池",
+      cat: "Tempo libero",
+      syll: "pi·scì·na",
+      ex: "Vado in piscina per stare in forma.",
+      exZh: "我去游泳以保持体型。",
+      note: "第32页采访 B"
+    },
+    {
+      it: "cinema",
+      pos: "s.m.",
+      zh: "电影院；电影",
+      cat: "Tempo libero",
+      syll: "cì·ne·ma",
+      ex: "Il 50% degli italiani ama andare al cinema.",
+      exZh: "50% 的意大利人喜欢去看电影。",
+      note: "第43页 Conosciamo l'Italia"
+    },
+    {
+      it: "teatro",
+      pos: "s.m.",
+      zh: "剧院；戏剧",
+      cat: "Tempo libero",
+      syll: "te·à·tro",
+      ex: "È da tempo che non vado a teatro!",
+      exZh: "我很久没去看戏了！",
+      note: "第35页对话 B1"
+    },
+    {
+      it: "discoteca",
+      pos: "s.f.",
+      zh: "迪斯科舞厅；夜总会",
+      cat: "Tempo libero",
+      syll: "di·sco·tè·ca",
+      ex: "Alessio, vieni con noi in discoteca stasera?",
+      exZh: "阿莱西奥，今晚你和我们去迪斯科舞厅吗？",
+      note: "第35页对话 B1"
+    },
+    {
+      it: "videogioco",
+      pos: "s.m.",
+      zh: "电子游戏",
+      cat: "Tempo libero",
+      syll: "vi·de·o·giò·co",
+      ex: "Giocare con i videogiochi.",
+      exZh: "玩电子游戏。",
+      note: "第31页活动 1（图片说明 a）"
+    },
+    {
+      it: "sport",
+      pos: "s.m.",
+      zh: "体育运动",
+      cat: "Tempo libero",
+      syll: "spòrt",
+      ex: "Il 29% fa sport, va in palestra, ama camminare.",
+      exZh: "29% 的人做运动、去健身房、喜欢散步。",
+      note: "第43页；sport 为阳性不变名词，复数字形不变"
+    },
+    {
+      it: "partita",
+      pos: "s.f.",
+      zh: "一局（牌、棋）；一场比赛",
+      cat: "Tempo libero",
+      syll: "par·tì·ta",
+      ex: "Facciamo una partita a carte.",
+      exZh: "我们打一局牌。",
+      note: "第32页采访 B"
+    },
+    {
+      it: "biglietto",
+      pos: "s.m.",
+      zh: "票；车票，门票",
+      cat: "Tempo libero",
+      syll: "bi·glièt·to",
+      ex: "Ho due biglietti!",
+      exZh: "我有两张票！",
+      note: "第35页对话 B1"
+    },
+    {
+      it: "appartamento",
+      pos: "s.m.",
+      zh: "公寓，单元房",
+      cat: "Casa",
+      syll: "ap·par·ta·mèn·to",
+      ex: "Vieni a vedere il mio appartamento nuovo?",
+      exZh: "你来看看我的新公寓吗？",
+      note: "第38页对话 D2"
+    },
+    {
+      it: "soggiorno",
+      pos: "s.m.",
+      zh: "起居室，客厅",
+      cat: "Casa",
+      syll: "sog·giòr·no",
+      ex: "Un soggiorno grande, camera da letto, cucina, bagno e un piccolo balcone.",
+      exZh: "一个大客厅、卧室、厨房、卫生间和一个小阳台。",
+      note: "第38页对话 D2"
+    },
+    {
+      it: "cucina",
+      pos: "s.f.",
+      zh: "厨房",
+      cat: "Casa",
+      syll: "cu·cì·na",
+      ex: "Ha due camere da letto, bagno e cucina.",
+      exZh: "有两间卧室、卫生间和厨房。",
+      note: "第44页自评活动 1c"
+    },
+    {
+      it: "bagno",
+      pos: "s.m.",
+      zh: "卫生间；浴室",
+      cat: "Casa",
+      syll: "bà·gno",
+      ex: "Camera da letto, cucina, bagno e un piccolo balcone.",
+      exZh: "卧室、厨房、卫生间和一个小阳台。",
+      note: "第38页对话 D2"
+    },
+    {
+      it: "piano",
+      pos: "s.m.",
+      zh: "楼层",
+      cat: "Casa",
+      syll: "pià·no",
+      ex: "Io abito al primo piano.",
+      exZh: "我住在二层。",
+      note: "第38页对话 D2；意大利语 piano terra 为底层，primo piano 相当于中文的二层"
+    },
+    {
+      it: "affitto",
+      pos: "s.m.",
+      zh: "房租，租金",
+      cat: "Casa",
+      syll: "af·fìt·to",
+      ex: "E quanto paghi di affitto?",
+      exZh: "那你付多少房租？",
+      note: "第38页对话 D2"
+    },
+    {
+      it: "impegno",
+      pos: "s.m.",
+      zh: "约定；要办的事",
+      cat: "Tempo libero",
+      syll: "im·pè·gno",
+      ex: "Ho già un impegno.",
+      exZh: "我已经有约了。",
+      note: "第35页 B2 表格（拒绝邀请用语）"
+    },
+    {
+      it: "spesso",
+      pos: "avv.",
+      zh: "经常",
+      cat: "Grammatica",
+      syll: "spès·so",
+      ex: "Il fine settimana spesso vengono amici a casa.",
+      exZh: "周末常有朋友来家里。",
+      note: "第33页采访 C；频率副词"
+    },
+    {
+      it: "sempre",
+      pos: "avv.",
+      zh: "总是；一直",
+      cat: "Grammatica",
+      syll: "sèm·pre",
+      ex: "I ragazzi devono sempre tornare a casa presto.",
+      exZh: "孩子们总得早点回家。",
+      note: "第37页情态动词表；频率副词"
+    },
+    {
+      it: "ogni",
+      pos: "agg.",
+      zh: "每，每个",
+      cat: "Grammatica",
+      syll: "ò·gni",
+      ex: "Ogni venerdì sera vado a un corso di tango.",
+      exZh: "每周五晚上我去上探戈课。",
+      note: "第33页采访 C；ogni + 单数名词，本身不变形"
+    },
+    {
+      it: "insieme",
+      pos: "avv.",
+      zh: "一起；共同",
+      cat: "Altro",
+      syll: "in·siè·me",
+      ex: "Mangiamo una pizza insieme.",
+      exZh: "我们一起吃披萨。",
+      note: "第33页采访 C"
+    },
+    {
+      it: "volentieri",
+      pos: "avv.",
+      zh: "乐意地，愿意地",
+      cat: "Altro",
+      syll: "vo·len·tiè·ri",
+      ex: "Sì, volentieri! Con questo bel tempo non ho voglia di restare in città.",
+      exZh: "好啊，非常乐意！这么好的天气，我不想待在城里。",
+      note: "第35页对话 B1；接受邀请的常用答语"
+    },
+    {
+      it: "purtroppo",
+      pos: "avv.",
+      zh: "遗憾的是；可惜",
+      cat: "Altro",
+      syll: "pur·tròp·po",
+      ex: "Grazie, ma purtroppo non posso.",
+      exZh: "谢谢，但可惜我不行。",
+      note: "第44页自评活动 1a；拒绝邀请时常用"
+    },
+    {
+      it: "interessante",
+      pos: "agg.",
+      zh: "有趣的；有意思的",
+      cat: "Descrizione",
+      syll: "in·te·res·sàn·te",
+      ex: "Secondo me è interessante... E per te?",
+      exZh: "我觉得这很有趣……你觉得呢？",
+      note: "第31页活动 2"
+    },
+    {
+      it: "noioso",
+      pos: "agg.",
+      zh: "无聊的，乏味的",
+      cat: "Descrizione",
+      syll: "no·iò·so",
+      ex: "Un'attività noiosa o poco interessante.",
+      exZh: "一项无聊或不太有趣的活动。",
+      note: "第31页活动 1"
+    },
+    {
+      it: "comodo",
+      pos: "agg.",
+      zh: "舒适的；方便的",
+      cat: "Descrizione",
+      syll: "cò·mo·do",
+      ex: "Non è molto moderno, però è comodo e luminoso.",
+      exZh: "它不太现代，但舒适又明亮。",
+      note: "第38页对话 D2"
+    }
+  ],
+  phrases: [
+    {
+      it: "Cosa fai nel tempo libero?",
+      pos: "frase",
+      zh: "你空闲时间做什么？",
+      cat: "Tempo libero",
+      syll: "cò·sa fài nel tèm·po lì·be·ro",
+      note: "第32页采访 A 的提问"
+    },
+    {
+      it: "Come passi il tempo libero?",
+      pos: "frase",
+      zh: "你怎么打发空闲时间？",
+      cat: "Tempo libero",
+      syll: "cò·me pàs·si il tèm·po lì·be·ro",
+      note: "第32页采访 B 的提问"
+    },
+    {
+      it: "Vieni con noi?",
+      pos: "frase",
+      zh: "你和我们一起去吗？",
+      cat: "Tempo libero",
+      syll: "viè·ni con nò·i",
+      note: "第35页 B2 表格（发出邀请）"
+    },
+    {
+      it: "Sì, volentieri!",
+      pos: "frase",
+      zh: "好啊，非常乐意！",
+      cat: "Tempo libero",
+      syll: "sì, vo·len·tiè·ri",
+      note: "第35页对话 B1（接受邀请）"
+    },
+    {
+      it: "Purtroppo non posso, devo studiare.",
+      pos: "frase",
+      zh: "可惜我不行，我得学习。",
+      cat: "Tempo libero",
+      syll: "pur·tròp·po non pòs·so, dè·vo stu·dià·re",
+      note: "第35页对话 B1（拒绝邀请）"
+    },
+    {
+      it: "Che ne dici di andare a mangiare una pizza?",
+      pos: "frase",
+      zh: "去吃个披萨怎么样？",
+      cat: "Tempo libero",
+      syll: "che ne dì·ci di an·dà·re a man·già·re u·na pìz·za",
+      note: "第40页活动 2；che ne dici di... = 「……你觉得怎么样」"
+    },
+    {
+      it: "Ho già un impegno.",
+      pos: "frase",
+      zh: "我已经有约了。",
+      cat: "Tempo libero",
+      syll: "ho già un im·pè·gno",
+      note: "第35页 B2 表格（拒绝邀请）"
+    },
+    {
+      it: "Magari un'altra volta.",
+      pos: "frase",
+      zh: "也许下次吧。",
+      cat: "Tempo libero",
+      syll: "ma·gà·ri un·àl·tra vòl·ta",
+      note: "第35页对话 B1（委婉拒绝）"
+    },
+    {
+      it: "Scusi, posso entrare?",
+      pos: "frase",
+      zh: "打扰一下，我可以进来吗？",
+      cat: "Altro",
+      syll: "scù·si, pòs·so en·trà·re",
+      note: "第36页 C 节标题；potere 用于礼貌请求"
+    },
+    {
+      it: "Sei libera domani pomeriggio?",
+      pos: "frase",
+      zh: "明天下午你有空吗？",
+      cat: "Tempo libero",
+      syll: "sèi lì·be·ra do·mà·ni po·me·rìg·gio",
+      note: "第38页对话 D2"
+    },
+    {
+      it: "Quanto paghi di affitto?",
+      pos: "frase",
+      zh: "你付多少房租？",
+      cat: "Casa",
+      syll: "quàn·to pà·ghi di af·fìt·to",
+      note: "第38页对话 D2"
+    },
+    {
+      it: "Che ora è? / Che ore sono?",
+      pos: "frase",
+      zh: "几点了？（单数用 ora，复数用 ore）",
+      cat: "Tempo",
+      syll: "che ò·ra è / che ò·re sò·no",
+      note: "第41页 G 节标题与活动 4"
+    },
+    {
+      it: "Sono le otto e quaranta.",
+      pos: "frase",
+      zh: "现在八点四十。",
+      cat: "Tempo",
+      syll: "sò·no le òt·to e qua·ràn·ta",
+      note: "第41页活动 4；同一时刻也可说 Sono le nove meno venti."
+    },
+    {
+      it: "Volentieri, quando?",
+      pos: "frase",
+      zh: "好啊，什么时候？",
+      cat: "Tempo libero",
+      syll: "vo·len·tiè·ri, quàn·do",
+      note: "第40页活动 2"
+    }
+  ],
+  sections: [
+    /* 1) 热身 / 单元目标 —— Per cominciare... */
+    {
+      id: "intro",
+      type: "intro",
+      title: "Per cominciare...",
+      goals: [
+        "a invitare, accettare/rifiutare un invito",
+        "a descrivere un appartamento, un'abitazione",
+        "a chiedere e dire l'indirizzo, che giorno è, l'ora",
+        "a parlare del tempo libero",
+        "i numeri cardinali (30-2.000) e i numeri ordinali",
+        "i giorni della settimana",
+        "il presente indicativo: verbi irregolari",
+        "i verbi modali (potere, volere, dovere)",
+        "le preposizioni a, da, in, con, per",
+        "quali sono i mezzi di trasporto urbani",
+        "come passano il tempo libero gli italiani"
+      ],
+      preview: [
+        { it: "giocare con videogiochi", zh: "玩电子游戏" },
+        { it: "andare in palestra", zh: "去健身房" },
+        { it: "ballare", zh: "跳舞" },
+        { it: "leggere un libro", zh: "读书" },
+        { it: "suonare uno strumento", zh: "演奏乐器" },
+        { it: "guardare la televisione", zh: "看电视" },
+        { it: "ascoltare musica", zh: "听音乐" },
+        { it: "andare al cinema / a teatro", zh: "去看电影 / 看戏" }
+      ]
+    },
+
+    /* 2) A 对话 —— Cosa fai nel tempo libero?（三段采访 + 不规则动词变位表） */
+    {
+      id: "A",
+      type: "dialogue",
+      title: "Cosa fai nel tempo libero?",
+      audio: "Audio 17",
+      lines: [
+        { who: "Giornalista", it: "Giorgio, cosa fai nel tempo libero?", zh: "Giorgio，你空闲时间做什么？" },
+        { who: "Giorgio", it: "Nel mio tempo libero faccio varie attività: suono il pianoforte, gioco a calcio, leggo e il fine settimana esco con gli amici. Andiamo al cinema o a bere qualcosa.", zh: "空闲时间我做各种活动：弹钢琴、踢足球、看书，周末我和朋友们出去。我们去看电影或者去喝点东西。" },
+        { who: "Giornalista", it: "Martina, come passi il tempo libero?", zh: "Martina，你怎么打发空闲时间？" },
+        { who: "Martina", it: "Adesso che sono in pensione, ho tanto tempo libero e faccio tante cose: suono in un gruppo musicale, vado in piscina per stare in forma, ascolto musica. Spesso viene la mia migliore amica e facciamo una partita a carte.", zh: "现在我退休了，有很多空闲时间，我做很多事：在一个乐队里演奏、去游泳池健身、听音乐。我最好的朋友常来，我们打一局牌。" },
+        { who: "Giornalista", it: "Francesca, sappiamo che sei molto impegnata con il tuo lavoro: hai però un po' di tempo per te?", zh: "Francesca，我们知道你工作很忙：不过你有一点属于自己的时间吗？" },
+        { who: "Francesca", it: "Come forse sai, una donna con due figli che lavora, non ha molto tempo libero. Qualche volta, però, vado a teatro e ogni venerdì sera vado a un corso di tango. Il fine settimana spesso vengono amici a casa e mangiamo una pizza insieme.", zh: "如你所知，一个有俩孩子又要工作的女人，没有太多空闲时间。不过偶尔我去看戏，每个星期五晚上我去上探戈课。周末常有朋友来家里，我们一起吃披萨。" }
+      ],
+      blocks: [
+        { kind: "table", title: "Presente indicativo — Verbi irregolari (1): andare / venire", head: ["", "io", "tu", "lui/lei/Lei", "noi", "voi", "loro"], rows: [
+          ["andare", "vado", "vai", "va", "andiamo", "andate", "vanno"],
+          ["venire", "vengo", "vieni", "viene", "veniamo", "venite", "vengono"]
+        ]},
+        { kind: "table", title: "Presente indicativo — Verbi irregolari (2): dare / sapere / stare / uscire / fare / giocare", head: ["", "io", "tu", "lui/lei/Lei", "noi", "voi", "loro"], rows: [
+          ["dare", "do", "dai", "dà", "diamo", "date", "danno"],
+          ["sapere", "so", "sai", "sa", "sappiamo", "sapete", "sanno"],
+          ["stare", "sto", "stai", "sta", "stiamo", "state", "stanno"],
+          ["uscire", "esco", "esci", "esce", "usciamo", "uscite", "escono"],
+          ["fare", "faccio", "fai", "fa", "facciamo", "fate", "fanno"],
+          ["giocare", "gioco", "giochi", "gioca", "giochiamo", "giocate", "giocano"]
+        ]},
+        { kind: "text", title: "Nota", text: "Il verbo giocare (come il verbo pagare) è regolare ma presenta una particolarità: la c diventa ch davanti a -i, -e. Altri verbi irregolari sono nell'Approfondimento grammaticale a pagina 196." }
+      ]
+    },
+
+    /* 3) B 对话 —— Vieni con noi?（四组迷你对话 + 邀请用语表） */
+    {
+      id: "B",
+      type: "dialogue",
+      title: "Vieni con noi?",
+      audio: "Audio 18",
+      lines: [
+        { who: "", it: "Che fai domani? Andiamo al mare?", zh: "你明天做什么？我们去海边吧？" },
+        { who: "", it: "Sì, volentieri! Con questo bel tempo non ho voglia di restare in città.", zh: "好啊，非常乐意！这么好的天气，我不想待在城里。" },
+        { who: "Alessio", it: "Alessio, vieni con noi in discoteca stasera?", zh: "Alessio，今晚你和我们一起去迪斯科舞厅吗？" },
+        { who: "", it: "Purtroppo non posso, devo studiare.", zh: "可惜我不行，我得学习。" },
+        { who: "", it: "Ma dai, oggi è venerdì!", zh: "哎呀，今天是星期五！" },
+        { who: "", it: "Beh, non è che non voglio, è che davvero non posso!", zh: "嗯，不是我不想，是真的去不了！" },
+        { who: "Carla", it: "Carla, domani pensiamo di andare a teatro. Vuoi venire?", zh: "Carla，明天我们打算去看戏。你想来吗？" },
+        { who: "", it: "Certo! È da tempo che non vado a teatro!", zh: "当然！我很久没去看戏了！" },
+        { who: "", it: "Senti, che ne dici di andare alla Scala stasera? Ho due biglietti!", zh: "听着，今晚去斯卡拉歌剧院怎么样？我有两张票！" },
+        { who: "", it: "No, mi dispiace. Magari un'altra volta. Stefania non sta molto bene e voglio restare con lei.", zh: "不了，抱歉。也许下次吧。Stefania 身体不太舒服，我想陪着她。" }
+      ],
+      blocks: [
+        { kind: "table", title: "Invitare / Accettare / Rifiutare un invito", head: ["Invitare qualcuno", "Accettare un invito", "Rifiutare un invito"], rows: [
+          ["Vieni...?", "Sì, grazie! / D'accordo!", "Ho già un impegno."],
+          ["Vuoi venire?", "Perché no?", ""],
+          ["Perché non...?", "Buona idea! / Perfetto!", ""]
+        ]}
+      ]
+    },
+
+    /* 4) C 语法 —— Scusi, posso entrare?（I verbi modali） */
+    {
+      id: "C",
+      type: "grammar",
+      title: "Scusi, posso entrare?",
+      blocks: [
+        { kind: "quote", title: "Osservate (C1)", lines: [
+          "Non potete dire di conoscere il mondo se non visitate la Sicilia",
+          "Tutti vogliono tornare alla Natura ma pochi ci vogliono andare a piedi. (J.A. Wollensky)"
+        ]},
+        { kind: "table", title: "potere + infinito", head: ["", "io", "tu", "lui/lei/Lei", "noi", "voi", "loro"], rows: [
+          ["potere", "posso", "puoi", "può", "possiamo", "potete", "possono"]
+        ]},
+        { kind: "table", title: "volere + infinito", head: ["", "io", "tu", "lui/lei/Lei", "noi", "voi", "loro"], rows: [
+          ["volere", "voglio", "vuoi", "vuole", "vogliamo", "volete", "vogliono"]
+        ]},
+        { kind: "table", title: "dovere + infinito", head: ["", "io", "tu", "lui/lei/Lei", "noi", "voi", "loro"], rows: [
+          ["dovere", "devo", "devi", "deve", "dobbiamo", "dovete", "devono"]
+        ]},
+        { kind: "text", title: "Osservate", text: "I verbi modali (potere, volere, dovere) sono seguiti dall'infinito di un altro verbo: Scusi, posso entrare? / Gianna, puoi aspettare un momento? / Professore, può ripetere, per favore?" }
+      ]
+    },
+
+    /* 5) D 对话 —— Dove abiti?（Lorenzo/Gianna 电话对话 + 数字表） */
+    {
+      id: "D",
+      type: "dialogue",
+      title: "Dove abiti?",
+      audio: "Audio 19",
+      lines: [
+        { who: "Lorenzo", it: "Pronto, Gianna?", zh: "喂，Gianna？" },
+        { who: "Gianna", it: "Oh, ciao Lorenzo, come va?", zh: "哦，你好 Lorenzo，最近好吗？" },
+        { who: "Lorenzo", it: "Bene. Senti, sei libera domani pomeriggio?", zh: "挺好。听着，你明天下午有空吗？" },
+        { who: "Gianna", it: "Sì, perché?", zh: "有空，怎么了？" },
+        { who: "Lorenzo", it: "Vieni a vedere il mio appartamento nuovo?", zh: "你来看看我的新公寓吗？" },
+        { who: "Gianna", it: "Sì, volentieri! Dov'è, in centro?", zh: "好啊，非常乐意！在哪儿，市中心吗？" },
+        { who: "Lorenzo", it: "No, in periferia, a San Siro, in via Gorlini 40. Puoi arrivare in metro allo stadio e prendere l'autobus, il 64.", zh: "不，在郊区，圣西罗，Gorlini 街 40 号。你坐地铁到体育场，再换乘 64 路公交车。" },
+        { who: "Gianna", it: "Va bene: il 64 da San Siro. E poi?", zh: "好的：从圣西罗坐 64 路。然后呢？" },
+        { who: "Lorenzo", it: "La seconda fermata è proprio sotto casa. Io abito al primo piano.", zh: "第二站就正好在我家楼下。我住在二层。" },
+        { who: "Gianna", it: "Perfetto. E com'è questo nuovo appartamento?", zh: "太好了。那这套新公寓怎么样？" },
+        { who: "Lorenzo", it: "Mah... non è molto moderno, però è comodo e luminoso: un soggiorno grande, camera da letto, cucina, bagno e un piccolo balcone.", zh: "嗯……不太现代，但舒适又明亮：一个大客厅、卧室、厨房、卫生间和一个小阳台。" },
+        { who: "Gianna", it: "E quanto paghi di affitto?", zh: "那你付多少房租？" },
+        { who: "Lorenzo", it: "Eh... 600 euro...", zh: "呃……600 欧元……" },
+        { who: "Gianna", it: "Beh, sei fortunato! Il mio è piccolo, al terzo piano senza ascensore e pago 500!", zh: "哇，你真走运！我的很小，在三层、没电梯，我还付 500！" },
+        { who: "Lorenzo", it: "Sì, ma il tuo è in centro! Allora... ci vediamo domani alle 6? Vieni con Michela?", zh: "是啊，可你的在市中心！那……我们明天六点见？你和 Michela 一起来吗？" },
+        { who: "Gianna", it: "No, Michela è a Roma per lavoro, torna venerdì.", zh: "不，Michela 在罗马工作，星期五才回来。" }
+      ],
+      blocks: [
+        { kind: "table", title: "I numeri da 30 a 2.000", head: ["", "", ""], rows: [
+          ["30 trenta", "300 trecento", ""],
+          ["31 trentuno", "400 quattrocento", ""],
+          ["40 quaranta", "500 cinquecento", ""],
+          ["50 cinquanta", "600 seicento", ""],
+          ["60 sessanta", "700 settecento", ""],
+          ["70 settanta", "800 ottocento", ""],
+          ["80 ottanta", "900 novecento", ""],
+          ["90 novanta", "1.000 mille", ""],
+          ["100 cento", "1.900 millenovecento", ""],
+          ["200 duecento", "2.000 duemila", ""]
+        ]},
+        { kind: "table", title: "I numeri ordinali", head: ["", ""], rows: [
+          ["1° primo", "6° sesto"],
+          ["2° secondo", "7° settimo"],
+          ["3° terzo", "8° ottavo"],
+          ["4° quarto", "9° nono"],
+          ["5° quinto", "10° decimo"]
+        ]},
+        { kind: "text", title: "Nota", text: "Dall'11 in poi tutti i numeri ordinali finiscono in -esimo: undicesimo (Approfondimento grammaticale a pagina 198)." }
+      ]
+    },
+
+    /* 6) E 语法 —— È in centro?（Le preposizioni） */
+    {
+      id: "E",
+      type: "grammar",
+      title: "È in centro?",
+      blocks: [
+        { kind: "table", title: "Le preposizioni (vado / vengo / parto)", head: ["", "", ""], rows: [
+          ["vado/vengo", "in", "periferia, centro, città · metro, autobus, macchina · ufficio, agenzia, biblioteca · vacanza, montagna · Italia, Sicilia · via, piazza"],
+          ["vado/vengo", "a", "Roma · vedere, studiare · casa, piedi, teatro"],
+          ["vado/vengo", "al / allo / alla…", "cinema, ristorante, mare · primo piano, lavoro"],
+          ["vado/vengo", "da / con", "Michela, un amico"],
+          ["vengo/parto", "da", "Firenze, Roma"],
+          ["parto", "per", "Venezia, gli Stati uniti"],
+          ["parto", "in", "aereo, autobus"]
+        ]}
+      ]
+    },
+
+    /* 7) F 词汇分节 —— Quando sei libera?（星期与日程观察） */
+    {
+      id: "F",
+      type: "vocab",
+      title: "Quando sei libera?",
+      blocks: [
+        { kind: "quote", title: "Osservate", lines: [
+          "sabato mattina · lunedì = lunedì prossimo",
+          "oggi pomeriggio · il lunedì = ogni lunedì",
+          "domani sera"
+        ]},
+        { kind: "text", title: "I giorni della settimana", text: "lunedì, martedì, mercoledì, giovedì, venerdì, sabato, domenica. Si usano per indicare gli impegni nell'agenda (es. ogni venerdì sera = ogni lunedì)." }
+      ]
+    },
+
+    /* 8) G 对话 —— Che ora è? / Che ore sono?（时间表达 + 钟表观察） */
+    {
+      id: "G",
+      type: "dialogue",
+      title: "Che ora è? / Che ore sono?",
+      audio: "Audio 21",
+      lines: [
+        { who: "", it: "Scusi, signora, che ore sono?", zh: "打扰一下，女士，几点了？" },
+        { who: "", it: "Sono le nove meno venti.", zh: "九点差二十分。" },
+        { who: "", it: "Sono le otto e quaranta.", zh: "八点四十分。（与上一句同指 8:40）" },
+        { who: "", it: "Scusa, che ora è?", zh: "不好意思，几点了？" },
+        { who: "", it: "È l'una e mezzo.", zh: "一点半。" }
+      ],
+      blocks: [
+        { kind: "quote", title: "Osservate gli orologi", lines: [
+          "Sono le nove.",
+          "Sono le sei e trentacinque.",
+          "Sono le sette meno venti.",
+          "È l'una.",
+          "Sono le venti e quindici. (20:15)",
+          "È mezzogiorno. (12:00)",
+          "È mezzanotte. (24:00)",
+          "Sono le otto e cinque. (8:05)"
+        ]}
+      ]
+    },
+
+    /* 9) 词汇分节 —— I mezzi di trasporto urbano（城市公共交通阅读） */
+    {
+      id: "mezzi",
+      type: "vocab",
+      title: "I mezzi di trasporto urbano",
+      blocks: [
+        { kind: "text", title: "Testo", text: "Nelle città italiane, i mezzi pubblici più usati sono l'autobus, il tram e, a Roma, Milano, Torino, Brescia, Genova, Napoli, anche la metropolitana. I passeggeri possono comprare il biglietto in tabaccheria, all'edicola, al bar o alle macchinette automatiche che sono nelle stazioni della metropolitana o ad alcune fermate dell'autobus. Inoltre, è possibile pagare l'abbonamento online o comprare il biglietto con il cellulare. I passeggeri dell'autobus e del tram devono convalidare (timbrare) il biglietto all'inizio della corsa." },
+        { kind: "text", title: "Glossario", text: "urbano: della città; passeggero: persona che viaggia in autobus, in treno ecc.; tabaccheria: negozio che vende sigarette, biglietti e altri oggetti; lettrice: donna che legge." }
+      ]
+    },
+
+    /* 10) 文化板块 —— Conosciamo l'Italia（意大利人的休闲） */
+    {
+      id: "it",
+      type: "culture",
+      title: "Conosciamo l'Italia",
+      body: "意大利人的休闲方式多样。调查显示，约一半意大利人喜欢看电影，近三成做运动或健身，超过半数上网或使用社交媒体，约四分之一喜欢和朋友相聚。阅读以女性居多。",
+      table: [
+        { head: ["Attività", "Percentuale"], rows: [
+          ["ama andare al cinema", "50%"],
+          ["va a teatro", "20%"],
+          ["dedica il tempo alla famiglia", "46%"],
+          ["fa sport, va in palestra, cammina, corre, va in bicicletta", "29%"],
+          ["naviga su internet o usa i social media", "54,7%"],
+          ["guarda la tv", "28,8%"],
+          ["legge (lettrici 37%, uomini 20,8%)", "27,6%"],
+          ["fa lavori creativi (es. giardinaggio)", "18%"],
+          ["preferisce stare con gli amici", "25%"]
+        ]}
+      ]
+    },
+
+    /* 11) 原书练习 —— AUTOVALUTAZIONE */
+    {
+      id: "es",
+      type: "exercise",
+      title: "Cosa ricordi delle unità 1 e 2?",
+      items: [
+        "1. Sai...? Abbina le due colonne. (invitare / dire l'ora / accettare un invito / descrivere l'abitazione / rifiutare un invito)",
+        "2. Abbina le domande alle risposte. (Di dove sei? / Quanti anni ha Paolo? / Dove abiti? / Che tipo è? / Dove lavori?)",
+        "3. Completa. 1. Quattro preposizioni: ______ ______ ______ ______   2. Prima di sabato: ______   3. Dopo sesto: ______   4. La prima persona singolare di volere: ______   5. La prima persona plurale di fare: ______",
+        "4. Scopri, in orizzontale e in verticale, le sei parole nascoste. (videogiochi, esco, affitto, grazie, mila, comodo)"
+      ]
+    }
+  ]
+};

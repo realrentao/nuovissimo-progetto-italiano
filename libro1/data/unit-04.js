@@ -1,0 +1,841 @@
+window.NPI = window.NPI || { units: {} };
+window.NPI.units["04"] = {
+  id: "04",
+  title: "Buon fine settimana!",
+  titleZh: "周末愉快！",
+  tema: "Parlare del fine settimana, raccontare al passato, ordinare al bar",
+  words: [
+    {
+      it: "fine settimana",
+      pos: "s.m.",
+      zh: "周末",
+      cat: "Tempo libero",
+      syll: "fì·ne set·ti·mà·na",
+      ex: "Allora? Come hai passato il fine settimana?",
+      exZh: "那么？你周末过得怎么样？",
+      note: "第60页对话 A1；单元标题亦为 Buon fine settimana!"
+    },
+    {
+      it: "sabato",
+      pos: "s.m.",
+      zh: "星期六",
+      cat: "Tempo",
+      syll: "sà·ba·to",
+      ex: "Allora... sabato sono andato al cinema con Gianna.",
+      exZh: "嗯……周六我和詹娜去看电影了。",
+      note: "第60页对话 A1；星期名词在意大利语中阳性，与 il 连用（il sabato 表示「每逢周六」）"
+    },
+    {
+      it: "domenica",
+      pos: "s.f.",
+      zh: "星期日",
+      cat: "Tempo",
+      syll: "do·mè·ni·ca",
+      ex: "Domenica pomeriggio sono uscito con due amici dell'università.",
+      exZh: "周日下午我和两个大学同学出去了。",
+      note: "第60页对话 A1；唯一为阴性的星期名词"
+    },
+    {
+      it: "mostra",
+      pos: "s.f.",
+      zh: "展览，画展",
+      cat: "Tempo libero",
+      syll: "mò·stra",
+      ex: "Hai visto la mostra su Botticelli alla fine?",
+      exZh: "你最后去看波提切利画展了吗？",
+      note: "第60页对话 A1；原书转录中 Botticelli 在部分版面被误排为 Bottecelli"
+    },
+    {
+      it: "concerto",
+      pos: "s.m.",
+      zh: "音乐会，演奏会",
+      cat: "Tempo libero",
+      syll: "con·cèr·to",
+      ex: "Domenica invece sono stata a un concerto con Michela. Bellissimo!",
+      exZh: "周日我倒是和米凯拉去听了一场音乐会。太棒了！",
+      note: "第60页对话 A1"
+    },
+    {
+      it: "museo",
+      pos: "s.m.",
+      zh: "博物馆",
+      cat: "Tempo libero",
+      syll: "mu·sè·o",
+      ex: "Purtroppo no. Il museo chiude alle 19 e sono arrivata tardi.",
+      exZh: "可惜没有。博物馆19点关门，我到晚了。",
+      note: "第60页对话 A1；第66页 C1 亦出现 il museo della città di Sassari"
+    },
+    {
+      it: "gita",
+      pos: "s.f.",
+      zh: "郊游，一日游，短途旅行",
+      cat: "Viaggi",
+      syll: "gì·ta",
+      ex: "Per molti la domenica è anche il giorno per fare una gita, al mare o in montagna.",
+      exZh: "对许多人来说，周日也是去郊游的日子，去海边或去山里。",
+      note: "第71页 Conosciamo l'Italia；常用搭配 fare una gita"
+    },
+    {
+      it: "passeggiata",
+      pos: "s.f.",
+      zh: "散步，溜达",
+      cat: "Azioni quotidiane",
+      syll: "pas·seg·già·ta",
+      ex: "Domenica Lorenzo ha fatto una passeggiata in centro con due amici.",
+      exZh: "周日洛伦佐和两个朋友在市中心逛了逛。",
+      note: "第61页活动 4 的完成句子；常用搭配 fare una passeggiata / fare un giro"
+    },
+    {
+      it: "cameriere",
+      pos: "s.m.",
+      zh: "（咖啡馆、餐厅的）服务员",
+      cat: "Lavoro",
+      syll: "ca·me·riè·re",
+      ex: "Il cameriere ha portato l'ordine sbagliato o forse noi abbiamo fatto confusione...",
+      exZh: "服务员上错了单，也可能是我们搞混了……",
+      note: "第60页对话 A1；女性形式为 la cameriera"
+    },
+    {
+      it: "ordine",
+      pos: "s.m.",
+      zh: "所点的东西；（点餐的）单子",
+      cat: "Cibo",
+      syll: "òr·di·ne",
+      ex: "Il cameriere ha portato l'ordine sbagliato...",
+      exZh: "服务员上错了单……",
+      note: "第60页对话 A1；此处指「（上错的）菜/饮品」；另有「秩序」义"
+    },
+    {
+      it: "mensa",
+      pos: "s.f.",
+      zh: "（学校、公司的）食堂",
+      cat: "Studio",
+      syll: "mèn·sa",
+      ex: "Dopo la lezione ho chiacchierato un po' con gli altri studenti del corso e poi sono andato alla mensa.",
+      exZh: "下课后我和班上其他同学聊了一会儿，然后去了食堂。",
+      note: "第64页对话 B3；第63页日程表亦有 14.00 mangiare alla mensa insieme a Gino"
+    },
+    {
+      it: "dentista",
+      pos: "s.m./s.f.",
+      zh: "牙医",
+      cat: "Salute",
+      syll: "den·tì·sta",
+      ex: "...dopo un'ora e mezza circa, cioè verso le cinque, sono andato dal dentista.",
+      exZh: "……大约一个半小时后，也就是快五点的时候，我去看牙医了。",
+      note: "第64页对话 B3；名词阴阳性同形，靠冠词区分（il/la dentista）"
+    },
+    {
+      it: "polizia",
+      pos: "s.f.",
+      zh: "警察（机关）；警方",
+      cat: "Altro",
+      syll: "po·li·zì·a",
+      ex: "Il 12 dicembre hanno rubato tre computer all'università. La polizia interroga gli studenti.",
+      exZh: "12月12日大学里被人偷了三台电脑。警方询问学生们。",
+      note: "第63页活动 B1 情景说明"
+    },
+    {
+      it: "caffè",
+      pos: "s.m.",
+      zh: "咖啡；咖啡馆",
+      cat: "Cibo",
+      syll: "caf·fè",
+      ex: "Alcuni prendono solo un caffè al banco e, prima di ordinare, \"fanno lo scontrino\".",
+      exZh: "有些人只在吧台喝一杯咖啡，点单前先「去打小票」。",
+      note: "第72页 Il bar italiano；意大利人口中的 caffè 通常指 espresso"
+    },
+    {
+      it: "cornetto",
+      pos: "s.m.",
+      zh: "意式牛角包，可颂",
+      cat: "Cibo",
+      syll: "cor·nèt·to",
+      ex: "Altri rimangono un po' di più perché fanno colazione con cappuccino e cornetto.",
+      exZh: "另一些人会多待一会儿，因为他们要吃卡布奇诺加牛角包的早餐。",
+      note: "第72页 Il bar italiano"
+    },
+    {
+      it: "tramezzino",
+      pos: "s.m.",
+      zh: "（三角形的）意式软三明治",
+      cat: "Cibo",
+      syll: "tra·mez·zì·no",
+      ex: "Io so già cosa prendo... vorrei un tramezzino e una fetta di torta al cioccolato.",
+      exZh: "我已经知道要什么了……我想要一份三明治和一块巧克力蛋糕。",
+      note: "第68页对话 D1"
+    },
+    {
+      it: "panino",
+      pos: "s.m.",
+      zh: "意式夹馅小面包，帕尼诺",
+      cat: "Cibo",
+      syll: "pa·nì·no",
+      ex: "Per me, un panino con prosciutto crudo e mozzarella e una lattina di Coca Cola.",
+      exZh: "我要一个生火腿加马苏里拉奶酪的帕尼诺，再加一罐可口可乐。",
+      note: "第68页对话 D1"
+    },
+    {
+      it: "torta",
+      pos: "s.f.",
+      zh: "蛋糕，派",
+      cat: "Cibo",
+      syll: "tòr·ta",
+      ex: "...e una fetta di torta al cioccolato per lei, un caffè macchiato per me...",
+      exZh: "……给她一块巧克力蛋糕，给我一杯玛奇朵咖啡……",
+      note: "第68页对话 D1；una fetta di torta = 一块蛋糕"
+    },
+    {
+      it: "listino",
+      pos: "s.m.",
+      zh: "价目表，菜单价格表",
+      cat: "Cibo",
+      syll: "li·stì·no",
+      ex: "Non so... io ho un po' di fame.... Scusi, possiamo avere il listino?",
+      exZh: "我不知道……我有点饿。……劳驾，能给我们看看价目表吗？",
+      note: "第68页对话 D1"
+    },
+    {
+      it: "aperitivo",
+      pos: "s.m.",
+      zh: "餐前酒，开胃酒",
+      cat: "Cibo",
+      syll: "a·pe·ri·tì·vo",
+      ex: "escono per bere un aperitivo, per cenare al ristorante, per andare a ballare.",
+      exZh: "他们出门喝餐前酒、去餐厅吃晚饭、去跳舞。",
+      note: "第71页 Conosciamo l'Italia"
+    },
+    {
+      it: "scontrino",
+      pos: "s.m.",
+      zh: "收银小票，收据",
+      cat: "Shopping",
+      syll: "scon·trì·no",
+      ex: "\"fanno lo scontrino\", cioè vanno alla cassa a pagare.",
+      exZh: "「打小票」，也就是先到收银台付钱。",
+      note: "第72页 Il bar italiano；原书对此表达加了引号并给出解释"
+    },
+    {
+      it: "colazione",
+      pos: "s.f.",
+      zh: "早餐",
+      cat: "Cibo",
+      syll: "co·la·ziò·ne",
+      ex: "Altri rimangono un po' di più perché fanno colazione con cappuccino e cornetto.",
+      exZh: "另一些人会多待一会儿，因为他们要在那里吃早餐。",
+      note: "第72页 Il bar italiano；常用搭配 fare colazione（吃早餐）"
+    },
+    {
+      it: "moka",
+      pos: "s.f.",
+      zh: "摩卡壶（家用直火式咖啡壶）",
+      cat: "Cibo",
+      syll: "mò·ka",
+      ex: "La moka è la caffettiera del 1933 di Alfonso Bialetti.",
+      exZh: "摩卡壶是阿尔丰索·比亚莱蒂1933年设计的咖啡壶。",
+      note: "第72页 \"Un caffè!\"；源自品牌名，在意大利语中已普通名词化"
+    },
+    {
+      it: "spritz",
+      pos: "s.m.",
+      zh: "⚠️ 待确认",
+      cat: "Cibo",
+      syll: "⚠️",
+      ex: "",
+      exZh: "",
+      note: "第69页价目表 aperitivi 一栏（spritz € 4,00）；原书未给释义，中文亦无固定译名（坊间常音译「斯普里兹」，指以气泡酒加苦味酒调配的意式开胃酒），故不臆造"
+    },
+    {
+      it: "bere",
+      pos: "v.",
+      zh: "喝，饮",
+      cat: "Cibo",
+      syll: "bé·re",
+      ex: "Abbiamo bevuto un caffè e dopo un'ora e mezza circa... sono andato dal dentista.",
+      exZh: "我们喝了杯咖啡，大约一个半小时后……我去看牙医了。",
+      note: "第64页对话 B3；过去分词 bevuto"
+    },
+    {
+      it: "decidere",
+      pos: "v.",
+      zh: "决定",
+      cat: "Azioni quotidiane",
+      syll: "de·cì·de·re",
+      ex: "Allora, cosa prendete? Avete già deciso?",
+      exZh: "那么，二位点什么？已经决定好了吗？",
+      note: "第68页对话 D1；过去分词 deciso"
+    },
+    {
+      it: "pranzare",
+      pos: "v.",
+      zh: "吃午餐",
+      cat: "Cibo",
+      syll: "pran·zà·re",
+      ex: "Sì, non ho potuto pranzare oggi.",
+      exZh: "是的，我今天没能吃上午饭。",
+      note: "第68页对话 D1；名词为 il pranzo（午餐）"
+    },
+    {
+      it: "cenare",
+      pos: "v.",
+      zh: "吃晚餐",
+      cat: "Cibo",
+      syll: "ce·nà·re",
+      ex: "escono per bere un aperitivo, per cenare al ristorante, per andare a ballare.",
+      exZh: "他们出门喝餐前酒、下馆子吃晚饭、去跳舞。",
+      note: "第71页 Conosciamo l'Italia；名词为 la cena（晚餐）"
+    },
+    {
+      it: "ordinare",
+      pos: "v.",
+      zh: "点（餐）；订购",
+      cat: "Cibo",
+      syll: "or·di·nà·re",
+      ex: "Abbiamo ordinato una pizza, abbiamo guardato la tv, abbiamo parlato un po'...",
+      exZh: "我们点了一份披萨，看了会儿电视，聊了一会儿天……",
+      note: "第64页对话 B3"
+    },
+    {
+      it: "provare",
+      pos: "v.",
+      zh: "品尝；尝试；试穿",
+      cat: "Azioni quotidiane",
+      syll: "pro·và·re",
+      ex: "Sì, abbiamo provato tante pizze diverse.",
+      exZh: "是啊，我们品尝了很多种不同的披萨。",
+      note: "第60页对话 A1"
+    },
+    {
+      it: "chiacchierare",
+      pos: "v.",
+      zh: "聊天，闲谈",
+      cat: "Comunicazione",
+      syll: "chiac·chie·rà·re",
+      ex: "Dopo la lezione ho chiacchierato un po' con gli altri studenti del corso...",
+      exZh: "下课后我和班上其他同学聊了一会儿……",
+      note: "第64页对话 B3"
+    },
+    {
+      it: "rubare",
+      pos: "v.",
+      zh: "偷，盗窃",
+      cat: "Altro",
+      syll: "ru·bà·re",
+      ex: "Il 12 dicembre hanno rubato tre computer all'università.",
+      exZh: "12月12日大学里被人偷走了三台电脑。",
+      note: "第63页活动 B1 情景说明"
+    },
+    {
+      it: "succedere",
+      pos: "v.",
+      zh: "发生",
+      cat: "Altro",
+      syll: "suc·cè·de·re",
+      ex: "E dopo, cos'è successo dopo?",
+      exZh: "那之后呢，之后发生了什么？",
+      note: "第64页对话 B3；单元 B 部分标题亦为 Ma che cosa è successo?；过去分词 successo，近过去时用 essere 作助动词"
+    },
+    {
+      it: "diventare",
+      pos: "v.",
+      zh: "变成，成为",
+      cat: "Altro",
+      syll: "di·ven·tà·re",
+      ex: "...il progetto che è iniziato solo due anni fa, ma che è già diventato un appuntamento fisso per il pubblico della città sarda.",
+      exZh: "……这个项目两年前才启动，却已经成为这座撒丁城市公众的固定活动。",
+      note: "第66页阅读 C1"
+    },
+    {
+      it: "nascere",
+      pos: "v.",
+      zh: "出生",
+      cat: "Altro",
+      syll: "nà·sce·re",
+      ex: "Sono nato nel 1998.",
+      exZh: "我是1998年出生的。",
+      note: "第74页 Autovalutazione 1b；过去分词 nato，近过去时用 essere"
+    },
+    {
+      it: "rimanere",
+      pos: "v.",
+      zh: "留下，停留；保持",
+      cat: "Azioni quotidiane",
+      syll: "ri·ma·nè·re",
+      ex: "Eh, niente, sabato sono rimasta a casa.",
+      exZh: "唉，没什么，周六我待在家里。",
+      note: "第60页对话 A1；过去分词 rimasto，近过去时用 essere"
+    },
+    {
+      it: "tornare",
+      pos: "v.",
+      zh: "回来，返回",
+      cat: "Azioni quotidiane",
+      syll: "tor·nà·re",
+      ex: "Matilde, sei già tornata dal lavoro?",
+      exZh: "玛蒂尔德，你已经下班回来了吗？",
+      note: "第62页活动 7a；过去分词 tornato，近过去时用 essere"
+    },
+    {
+      it: "vincere",
+      pos: "v.",
+      zh: "赢，获胜；赢得",
+      cat: "Altro",
+      syll: "vìn·ce·re",
+      ex: "Come l'anno scorso, il primo ospite è Francesco Manara, violinista che ha vinto molti premi internazionali...",
+      exZh: "和去年一样，首位嘉宾是弗朗切斯科·马纳拉，一位赢得过许多国际奖项的小提琴家……",
+      note: "第66页阅读 C1；过去分词 vinto。第65页不规则过去分词配对表在本转录中列序错乱（如 dire→letto 实为 leggere→letto），本条按标准语法收录"
+    },
+    {
+      it: "pagare",
+      pos: "v.",
+      zh: "支付，付款",
+      cat: "Shopping",
+      syll: "pa·gà·re",
+      ex: "...\"fanno lo scontrino\", cioè vanno alla cassa a pagare.",
+      exZh: "……「打小票」，也就是先到收银台去付钱。",
+      note: "第72页 Il bar italiano"
+    },
+    {
+      it: "ieri",
+      pos: "avv.",
+      zh: "昨天",
+      cat: "Tempo",
+      syll: "iè·ri",
+      ex: "Ieri abbiamo visitato San Pietro.",
+      exZh: "昨天我们参观了圣彼得大教堂。",
+      note: "第62页活动 6b 连词成句题；与近过去时连用表示已完成的过去时间"
+    },
+    {
+      it: "scorso",
+      pos: "agg.",
+      zh: "上一个的，刚过去的",
+      cat: "Tempo",
+      syll: "scòr·so",
+      ex: "Quando sei venuto in Italia? — Nel maggio scorso.",
+      exZh: "你是什么时候来意大利的？——刚过去的那个五月。",
+      note: "第74页 Autovalutazione 2d；scorso 指「刚过去的那一个」，汉语常译作「去年X月／上周X」；常见搭配 l'anno scorso（去年）、la settimana scorsa（上周）、martedì scorso（上周二）"
+    },
+    {
+      it: "ancora",
+      pos: "avv.",
+      zh: "还，仍然（与 non 连用时表示「尚未」）",
+      cat: "Grammatica",
+      syll: "an·cò·ra",
+      ex: "Dora non è ancora arrivata in ufficio.",
+      exZh: "多拉还没到办公室。",
+      note: "第67页 Avverbi con il passato prossimo"
+    },
+    {
+      it: "mai",
+      pos: "avv.",
+      zh: "从未，从不（与 non 连用）",
+      cat: "Grammatica",
+      syll: "mài",
+      ex: "A Claudia non piace ballare. Non è mai stata in una discoteca!",
+      exZh: "克劳迪娅不喜欢跳舞。她从没去过迪斯科舞厅！",
+      note: "第68页活动 5b"
+    },
+    {
+      it: "appena",
+      pos: "avv.",
+      zh: "刚刚，刚才",
+      cat: "Grammatica",
+      syll: "ap·pè·na",
+      ex: "Gianluca è appena uscito di casa.",
+      exZh: "詹卢卡刚出门。",
+      note: "第67页 Avverbi con il passato prossimo"
+    }
+  ],
+  phrases: [
+    {
+      it: "Come hai passato il fine settimana?",
+      pos: "frase",
+      zh: "你周末过得怎么样？",
+      cat: "Tempo libero",
+      syll: "cò·me ài pas·sà·to il fì·ne set·ti·mà·na",
+      note: "第60页对话 A1 首句；passato 为 passare 的过去分词"
+    },
+    {
+      it: "Buon fine settimana!",
+      pos: "frase",
+      zh: "周末愉快！",
+      cat: "Tempo libero",
+      syll: "buòn fì·ne set·ti·mà·na",
+      note: "第59页单元标题"
+    },
+    {
+      it: "Che cosa è successo?",
+      pos: "frase",
+      zh: "发生了什么事？",
+      cat: "Altro",
+      syll: "ché cò·sa è suc·cès·so",
+      note: "第63页 B 部分标题 Ma che cosa è successo?；第64页亦有 E dopo, cos'è successo dopo?"
+    },
+    {
+      it: "Che cosa hai fatto di bello?",
+      pos: "frase",
+      zh: "你做了什么有意思的事？",
+      cat: "Tempo libero",
+      syll: "ché cò·sa ài fàt·to di bèl·lo",
+      note: "第60页对话 A1（E tu, che cosa hai fatto di bello?）"
+    },
+    {
+      it: "Sabato sono rimasta a casa.",
+      pos: "frase",
+      zh: "周六我待在家里。",
+      cat: "Azioni quotidiane",
+      syll: "sà·ba·to sò·no ri·mà·sta a cà·sa",
+      note: "第60页对话 A1；rimanere 近过去时用 essere，过去分词与主语性数一致（说话人为女性故用 rimasta）"
+    },
+    {
+      it: "Scusi, possiamo avere il listino?",
+      pos: "frase",
+      zh: "劳驾，能给我们看看价目表吗？",
+      cat: "Cibo",
+      syll: "scù·si, pos·sià·mo a·vé·re il li·stì·no",
+      note: "第68页对话 D1"
+    },
+    {
+      it: "Cosa prendi?",
+      pos: "frase",
+      zh: "你点什么？／你要什么？",
+      cat: "Cibo",
+      syll: "cò·sa prèn·di",
+      note: "第69页 Ordinare 功能表；复数形式为 Cosa prendete? / Cosa prendiamo?"
+    },
+    {
+      it: "Per me, un panino.",
+      pos: "frase",
+      zh: "我要一个帕尼诺。",
+      cat: "Cibo",
+      syll: "per mé, un pa·nì·no",
+      note: "第68页对话 D1（Per me, un panino con prosciutto crudo e mozzarella...）；点单常用省略句"
+    },
+    {
+      it: "Vorrei un tramezzino e una fetta di torta al cioccolato.",
+      pos: "frase",
+      zh: "我想要一份三明治和一块巧克力蛋糕。",
+      cat: "Cibo",
+      syll: "vor·rèi un tra·mez·zì·no e ù·na fèt·ta di tòr·ta al cio·co·là·to",
+      note: "第68页对话 D1；vorrei 为 volere 的条件式，点单时的礼貌说法"
+    },
+    {
+      it: "Avete già deciso?",
+      pos: "frase",
+      zh: "你们已经决定好了吗？",
+      cat: "Cibo",
+      syll: "a·vè·te già de·cì·so",
+      note: "第68页对话 D1；già 位于过去分词前"
+    },
+    {
+      it: "Non ho potuto pranzare oggi.",
+      pos: "frase",
+      zh: "我今天没能吃上午饭。",
+      cat: "Cibo",
+      syll: "non ò po·tù·to pran·zà·re òg·gi",
+      note: "第68页对话 D1；情态动词 potere 近过去时用 avere，后接动词原形"
+    },
+    {
+      it: "Io ho fame: vorrei un panino...",
+      pos: "frase",
+      zh: "我饿了：我想要一个帕尼诺……",
+      cat: "Cibo",
+      syll: "ì·o ò fà·me: vor·rèi un pa·nì·no",
+      note: "第69页 Ordinare 功能表；对应表达为 Ho sete: vorrei bere qualcosa...（我渴了：想喝点东西……）"
+    },
+    {
+      it: "Preferisco il tè al caffè.",
+      pos: "frase",
+      zh: "相比咖啡我更喜欢茶。",
+      cat: "Cibo",
+      syll: "pre·fe·rì·sco il tè al caf·fè",
+      note: "第69页 Ordinare 功能表；preferire A a B = 相比 B 更喜欢 A"
+    },
+    {
+      it: "un sacco di gente",
+      pos: "loc.",
+      zh: "好多人，人山人海",
+      cat: "Altro",
+      syll: "un sàc·co di gèn·te",
+      note: "第60页对话 A1（siamo andati al Pizza Festival: un sacco di gente!）；口语中 un sacco di = 很多"
+    },
+    {
+      it: "l'anno scorso",
+      pos: "loc.",
+      zh: "去年",
+      cat: "Tempo",
+      syll: "l'àn·no scòr·so",
+      note: "第66页阅读 C1 及 Quando? 表；同类表达 la settimana scorsa（上周）、il mese scorso（上个月）、l'estate scorsa（去年夏天）"
+    }
+  ],
+  sections: [
+    /* 1) 热身 / 单元目标 —— Per cominciare... */
+    {
+      id: "intro",
+      type: "intro",
+      title: "Per cominciare...",
+      goals: [
+        "a parlare di cosa facciamo durante il fine settimana",
+        "a raccontare al passato",
+        "a situare un avvenimento nel passato",
+        "a chiedere e dire una data",
+        "a ordinare al bar",
+        "a esprimere preferenza",
+        "il participio passato: verbi regolari e irregolari",
+        "il passato prossimo",
+        "l'avverbio ci",
+        "l'uso degli avverbi con il passato prossimo",
+        "i verbi modali al passato prossimo",
+        "come passano il fine settimana gli italiani",
+        "come sono i bar in Italia e come bevono il caffè gli italiani"
+      ],
+      preview: [
+        { it: "fine settimana", zh: "周末" },
+        { it: "sabato", zh: "星期六" },
+        { it: "domenica", zh: "星期日" },
+        { it: "mostra", zh: "展览，画展" },
+        { it: "concerto", zh: "音乐会" },
+        { it: "museo", zh: "博物馆" },
+        { it: "gita", zh: "郊游，一日游" },
+        { it: "passeggiata", zh: "散步" }
+      ]
+    },
+
+    /* 2) A 对话 —— Come hai passato il fine settimana? */
+    {
+      id: "A",
+      type: "dialogue",
+      title: "Come hai passato il fine settimana?",
+      audio: "Audio 26",
+      lines: [
+        { who: "Chiara",  it: "Buongiorno Lorenzo, come va?", zh: "你好 Lorenzo，最近怎么样？" },
+        { who: "Lorenzo", it: "Non c'è male, grazie. E tu?", zh: "还不错，谢谢。你呢？" },
+        { who: "Chiara",  it: "Abbastanza bene. Allora? Come hai passato il fine settimana?", zh: "挺好的。那么？你周末过得怎么样？" },
+        { who: "Lorenzo", it: "Mah... bene, devo dire.", zh: "嗯……挺好的，我得说。" },
+        { who: "Chiara",  it: "Racconta, dai!", zh: "讲讲吧，快！" },
+        { who: "Lorenzo", it: "Allora... sabato sono andato al cinema con Gianna. Prima, però, abbiamo mangiato qualcosa al bar accanto... che rideri!", zh: "嗯……周六我和 Gianna 去看电影了。不过之前我们在旁边那家酒吧吃了点东西……太好笑了！" },
+        { who: "Chiara",  it: "Per il film? Una commedia?", zh: "因为电影？喜剧片？" },
+        { who: "Lorenzo", it: "No, non per il film, al bar! Il cameriere ha portato l'ordine sbagliato o forse noi abbiamo fatto confusione...", zh: "不，不是因为电影，是因为酒吧！服务员上错了单，也可能是我们搞混了……" },
+        { who: "Chiara",  it: "Davvero? E domenica?", zh: "真的吗？那周日呢？" },
+        { who: "Lorenzo", it: "Domenica pomeriggio sono uscito con due amici dell'università. Prima abbiamo fatto un giro in centro e poi siamo andati al Pizza Festival: un sacco di gente!", zh: "周日下午我和两个大学同学出去了。我们先在市中心转了转，然后去了披萨节：人山人海！" },
+        { who: "Chiara",  it: "Pizza Festival?", zh: "披萨节？" },
+        { who: "Lorenzo", it: "Sì, abbiamo provato tante pizze diverse. E tu, che cosa hai fatto di bello? Hai visto la mostra su Botticelli alla fine?", zh: "对，我们尝了好多不一样的披萨。你呢，做了什么有意思的事？你最后去看波提切利画展了吗？" },
+        { who: "Chiara",  it: "Purtroppo no. Il museo chiude alle 19 e sono arrivata tardi.", zh: "可惜没有。博物馆19点关门，我到晚了。" },
+        { who: "Lorenzo", it: "Peccato! E allora?", zh: "太遗憾了！那后来呢？" },
+        { who: "Chiara",  it: "Eh, niente, sabato sono rimasta a casa. Domenica invece sono stata a un concerto con Michela. Bellissimo! Abbiamo ballato tanto.", zh: "唉，没什么，周六我待在家里。周日我倒是和 Michela 去听了一场音乐会。太棒了！我们跳了好多舞。" },
+        { who: "Lorenzo", it: "Bene! Senti,... andiamo a mangiare qualcosa? Ah, conosco un bar dove il cameriere sbaglia tutto!", zh: "好呀！听着……我们去吃点东西？啊，我知道一家酒吧，那的服务员什么都上错！" }
+      ],
+      blocks: [
+        { kind: "quote", title: "Osservate — Passato prossimo", lines: [
+          "Come hai passato il fine settimana?",
+          "Ho mangiato un gelato.",
+          "Ha ricevuto una telefonata.",
+          "Sono uscito con due amici.",
+          "Siamo andati al Pizza Festival.",
+          "Siamo state a un concerto."
+        ] }
+      ]
+    },
+
+    /* 3) B 对话 —— Ma che cosa è successo? */
+    {
+      id: "B",
+      type: "dialogue",
+      title: "Ma che cosa è successo?",
+      lines: [
+        { who: "agente",  it: "Cosa ha fatto il 12 dicembre?", zh: "12月12日你做了什么？" },
+        { who: "Luigi",   it: "Se ricordo bene... quel giorno sono arrivato presto all'università... verso le 10... ma sono subito entrato nell'aula per la lezione.", zh: "如果我没记错……那天我很早就到了大学……大概10点……但我马上进了教室上课。" },
+        { who: "agente",  it: "E poi?", zh: "然后呢？" },
+        { who: "Luigi",   it: "Dopo la lezione ho chiacchierato un po' con gli altri studenti del corso e poi sono andato alla mensa.", zh: "下课后我和班上其他同学聊了一会儿，然后去了食堂。" },
+        { who: "agente",  it: "Da solo?", zh: "一个人？" },
+        { who: "Luigi",   it: "No, ci sono andato con Gino! Però... prima ho incontrato il professor Berti.", zh: "不，我和 Gino 一起去的！不过……之前我遇到了 Berti 教授。" },
+        { who: "agente",  it: "Hmm, poi cosa ha fatto?", zh: "嗯，那之后你又做了什么？" },
+        { who: "Luigi",   it: "Dopo che abbiamo finito di mangiare, io sono andato al bar per incontrare Nina, la mia ragazza. Abbiamo bevuto un caffè e dopo un'ora e mezza circa, cioè verso le cinque, sono andato dal dentista. Poi sono tornato a casa.", zh: "我们吃完饭后，我去酒吧见了我的女朋友 Nina。我们喝了杯咖啡，大约一个半小时后，也就是快五点的时候，我去看牙医了。然后我就回家了。" },
+        { who: "agente",  it: "E dopo, cos'è successo dopo?", zh: "那再之后，发生了什么事？" },
+        { who: "Luigi",   it: "Mah, niente di speciale... ho studiato un po' e più tardi è venuta anche Nina. Abbiamo ordinato una pizza, abbiamo guardato la tv, abbiamo parlato un po' e alla fine siamo andati a dormire.", zh: "唉，没什么特别的……我学了会儿习，后来 Nina 也来了。我们点了一份披萨，看了会儿电视，聊了一会儿，最后就去睡了。" }
+      ],
+      blocks: [
+        { kind: "quote", title: "Essere o avere?", lines: [
+          "a. Formano il passato prossimo con essere:",
+          "1. verbi di movimento: andare, entrare, partire, tornare, uscire, venire ecc.",
+          "2. verbi di stato: essere, rimanere, stare ecc.",
+          "3. alcuni verbi intransitivi: essere, nascere, piacere, succedere ecc.",
+          "b. Formano il passato prossimo con avere:",
+          "1. i verbi transitivi (hanno un oggetto): avere, bere, chiamare, mangiare un panino ecc.",
+          "2. alcuni verbi intransitivi: camminare, dormire, lavorare ecc."
+        ] },
+        { kind: "quote", title: "Raccontare una giornata", lines: [
+          "all'inizio... / per prima cosa...",
+          "dopo le due...",
+          "più tardi...",
+          "prima... / prima di mangiare...",
+          "poi... / dopo...",
+          "così... / alla fine..."
+        ] }
+      ]
+    },
+
+    /* 4) D 对话 —— Per me, un panino. */
+    {
+      id: "D",
+      type: "dialogue",
+      title: "Per me, un panino.",
+      audio: "Audio 27",
+      lines: [
+        { who: "Nadia",    it: "Allora? Cosa prendiamo? Io un caffè.", zh: "那么？我们点什么？我要一杯咖啡。" },
+        { who: "Claudio",  it: "Non so... io ho un po' di fame.... Scusi, possiamo avere il listino?", zh: "我不知道……我有点饿。……劳驾，能给我们看看价目表吗？" },
+        { who: "cameriere", it: "Ecco a voi!", zh: "给你们！" },
+        { who: "Claudio",  it: "Grazie! Vediamo...", zh: "谢谢！我看看……" },
+        { who: "Silvia",   it: "Io so già cosa prendo... vorrei un tramezzino e una fetta di torta al cioccolato.", zh: "我已经知道要什么了……我想要一份三明治和一块巧克力蛋糕。" },
+        { who: "Nadia",    it: "Ma come?! Hai fame a quest'ora?!", zh: "什么？！你这个点儿还饿？！" },
+        { who: "Silvia",   it: "Sì, non ho potuto pranzare oggi. Tu, Claudio... hai deciso?", zh: "对，我今天没能吃上午饭。你呢，Claudio……决定好了吗？" },
+        { who: "Claudio",  it: "Mah, non so... prendo anch'io un tramezzino. No, anzi, meglio se prendo un cornetto...", zh: "唉，不知道……我也来一份三明治吧。不，还是算了我来个牛角包吧……" },
+        { who: "cameriere", it: "Allora, cosa prendete? Avete già deciso?", zh: "那你们点什么？已经决定好了吗？" },
+        { who: "Nadia",    it: "Sì, dunque... un tramezzino...", zh: "对，那……一份三明治……" },
+        { who: "Silvia",   it: "Prosciutto e formaggio.", zh: "火腿和奶酪。" },
+        { who: "Nadia",    it: "...e una fetta di torta al cioccolato per lei, un caffè macchiato per me e una bottiglia di acqua minerale naturale. Claudio, tu alla fine cosa prendi?", zh: "……给她一块巧克力蛋糕，给我一杯玛奇朵咖啡，还有一瓶天然矿泉水。Claudio，你最后到底点什么？" },
+        { who: "Claudio",  it: "Per me, un panino con prosciutto crudo e mozzarella e una lattina di Coca Cola.", zh: "我要一个生火腿加马苏里拉奶酪的帕尼诺，再加一罐可口可乐。" },
+        { who: "cameriere", it: "D'accordo, grazie!", zh: "好的，谢谢！" },
+        { who: "Silvia",   it: "Claudio!? Certo che sei proprio un tipo deciso!", zh: "Claudio！？你真是个果断的人！" }
+      ]
+    },
+
+    /* 5) Vocabolario e abilità */
+    {
+      id: "voc",
+      type: "vocab",
+      title: "Vocabolario e abilità",
+      blocks: [
+        { kind: "table", title: "Nel fine settimana preferisco... (attività)", head: ["attività del fine settimana"], rows: [
+          ["fare sport"],
+          ["riordinare la casa"],
+          ["prendere un caffè al bar con gli amici"],
+          ["dormire tutto il giorno"],
+          ["fare una gita"],
+          ["uscire con la mia famiglia"],
+          ["andare in giro per negozi"],
+          ["visitare un museo"],
+          ["mangiare una pizza in compagnia"]
+        ] },
+        { kind: "table", title: "Quando? (espressioni di tempo)", head: ["nel passato", "esempio"], rows: [
+          ["recente", "un'ora fa / tre giorni fa"],
+          ["settimana / mese", "martedì scorso / la settimana scorsa / il mese scorso"],
+          ["stagione / anno", "nel dicembre scorso / l'estate scorsa / l'anno scorso"],
+          ["ieri", "ieri / l'anno scorso"]
+        ] },
+        { kind: "table", title: "Data precisa", head: ["quando", "esempio"], rows: [
+          ["giorno", "il 18 gennaio / giovedì scorso / domenica prossima"],
+          ["mese", "nel novembre scorso / a giugno, settembre"],
+          ["anno", "nel 2002, a febbraio / nel febbraio del 2002"]
+        ] }
+      ],
+      note: "Abilità (E): Parliamo — 1. Vi piace il caffè? Qual è il vostro caffè preferito? 2. Quanti tipi di caffè conoscete? 3. Nel vostro Paese, quanto costa un caffè al bar? Scriviamo — Scrivi un'e-mail a un amico italiano: saluta e racconta come hai passato il fine settimana."
+    },
+
+    /* 6) 语法框 —— Passato prossimo / Essere o avere / Participi irregolari / Avverbi / Verbi modali */
+    {
+      id: "gram",
+      type: "grammar",
+      title: "Il passato prossimo",
+      blocks: [
+        { kind: "quote", title: "Regola", lines: [
+          "passato prossimo = presente di avere o essere + participio passato",
+          "mangiare → mangiato",
+          "ricevere → ricevuto",
+          "uscire → uscito"
+        ] },
+        { kind: "table", title: "Passato prossimo con avere", head: ["ausiliare", "participio passato", "esempio"], rows: [
+          ["ho", "venduto", "Ho venduto la vecchia casa."],
+          ["hai", "dormito", "Hai dormito molto ore domenica?"],
+          ["ha", "parlato", "Ha parlato di Michela a Lorenzo."],
+          ["abbiamo", "avuto", "Abbiamo avuto molta fortuna."],
+          ["avete", "capito", "Avete capito quando usiamo il passato prossimo?"],
+          ["hanno", "mangiato", "Hanno mangiato la pasta o la pizza?"]
+        ] },
+        { kind: "table", title: "Passato prossimo con essere", head: ["ausiliare", "participio passato (m./f.)", "esempio"], rows: [
+          ["sono", "andato / andata", "Io sono andato/a a teatro due giorni fa."],
+          ["sei", "tornato / tornata", "Matilde, sei già tornata dal lavoro?"],
+          ["è", "entrato / entrata", "Roberto è entrato in un negozio."],
+          ["siamo", "partiti / partite", "Io e mio fratello siamo partiti un mese fa."],
+          ["siete", "usciti / uscite", "Ragazze, siete uscite l'altro ieri?"],
+          ["sono", "saliti / salite", "Lorenzo e Livia sono saliti al quarto piano."]
+        ] },
+        { kind: "table", title: "Participi passati irregolari", head: ["infinito", "participio passato"], rows: [
+          ["dire", "detto"],
+          ["fare", "fatto"],
+          ["leggere", "letto"],
+          ["scrivere", "scritto"],
+          ["chiedere", "chiesto"],
+          ["rispondere", "risposto"],
+          ["vedere", "visto"],
+          ["rimanere", "rimasto"],
+          ["chiudere", "chiuso"],
+          ["aprire", "aperto"],
+          ["offrire", "offerto"],
+          ["prendere", "preso"],
+          ["conoscere", "conosciuto"],
+          ["piacere", "piaciuto"],
+          ["bere", "bevuto"],
+          ["vincere", "vinto"],
+          ["mettere", "messo"],
+          ["venire", "venuto"],
+          ["essere / stare", "stato"],
+          ["succedere", "successo"]
+        ] },
+        { kind: "quote", title: "Avverbi con il passato prossimo", lines: [
+          "Eugenio è sempre stato gentile con me.",
+          "Rita, hai già finito di studiare?",
+          "Gianluca è appena uscito di casa.",
+          "Lei non ha mai parlato di questa cosa.",
+          "Dora non è ancora arrivata in ufficio.",
+          "Alfredo non ha più detto niente."
+        ] },
+        { kind: "quote", title: "Passato prossimo dei verbi modali", lines: [
+          "Non ho voluto prendere il caffè.",
+          "Perché hai voluto venire in questo bar?",
+          "Non ho potuto pranzare oggi.",
+          "Ieri sono potuto andare alla festa di Luigi.",
+          "Irene ha dovuto fare la spesa.",
+          "Irene ha dovuto partire da sola."
+        ] },
+        { kind: "text", title: "Un fine settimana al museo (lettura)", text: "Testo «Sardegna: sette appuntamenti musicali»: il museo di Sassari ha pubblicato il programma di «Musica al Museo», iniziato due anni fa e già diventato un appuntamento fisso per il pubblico della città sarda; ospita concerti jazz, folk, blues e di musica classica. Appuntamento sabato sera alle 21. (adattato da www.sardegnadies.it)" }
+      ],
+      note: "La tabella dei participi irregolari in merged_full.md (p. 65) presenta le colonne scambiate (es. «rispondere → (è) rimasto» è errato: rimanere → rimasto); qui si riportano le coppie corrette secondo la grammatica standard."
+    },
+
+    /* 7) 文化板块 —— Conosciamo l'Italia */
+    {
+      id: "it",
+      type: "culture",
+      title: "Conosciamo l'Italia",
+      body: "意大利人的周末从周一办公室或学校里那句「周末过得怎么样？」开启。周六通常去采购，且常晚起因为周日能多睡；他们出门喝餐前酒、下馆子吃晚饭、去跳舞。周日则留给家务与个人兴趣：运动、读书、看电视、刷社交媒体、与朋友相聚；对许多人来说周日也是去海边或山里郊游、参观博物馆或艺术之城的日子。不过一项调查显示，意大利人周一未必总说真话——有时宁愿编点没做的事，好让周一早上有的聊。咖啡方面，意大利人说的「caffè」几乎总是指 espresso 或家用摩卡壶煮的咖啡；摩卡壶是 Bialetti 于 1933 年设计的工业设计典范，还被纽约现代艺术博物馆收藏。常见咖啡有 macchiato（加少许奶）、lungo、ristretto、corretto，以及早餐常喝的 caffellatte；cappuccino 因颜色得名于嘉布遣会修士的长袍，且意大利人只在早晨喝。",
+      table: [
+        { head: ["Consumo quotidiano di caffè espresso — Quanto?", "percentuale"], rows: [
+          ["1 o 2 tazzine", "58%"],
+          ["3 o 4 tazzine", "37%"],
+          ["5 o più tazzine", "5%"]
+        ] },
+        { head: ["Quando si beve il caffè?", "percentuale"], rows: [
+          ["Mattina appena svegli", "77%"],
+          ["Metà mattina", "42%"],
+          ["Pomeriggio", "49%"],
+          ["Dopo cena", "19%"],
+          ["Notte", "3%"]
+        ] }
+      ]
+    },
+
+    /* 8) 自测 —— AUTOVALUTAZIONE */
+    {
+      id: "es",
+      type: "exercise",
+      title: "Che cosa hai imparato nelle unità 3 e 4?",
+      items: [
+        "1. Sai...? Abbina le due colonne. a. Un cornetto, per favore. b. Sono nato nel 1998. c. È in salotto, sul tavolino. d. All'inizio siamo andati a mangiare, poi... e. Mah... non sono sicuro. (1. esprimere incertezza 2. ordinare al bar 3. dire una data 4. localizzare nello spazio 5. raccontare)",
+        "2. Abbina le frasi. a. Per me un caffè lungo, grazie. b. Ma figurati! c. Posso parlare con Marco? d. Nel maggio scorso. e. Con lo sconto, 90 euro. (1. Quando sei venuto in Italia? 2. Scusi, quanto costa? 3. Cosa prendi? 4. Pronto? 5. Grazie mille!)",
+        "3. Completa. 1. Due tipi di caffè espresso: ______ ______ 2. In genere non si beve dopo un pasto: ______ 3. Il participio passato del verbo bere: ______ 4. Il passato prossimo di rimanere (prima persona singolare): ______ 5. L'ausiliare di molti verbi di movimento: ______",
+        "4. Scopri, in orizzontale e in verticale, le otto parole nascoste: E S U C C E S S O T / T O L I P E T B L A / T P I A Z Z A E E V / Y R S G I U G N O O / N A T T U F E T A L / A T I R E Z L O S I / P A N I N O D U M N / U V O G E L A T I O"
+      ]
+    }
+  ]
+};

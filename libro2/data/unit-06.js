@@ -1,0 +1,773 @@
+window.NPI = window.NPI || { units: {} };
+window.NPI.units["06"] = {
+  id: "06",
+  title: "Andiamo all'opera",
+  titleZh: "我们去歌剧院",
+  tema: "L'opera lirica, la salute e gli imperativi di cortesia",
+  words: [
+    {
+      it: "opera",
+      pos: "s.f.",
+      zh: "歌剧（opera lirica 抒情歌剧）",
+      cat: "Tempo libero",
+      syll: "ò·pe·ra",
+      ex: "alcune informazioni sull'opera italiana",
+      exZh: "一些关于意大利歌剧的信息",
+      note: "第87页单元目标"
+    },
+    {
+      it: "Scala",
+      pos: "s.f.",
+      zh: "斯卡拉歌剧院（La Scala，米兰歌剧院）",
+      cat: "Altro",
+      syll: "scà·la",
+      ex: "Ha visto il nuovo programma della Scala?",
+      exZh: "您看了斯卡拉的新节目单吗？",
+      note: "第87页对话 A"
+    },
+    {
+      it: "direttore",
+      pos: "s.m.",
+      zh: "经理；指挥（direttore d'orchestra 乐队指挥）",
+      cat: "Altro",
+      syll: "di·ret·tò·re",
+      ex: "il nuovo direttore della Scala è veramente bravo.",
+      exZh: "斯卡拉的新任经理真的很棒。",
+      note: "第87页对话 A"
+    },
+    {
+      it: "biglietto",
+      pos: "s.m.",
+      zh: "票；门票",
+      cat: "Altro",
+      syll: "bi·glièt·to",
+      ex: "Vuole che controlli se sono biglietti disponibili?",
+      exZh: "要我查一下有没有票吗？",
+      note: "第87页对话 A"
+    },
+    {
+      it: "teatro",
+      pos: "s.m.",
+      zh: "剧院；戏剧",
+      cat: "Tempo libero",
+      syll: "teà·tro",
+      ex: "sempre meno persone oggi vanno a teatro",
+      exZh: "如今越来越少的人去剧院",
+      note: "第99页 Tutti all'opera"
+    },
+    {
+      it: "concerto",
+      pos: "s.m.",
+      zh: "音乐会；演奏会",
+      cat: "Tempo libero",
+      syll: "con·cèr·to",
+      ex: "andrà a vedere un concerto alla Scala",
+      exZh: "要去看斯卡拉的一场音乐会",
+      note: "第86页 Per cominciare 选择题"
+    },
+    {
+      it: "canto",
+      pos: "s.m.",
+      zh: "歌唱；声乐",
+      cat: "Tempo libero",
+      syll: "càn·to",
+      ex: "domani andrò a chiedere informazioni per un corso di canto",
+      exZh: "明天我要去咨询一个声乐课程的信息",
+      note: "第87页对话 A"
+    },
+    {
+      it: "tenore",
+      pos: "s.m.",
+      zh: "男高音（歌手）",
+      cat: "Tempo libero",
+      syll: "te·nò·re",
+      ex: "Il tenore Roberto Alagna, Radames, ha lasciato il palco",
+      exZh: "男高音罗伯托·阿拉尼亚（拉达梅斯）离开了舞台",
+      note: "第95页报纸文章"
+    },
+    {
+      it: "spettacolo",
+      pos: "s.m.",
+      zh: "演出；节目；表演",
+      cat: "Tempo libero",
+      syll: "spet·tà·co·lo",
+      ex: "il primo tempo dello spettacolo è andato avanti così",
+      exZh: "演出的第一幕就这样继续着",
+      note: "第96页报纸文章"
+    },
+    {
+      it: "pubblico",
+      pos: "s.m.",
+      zh: "观众；公众",
+      cat: "Tempo libero",
+      syll: "pùb·bli·co",
+      ex: "di fronte al pubblico di questa sera non potevo fare nient'altro",
+      exZh: "面对今晚的观众我别无他法",
+      note: "第95页报纸文章"
+    },
+    {
+      it: "medico",
+      pos: "s.m.",
+      zh: "医生",
+      cat: "Salute",
+      syll: "mè·di·co",
+      ex: "Parlane con il tuo medico.",
+      exZh: "和你的医生谈谈。",
+      note: "第90页 B 文本"
+    },
+    {
+      it: "paziente",
+      pos: "s.m./s.f.",
+      zh: "病人；患者（男女同形）",
+      cat: "Salute",
+      syll: "pa·zièn·te",
+      ex: "la prima paziente è già arrivata, è in sala d'attesa.",
+      exZh: "第一位病人已经到了，在候诊室。",
+      note: "第98页 Vocabolario E"
+    },
+    {
+      it: "salute",
+      pos: "s.f.",
+      zh: "健康；身体",
+      cat: "Salute",
+      syll: "sa·lù·te",
+      ex: "parlare di prevenzione e della nostra salute",
+      exZh: "谈论预防和我们的健康",
+      note: "第87页单元目标"
+    },
+    {
+      it: "tosse",
+      pos: "s.f.",
+      zh: "咳嗽",
+      cat: "Salute",
+      syll: "tòs·se",
+      ex: "Ho i raffreddore e la tosse.",
+      exZh: "我感冒又咳嗽。",
+      note: "第88页对话 A 练习"
+    },
+    {
+      it: "raffreddore",
+      pos: "s.m.",
+      zh: "感冒；着凉",
+      cat: "Salute",
+      syll: "raf·fre·ddò·re",
+      ex: "Ho i raffreddore e la tosse, e il medico mi ha consigliato di rimanere a casa.",
+      exZh: "我感冒又咳嗽，医生建议我待在家里。",
+      note: "第88页对话 A 练习"
+    },
+    {
+      it: "febbre",
+      pos: "s.f.",
+      zh: "发烧；发热",
+      cat: "Salute",
+      syll: "fèb·bre",
+      ex: "febbre",
+      exZh: "发烧",
+      note: "转录仅以词条形式出现于词汇配对表 (第91页)"
+    },
+    {
+      it: "farmaco",
+      pos: "s.m.",
+      zh: "药物；药品",
+      cat: "Salute",
+      syll: "fàr·ma·co",
+      ex: "evitare il fuso di farmaci",
+      exZh: "避免滥用药物",
+      note: "第90页 B 文本；转录「fuso」疑为 abuso（滥用）"
+    },
+    {
+      it: "antibiotico",
+      pos: "s.m.",
+      zh: "抗生素",
+      cat: "Salute",
+      syll: "an·ti·bi·ò·ti·co",
+      ex: "gli antibiotici non curano i virus",
+      exZh: "抗生素治不了病毒",
+      note: "第91页 B 文本"
+    },
+    {
+      it: "farmacia",
+      pos: "s.f.",
+      zh: "药房；药店",
+      cat: "Salute",
+      syll: "far·ma·cì·a",
+      ex: "acquistare antibiotici in farmacia senza una prescrizione medica",
+      exZh: "在没有医生处方的情况下在药房购买抗生素",
+      note: "第91页 B 文本"
+    },
+    {
+      it: "prescrizione",
+      pos: "s.f.",
+      zh: "处方；开药",
+      cat: "Salute",
+      syll: "pre·scrit·ziò·ne",
+      ex: "senza una prescrizione medica",
+      exZh: "没有医生处方",
+      note: "第91页 B 文本"
+    },
+    {
+      it: "analisi",
+      pos: "s.f.",
+      zh: "化验；分析（analisi del sangue 验血）",
+      cat: "Salute",
+      syll: "a·na·lì·si",
+      ex: "potrebbe prescriverti delle analisi del sangue",
+      exZh: "可能给你开验血单",
+      note: "第90页 B 文本"
+    },
+    {
+      it: "pillola",
+      pos: "s.f.",
+      zh: "药丸；药片",
+      cat: "Salute",
+      syll: "pìl·lo·la",
+      ex: "le prescrivo queste pillole: una la mattina e una la sera.",
+      exZh: "我给您开这些药丸：早上一粒晚上一粒。",
+      note: "第98页 Vocabolario E"
+    },
+    {
+      it: "ambulatorio",
+      pos: "s.m.",
+      zh: "诊所；门诊部",
+      cat: "Salute",
+      syll: "am·bu·la·tò·rio",
+      ex: "L'ambulatorio medico è aperto ogni pomeriggio dalle 15.00 alle 20.00.",
+      exZh: "诊所受个下午开门。",
+      note: "第98页 Vocabolario E"
+    },
+    {
+      it: "indicazione",
+      pos: "s.f.",
+      zh: "指示；指路说明",
+      cat: "Viaggi",
+      syll: "in·di·ca·ziò·ne",
+      ex: "chiedere e dare indicazioni stradali",
+      exZh: "询问和给出指路说明",
+      note: "第87页单元目标"
+    },
+    {
+      it: "strada",
+      pos: "s.f.",
+      zh: "街道；道路",
+      cat: "Viaggi",
+      syll: "strà·da",
+      ex: "chiedere e dare indicazioni stradali",
+      exZh: "询问和给出指路说明",
+      note: "第87页单元目标"
+    },
+    {
+      it: "destra",
+      pos: "s.f.",
+      zh: "右边（a destra 向右）",
+      cat: "Viaggi",
+      syll: "dè·stra",
+      ex: "alla seconda traversa giri a destra",
+      exZh: "在第二个路口向右转",
+      note: "第93页对话 C"
+    },
+    {
+      it: "fermata",
+      pos: "s.f.",
+      zh: "（公交、地铁的）车站；停靠站",
+      cat: "Viaggi",
+      syll: "fer·mà·ta",
+      ex: "sa a quale fermata scendere?",
+      exZh: "您知道在哪一站下车吗？",
+      note: "第93页对话 C"
+    },
+    {
+      it: "metro",
+      pos: "s.f.",
+      zh: "地铁（metropolitana 的缩写）",
+      cat: "Viaggi",
+      syll: "mè·tro",
+      ex: "prenda la metro, Le conviene",
+      exZh: "您坐地铁吧，这样更合适",
+      note: "第93页对话 C"
+    },
+    {
+      it: "permesso",
+      pos: "s.m.",
+      zh: "允许；许可（è permesso? 可以吗）",
+      cat: "Viaggi",
+      syll: "per·mès·so",
+      ex: "Mi scusi, direttore, è permesso?",
+      exZh: "打扰一下经理，可以吗？",
+      note: "第88页对话 A 练习"
+    },
+    {
+      it: "diritto",
+      pos: "avv.",
+      zh: "直；一直（andare diritto 直走）",
+      cat: "Viaggi",
+      syll: "di·rit·to",
+      ex: "vada diritto e si troverà in Piazza Duomo",
+      exZh: "一直走您就到多莫广场了",
+      note: "第93页对话 C"
+    },
+    {
+      it: "consiglio",
+      pos: "s.m.",
+      zh: "建议；劝告",
+      cat: "Grammatica",
+      syll: "con·sì·glio",
+      ex: "Seguirò i suoi consigli.",
+      exZh: "我会听从您的建议。",
+      note: "第88页对话 A 练习"
+    },
+    {
+      it: "imperativo",
+      pos: "s.m.",
+      zh: "祈使式；命令（imperativo indiretto 间接/礼貌祈使式）",
+      cat: "Grammatica",
+      syll: "im·pe·ra·tì·vo",
+      ex: "l'imperativo indiretto (o di cortesia)",
+      exZh: "间接祈使式（或礼貌祈使式）",
+      note: "第87页单元目标"
+    },
+    {
+      it: "pronome",
+      pos: "s.m.",
+      zh: "代词（pronomi indefiniti 不定代词）",
+      cat: "Grammatica",
+      syll: "prò·no·me",
+      ex: "gli aggettivi e i pronomi indefiniti",
+      exZh: "不定形容词和不定代词",
+      note: "第87页单元目标"
+    },
+    {
+      it: "aggettivo",
+      pos: "s.m.",
+      zh: "形容词（aggettivi indefiniti 不定形容词）",
+      cat: "Grammatica",
+      syll: "ag·get·tì·vo",
+      ex: "gli aggettivi e i pronomi indefiniti",
+      exZh: "不定形容词和不定代词",
+      note: "第87页单元目标"
+    },
+    {
+      it: "indefinito",
+      pos: "s.m./agg.",
+      zh: "不定词（可作名词或形容词：不定代词/不定形容词）",
+      cat: "Grammatica",
+      syll: "in·de·fi·nì·to",
+      ex: "Gli indefiniti possono essere aggettivi",
+      exZh: "不定词可以是形容词",
+      note: "第97页 D 语法框"
+    },
+    {
+      it: "perdere",
+      pos: "v.",
+      zh: "丢失；错过；失去",
+      cat: "Altro",
+      syll: "pèr·de·re",
+      ex: "non me la voglio perdere!",
+      exZh: "我可不想错过它！",
+      note: "第87页对话 A 标题句"
+    },
+    {
+      it: "controllare",
+      pos: "v.",
+      zh: "检查；核实；控制",
+      cat: "Altro",
+      syll: "con·trol·là·re",
+      ex: "Vuole che controlli se sono biglietti disponibili?",
+      exZh: "要我查一下有没有票吗？",
+      note: "第87页对话 A"
+    },
+    {
+      it: "prenotare",
+      pos: "v.",
+      zh: "预订；预约",
+      cat: "Altro",
+      syll: "pre·no·tà·re",
+      ex: "ha poi prenotato i biglietti per La Scala?",
+      exZh: "您订了斯卡拉的票了吗？",
+      note: "第88页对话 A 练习"
+    },
+    {
+      it: "consigliare",
+      pos: "v.",
+      zh: "建议；劝告",
+      cat: "Altro",
+      syll: "con·si·glià·re",
+      ex: "il medico mi ha consigliato di rimanere a casa",
+      exZh: "医生建议我待在家里",
+      note: "第88页对话 A 练习"
+    },
+    {
+      it: "guarire",
+      pos: "v.",
+      zh: "痊愈；治愈",
+      cat: "Salute",
+      syll: "gua·rì·re",
+      ex: "mettere tutto l'impegno a guarire rapidamente",
+      exZh: "全力投入以尽快痊愈",
+      note: "第91页 D 阅读文本"
+    },
+    {
+      it: "camminare",
+      pos: "v.",
+      zh: "步行；走路",
+      cat: "Viaggi",
+      syll: "cam·mi·nà·re",
+      ex: "cammini verso il Duomo e la galleria...",
+      exZh: "朝大教堂和画廊走……",
+      note: "第93页对话 C"
+    },
+    {
+      it: "girare",
+      pos: "v.",
+      zh: "转弯；转；转动",
+      cat: "Viaggi",
+      syll: "gi·rà·re",
+      ex: "alla seconda traversa giri a destra",
+      exZh: "在第二个路口向右转",
+      note: "第93页对话 C"
+    },
+    {
+      it: "attraversare",
+      pos: "v.",
+      zh: "穿过；横穿",
+      cat: "Viaggi",
+      syll: "at·tra·ver·sà·re",
+      ex: "l'attraversi e si troverà in una...",
+      exZh: "穿过它您就到……",
+      note: "第93页对话 C；转录此句截断于 in una..."
+    }
+  ],
+  phrases: [
+    {
+      it: "Non me la voglio perdere!",
+      pos: "frase",
+      zh: "我可不想错过它！",
+      cat: "Altro",
+      syll: "non me la vòg·glio per·dè·re",
+      note: "第87页对话 A 标题句（la＝指代歌剧）"
+    },
+    {
+      it: "Ha visto il nuovo programma della Scala?",
+      pos: "frase",
+      zh: "您看了斯卡拉的新节目单吗？",
+      cat: "Tempo libero",
+      syll: "ha vù·sto il nuò·vo pro·gràm·ma del·la scà·la",
+      note: "第87页对话 A"
+    },
+    {
+      it: "Legga, vediamo cosa c'è dentro!",
+      pos: "frase",
+      zh: "您读读，我们看看里面有什么！",
+      cat: "Altro",
+      syll: "lèg·ga, ve·dià·mo co·sa c'è den·tro",
+      note: "第87页对话 A（Legga＝Lei 祈使）"
+    },
+    {
+      it: "Vuole che controlli se ci sono biglietti disponibili?",
+      pos: "frase",
+      zh: "您要我查一下有没有票吗？",
+      cat: "Altro",
+      syll: "vùo·le che con·tròl·li se ci so·no bi·glièt·ti di·spo·nì·bi·li",
+      note: "第87页对话 A"
+    },
+    {
+      it: "Mi scusi, è permesso?",
+      pos: "frase",
+      zh: "打扰一下，可以吗？",
+      cat: "Altro",
+      syll: "mi scù·si, è per·mès·so",
+      note: "第88页对话 A 练习"
+    },
+    {
+      it: "Non ci vada a piedi.",
+      pos: "frase",
+      zh: "您别步行去。",
+      cat: "Viaggi",
+      syll: "non ci và·da a piè·di",
+      note: "第93页对话 C（Lei 否定祈使）"
+    },
+    {
+      it: "Prenda la metro, Le conviene.",
+      pos: "frase",
+      zh: "您坐地铁吧，这样更合适。",
+      cat: "Viaggi",
+      syll: "prèn·da la mè·tro, le con·viè·ne",
+      note: "第93页对话 C"
+    },
+    {
+      it: "Alla seconda traversa giri a destra.",
+      pos: "frase",
+      zh: "在第二个路口向右转。",
+      cat: "Viaggi",
+      syll: "al·la sè·con·da tra·vèr·sa gì·ri a dè·stra",
+      note: "第93页对话 C"
+    },
+    {
+      it: "Vada diritto e si troverà in Piazza Duomo.",
+      pos: "frase",
+      zh: "一直走您就到多莫广场了。",
+      cat: "Viaggi",
+      syll: "và·da di·rit·to e si tro·ve·rà in piàz·za duò·mo",
+      note: "第93页对话 C"
+    },
+    {
+      it: "Stia attento ai colpi d'aria!",
+      pos: "frase",
+      zh: "小心着凉！",
+      cat: "Salute",
+      syll: "stìa at·tèn·to ai còl·pi d'ài·a",
+      note: "第88页对话 A 练习（Si 祈使）"
+    },
+    {
+      it: "Chiedere e dare il permesso",
+      pos: "loc.",
+      zh: "请求与给予许可",
+      cat: "Comunicazione",
+      syll: "chiè·de·re e dà·re il per·mès·so",
+      note: "第87页单元目标"
+    },
+    {
+      it: "Dare ordini e consigli",
+      pos: "loc.",
+      zh: "下达命令与给出建议",
+      cat: "Comunicazione",
+      syll: "dà·re òr·di·ni e con·sì·gli",
+      note: "第87页单元目标"
+    },
+    {
+      it: "Parlare di prevenzione e della nostra salute",
+      pos: "loc.",
+      zh: "谈论预防和我们的健康",
+      cat: "Salute",
+      syll: "par·là·re di pre·ven·ziò·ne e del·la no·stra sa·lù·te",
+      note: "第87页单元目标"
+    }
+  ],
+  sections: [
+    /* 1) 热身 / 单元目标 —— Per cominciare... */
+    {
+      id: "intro",
+      type: "intro",
+      title: "Per cominciare...",
+      goals: [
+        "dare ordini, consigli",
+        "chiedere e dare il permesso",
+        "parlare di prevenzione e della nostra salute",
+        "chiedere e dare indicazioni stradali",
+        "capire un testo e a parlare d'opera",
+        "l'imperativo indiretto (o di cortesia): forme affermativa e negativa",
+        "l'imperativo indiretto con i pronomi: gli aggettivi e i pronomi indefiniti",
+        "alcune informazioni sull'opera italiana"
+      ],
+      preview: [
+        { it: "opera", zh: "歌剧" },
+        { it: "Scala", zh: "斯卡拉歌剧院" },
+        { it: "salute", zh: "健康" },
+        { it: "indicazione", zh: "指路说明" },
+        { it: "permesso", zh: "允许" }
+      ]
+    },
+
+    /* 2) A 对话 —— Non me la voglio perdere! */
+    {
+      id: "A",
+      type: "dialogue",
+      title: "Non me la voglio perdere!",
+      audio: "Audio 3",
+      lines: [
+        { who: "Gianna", it: "Sig. Direttore, ha visto il nuovo programma della Scala?", zh: "经理先生，您看了斯卡拉的新节目单吗？" },
+        { who: "direttore", it: "Ah, è già uscito? Lei è sul sito adesso? Legga, vediamo cosa c'è dentro!", zh: "啊，已经出了吗？您现在在看网站？您读读，我们看看里面有什么！" },
+        { who: "Gianna", it: "Dunque, a ottobre c'è La Traviata.", zh: "嗯，十月份有《茶花女》(La Traviata)。" },
+        { who: "direttore", it: "Ah, Verdi, che genio, che musiche! È il mio preferito in assoluto! Veda un po' in quali giorni, non me la voglio perdere!", zh: "啊，威尔第，天才，音乐多美！他绝对是我的最爱！您看看是哪几天，我可不想错过！" },
+        { who: "Gianna", it: "Allora... dal 20 al 28. Vuole che controlli se sono biglietti disponibili?", zh: "那就……20 号到 28 号。要我查一下有没有票吗？" },
+        { who: "direttore", it: "No, grazie, lo farò io più tardi. Sa, io ho visto cal vivo i più grandi interpreti. Penso che La Traviata l'ho vista con il grande Pavarotti: un'esperienza indimenticabile.", zh: "不用了，谢谢，我晚点自己查。您知道，我曾⚠️（疑为 dal vivo＝现场）看过最顶尖的演绎者。我想《茶花女》我是和伟大的帕瓦罗蒂一起看的：一次难忘的经历。" },
+        { who: "Gianna", it: "Pavarotti?! Chissà che emozione! Poi a novembre c'è la Turandot!", zh: "帕瓦罗蒂？！那该多激动啊！然后十一月份有《图兰朵》！" },
+        { who: "direttore", it: "Ah, Puccini, \"Nessun dorma\", che bello! Se non sbaglio, l'avevo vista con Cecilia Gasdia. A novembre, eh? Ci andrò senz'altro!", zh: "啊，普契尼，《今夜无人入睡》，真美！如果我没记错，我是和切奇莉亚·加斯迪亚一起看的。十一月，嗯？我肯定会去的！" },
+        { who: "Gianna", it: "Bene... senta, a gennaio poi danno Il Trovatore.", zh: "好的……您听，一月份他们还上演《游吟诗人》。" },
+        { who: "direttore", it: "Che bello, da non perdere assolutamente! Mi sa che l'avevo visto con Riccardo Muti come direttore d'orchestra!", zh: "太好了，绝对不能错过！我好像是和里卡多·穆蒂一起看的，他是指挥。" },
+        { who: "Gianna", it: "Davvero? A proposito, il nuovo direttore della Scala è veramente bravo.", zh: "真的吗？对了，斯卡拉的新任经理真的很棒。" },
+        { who: "direttore", it: "Sì, mi lo dicono tutti. Ma quindi anche lei è appassionata di musica lirica!", zh: "是的，大家都这么跟我说。那这么说您也热爱抒情音乐！" },
+        { who: "Gianna", it: "Beh, sì. Pensì che domani andrò a chiedere informazioni per un corso di canto! Ma solo come hobby, niente di più!", zh: "呃，是的。⚠️（疑为 Penso）明天我要去咨询一个声乐课程的信息！不过只是当爱好，仅此而已！" },
+        { who: "direttore", it: "Brava! Complimenti!", zh: "真棒！恭喜！" },
+        { who: "direttore", it: "Per me, invece, la lirica non è solo un passatempo, ma una vera passione! Potrei ascoltarla per ore!", zh: "对我来说，抒情歌剧不只是一项消遣，而是一份真正的激情！我能听上几个小时！" },
+        { who: "Gianna", it: "Sì, l'avevo capito...", zh: "是的，我早就看出来了……" },
+        { who: "Gianna", it: "Questa domenica c'è il Gran Galà dell'Opera con i più grandi nomi internazionali. Lei sicuramente ci sarà, no?", zh: "这个星期天有歌剧盛典，汇聚了最著名的国际名字。您肯定会在场的，对吧？" },
+        { who: "direttore", it: "Eh... no... a quell'ora c'è il calcio in tv...", zh: "呃……不……那个时间电视上有足球赛……" }
+      ],
+      note: "OCR 疑误：cal vivo→dal vivo（现场）；Pensì→Penso（我想）。对话中穿插礼貌祈使式练习（Mi scusi / Legga / Prenda 等）。"
+    },
+
+    /* 3) B 阅读 —— Non mi sento bene! */
+    {
+      id: "B",
+      type: "exercise",
+      title: "Non mi sento bene!",
+      blocks: [
+        {
+          kind: "text",
+          title: "A — Prevenzione e salute",
+          text: "Spesso basta guardarsi allo specchio e fare un'autodiagnosi per prevenire piccoli problemi di salute ed evitare l'abuso di farmaci e soprattutto di antibiotici. La prevenzione delle infezioni è la prima cura per stare bene e in salute."
+        },
+        {
+          kind: "text",
+          title: "B — Resistenza agli antibiotici: emergenza mondiale?",
+          text: "La scoperta degli antibiotici ha ridotto il numero di morti per infezioni, ma negli ultimi anni stanno perdendo la loro capacità di curare perché li usiamo anche quando non sono necessari. Per un uso corretto dobbiamo evitare di utilizzarli per curare malattie virali, di usarli rimasti inutilizzati o scaduti, di acquistarli in farmacia senza prescrizione, di prenderli in dosi diverse da quelle indicate dal medico."
+        }
+      ],
+      items: [
+        "1. La prevenzione è il primo passo per stare bene. (testo A)",
+        "2. Gli antibiotici non hanno più molta efficacia sui pazienti. (testo B)",
+        "3. C'è un abuso di medicinali, anche quando non servono veramente. (testo B)",
+        "4. Il mal di testa può essere un sintomo di un problema alimentare. (testo A)",
+        "5. Gli antibiotici sono usati anche nell'allevamento e in agricoltura. (testo B)",
+        "6. Lo stress può causare stanchezza eccessiva e mal di testa. (testo A)",
+        "7. Usare prodotti per il corpo profumati irrita e secca la pelle. (testo A)",
+        "8. È consigliabile non acquistare farmaci senza la prescrizione del medico. (testo B)"
+      ],
+      note: "第90–91页阅读与理解练习；转录「fuso di farmaci」疑为 abuso。"
+    },
+
+    /* 4) C 对话 —— Giri a destra! （指路） */
+    {
+      id: "C",
+      type: "dialogue",
+      title: "Giri a destra!",
+      audio: "Audio 2 CD 2",
+      lines: [
+        { who: "passante", it: "mi faccia pensare un attimo...", zh: "让我想一下……" },
+        { who: "passante", it: "non ci vada a piedi...", zh: "您别步行去……" },
+        { who: "passante", it: "prenda la metro, Le conviene", zh: "您坐地铁吧，这样更合适" },
+        { who: "studente", it: "sa a quale fermata scendere?", zh: "您知道在哪一站下车吗？" },
+        { who: "passante", it: "alla seconda traversa giri a destra", zh: "在第二个路口向右转" },
+        { who: "passante", it: "vada diritto e si troverà in Piazza Duomo", zh: "一直走您就到多莫广场了" },
+        { who: "passante", it: "cammini verso il Duomo e la galleria...", zh: "朝大教堂和画廊走……" },
+        { who: "passante", it: "l'attraversi e si troverà in una...", zh: "穿过它您就到⚠️（转录在此截断 in una...）" }
+      ],
+      note: "第93页听力理解所列「听到的句子」；最后一句转录截断于 in una...。"
+    },
+
+    /* 5) D 语法 / 阅读 —— Alla Scala */
+    {
+      id: "D",
+      type: "grammar",
+      title: "Alla Scala",
+      blocks: [
+        {
+          kind: "quote",
+          title: "FISCHIATO, LASCIA IL PALCO — L'AIDA VA AVANTI COL SOSTITUTO",
+          lines: [
+            "MILANO — Il tenore Roberto Alagna, Radames, ha lasciato il palcoscenico subito dopo l'aria \"Celeste Aida\" fischiata da una parte degli spettatori.",
+            "La musica non si è mai interrotta e la direzione di paloscenico ha gettato in scena Antonello Palombi, che fa parte del secondo cast dell'opera."
+          ]
+        },
+        {
+          kind: "table",
+          title: "La forma negativa dell'imperativo indiretto",
+          head: ["", "Imperativo diretto", "Imperativo indiretto o di cortesia"],
+          rows: [
+            ["-ARE →", "Tu: Non andare ancora via!", "Lei: Non __________ ancora via, la prego!"],
+            ["-ERE →", "Tu: Non prendere queste medicine!", "Lei: Non __________ queste medicine!"],
+            ["-IRE →", "Tu: Non dormire meno di 7 ore!", "Lei: Non __________ meno di 7 ore!"]
+          ]
+        },
+        {
+          kind: "table",
+          title: "Indefiniti: aggettivi e pronomi",
+          head: ["Forma", "Frase esempio"],
+          rows: [
+            ["altro/a - altri/e", "Ti piace questo libro o ne vuoi un altro?"],
+            ["molto/a - molti/e", "Io non voglio fare molti allenamenti alla settimana."],
+            ["tanto/a - tanti/e", "A tanti giovani l'opera lirica non piace."],
+            ["poco/a - pochi/e", "Quando ho l'influenza, ho sempre poche energie."],
+            ["qualche", "Ho chiesto al medico qualche informazione su questa medicina."],
+            ["troppo/a - troppi/e", "Secondo me, mangi troppe patatine fritte."],
+            ["ciascuno/a", "Ciascun problema deve essere affrontato con calma."],
+            ["nessuno/a", "Nessuno si allena con me."],
+            ["alcuno/a (= nessuno/a)", "Non c'è alcun problema."],
+            ["alcuni/e", "Alcuni giorni ho un mal di testa fortissimo."]
+          ]
+        }
+      ],
+      note: "第94–97页：间接祈使否定式 + 不定形容词/代词；报纸文章讲述阿拉尼亚在斯卡拉被喝倒彩离场、由帕隆比替演。"
+    },
+
+    /* 6) E 词汇 —— Vocabolario e abilità */
+    {
+      id: "E",
+      type: "vocab",
+      title: "Vocabolario e abilità",
+      blocks: [
+        {
+          kind: "table",
+          title: "Lessico medico (p. 98)",
+          head: ["Parola", "Significato"],
+          rows: [
+            ["medico", "医生"],
+            ["collirio", "眼药水"],
+            ["pomata", "软膏"],
+            ["paziente", "病人"],
+            ["cerotto", "创可贴"],
+            ["ambulatorio", "诊所"],
+            ["pillole", "药丸"]
+          ]
+        }
+      ],
+      note: "第98页词汇配对；collirio / pomata / cerotto 仅见于本分节，未列入顶层 words。"
+    },
+
+    /* 7) 阅读练习 —— Tutti all'opera (lirica)! */
+    {
+      id: "tutti",
+      type: "exercise",
+      title: "Tutti all'opera (lirica)!",
+      blocks: [
+        {
+          kind: "text",
+          title: "A — Il Barbiere di Siviglia",
+          text: "Opera buffa (comica) di Gioacchino Rossini, prima rappresentazione nel 1816. Protagonista Figaro, un \"tuttofare\" (factotum) molto richiesto; l'aria famosa è \"Largo al factotum\". Il Conte d'Almaviva si fa aiutare da Figaro per sposare la bella Rosina."
+        },
+        {
+          kind: "text",
+          title: "B — La Traviata",
+          text: "Opera drammatica di Giuseppe Verdi, ispirata a \"La signora delle camelie\" di Dumas, nel 1853. Storia d'amore tra Violetta, cortigiana di Parigi, e Alfredo, giovane borghese; il padre di Alfredo costringe Violetta a lasciarlo e l'opera si conclude con la morte di Violetta."
+        },
+        {
+          kind: "text",
+          title: "C — La Tosca",
+          text: "Opera di Giacomo Puccini, alla Scala nel 1900. La protagonista Tosca, cantante, ama il pittore Cavaradossi; il capo della polizia Scarpia la costringe a diventare sua amante per salvare Cavaradossi. Tosca uccide Scarpia, ma Cavaradossi viene fucilato e lei si suicida."
+        }
+      ],
+      items: [
+        "1. È una storia d'amore ostacolata da un padre. (B)",
+        "2. La protagonista, alla fine, si toglie la vita. (C)",
+        "3. È un'opera comica e divertente. (A)",
+        "4. Un altro autore ha ispirato quest'opera. (B)",
+        "5. I protagonisti sono vittime della società. (B/C)",
+        "6. Uno dei protagonisti chiede aiuto a un tuttofare. (A)",
+        "7. Quest'opera è più recente delle altre. (C)",
+        "8. La trama \"ricorda\" quella di un'altra storia. (B)"
+      ],
+      note: "第99–100页三段歌剧简介与对照练习。"
+    },
+
+    /* 8) 文化板块 —— Conosciamo l'Italia */
+    {
+      id: "it",
+      type: "culture",
+      title: "Conosciamo l'Italia",
+      body: "**I GIOVANI E LA LIRICA: DUE MONDI LONTANI**\n\nIl direttore d'orchestra Riccardo Muti osserva: «I ragazzi che girano per strada con gli auricolari spesso ascoltano cose molto complesse. Quindi non è la \"difficoltà\" della musica classica a tenerli fuori dai teatri. Molte volte è l'ambiente che non si è mai rinnovato. [...] Sogno concerti dove i musicisti, vestiti come i loro ascoltatori, spiegano e condividono ciò che stanno per fare...»\n\nMuti critica il formalismo dei teatri («i pinguini» col frac) e auspica un avvicinamento dei giovani alla lirica.",
+      table: [
+        {
+          head: ["Affermazione", "A (Barbiere)", "B (Traviata)", "C (Tosca)"],
+          rows: [
+            ["È una storia d'amore ostacolata da un padre", "", "x", ""],
+            ["La protagonista si toglie la vita", "", "", "x"],
+            ["È un'opera comica e divertente", "x", "", ""],
+            ["Un altro autore ha ispirato l'opera", "", "x", ""],
+            ["Un protagonista chiede aiuto a un tuttofare", "x", "", ""],
+            ["È l'opera più recente", "", "", "x"]
+          ]
+        }
+      ]
+    }
+  ]
+};
