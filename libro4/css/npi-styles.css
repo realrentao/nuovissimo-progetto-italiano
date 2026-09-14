@@ -3,29 +3,29 @@
    配色沿用 nuovo-espresso 技能体系（意式红/金/奶油）
    =========================================================== */
 :root {
-  --ne-red: #1F618D;
-  --ne-red-bright: #2E86C1;
-  --ne-red-dark: #154360;
-  --ne-orange: #2980B9;
-  --ne-orange-bright: #3498DB;
-  --ne-gold: #5DADE2;
-  --ne-gold-dark: #4A90C2;
+  --ne-red: #C0392B;
+  --ne-red-bright: #E74C3C;
+  --ne-red-dark: #922B21;
+  --ne-orange: #E67E22;
+  --ne-orange-bright: #F39C12;
+  --ne-gold: #F1C40F;
+  --ne-gold-dark: #D4AC0D;
   --ne-blue: #1A5276;
   --ne-blue-bright: #2E86C1;
   --ne-blue-dark: #0E3A53;
-  --ne-cream: #EBF5FB;
-  --ne-cream-dark: #D6EAF8;
+  --ne-cream: #FEF9E7;
+  --ne-cream-dark: #FDEBD0;
   --ne-light-blue: #D4E6F1;
   --ne-green: #27AE60;
   --ne-green-dark: #1E8449;
   --ne-purple: #8E44AD;
   --ne-teal: #1ABC9C;
 
-  --bg: #F5F9FC;
+  --bg: #FDFBF6;
   --card: #FFFFFF;
   --text: #2C3E50;
   --text-soft: #5D6D7E;
-  --line: #D5E3F0;
+  --line: #E8E2D4;
   --shadow: 0 2px 10px rgba(44, 62, 80, .07);
   --shadow-hover: 0 8px 24px rgba(44, 62, 80, .13);
   --radius: 14px;
@@ -83,7 +83,7 @@ body {
 }
 .hero::after {
   content: ""; position: absolute; inset: 0;
-  background: radial-gradient(circle at 20% 120%, rgba(52, 152, 219, .35), transparent 55%);
+  background: radial-gradient(circle at 20% 120%, rgba(241, 196, 15, .35), transparent 55%);
 }
 .hero > * { position: relative; z-index: 1; }
 .hero h1 { margin: 0 0 10px; font-size: 2.1rem; letter-spacing: .5px; }
@@ -182,8 +182,8 @@ body {
 .entry .ex .zh-s { color: var(--text-soft); }
 .entry .tags { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
 .tag { font-size: .74rem; background: var(--ne-light-blue); color: var(--ne-blue-dark); padding: 2px 8px; border-radius: 6px; }
-.tag.warn { background: #D6EAF8; color: #21618C; }
-.note { font-size: .82rem; color: #21618C; background: var(--ne-cream); padding: 6px 10px; border-radius: 8px; margin-top: 8px; }
+.tag.warn { background: #FDEBD0; color: #935116; }
+.note { font-size: .82rem; color: #935116; background: var(--ne-cream); padding: 6px 10px; border-radius: 8px; margin-top: 8px; }
 .zh-hidden .zh, .zh-hidden .zh-s { filter: blur(5px); }
 .zh-hidden .zh:hover, .zh-hidden .zh-s:hover { filter: none; }
 
@@ -195,7 +195,7 @@ body {
   padding: 22px; box-shadow: var(--shadow); max-width: 760px; margin: 0 auto;
 }
 .q-meta { display: flex; justify-content: space-between; font-size: .85rem; color: var(--text-soft); margin-bottom: 12px; }
-.q-type { font-size: .78rem; background: var(--ne-gold); color: #154360; padding: 2px 10px; border-radius: 999px; font-weight: 700; }
+.q-type { font-size: .78rem; background: var(--ne-gold); color: #6b4e00; padding: 2px 10px; border-radius: 999px; font-weight: 700; }
 .q-prompt { font-size: 1.25rem; font-weight: 700; margin: 10px 0 4px; }
 .q-hint { font-size: .88rem; color: var(--text-soft); margin-bottom: 14px; }
 .opts { display: grid; gap: 10px; }
@@ -205,7 +205,7 @@ body {
 }
 .opt:hover { border-color: var(--ne-orange); background: #fff; }
 .opt.correct { background: #E8F8F0; border-color: var(--ne-green); color: var(--ne-green-dark); font-weight: 600; }
-.opt.wrong { background: #EBF5FB; border-color: var(--ne-red); color: var(--ne-red-dark); }
+.opt.wrong { background: #FDEDEC; border-color: var(--ne-red); color: var(--ne-red-dark); }
 .opt:disabled { cursor: default; }
 .q-input {
   width: 100%; padding: 12px 14px; font-size: 1.05rem; border: 1px solid var(--line);
@@ -214,7 +214,7 @@ body {
 .q-input:focus { border-color: var(--ne-orange); background: #fff; }
 .feedback { margin-top: 14px; padding: 12px 14px; border-radius: 10px; font-size: .95rem; display: none; }
 .feedback.ok { background: #E8F8F0; color: var(--ne-green-dark); border: 1px solid var(--ne-green); display: block; }
-.feedback.no { background: #EBF5FB; color: var(--ne-red-dark); border: 1px solid var(--ne-red); display: block; }
+.feedback.no { background: #FDEDEC; color: var(--ne-red-dark); border: 1px solid var(--ne-red); display: block; }
 .feedback .ans { font-weight: 700; }
 .q-actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
 
@@ -234,17 +234,17 @@ body {
 .nav-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 32px 0 10px; }
 .nav-buttons a {
   background: linear-gradient(135deg, var(--ne-red), var(--ne-red-bright)); color: #fff;
-  padding: 10px 22px; border-radius: 999px; text-decoration: none; box-shadow: 0 4px 12px rgba(26, 82, 118, .25);
+  padding: 10px 22px; border-radius: 999px; text-decoration: none; box-shadow: 0 4px 12px rgba(192, 57, 43, .25);
   font-size: .92rem; transition: .2s;
 }
-.nav-buttons a:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(26, 82, 118, .32); }
+.nav-buttons a:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(192, 57, 43, .32); }
 .site-footer { text-align: center; color: var(--text-soft); font-size: .84rem; padding: 26px 20px 40px; border-top: 1px solid var(--line); margin-top: 30px; }
 
-/* ---------- 品牌页脚：红色弹钢琴 logo + 唯意意大利语 ---------- */
+/* ---------- 品牌页脚：红色弹钢琴 logo + 涛子办事处 ---------- */
 .brand-footer { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
-.brand-logo { display: inline-flex; width: 40px; height: 40px; flex: 0 0 auto; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(26, 82, 118, .22); }
+.brand-logo { display: inline-flex; width: 40px; height: 40px; flex: 0 0 auto; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(193, 18, 31, .22); }
 .brand-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.brand-name { font-weight: 700; font-size: 32px; line-height: 1; letter-spacing: .06em; color: #1A5276; }
+.brand-name { font-weight: 700; font-size: 32px; line-height: 1; letter-spacing: .06em; color: #c1121f; }
 
 /* ---------- 移动端 ---------- */
 @media (max-width: 640px) {
@@ -385,17 +385,17 @@ body {
    对话角色音色：按说话人性别着色（男 = 蓝 / 女 = 红 / 旁白 = 灰）
    配合 data/dlg-XX.js 的逐行音色，让学习者一眼分清谁在说话。
    ============================================================ */
-.dlg-line.g-f .dlg-bubble { border-left: 3px solid #2E86C1; background: #EBF5FB; }
+.dlg-line.g-f .dlg-bubble { border-left: 3px solid #D9534F; background: #FDF4F3; }
 .dlg-line.g-m .dlg-bubble { border-left: 3px solid #2E86C1; background: #F2F8FD; }
-.dlg-line.g-n .dlg-bubble { border-left: 3px solid #A9BFD1; }
-.dlg-line.g-f .dlg-who { color: #1A5276; }
+.dlg-line.g-n .dlg-bubble { border-left: 3px solid #B7AE9C; }
+.dlg-line.g-f .dlg-who { color: #B03A2E; }
 .dlg-line.g-m .dlg-who { color: #1A5276; }
-.dlg-line.g-n .dlg-who { color: #667C90; }
+.dlg-line.g-n .dlg-who { color: #7B7266; }
 .dlg-who .g-badge { font-size: .72rem; margin-left: 4px; opacity: .72; }
 .dlg-legend { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
 .dlg-legend .lg { font-size: .76rem; padding: 2px 10px; border-radius: 999px; white-space: nowrap;
   background: var(--ne-cream); border: 1px solid var(--line); }
-.dlg-legend .lg.g-f { color: #1A5276; border-color: #AED6F1; }
+.dlg-legend .lg.g-f { color: #B03A2E; border-color: #EFC9C4; }
 .dlg-legend .lg.g-m { color: #1A5276; border-color: #B7D3E8; }
 
 /* 发音进行中高亮（打断机制可见反馈） */

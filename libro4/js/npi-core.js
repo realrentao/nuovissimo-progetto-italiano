@@ -131,7 +131,7 @@ function NPI_flashMissing(text) {
   if (!t) {
     t = document.createElement('div');
     t.id = 'npi-toast';
-    t.style.cssText = 'position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#154360;color:#fff;padding:10px 18px;border-radius:999px;font-size:.86rem;z-index:2000;box-shadow:0 6px 18px rgba(0,0,0,.2)';
+    t.style.cssText = 'position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#922B21;color:#fff;padding:10px 18px;border-radius:999px;font-size:.86rem;z-index:2000;box-shadow:0 6px 18px rgba(0,0,0,.2)';
     document.body.appendChild(t);
   }
   t.textContent = '音频缺失：' + text;

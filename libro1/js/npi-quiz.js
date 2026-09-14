@@ -164,7 +164,7 @@
       (ok ? '✅ 正确！' : '❌ 不正确。正确答案：<span class="ans">' + NPI_esc(q.answer) + '</span>') +
       `<div style="margin-top:6px;font-size:.9rem">${NPI_esc(q.item.it)} · ${NPI_esc(q.item.pos || '')} ${NPI_esc(q.item.syll || '')} — ${NPI_esc(q.item.zh)}</div>` +
       exHtml +
-      (q.item.note ? `<div style="margin-top:6px;font-size:.86rem;color:#21618C">📌 ${NPI_esc(q.item.note)}</div>` : '');
+      (q.item.note ? `<div style="margin-top:6px;font-size:.86rem;color:#935116">📌 ${NPI_esc(q.item.note)}</div>` : '');
 
     el('btn-next').style.display = 'inline-block';
     if (ok) speak(q.item.it);
