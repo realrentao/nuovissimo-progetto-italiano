@@ -103,6 +103,23 @@
   </span>
   <span class="brand-name">涛子办事处</span>
 </footer>
+<!-- 兜底：捕获静态选项，若任何（旧版）脚本清空下拉框，3 秒内自动回填，杜绝白屏 -->
+<script>
+(function(){
+  var ids=['sel-unit','sel-mode','sel-num'], snap={};
+  ids.forEach(function(id){ var s=document.getElementById(id); if(s) snap[id]=s.innerHTML; });
+  function ensure(){
+    ids.forEach(function(id){
+      var s=document.getElementById(id);
+      if(s && s.options.length===0 && snap[id]) s.innerHTML=snap[id];
+    });
+  }
+  ensure();
+  document.addEventListener('DOMContentLoaded', ensure);
+  var _t=setInterval(ensure, 100);
+  setTimeout(function(){ clearInterval(_t); }, 3000);
+})();
+</script>
 <script defer src="data/lexicon-index.js"></script>
 <script defer src="js/npi-core.js"></script>
 <script defer src="js/npi-quiz.js"></script>

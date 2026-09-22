@@ -9,7 +9,7 @@
    - HTML          ：不拦截，永远走网络，保证入口页面即时更新
    ============================================================ */
 const CACHE_NAME = 'npi-audio-v3';
-const SHELL_CACHE = 'npi-shell-463291e0';
+const SHELL_CACHE = 'npi-shell-76caa4a5';
 
 self.addEventListener('install', () => self.skipWaiting());
 
