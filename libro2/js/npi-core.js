@@ -156,7 +156,7 @@ function NPI_stopAudio() {
 }
 
 function NPI_playSrc(src, fallbackText, el) {
-  if (!src) { NPI_flashMissing(fallbackText); return; }
+  if (!src) return;                       // 无路径：静默，不提示「音频缺失」
   /* 打断：新音频打开，在播音频自动停止 */
   if (NPI_currentAudio && !NPI_currentAudio.paused) NPI_stopAudio();
   if (!NPI_currentAudio) NPI_currentAudio = new Audio();
@@ -165,22 +165,18 @@ function NPI_playSrc(src, fallbackText, el) {
   if (el) { el.classList.add('npi-playing'); NPI_currentEl = el; }
   a.onended = () => NPI_clearPlayingClass();
   a.src = src;
-  a.play().catch(() => NPI_flashMissing(fallbackText));
+  a.play().catch(() => { /* 文件未就绪/加载失败：静默，不弹「音频缺失」 */ });
 }
 
 /* 点击带 data-spk 的元素：优先用 data-audio 直给路径（对话角色音色），否则查清单 */
 function speak(text, el) {
   if (!text) return;
+  /* 音频清单（缓存）还没就绪：本次不播放、不提示「音频缺失」，
+     后台继续加载，下次点击即可用 —— 即「缓存没好不播放」。 */
+  if (!window.NPI_AUDIO) { NPI_ensureAudio(); return; }
   const src = NPI_resolveSrc(text);
   if (src) { NPI_playSrc(src, text, el); return; }
-  if (!window.NPI_AUDIO) {
-    NPI_ensureAudio().then(() => {
-      const s2 = NPI_resolveSrc(text);
-      if (s2) NPI_playSrc(s2, text, el); else NPI_flashMissing(text);
-    });
-    return;
-  }
-  NPI_flashMissing(text);
+  /* 清单已就绪但查无此文本：静默，不显示「音频缺失」 */
 }
 
 function NPI_speakNode(el) {
@@ -194,18 +190,12 @@ function NPI_speakNode(el) {
   speak(el.getAttribute('data-spk'), el);
 }
 
+/* 2026-09-22：按需求「不要显示音频丢失」—— 取消「音频缺失」浮条。
+   改为静默：缓存（清单）未就绪时不播放、不提示；清单就绪但查无文本也不提示。
+   保留函数以满足潜在调用点，但不再有任何可见 UI。 */
 function NPI_flashMissing(text) {
-  let t = document.getElementById('npi-toast');
-  if (!t) {
-    t = document.createElement('div');
-    t.id = 'npi-toast';
-    t.style.cssText = 'position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#922B21;color:#fff;padding:10px 18px;border-radius:999px;font-size:.86rem;z-index:2000;box-shadow:0 6px 18px rgba(0,0,0,.2)';
-    document.body.appendChild(t);
-  }
-  t.textContent = '音频缺失：' + text;
-  t.style.display = 'block';
-  clearTimeout(t._timer);
-  t._timer = setTimeout(() => (t.style.display = 'none'), 1800);
+  /* 静默：如需调试可放开下一行 */
+  // console.debug('[audio] 无可用音频:', text);
 }
 
 /* ---------- 发音预取：鼠标停留 / 触摸时提前拉取，点击即响 ---------- */
