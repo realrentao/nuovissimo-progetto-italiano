@@ -228,7 +228,8 @@
 
   /* ---------- 初始化 ---------- */
   (async function init() {
-    await NPI_lexIndex();
+    /* 单元标题已由 defer 的 data/lexicon-index.js 同步载入 window.NPI.units，
+       先同步填充下拉框，不等任何异步加载 —— 消除「白屏几秒才出选项」。 */
     refreshData();
 
     el('sel-unit').innerHTML = '<option value="all">全部单元</option>' +
@@ -253,6 +254,9 @@
     });
 
     renderStats();
+    /* 下拉框已就绪；这里再按需加载词库切片（慢一点也不影响下拉显示） */
+    await NPI_lexIndex();
+    refreshData();
     await start();
   })();
 })();
