@@ -1,11 +1,15 @@
 /* ============================================================
    NPI Service Worker
-   - *.mp3        ：CacheFirst，听过一次即永久本地命中，兼容 Range 206
-   - js/ css/     ：NetworkFirst（强制 revalidate），保证改动即时生效，离线回退缓存
-   - HTML / data/ ：一律走网络，保证教材内容更新即时生效
+   - *.mp3         ：CacheFirst，听过一次即永久本地命中，兼容 Range 206
+   - *.js / *.css  ：CacheFirst，缓存桶按「构建戳」划分
+       桶名里的 d5e0c332 由 tools/stamp_shell.js 按这些文件的内容哈希生成，
+       每次部署重新计算 —— 内容一变戳就变，新 SW 激活时旧桶自动丢弃。
+       于是一方面「二次访问零网络请求」，另一方面不会再把旧 CSS/JS 缓住。
+       ⚠️ 改完 js/ css/ data/ 必须重跑 tools/stamp_shell.js 再部署。
+   - HTML          ：不拦截，永远走网络，保证入口页面即时更新
    ============================================================ */
 const CACHE_NAME = 'npi-audio-v3';
-const SHELL_CACHE = 'npi-shell-v2';
+const SHELL_CACHE = 'npi-shell-d5e0c332';
 
 self.addEventListener('install', () => self.skipWaiting());
 
@@ -50,16 +54,20 @@ function sliceResponse(cached, start, end, size) {
   });
 }
 
-/* 壳资源：网络优先（强制 revalidate，保证改动即时生效），离线时回退缓存 */
-async function shellSWR(req) {
+/* 壳资源（js / css）：缓存优先。
+   缓存桶名带构建戳 —— 内容一变就换桶，所以命中的一定是当前版本，
+   不需要每次回源校验，二次访问可做到零网络请求。
+   未命中（首次访问 / 刚发新版）时强制回源校验，拿到的一定是最新字节。 */
+async function shellCacheFirst(req) {
   const cache = await caches.open(SHELL_CACHE);
+  const hit = await cache.match(req);
+  if (hit) return hit;
   try {
     const resp = await fetch(req, { cache: 'no-cache' });
     if (resp && resp.status === 200) cache.put(req, resp.clone()).catch(() => {});
     return resp;
   } catch (e) {
-    const cached = await cache.match(req);
-    return cached || Response.error();
+    return Response.error();
   }
 }
 
@@ -71,39 +79,41 @@ self.addEventListener('fetch', (event) => {
   try { url = new URL(req.url); } catch (e) { return; }
   if (url.origin !== self.location.origin) return;
 
-  /* 代码类壳资源（js / css）走 stale-while-revalidate；
-     data/ 下是教材内容，一律走网络以保证更新即时生效 */
-  const isData = url.pathname.indexOf('/data/') !== -1;
-  if (!isData && (url.pathname.endsWith('.js') || url.pathname.endsWith('.css'))) {
-    event.respondWith(shellSWR(req));
+  /* 音频：内容哈希命名，永久缓存 + 兼容 Range */
+  if (url.pathname.endsWith('.mp3')) {
+    event.respondWith((async () => {
+      const cache = await caches.open(CACHE_NAME);
+      const key = url.origin + url.pathname;
+      let hit = await cache.match(key);
+
+      if (!hit) {
+        let resp;
+        try {
+          resp = await fetch(key, { credentials: 'omit' });
+        } catch (err) {
+          return Response.error();
+        }
+        if (!resp || resp.status !== 200) return resp;
+        cache.put(key, resp.clone()).catch(() => {});   /* 后台写缓存，不阻塞本次响应 */
+        hit = resp.clone();
+      }
+
+      const rangeHeader = req.headers.get('range');
+      if (!rangeHeader) return hit;
+
+      const size = parseInt(hit.headers.get('content-length') || '0', 10);
+      const r = parseRange(rangeHeader, size);
+      if (!r || r.invalid) return hit;
+      return sliceResponse(hit, r.start, r.end, size);
+    })());
     return;
   }
 
-  if (!url.pathname.endsWith('.mp3')) return;      /* 只接管音频，别的都不碰 */
+  /* 代码类壳资源（含 data/*.js 数据切片）：缓存优先，桶名带构建戳 */
+  if (url.pathname.endsWith('.js') || url.pathname.endsWith('.css')) {
+    event.respondWith(shellCacheFirst(req));
+    return;
+  }
 
-  event.respondWith((async () => {
-    const cache = await caches.open(CACHE_NAME);
-    const key = url.origin + url.pathname;
-    let hit = await cache.match(key);
-
-    if (!hit) {
-      let resp;
-      try {
-        resp = await fetch(key, { credentials: 'omit' });
-      } catch (err) {
-        return Response.error();
-      }
-      if (!resp || resp.status !== 200) return resp;
-      cache.put(key, resp.clone()).catch(() => {});   /* 后台写缓存，不阻塞本次响应 */
-      hit = resp.clone();
-    }
-
-    const rangeHeader = req.headers.get('range');
-    if (!rangeHeader) return hit;
-
-    const size = parseInt(hit.headers.get('content-length') || '0', 10);
-    const r = parseRange(rangeHeader, size);
-    if (!r || r.invalid) return hit;
-    return sliceResponse(hit, r.start, r.end, size);
-  })());
+  /* 其余（HTML / 图片等）不拦截，交由浏览器与网络处理 */
 });

@@ -35,6 +35,55 @@ function NPI_load() {
   return { units, items };
 }
 
+/* ---------- 词库（词汇页 / 练习页）：轻量索引 + 按单元切片，按需加载 ---------- */
+/* 先用 ~2KB 的 data/lexicon-index.js 把界面（筛选条 / 下拉框）画出来，
+   再按单元渐进加载 data/lexicon-XX.js 词条切片并就地重渲染。
+   这样首屏不必再等整份 lexicon.js（181~266KB / gzip 58~85KB）。 */
+const NPI_lexLoaded = {};              /* 已载入完整词条的单元 id */
+let NPI_lexIndexPromise = null;
+
+function NPI_lexIndex() {
+  if (NPI_lexIndexPromise) return NPI_lexIndexPromise;
+  NPI_lexIndexPromise = new Promise((resolve) => {
+    const s = document.createElement('script');
+    s.src = 'data/lexicon-index.js';
+    s.onload = resolve;
+    s.onerror = resolve;               /* 失败也不阻塞页面 */
+    document.head.appendChild(s);
+  });
+  return NPI_lexIndexPromise;
+}
+
+function NPI_lexSlice(id) {
+  if (NPI_lexLoaded[id]) return Promise.resolve();
+  return new Promise((resolve) => {
+    const s = document.createElement('script');
+    s.src = 'data/lexicon-' + id + '.js';
+    s.onload = () => { NPI_lexLoaded[id] = true; resolve(); };
+    s.onerror = resolve;
+    document.head.appendChild(s);
+  });
+}
+
+/* 渐进加载：第一批先跑完保证首屏尽快可用，其余并行补齐（每约 1/3 回调一次，避免频繁重渲染） */
+async function NPI_lexLoad(ids, onProgress, batch) {
+  const todo = (ids || []).filter((id) => !NPI_lexLoaded[id]);
+  if (!todo.length) { if (onProgress) onProgress(); return 0; }
+  const step = batch || 3;
+  await Promise.all(todo.slice(0, step).map(NPI_lexSlice));
+  if (onProgress) onProgress();
+  const rest = todo.slice(step);
+  if (rest.length) {
+    let done = 0;
+    const stride = Math.max(1, Math.ceil(rest.length / 3));
+    await Promise.all(rest.map((id) => NPI_lexSlice(id).then(() => {
+      done++;
+      if (done % stride === 0 || done === rest.length) { if (onProgress) onProgress(); }
+    })));
+  }
+  return todo.length;
+}
+
 /* ---------- 音频清单：按需异步加载 ---------- */
 let NPI_manifestPromise = null;
 

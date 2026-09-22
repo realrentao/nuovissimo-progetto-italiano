@@ -139,7 +139,7 @@
       nav.innerHTML =
         `${prev ? `<a href="unit-${prev}.html">← Unità ${prev}</a>` : '<span></span>'}
          <a href="index.html">🏠 单元总览</a>
-         <a href="vocabolario.html">🔤 词汇</a>
+         <a href="vocabolario.html?unit=${esc(u.id)}">🔤 词汇</a>
          <a href="esercizi.html?u=${esc(u.id)}">✏️ 练习</a>
          ${next ? `<a href="unit-${next}.html">Unità ${next} →</a>` : '<span></span>'}`;
     }

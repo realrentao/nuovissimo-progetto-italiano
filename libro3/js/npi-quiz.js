@@ -1,14 +1,24 @@
 /* ============================================================
    练习页：题库自动生成（选择 / 填空 / 互译）+ 即时判定 + 统计
    统计保存在 localStorage: npi_quiz_stats
+
+   加载策略（性能）：
+   1) 先取 ~2KB 的 data/lexicon-index.js，立刻把统计面板与下拉框画出来；
+   2) 只加载本次需要的单元切片 —— 带 ?u=XX 进来（单元页的「去做本单元练习」）
+      就只拉那一个单元；选「全部单元」时才分批拉齐，且带进度提示。
+   首屏不再无脑等整份 lexicon.js（181~266KB）。
    ============================================================ */
 (function () {
-  const { units, items } = NPI_load();
   const KEY = 'npi_quiz_stats_v1';
 
   const el = (id) => document.getElementById(id);
   const stats = loadStats();
   const state = { pool: [], idx: 0, q: null, answered: false, mode: 'mix', unit: 'all', total: 10, wrongOnly: false };
+
+  let units = {};
+  let items = [];
+  function refreshData() { const r = NPI_load(); units = r.units; items = r.items; }
+  const unitIds = () => Object.keys(units).sort();
 
   function loadStats() {
     try {
@@ -22,6 +32,7 @@
   const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a; };
   const keyOf = (i) => i.kind + ':' + i.it;
   const pick = (arr, n) => shuffle(arr).slice(0, n);
+  const setNote = (t) => { el('q-hint').textContent = t || ''; };
 
   /* ---------- 题型生成 ---------- */
   function makeQuestion(item) {
@@ -85,6 +96,22 @@
     state.total = Math.min(state.total, pool.length);
     state.pool = pool.slice(0, state.total);
     state.idx = 0;
+  }
+
+  /* ---------- 按需加载词条切片 ---------- */
+  async function ensurePool() {
+    const sel = el('sel-unit').value;
+    const want = sel === 'all' ? unitIds() : [sel];
+    const missing = want.filter((id) => !NPI_lexLoaded[id]);
+    if (!missing.length) { refreshData(); return; }
+    const label = sel === 'all' ? '全部单元' : 'Unità ' + (+sel);
+    setNote('正在加载' + label + '词库…');
+    await NPI_lexLoad(missing, () => {
+      refreshData();
+      const done = want.filter((id) => NPI_lexLoaded[id]).length;
+      setNote('正在加载词库 ' + done + '/' + want.length + ' 单元…');
+    }, sel === 'all' ? 4 : 2);
+    refreshData();
   }
 
   /* ---------- 渲染 ---------- */
@@ -183,39 +210,47 @@
     el('progress-fill').style.width = '100%';
   }
 
-  function start() {
+  async function start() {
     const selUnit = el('sel-unit'), selMode = el('sel-mode'), selNum = el('sel-num');
     state.unit = selUnit.value;
     state.mode = selMode.value;
     state.total = selNum.value === 'all' ? 9999 : parseInt(selNum.value, 10);
     state.wrongOnly = el('chk-wrong').checked;
+
+    await ensurePool();                 /* 只为本次选的单元拉数据 */
+
     buildPool();
     el('progress-txt').textContent = '本轮进度 0 / ' + state.pool.length;
     nextQuestion();
   }
 
   /* ---------- 初始化 ---------- */
-  el('sel-unit').innerHTML = '<option value="all">全部单元</option>' +
-    Object.keys(units).sort().map(id => {
-      const label = id === '00' ? '导论 · ' : 'Unità ' + (+id) + ' · ';
-      return `<option value="${id}">${label}${NPI_esc(units[id].title)}</option>`;
-    }).join('');
-  const _uParam = new URLSearchParams(location.search).get('u');
-  if (_uParam && units[_uParam]) el('sel-unit').value = _uParam;
-  el('sel-mode').innerHTML = [
-    ['mix', '混合题型'], ['mc_it_zh', '选择题：意 → 中'], ['mc_zh_it', '选择题：中 → 意'],
-    ['fill_word', '填空：看中文写意语'], ['fill_ex', '填空：例句补全']
-  ].map(([v, t]) => `<option value="${v}">${t}</option>`).join('');
+  (async function init() {
+    await NPI_lexIndex();
+    refreshData();
 
-  el('btn-start').addEventListener('click', start);
-  el('btn-next').addEventListener('click', () => { state.idx++; nextQuestion(); });
-  el('btn-skip').addEventListener('click', () => { if (!state.answered) { stats.asked++; saveStats(); } state.idx++; nextQuestion(); });
-  el('btn-reset').addEventListener('click', () => {
-    if (!confirm('确定清空所有答题记录与正确率统计？')) return;
-    stats.asked = 0; stats.correct = 0; stats.streak = 0; stats.best = 0; stats.per = {};
-    saveStats(); renderStats();
-  });
+    el('sel-unit').innerHTML = '<option value="all">全部单元</option>' +
+      unitIds().map(id => {
+        const label = id === '00' ? '导论 · ' : 'Unità ' + (+id) + ' · ';
+        return `<option value="${id}">${label}${NPI_esc(units[id].title)}</option>`;
+      }).join('');
+    const _uParam = new URLSearchParams(location.search).get('u');
+    if (_uParam && units[_uParam]) el('sel-unit').value = _uParam;
+    el('sel-mode').innerHTML = [
+      ['mix', '混合题型'], ['mc_it_zh', '选择题：意 → 中'], ['mc_zh_it', '选择题：中 → 意'],
+      ['fill_word', '填空：看中文写意语'], ['fill_ex', '填空：例句补全']
+    ].map(([v, t]) => `<option value="${v}">${t}</option>`).join('');
 
-  renderStats();
-  start();
+    el('btn-start').addEventListener('click', start);
+    el('btn-next').addEventListener('click', () => { state.idx++; nextQuestion(); });
+    el('btn-skip').addEventListener('click', () => { if (!state.answered) { stats.asked++; saveStats(); } state.idx++; nextQuestion(); });
+    el('btn-reset').addEventListener('click', () => {
+      if (!confirm('确定清空所有答题记录与正确率统计？')) return;
+      stats.asked = 0; stats.correct = 0; stats.streak = 0; stats.best = 0; stats.per = {};
+      saveStats(); renderStats();
+    });
+
+    renderStats();
+    await start();
+  })();
 })();
