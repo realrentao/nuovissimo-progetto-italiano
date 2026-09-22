@@ -96,15 +96,34 @@ function NPI_manifestUrl() {
 function NPI_ensureAudio() {
   if (window.NPI_AUDIO) return Promise.resolve();
   if (!NPI_manifestPromise) {
+    const url = NPI_manifestUrl();
+    /* 非单元页拿到的是全量清单，标记一下，之后不必再叠单元切片 */
+    if (url.indexOf('audio-manifest-') === 0) window.NPI_fullAudio = true;
     NPI_manifestPromise = new Promise((resolve) => {
       const s = document.createElement('script');
-      s.src = NPI_manifestUrl();
+      s.src = url;
       s.onload = resolve;
       s.onerror = resolve;                 // 失败也不阻塞后续逻辑
       document.head.appendChild(s);
     });
   }
   return NPI_manifestPromise;
+}
+
+/* ---------- 单元级音频清单：与词库切片成对按需加载 ---------- */
+/* 词汇页 / 练习页只需要当前单元的发音表，加载 ~3KB 的切片即可，
+   不必为了一句发音拉整份 audio-manifest.js（原始 110KB / gzip ~58KB）。 */
+const NPI_audioSlices = new Set();
+function NPI_audioSlice(id) {
+  if (window.NPI_fullAudio || NPI_audioSlices.has(id)) return Promise.resolve();
+  NPI_audioSlices.add(id);
+  return new Promise((resolve) => {
+    const s = document.createElement('script');
+    s.src = 'data/audio-manifest-' + id + '.js';
+    s.onload = resolve;
+    s.onerror = resolve;
+    document.head.appendChild(s);
+  });
 }
 
 function NPI_resolveSrc(text) {
@@ -246,9 +265,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- 音频清单与首屏音频：空闲时后台预热，完全不占用首屏时间 ---------- */
   const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 1400));
   idle(() => {
+    const els = Array.from(document.querySelectorAll('[data-audio],[data-spk]'));
+    /* 本页没有可发音节点（词汇/练习页用的是 onclick="speak()"）→ 不做任何音频预热，
+       避免白白拉整份音频清单；真正点击时再按需加载单元切片或全量清单。 */
+    if (!els.length) return;
     NPI_ensureAudio();
-    const els = Array.from(document.querySelectorAll('[data-audio],[data-spk]')).slice(0, 8);
-    els.forEach((el) => NPI_prefetch(el));
+    els.slice(0, 8).forEach((el) => NPI_prefetch(el));
   }, { timeout: 2600 });
 
   /* ---------- 音频离线缓存：Service Worker 接管 *.mp3 与壳资源 ---------- */

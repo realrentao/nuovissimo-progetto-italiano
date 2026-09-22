@@ -151,6 +151,10 @@
     const want = single || unitIds();
     const total = want.length;
 
+    /* 单单元模式：把该单元的发音表（~3KB）一并拉取，点词即响，
+       不必为了一句发音加载整份 audio-manifest.js（gzip ~58KB） */
+    if (single) NPI_audioSlice(single[0]);
+
     await NPI_lexLoad(want, () => {
       refreshData();
       loading = items.length === 0;

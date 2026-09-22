@@ -105,6 +105,8 @@
     const missing = want.filter((id) => !NPI_lexLoaded[id]);
     if (!missing.length) { refreshData(); return; }
     const label = sel === 'all' ? '全部单元' : 'Unità ' + (+sel);
+    /* 单单元模式：发音表切片一并拉取（~3KB），答对时自动发音即响 */
+    if (sel !== 'all') NPI_audioSlice(sel);
     setNote('正在加载' + label + '词库…');
     await NPI_lexLoad(missing, () => {
       refreshData();
