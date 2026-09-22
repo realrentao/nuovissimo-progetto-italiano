@@ -232,17 +232,23 @@
        先同步填充下拉框，不等任何异步加载 —— 消除「白屏几秒才出选项」。 */
     refreshData();
 
-    el('sel-unit').innerHTML = '<option value="all">全部单元</option>' +
-      unitIds().map(id => {
-        const label = id === '00' ? '导论 · ' : 'Unità ' + (+id) + ' · ';
-        return `<option value="${id}">${label}${NPI_esc(units[id].title)}</option>`;
-      }).join('');
+    /* 下拉选项已静态写入 HTML（解析即就绪，永不白屏）；
+       仅当异常情况下尚未填充时才用 JS 兜底，避免覆盖已就绪的选项。 */
+    if (!el('sel-unit').options.length) {
+      el('sel-unit').innerHTML = '<option value="all">全部单元</option>' +
+        unitIds().map(id => {
+          const label = id === '00' ? '导论 · ' : 'Unità ' + (+id) + ' · ';
+          return `<option value="${id}">${label}${NPI_esc(units[id].title)}</option>`;
+        }).join('');
+    }
     const _uParam = new URLSearchParams(location.search).get('u');
-    if (_uParam && units[_uParam]) el('sel-unit').value = _uParam;
-    el('sel-mode').innerHTML = [
-      ['mix', '混合题型'], ['mc_it_zh', '选择题：意 → 中'], ['mc_zh_it', '选择题：中 → 意'],
-      ['fill_word', '填空：看中文写意语'], ['fill_ex', '填空：例句补全']
-    ].map(([v, t]) => `<option value="${v}">${t}</option>`).join('');
+    if (_uParam && el('sel-unit').querySelector('option[value="' + _uParam + '"]')) el('sel-unit').value = _uParam;
+    if (!el('sel-mode').options.length) {
+      el('sel-mode').innerHTML = [
+        ['mix', '混合题型'], ['mc_it_zh', '选择题：意 → 中'], ['mc_zh_it', '选择题：中 → 意'],
+        ['fill_word', '填空：看中文写意语'], ['fill_ex', '填空：例句补全']
+      ].map(([v, t]) => `<option value="${v}">${t}</option>`).join('');
+    }
 
     el('btn-start').addEventListener('click', start);
     el('btn-next').addEventListener('click', () => { state.idx++; nextQuestion(); });
