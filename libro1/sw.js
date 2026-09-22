@@ -2,14 +2,14 @@
    NPI Service Worker
    - *.mp3         ：CacheFirst，听过一次即永久本地命中，兼容 Range 206
    - *.js / *.css  ：CacheFirst，缓存桶按「构建戳」划分
-       桶名里的 669b8139 由 tools/stamp_shell.js 按这些文件的内容哈希生成，
+       桶名里的 51ee4a2d 由 tools/stamp_shell.js 按这些文件的内容哈希生成，
        每次部署重新计算 —— 内容一变戳就变，新 SW 激活时旧桶自动丢弃。
        于是一方面「二次访问零网络请求」，另一方面不会再把旧 CSS/JS 缓住。
        ⚠️ 改完 js/ css/ data/ 必须重跑 tools/stamp_shell.js 再部署。
    - HTML          ：不拦截，永远走网络，保证入口页面即时更新
    ============================================================ */
 const CACHE_NAME = 'npi-audio-v3';
-const SHELL_CACHE = 'npi-shell-669b8139';
+const SHELL_CACHE = 'npi-shell-51ee4a2d';
 
 self.addEventListener('install', () => self.skipWaiting());
 

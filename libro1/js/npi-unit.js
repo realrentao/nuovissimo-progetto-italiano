@@ -100,7 +100,13 @@
   function renderSection(sec, unit, vocabDone) {
     let inner = '';
     if (sec.type === 'intro') {
-      const goals = (sec.goals || []).map((g) => `<li>${esc(g)}</li>`).join('');
+      const goalsZh = sec.goalsZh || [];
+      const goals = (sec.goals || [])
+        .map((g, i) => {
+          const zh = goalsZh[i];
+          return `<li>${esc(g)}${zh ? `<span class="goal-zh">${esc(zh)}</span>` : ''}</li>`;
+        })
+        .join('');
       const prev = (sec.preview || []).map((p) => `<span class="chip">${spk(p.it)} <i>${esc(p.zh)}</i></span>`).join('');
       inner = `<ul class="goal-list">${goals}</ul>${prev ? `<div class="preview-row">${prev}</div>` : ''}`;
     } else if (sec.type === 'dialogue') {

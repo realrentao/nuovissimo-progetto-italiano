@@ -289,7 +289,8 @@ body {
 .sec-grammar > .sec-title { color: var(--ne-purple); }
 
 .goal-list { margin: 0; padding-left: 20px; columns: 2; }
-.goal-list li { margin: 4px 0; font-size: .94rem; }
+.goal-list li { margin: 4px 0; font-size: .94rem; break-inside: avoid; -webkit-column-break-inside: avoid; }
+.goal-zh { display: block; margin-top: 1px; font-size: .86rem; color: var(--text-soft); }
 .preview-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .chip { background: var(--ne-cream); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: .85rem; }
 .chip .spk { color: var(--ne-blue-dark); font-weight: 600; }
