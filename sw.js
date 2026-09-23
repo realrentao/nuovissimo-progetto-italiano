@@ -9,7 +9,7 @@
 const CACHE_NAME = 'npi-audio-v3';
 const SHELL_CACHE = 'npi-shell-578aed34';
 /* HTML：Stale-While-Revalidate */
-const HTML_CACHE = 'npi-html-v4';
+const HTML_CACHE = 'npi-html-v5';
 async function htmlSWR(req) {
   const cache = await caches.open(HTML_CACHE);
   const cached = await cache.match(req);

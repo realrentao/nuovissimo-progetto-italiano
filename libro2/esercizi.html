@@ -5,6 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>练习 — NPI 2 意语学习站</title>
 <link rel="icon" href="data:,">
+<style data-npi-critical>:root{--ne-red:#C0392B;--ne-red-bright:#E74C3C;--ne-red-dark:#922B21;--ne-orange:#E67E22;--ne-orange-bright:#F39C12;--ne-gold:#F1C40F;--ne-gold-dark:#D4AC0D;--ne-blue:#1A5276;--ne-blue-bright:#2E86C1;--ne-blue-dark:#0E3A53;--ne-cream:#FEF9E7;--ne-cream-dark:#FDEBD0;--ne-light-blue:#D4E6F1;--ne-green:#27AE60;--ne-green-dark:#1E8449;--ne-purple:#8E44AD;--ne-teal:#1ABC9C;--bg:#FDFBF6;--card:#FFFFFF;--text:#2C3E50;--text-soft:#5D6D7E;--line:#E8E2D4;--shadow:0 2px 10px rgba(44,62,80,.07);--shadow-hover:0 8px 24px rgba(44,62,80,.13);--radius:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI","PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-text-size-adjust:100%}
+.top-nav{position:sticky;top:0;z-index:900;display:flex;align-items:center;gap:18px;padding:12px 24px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-logo{font-weight:800;font-size:1.05rem;color:var(--ne-red-dark);text-decoration:none;white-space:nowrap;letter-spacing:.3px}
+.nav-links{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{color:var(--text-soft);text-decoration:none;font-size:.92rem;padding:6px 12px;border-radius:999px;transition:.2s;white-space:nowrap}
+.nav-links a:hover{background:var(--ne-cream);color:var(--ne-red)}
+.page-section{max-width:1080px;margin:0 auto;padding:28px 20px}
+.page-section h2{margin:0 0 16px;font-size:1.35rem;color:var(--ne-red-dark);padding-bottom:8px;border-bottom:2px solid transparent;border-image:linear-gradient(90deg,var(--ne-red),var(--ne-gold),transparent) 1}
+.page-section h3{margin:20px 0 10px;color:var(--ne-orange);font-size:1.05rem}
+.filters{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);position:sticky;top:62px;z-index:50}
+.search-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn{padding:10px 16px;border:none;border-radius:10px;cursor:pointer;background:var(--ne-red);color:#fff;font-size:.92rem;transition:.2s;font-family:inherit}
+.btn:hover{background:var(--ne-red-dark)}
+.btn.ghost{background:#fff;color:var(--ne-red);border:1px solid var(--ne-red)}
+.btn.ghost:hover{background:var(--ne-red);color:#fff}
+select.btn{font-family:inherit;cursor:pointer}
+.chip-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:var(--ne-cream);font-size:.82rem;cursor:pointer;transition:.18s;user-select:none}
+.chip:hover{border-color:var(--ne-orange)}
+.chip.on{background:var(--ne-red);color:#fff;border-color:var(--ne-red)}
+.quiz-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);max-width:760px;margin:0 auto}
+.scorebar{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:18px}
+.scorebar div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;box-shadow:var(--shadow)}
+.scorebar .n{font-size:1.4rem;font-weight:800;color:var(--ne-red)}
+.scorebar .l{font-size:.8rem;color:var(--text-soft)}
+.nav-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:32px 0 10px}
+.nav-buttons a{background:linear-gradient(135deg,var(--ne-red),var(--ne-red-bright));color:#fff;padding:10px 22px;border-radius:999px;text-decoration:none;box-shadow:0 4px 12px rgba(192,57,43,.25);font-size:.92rem;transition:.2s}
+.site-footer{text-align:center;color:var(--text-soft);font-size:.84rem;padding:26px 20px 40px;border-top:1px solid var(--line);margin-top:30px}
+.brand-footer{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.brand-logo{display:inline-flex;width:40px;height:40px;flex:0 0 auto;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(193,18,31,.22)}
+.brand-logo img{width:100%;height:100%;object-fit:cover;display:block}
+.brand-name{font-weight:700;font-size:32px;line-height:1;letter-spacing:.06em;color:#c1121f}
+.hero{background:linear-gradient(135deg,var(--ne-red-dark) 0%,var(--ne-red) 45%,var(--ne-orange) 100%);color:#fff;padding:56px 24px 48px;text-align:center;position:relative;overflow:hidden}
+.hero h1{margin:0 0 10px;font-size:2.1rem;letter-spacing:.5px}
+.hero p{margin:0 auto;max-width:720px;opacity:.95;font-size:1rem}
+.unit-wrap{max-width:880px;margin:0 auto;padding:22px 16px 40px}
+.unit-header{text-align:center;padding:30px 16px 22px;margin-bottom:18px;background:linear-gradient(135deg,var(--ne-red-dark),var(--ne-red) 60%,var(--ne-orange));color:#fff;border-radius:var(--radius);box-shadow:var(--shadow)}
+.unit-header h1{margin:6px 0 4px;font-size:1.9rem}
+</style>
 <link rel="preload" as="style" href="css/npi-styles.css" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="css/npi-styles.css"></noscript>
 </head>
