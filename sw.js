@@ -1,0 +1,155 @@
+/* ============================================================
+   NPI Service Worker —— 站点根作用域（/nuovissimo-progetto-italiano/）
+   - *.mp3         ：CacheFirst，听过一次即永久本地命中，兼容 Range 206
+   - *.js / *.css  ：CacheFirst，缓存桶按「构建戳」划分
+       桶名里的 578aed34 由 css 内容哈希生成；内容一变即换桶，旧桶自动丢弃。
+   - HTML          ：Stale-While-Revalidate —— 二次访问直接命中 SW 缓存、瞬间出内容，
+       后台静默回源更新；首访/缓存未命中才走网络。彻底消除「先白屏再显示内容」。
+   ============================================================ */
+const CACHE_NAME = 'npi-audio-v3';
+const SHELL_CACHE = 'npi-shell-578aed34';
+/* HTML：Stale-While-Revalidate */
+const HTML_CACHE = 'npi-html-v4';
+async function htmlSWR(req) {
+  const cache = await caches.open(HTML_CACHE);
+  const cached = await cache.match(req);
+  const network = fetch(req, { cache: 'no-cache' })
+    .then((r) => { if (r && r.status === 200) cache.put(req, r.clone()).catch(() => {}); return r; })
+    .catch(() => null);
+  if (cached) { network.catch(() => {}); return cached; }
+  const resp = await network;
+  return resp || Response.error();
+}
+
+
+self.addEventListener('install', () => self.skipWaiting());
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(
+      keys.filter((k) => (k.indexOf('npi-audio-') === 0 && k !== CACHE_NAME) ||
+                         (k.indexOf('npi-shell-') === 0 && k !== SHELL_CACHE) ||
+                         (k.indexOf('npi-html-') === 0 && k !== HTML_CACHE))
+          .map((k) => caches.delete(k))
+    );
+
+    /* 预热：把当前打开页面的 HTML + 其 css/js 预存进缓存，
+       使本次刷新后的下一次访问直接命中、瞬间出内容（消灭首屏白屏）。 */
+    try {
+      const cls = await self.clients.matchAll({ includeUncontrolled: true, type: 'window' });
+      for (const c of cls) {
+        const resp = await fetch(c.url, { cache: 'no-cache' });
+        if (!resp || resp.status !== 200) continue;
+        const html = await resp.text();
+        const hc = await caches.open(HTML_CACHE);
+        await hc.put(c.url, new Response(html, { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8' } }));
+        const sc = await caches.open(SHELL_CACHE);
+        const re = /(?:href|src)="([^"]+\\.(?:css|js))"/g; let m; const subs = [];
+        while ((m = re.exec(html))) subs.push(new URL(m[1], c.url).href);
+        await Promise.all(subs.map((u) => fetch(u, { cache: 'no-cache' })
+          .then((r) => { if (r && r.status === 200) sc.put(u, r.clone()).catch(() => {}); })
+          .catch(() => {})));
+      }
+    } catch (e) { /* 预热失败不影响激活 */ }
+    await self.clients.claim();
+  })());
+});
+
+/* 解析 Range 头，返回 {start, end}；不支持或非法返回 null / {invalid:true} */
+function parseRange(header, size) {
+  const m = /bytes=(\d*)-(\d*)/.exec(header || '');
+  if (!m) return null;
+  let start = m[1] === '' ? null : parseInt(m[1], 10);
+  let end = m[2] === '' ? null : parseInt(m[2], 10);
+  if (start === null && end === null) return null;
+  if (start === null) { start = Math.max(0, size - end); end = size - 1; }  /* 后缀区间 */
+  if (end === null || end >= size) end = size - 1;
+  if (start > end || start >= size || size <= 0) return { invalid: true };
+  return { start, end };
+}
+
+function sliceResponse(cached, start, end, size) {
+  return cached.arrayBuffer().then((buf) => {
+    const chunk = buf.slice(start, end + 1);
+    return new Response(chunk, {
+      status: 206,
+      statusText: 'Partial Content',
+      headers: {
+        'Content-Type': cached.headers.get('Content-Type') || 'audio/mpeg',
+        'Content-Length': String(chunk.byteLength),
+        'Content-Range': 'bytes ' + start + '-' + end + '/' + size,
+        'Accept-Ranges': 'bytes',
+      },
+    });
+  });
+}
+
+/* 壳资源（js / css）：缓存优先。
+   缓存桶名带构建戳 —— 内容一变就换桶，命中的一定是当前版本，二次访问零网络请求。 */
+async function shellCacheFirst(req) {
+  const cache = await caches.open(SHELL_CACHE);
+  const hit = await cache.match(req);
+  if (hit) return hit;
+  try {
+    const resp = await fetch(req, { cache: 'no-cache' });
+    if (resp && resp.status === 200) cache.put(req, resp.clone()).catch(() => {});
+    return resp;
+  } catch (e) {
+    return Response.error();
+  }
+}
+
+self.addEventListener('fetch', (event) => {
+  const req = event.request;
+  if (req.method !== 'GET') return;
+
+  let url;
+  try { url = new URL(req.url); } catch (e) { return; }
+  if (url.origin !== self.location.origin) return;
+
+  /* HTML：缓存优先（Stale-While-Revalidate） */
+  const _accept = req.headers.get('accept') || '';
+  if (_accept.indexOf('text/html') !== -1) {
+    event.respondWith(htmlSWR(req));
+    return;
+  }
+
+  /* 音频：内容哈希命名，永久缓存 + 兼容 Range */
+  if (url.pathname.endsWith('.mp3')) {
+    event.respondWith((async () => {
+      const cache = await caches.open(CACHE_NAME);
+      const key = url.origin + url.pathname;
+      let hit = await cache.match(key);
+
+      if (!hit) {
+        let resp;
+        try {
+          resp = await fetch(key, { credentials: 'omit' });
+        } catch (err) {
+          return Response.error();
+        }
+        if (!resp || resp.status !== 200) return resp;
+        cache.put(key, resp.clone()).catch(() => {});   /* 后台写缓存，不阻塞本次响应 */
+        hit = resp.clone();
+      }
+
+      const rangeHeader = req.headers.get('range');
+      if (!rangeHeader) return hit;
+
+      const size = parseInt(hit.headers.get('content-length') || '0', 10);
+      const r = parseRange(rangeHeader, size);
+      if (!r || r.invalid) return hit;
+      return sliceResponse(hit, r.start, r.end, size);
+    })());
+    return;
+  }
+
+  /* 代码类壳资源（含 data/*.js 数据切片）：缓存优先，桶名带构建戳 */
+  if (url.pathname.endsWith('.js') || url.pathname.endsWith('.css')) {
+    event.respondWith(shellCacheFirst(req));
+    return;
+  }
+
+  /* 其余（图片等）不拦截，交由浏览器与网络处理 */
+});
