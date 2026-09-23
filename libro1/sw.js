@@ -9,7 +9,21 @@
    - HTML          ：不拦截，永远走网络，保证入口页面即时更新
    ============================================================ */
 const CACHE_NAME = 'npi-audio-v3';
-const SHELL_CACHE = 'npi-shell-ebf687e3';
+const SHELL_CACHE = 'npi-shell-450e898c';
+/* HTML：Stale-While-Revalidate —— 二次访问直接命中 SW 缓存、瞬间出内容，
+   后台静默回源更新；首访/缓存未命中才走网络。彻底消除「先白屏再显示内容」。 */
+const HTML_CACHE = 'npi-html-v2';
+async function htmlSWR(req) {
+  const cache = await caches.open(HTML_CACHE);
+  const cached = await cache.match(req);
+  const network = fetch(req, { cache: 'no-cache' })
+    .then((r) => { if (r && r.status === 200) cache.put(req, r.clone()).catch(() => {}); return r; })
+    .catch(() => null);
+  if (cached) { network.catch(() => {}); return cached; }
+  const resp = await network;
+  return resp || Response.error();
+}
+
 
 self.addEventListener('install', () => self.skipWaiting());
 
@@ -18,7 +32,8 @@ self.addEventListener('activate', (event) => {
     const keys = await caches.keys();
     await Promise.all(
       keys.filter((k) => (k.indexOf('npi-audio-') === 0 && k !== CACHE_NAME) ||
-                         (k.indexOf('npi-shell-') === 0 && k !== SHELL_CACHE))
+                         (k.indexOf('npi-shell-') === 0 && k !== SHELL_CACHE) ||
+                         (k.indexOf('npi-html-') === 0 && k !== HTML_CACHE))
           .map((k) => caches.delete(k))
     );
     await self.clients.claim();
@@ -78,6 +93,13 @@ self.addEventListener('fetch', (event) => {
   let url;
   try { url = new URL(req.url); } catch (e) { return; }
   if (url.origin !== self.location.origin) return;
+
+  /* HTML：缓存优先（Stale-While-Revalidate） */
+  const _accept = req.headers.get('accept') || '';
+  if (_accept.indexOf('text/html') !== -1) {
+    event.respondWith(htmlSWR(req));
+    return;
+  }
 
   /* 音频：内容哈希命名，永久缓存 + 兼容 Range */
   if (url.pathname.endsWith('.mp3')) {
