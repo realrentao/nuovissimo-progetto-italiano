@@ -9,7 +9,7 @@
    - HTML          ：不拦截，永远走网络，保证入口页面即时更新
    ============================================================ */
 const CACHE_NAME = 'npi-audio-v3';
-const SHELL_CACHE = 'npi-shell-450e898c';
+const SHELL_CACHE = 'npi-shell-7fb33868';
 /* HTML：Stale-While-Revalidate —— 二次访问直接命中 SW 缓存、瞬间出内容，
    后台静默回源更新；首访/缓存未命中才走网络。彻底消除「先白屏再显示内容」。 */
 const HTML_CACHE = 'npi-html-v2';
@@ -36,6 +36,25 @@ self.addEventListener('activate', (event) => {
                          (k.indexOf('npi-html-') === 0 && k !== HTML_CACHE))
           .map((k) => caches.delete(k))
     );
+
+    /* 预热：把当前打开页面的 HTML + 其 css/js 预存进缓存，
+       使本次刷新后的下一次访问直接命中、瞬间出内容（消灭首屏白屏）。 */
+    try {
+      const cls = await self.clients.matchAll({ includeUncontrolled: true, type: 'window' });
+      for (const c of cls) {
+        const resp = await fetch(c.url, { cache: 'no-cache' });
+        if (!resp || resp.status !== 200) continue;
+        const html = await resp.text();
+        const hc = await caches.open(HTML_CACHE);
+        await hc.put(c.url, new Response(html, { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8' } }));
+        const sc = await caches.open(SHELL_CACHE);
+        const re = /(?:href|src)="([^"]+\\.(?:css|js))"/g; let m; const subs = [];
+        while ((m = re.exec(html))) subs.push(new URL(m[1], c.url).href);
+        await Promise.all(subs.map((u) => fetch(u, { cache: 'no-cache' })
+          .then((r) => { if (r && r.status === 200) sc.put(u, r.clone()).catch(() => {}); })
+          .catch(() => {})));
+      }
+    } catch (e) { /* 预热失败不影响激活 */ }
     await self.clients.claim();
   })());
 });
