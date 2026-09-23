@@ -266,7 +266,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- 音频离线缓存：Service Worker 接管 *.mp3 与壳资源 ---------- */
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js').catch(() => { /* 不支持或被禁用则静默降级 */ });
+      /* 版本化 URL + updateViaCache:'none'：每次部署换 URL、绕过 HTTP 缓存，
+         强制浏览器拉取最新 sw.js，杜绝「旧 SW 一直服务陈旧 HTML/白屏」的死锁。 */
+      navigator.serviceWorker.register('sw.js?v=20260923e', { updateViaCache: 'none' }).catch(() => { /* 不支持或被禁用则静默降级 */ });
     });
   }
 });
